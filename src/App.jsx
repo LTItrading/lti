@@ -43,6 +43,7 @@ import TopFourSection from "./features/topFourSection";
 import MiddleSixSection from "./features/middleSixSection";
 import NewsEducation from "./features/newsEducation";
 import RewardsFeatures from "./features/rewardsFeatures";
+import DepositsWithdrawals from "./features/depositWithdrawl";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("home"); // default home
@@ -60,6 +61,8 @@ function App() {
         return <NewsEducation />;
       case "rewardsAndFeatures":
         return <RewardsFeatures />;
+         case "depositsAndWithdrawals":
+        return <DepositsWithdrawals />;
       default:
         return <TradingLandingPage />;
     }

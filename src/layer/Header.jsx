@@ -170,6 +170,7 @@ const Header = ({ setCurrentPage }) => {
         // "Derivatives",
         // "Futures",
         "Home",
+        "Deposits and Withdrawals",
         // "NewsEducation",
         // "Rewards and Features",
       ],
@@ -194,6 +195,8 @@ const Header = ({ setCurrentPage }) => {
       setCurrentPage("newsEducation");
     } else if (item === "Rewards and Features") {
       setCurrentPage("rewardsAndFeatures");
+    } else if (item === "Deposits and Withdrawals") {
+      setCurrentPage("depositsAndWithdrawals");
     } else {
       setCurrentPage("home"); // fallback, can expand later
     }
