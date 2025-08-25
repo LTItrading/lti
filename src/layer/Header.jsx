@@ -171,8 +171,11 @@ const Header = ({ setCurrentPage }) => {
         // "Futures",
         "Home",
         "Deposits and Withdrawals",
-        // "NewsEducation",
-        // "Rewards and Features",
+        "Market Access",
+        "NewsEducation",
+        "Rewards and Features",
+        "Tools and Platform",
+        "Trading Conditions"
       ],
     },
     { label: "Insights", subMenu: ["Market News", "Reports", "Research"] },
@@ -197,6 +200,12 @@ const Header = ({ setCurrentPage }) => {
       setCurrentPage("rewardsAndFeatures");
     } else if (item === "Deposits and Withdrawals") {
       setCurrentPage("depositsAndWithdrawals");
+    } else if (item === "Market Access") {
+      setCurrentPage("MarketAccess");
+    } else if (item === "Tools and Platform") {
+      setCurrentPage("Mt5");
+    } else if (item === "Trading Conditions") {
+      setCurrentPage("tradingconditions");
     } else {
       setCurrentPage("home"); // fallback, can expand later
     }

@@ -44,6 +44,9 @@ import MiddleSixSection from "./features/middleSixSection";
 import NewsEducation from "./features/newsEducation";
 import RewardsFeatures from "./features/rewardsFeatures";
 import DepositsWithdrawals from "./features/depositWithdrawl";
+import MarketAccess from "./features/MarketAccess";
+import MT5Platform from "./features/MT5Platform";
+import TradingConditions from "./features/TradingConditions";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("home"); // default home
@@ -61,8 +64,14 @@ function App() {
         return <NewsEducation />;
       case "rewardsAndFeatures":
         return <RewardsFeatures />;
-         case "depositsAndWithdrawals":
+      case "depositsAndWithdrawals":
         return <DepositsWithdrawals />;
+      case "MarketAccess":
+        return <MarketAccess />;
+      case "Mt5":
+        return <MT5Platform />;
+      case "tradingconditions":
+        return <TradingConditions />;
       default:
         return <TradingLandingPage />;
     }
