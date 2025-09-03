@@ -172,13 +172,12 @@ const Header = ({ setCurrentPage }) => {
         "Home",
         "Deposits and Withdrawals",
         "Market Access",
-        "NewsEducation",
-        "Rewards and Features",
         "Tools and Platform",
-        "Trading Conditions"
+        "Trading Conditions",
+        "Account Options"
       ],
     },
-    { label: "Insights", subMenu: ["Market News", "Reports", "Research"] },
+    { label: "Insights", subMenu: ["Market News", "Reports", "Research", "News and Education","Rewards and Features"] },
     { label: "Corporate", subMenu: ["About Us", "Careers", "Contact"] },
     // { label: "News Education", page: "newsEducation" },
     // { label: "Rewards", page: "rewardsAndFeatures" },
@@ -194,7 +193,7 @@ const Header = ({ setCurrentPage }) => {
 
   // helper for navigation
   const handleNavClick = (item) => {
-    if (item === "NewsEducation") {
+    if (item === "News and Education") {
       setCurrentPage("newsEducation");
     } else if (item === "Rewards and Features") {
       setCurrentPage("rewardsAndFeatures");
