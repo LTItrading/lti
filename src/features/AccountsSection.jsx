@@ -55,7 +55,7 @@ export default function AccountsSection() {
     },
     {
       title: "ECO",
-      subtitle: "Everyday Traders",
+      subtitle: "Impact-Orientated Traders",
       desc: "Trade as usual while making a difference - a portion of spread revenue supports charitable causes.",
       icon: "leaf",
       size: "large",

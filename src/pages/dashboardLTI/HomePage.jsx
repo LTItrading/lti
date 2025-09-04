@@ -157,9 +157,9 @@ export default function TradingLandingPage() {
                         alt=""
                         className="hidden sm:block w-[200px] md:w-[300px] lg:w-[447px]"
                     />
-                    <p className="font-extrabold text-sm sm:text-lg md:text-xl text-gray-500 text-center">
+                    <div className="font-extrabold text-sm sm:text-lg md:text-xl text-black text-center">
                         Global Footprint. Local Impact
-                    </p>
+                    </div>
                     <img
                         src={line2}
                         alt=""

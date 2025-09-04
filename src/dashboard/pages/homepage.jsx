@@ -181,7 +181,7 @@ export default function TradingLandingPage() {
                     />
 
                     {/* Center Text */}
-                    <p className="font-extrabold text-center text-gray-600 text-sm sm:text-base md:text-lg leading-snug">
+                    <p className="font-extrabold text-center text-gray-600 text-sm md:text-lg leading-snug">
                         Global Footprint. Local Impact
                     </p>
 

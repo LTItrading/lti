@@ -131,7 +131,7 @@ const TradersFeatures = () => {
                                     </div>
                                     <h4 className="text-[#F4F4F4] text-[16px] font-extrabold mb-2">Risk Protection Built In</h4>
                                     <p className="text-[#F4F4F4] text-[11px] font-bold opacity-60 leading-relaxed">
-                                        Never lose more than your deposit. All accounts come with negative balance protection.
+                                        Never lose more than your deposit. All accounts come with negative balance protection as standard.
                                     </p>
                                 </div>
                             </div>
