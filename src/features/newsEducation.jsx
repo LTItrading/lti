@@ -1,8 +1,14 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import {
   Newspaper,
   Calendar,
@@ -13,13 +19,10 @@ import {
   Globe,
   TrendingUp,
   Clock,
-  Users
-} from 'lucide-react';
+  Users,
+} from "lucide-react";
 import ReactCountryFlag from "react-country-flag";
-import LanguagesSlider from '@/components/sliders/LanguagesSlider';
-
-
-
+import LanguagesSlider from "@/components/sliders/LanguagesSlider";
 
 const NewsEducation = () => {
   const ref = useRef(null);
@@ -28,39 +31,40 @@ const NewsEducation = () => {
   const educationFormats = [
     {
       icon: Play,
-      title: 'Video Courses',
-      description: 'Comprehensive video tutorials covering all aspects of trading',
-      duration: '50+ hours',
+      title: "Video Courses",
+      description:
+        "Comprehensive video tutorials covering all aspects of trading",
+      duration: "50+ hours",
     },
     {
       icon: Headphones,
-      title: 'Audio Sessions',
-      description: 'Listen to expert insights and market analysis on the go',
-      duration: '30+ episodes',
+      title: "Audio Sessions",
+      description: "Listen to expert insights and market analysis on the go",
+      duration: "30+ episodes",
     },
     {
       icon: BookOpen,
-      title: 'eBooks & Guides',
-      description: 'Detailed written materials and trading strategies',
-      duration: '20+ guides',
+      title: "eBooks & Guides",
+      description: "Detailed written materials and trading strategies",
+      duration: "20+ guides",
     },
     {
       icon: Monitor,
-      title: 'Live Tutorials',
-      description: 'Interactive sessions with professional traders',
-      duration: 'Weekly',
+      title: "Live Tutorials",
+      description: "Interactive sessions with professional traders",
+      duration: "Weekly",
     },
   ];
 
   const languages = [
-    { code: 'EN', name: 'English', flag: '🇺🇸' },
-    { code: 'ES', name: 'Spanish', flag: '🇪🇸' },
-    { code: 'FR', name: 'French', flag: '🇫🇷' },
-    { code: 'DE', name: 'German', flag: '🇩🇪' },
-    { code: 'IT', name: 'Italian', flag: '🇮🇹' },
-    { code: 'JP', name: 'Japanese', flag: '🇯🇵' },
-    { code: 'CN', name: 'Chinese', flag: '🇨🇳' },
-    { code: 'AR', name: 'Arabic', flag: '🇸🇦' },
+    { code: "EN", name: "English", flag: "🇺🇸" },
+    { code: "ES", name: "Spanish", flag: "🇪🇸" },
+    { code: "FR", name: "French", flag: "🇫🇷" },
+    { code: "DE", name: "German", flag: "🇩🇪" },
+    { code: "IT", name: "Italian", flag: "🇮🇹" },
+    { code: "JP", name: "Japanese", flag: "🇯🇵" },
+    { code: "CN", name: "Chinese", flag: "🇨🇳" },
+    { code: "AR", name: "Arabic", flag: "🇸🇦" },
   ];
 
   const marketData = [
@@ -87,9 +91,12 @@ const NewsEducation = () => {
     },
   ];
 
-
   return (
-    <section ref={ref} className="py-20 bg-background" id="education">
+    <section
+      ref={ref}
+      className="py-20 bg-background font-manrope"
+      id="education"
+    >
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0 }}
@@ -107,7 +114,10 @@ const NewsEducation = () => {
               Market Intelligence Meets Expert Education
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Stay one step ahead with real-time news and economic event directly from your trading platform - and strengthen your trading knowledge with expert video, audio, and eBook content in multiple languages.
+              Stay one step ahead with real-time news and economic event
+              directly from your trading platform - and strengthen your trading
+              knowledge with expert video, audio, and eBook content in multiple
+              languages.
             </p>
           </motion.div>
 
@@ -118,7 +128,7 @@ const NewsEducation = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mb-20"
           >
-            <Card className="shadow-elegant hover:shadow-glow transition-smooth bg-card/80 backdrop-blur-sm border-primary/10">
+            <Card className="relative bg-[#1C1C1C] text-white shadow-2xl rounded-none md:rounded-tl-[80px] md:rounded-br-[80px] xl:w-[1200px] lg:w-[1000px] sm:w-[900px] min-h-[463px] sm:min-h-[320px] lg:min-h-[400px] flex flex-col justify-center sm:px-[60px] lg:px-[50px] py-[100px] sm:py-[50px] lg:py-[50px]">
               <CardHeader>
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 gradient-primary rounded-lg flex items-center justify-center">
@@ -138,24 +148,40 @@ const NewsEducation = () => {
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                   <div>
                     <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
-                      Access streaming market news and a global economic calendar directly within your MT5 trading platform — no need for external apps or plugins. Our integration with MT5 ensures you have the latest financial developments, central bank decisions, and economic event forecasts at your fingertips.
-
+                      Access streaming market news and a global economic
+                      calendar directly within your MT5 trading platform — no
+                      need for external apps or plugins. Our integration with
+                      MT5 ensures you have the latest financial developments,
+                      central bank decisions, and economic event forecasts at
+                      your fingertips.
                     </p>
 
-                    <div className="grid grid-cols-2 gap-4 mb-8">
-                      <div className="text-center p-4 bg-muted/50 rounded-lg">
+                    <div className="grid grid-cols-2 gap-4 mb-8 my-2">
+                      <div className="text-center p-4 text-white rounded-lg bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] p-6 rounded-[20px] shadow-[0px_4px_4px_0px_#FF66334D] transition-all duration-300 border border-transparent hover:border-[#EE422333] hover:border-[2px] hover:bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] hover:backdrop-blur-[20px]">
                         <TrendingUp className="h-6 w-6 text-primary mx-auto mb-2" />
-                        <div className="text-sm font-medium text-foreground">Market Analysis</div>
-                        <div className="text-xs text-muted-foreground">Real-time insights</div>
+                        <div className="text-sm font-medium">
+                          Market Analysis
+                        </div>
+                        <div className="text-xs text-gray-400">
+                          Real-time insights
+                        </div>
                       </div>
-                      <div className="text-center p-4 bg-muted/50 rounded-lg">
+                      <div className="text-center p-4 text-white rounded-lg bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] p-6 rounded-[20px] shadow-[0px_4px_4px_0px_#FF66334D] transition-all duration-300 border border-transparent hover:border-[#EE422333] hover:border-[2px] hover:bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] hover:backdrop-blur-[20px]">
                         <Calendar className="h-6 w-6 text-primary mx-auto mb-2" />
-                        <div className="text-sm font-medium text-foreground">Economic Calendar</div>
-                        <div className="text-xs text-muted-foreground">Upcoming events</div>
+                        <div className="text-sm font-medium">
+                          Economic Calendar
+                        </div>
+                        <div className="text-xs text-gray-400">
+                          Upcoming events
+                        </div>
                       </div>
                     </div>
 
-                    <Button variant="cta" size="lg">
+                    <Button
+                      className="bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold"
+                      variant="cta"
+                      size="lg"
+                    >
                       Open an Account
                     </Button>
                   </div>
@@ -201,9 +227,13 @@ const NewsEducation = () => {
                   <div className="relative">
                     <motion.div
                       initial={{ opacity: 0, scale: 0.8 }}
-                      animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                      animate={
+                        isInView
+                          ? { opacity: 1, scale: 1 }
+                          : { opacity: 0, scale: 0.8 }
+                      }
                       transition={{ delay: 0.6 }}
-                      className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-6 border border-primary/20 backdrop-blur-sm"
+                      className="bg-[rgba(255,102,51,1)] text-white rounded-2xl p-6 border border-primary/20 backdrop-blur-sm"
                     >
                       <div className="space-y-4">
                         {marketData.map((item, idx) => (
@@ -212,12 +242,13 @@ const NewsEducation = () => {
                             className="flex items-center space-x-3 p-3 bg-card/50 rounded-lg"
                           >
                             <div
-                              className={`w-2 h-2 rounded-full animate-pulse ${item.color === "green"
+                              className={`w-2 h-2 rounded-full animate-pulse ${
+                                item.color === "green"
                                   ? "bg-green-500"
                                   : item.color === "red"
-                                    ? "bg-red-500"
-                                    : "bg-blue-500"
-                                }`}
+                                  ? "bg-red-500"
+                                  : "bg-blue-500"
+                              }`}
                             />
                             <div className="flex-1 flex items-center space-x-2">
                               {/* Flags */}
@@ -242,16 +273,19 @@ const NewsEducation = () => {
                                 <div className="text-sm font-medium text-foreground">
                                   {item.title}
                                 </div>
-                                <div className="text-xs text-muted-foreground">{item.subtitle}</div>
+                                <div className="text-xs text-muted-foreground">
+                                  {item.subtitle}
+                                </div>
                               </div>
                             </div>
                             <div
-                              className={`text-xs ${item.color === "green"
+                              className={`text-xs ${
+                                item.color === "green"
                                   ? "text-green-500"
                                   : item.color === "red"
-                                    ? "text-red-500"
-                                    : "text-blue-500"
-                                }`}
+                                  ? "text-red-500"
+                                  : "text-blue-500"
+                              }`}
                             >
                               {item.change}
                             </div>
@@ -318,41 +352,46 @@ const NewsEducation = () => {
                     ))}
                   </div> */}
 
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-  {educationFormats.map((format, index) => (
-    <motion.div
-      key={format.title}
-      initial={{ opacity: 0, y: 30 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0 }}
-      transition={{ delay: 0.8 + index * 0.1, duration: 0.4 }}
-      whileHover={{ y: -5, boxShadow: "0 0 20px rgba(238, 66, 35, 0.7)", transition: { duration: 0.3 } }}
-      className="relative text-center p-8 rounded-xl bg-[#1A1A1A] transition-all duration-300 group"
-    >
-      {/* Glow Effect Element */}
-      <span className="absolute inset-0 rounded-xl pointer-events-none transition-opacity duration-300 opacity-0 group-hover:opacity-100" style={{ boxShadow: "0 0 20px #EE4223" }}></span>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {educationFormats.map((format, index) => (
+                      <motion.div
+                        key={format.title}
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={
+                          isInView ? { opacity: 1, y: 0 } : { opacity: 0 }
+                        }
+                        transition={{ delay: 0.8 + index * 0.1, duration: 0.4 }}
+                        whileHover={{
+                          y: -5,
+                          boxShadow: "0 0 20px rgba(238, 66, 35, 0.7)",
+                          transition: { duration: 0.3 },
+                        }}
+                        className="relative text-center p-8 rounded-xl bg-[#1A1A1A] transition-all duration-300 group"
+                      >
+                        {/* Glow Effect Element */}
+                        <span
+                          className="absolute inset-0 rounded-xl pointer-events-none transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+                          style={{ boxShadow: "0 0 20px #EE4223" }}
+                        ></span>
 
-      <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center transform transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-2">
-        <format.icon className="h-6 w-6 text-gray-500 transition-colors duration-300 group-hover:text-[#EE4223]" />
-      </div>
+                        <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center transform transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-2">
+                          <format.icon className="h-6 w-6 text-gray-500 transition-colors duration-300 group-hover:text-[#EE4223]" />
+                        </div>
 
-      <h5 className="font-manrope font-extrabold text-white text-[18px] sm:text-[20px] mb-3 relative z-10">
-        {format.title}
-      </h5>
+                        <h5 className="font-manrope font-extrabold text-white text-[18px] sm:text-[20px] mb-3 relative z-10">
+                          {format.title}
+                        </h5>
 
-      <p className="font-manrope font-medium text-gray-400 text-[13px] sm:text-[14px] leading-[20px] mb-3 relative z-10">
-        {format.description}
-      </p>
+                        <p className="font-manrope font-medium text-gray-400 text-[13px] sm:text-[14px] leading-[20px] mb-3 relative z-10">
+                          {format.description}
+                        </p>
 
-      <div className="font-manrope font-semibold text-[#EE4223] text-[13px] sm:text-[14px] relative z-10">
-        {format.duration}
-      </div>
-    </motion.div>
-  ))}
-</div>
-
-
-
-                  
+                        <div className="font-manrope font-semibold text-[#EE4223] text-[13px] sm:text-[14px] relative z-10">
+                          {format.duration}
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
                 </div>
 
                 {/* <div className="mb-8">
@@ -378,7 +417,6 @@ const NewsEducation = () => {
 
                 <LanguagesSlider languages={languages} isInView={isInView} />
 
-
                 <div className="text-center">
                   <Button className="inline-block mt-4 py-[8px] px-[40px] rounded-full bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold text-[18px]">
                     <span className="transform transition-transform duration-300 hover:scale-105">
@@ -386,7 +424,6 @@ const NewsEducation = () => {
                     </span>
                   </Button>
                 </div>
-
               </CardContent>
             </Card>
           </motion.div>
@@ -401,8 +438,8 @@ const NewsEducation = () => {
             <div className="relative z-10">
               <Users className="h-12 w-12 text-primary-foreground mx-auto mb-6 opacity-80" />
               <blockquote className="text-2xl md:text-3xl font-bold text-primary-foreground mb-6 leading-relaxed">
-                "Education is the foundation of successful trading.
-                Knowledge transforms risk into opportunity."
+                "Education is the foundation of successful trading. Knowledge
+                transforms risk into opportunity."
               </blockquote>
               <cite className="text-primary-foreground/90 text-lg">
                 — LTI Trading Academy
@@ -422,9 +459,10 @@ const NewsEducation = () => {
             className="text-center mt-8"
           >
             <p className="text-xs text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              Trading involves substantial risk of loss and is not suitable for all investors.
-              Past performance is not indicative of future results. Please ensure you fully
-              understand the risks involved and seek independent advice if necessary.
+              Trading involves substantial risk of loss and is not suitable for
+              all investors. Past performance is not indicative of future
+              results. Please ensure you fully understand the risks involved and
+              seek independent advice if necessary.
             </p>
           </motion.div>
         </motion.div>
