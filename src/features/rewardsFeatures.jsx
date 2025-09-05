@@ -24,12 +24,12 @@ const RewardsFeatures = () => {
     {
       icon: Calculator,
       title: 'Trade Calculators',
-      description: 'Advanced position sizing and risk management calculators',
+      description: ' Instantly calculate pip value, margin requirements, and potential profit/loss before opening a trade.',
     },
     {
       icon: Bell,
       title: 'Custom Alerts',
-      description: 'Real-time price alerts and market notifications',
+      description: 'Set price-based or indicator-triggered alerts across platforms.',
     },
     {
       icon: BarChart3,
@@ -38,27 +38,31 @@ const RewardsFeatures = () => {
     },
     {
       icon: Globe,
-      title: 'Global Markets',
-      description: 'Access to forex, stocks, commodities, and crypto',
+      title: 'Strategy Tester',
+      description: 'Backtest your expert advisors (EAs) against historical data',
     },
     {
       icon: Smartphone,
-      title: 'Mobile Trading',
-      description: 'Trade on-the-go with our mobile apps',
+      title: 'MQL5 Market Access',
+      description: 'Download hundreds of scripts, indicators, and automated strategies',
     },
     {
       icon: Users,
-      title: 'Copy Trading',
-      description: 'Follow and copy successful traders automatically',
+      title: 'Built-in Robots & EA’s',
+      description: 'Free access to expert advisors pre-installed on MT5',
+    },
+    {
+      icon: Users,
+      title: 'Correlation Matrix',
+      description: 'Analyse market interdependencies in real time',
     },
   ];
 
   const contestFeatures = [
-    'Real-time leaderboards and rankings',
-    'Weekly and monthly competitions',
-    'Cash prizes and trading credits',
-    'Risk-free environment to test strategies',
-    'Network with top traders globally',
+    'Monthly Leaderboard Challenges',
+    'Prizes including cash, bonuses, or funded accounts.',
+    'Transparent rules and live rankings',
+    'Open to both demo accounts and live accounts (T&Cs apply) Keep an eye in your client portal for launch updates and registrations',
   ];
 
   return (
@@ -77,10 +81,11 @@ const RewardsFeatures = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Rewards & Features
+              Tools that Empower. Rewards That Motivate
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Unlock powerful trading tools and participate in exciting contests to boost your trading journey
+               LTI gives you more than a trading platform — we offer smart tools and performance-based rewards to elevate your trading experience. From real-time utilities to cashback and competitions, every feature is designed to support your trading.
+              Tools that Empower. Rewards That Motivate
             </p>
           </motion.div>
 
@@ -97,7 +102,7 @@ const RewardsFeatures = () => {
                   <Trophy className="h-8 w-8 text-primary-foreground" />
                 </div>
                 <CardTitle className="text-3xl font-bold mb-2 bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-                  Trading Contests
+                  Compete. Climb. Win
                 </CardTitle>
                 <CardDescription className="text-lg">
                   <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20">
@@ -109,8 +114,7 @@ const RewardsFeatures = () => {
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                   <div>
                     <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
-                      Join our competitive trading environment where skill meets opportunity. 
-                      Compete with traders worldwide and showcase your expertise in risk-free contests.
+                      LTI’s trading contests will give you the chance to test your skills, showcase your strategy, and win real rewards - all in a fair and competitive environment.
                     </p>
                     
                     <ul className="space-y-3 mb-8">
@@ -127,10 +131,14 @@ const RewardsFeatures = () => {
                         </motion.li>
                       ))}
                     </ul>
-
-                    <Button variant="premium" size="lg" className="w-full md:w-auto">
+ <Button className="relative bg-[#ee4223] hover:bg-[#FF6B3D] text-white text-base sm:text-lg font-semibold shadow-lg transition-all duration-300 group px-[24px] py-[28px] rounded-full mx-auto lg:mx-0 flex items-center justify-center">
+                                <div className="flex items-center justify-center gap-2 leading-none transform transition-transform duration-300 group-hover:scale-105">
+                                    <span>Register Now</span>
+                                </div>
+                            </Button>
+                    {/* <button  size="lg" className="w-full md:w-auto">
                       Register Now
-                    </Button>
+                    </button> */}
                   </div>
 
                   <div className="relative">
@@ -164,10 +172,11 @@ const RewardsFeatures = () => {
           >
             <div className="text-center mb-12">
               <h3 className="text-3xl font-bold text-foreground mb-4">
-                Advanced Trading Tools
+                Powerful tools. Built In
               </h3>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Professional-grade tools designed to enhance your trading experience and maximize your potential
+                
+                Whether you're analysing trades, testing strategies, or executing with precision - our platform and client area come equipped with advanced tools designed to enhance your trading intelligence.
               </p>
             </div>
 

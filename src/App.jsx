@@ -47,6 +47,7 @@ import DepositsWithdrawals from "./features/depositWithdrawl";
 import MarketAccess from "./features/MarketAccess";
 import MT5Platform from "./features/MT5Platform";
 import TradingConditions from "./features/TradingConditions";
+import AccountOptions from "./pages/dashboardLTI/AccountOptions";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("home"); // default home
@@ -72,6 +73,8 @@ function App() {
         return <MT5Platform />;
       case "tradingconditions":
         return <TradingConditions />;
+      case "AccountOptions":
+        return <AccountOptions />;
       default:
         return <TradingLandingPage />;
     }

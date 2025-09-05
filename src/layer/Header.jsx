@@ -174,10 +174,13 @@ const Header = ({ setCurrentPage }) => {
         "Market Access",
         "Tools and Platform",
         "Trading Conditions",
-        "Account Options"
+        "Account Options",
       ],
     },
-    { label: "Insights", subMenu: [ "News and Education","Rewards and Features"] },
+    {
+      label: "Insights",
+      subMenu: ["News and Education", "Rewards and Features"],
+    },
     { label: "Corporate", subMenu: ["About Us", "Careers", "Contact"] },
     // { label: "News Education", page: "newsEducation" },
     // { label: "Rewards", page: "rewardsAndFeatures" },
@@ -205,6 +208,8 @@ const Header = ({ setCurrentPage }) => {
       setCurrentPage("Mt5");
     } else if (item === "Trading Conditions") {
       setCurrentPage("tradingconditions");
+    } else if (item === "Account Options") {
+      setCurrentPage("AccountOptions");
     } else {
       setCurrentPage("home"); // fallback, can expand later
     }
@@ -253,7 +258,8 @@ const Header = ({ setCurrentPage }) => {
             <div className="flex gap-3 sm:gap-4 md:gap-5 lg:gap-[20px] text-sm sm:text-base md:text-[14px] lg:text-[16px] font-medium text-[#DE2605]">
               {miniLinks.map((label) => (
                 <span
-                  key={label} style={{color:'#EE4223'}}
+                  key={label}
+                  style={{ color: "#EE4223" }}
                   className="hover:underline focus:outline-none transition-all duration-200"
                 >
                   {label}

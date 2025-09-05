@@ -74,10 +74,10 @@ const NewsEducation = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              News & Education
+              Market Intelligence Meets Expert Education
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Stay informed with real-time market news and enhance your trading skills with our comprehensive education hub
+              Stay one step ahead with real-time news and economic event directly from your trading platform - and strengthen your trading knowledge with expert video, audio, and eBook content in multiple languages.
             </p>
           </motion.div>
 
@@ -96,7 +96,7 @@ const NewsEducation = () => {
                   </div>
                   <div>
                     <CardTitle className="text-2xl font-bold">
-                      Live Market News & Economic Events
+                      Real-time Market Coverage, Built In
                     </CardTitle>
                     <CardDescription className="text-lg">
                       Real-time updates that impact your trading decisions
@@ -108,9 +108,8 @@ const NewsEducation = () => {
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                   <div>
                     <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
-                      Access live market news, economic indicators, and real-time events that 
-                      directly impact global financial markets. Our integrated news feed keeps 
-                      you informed of market-moving events as they happen.
+                      Access streaming market news and a global economic calendar directly within your MT5 trading platform — no need for external apps or plugins. Our integration with MT5 ensures you have the latest financial developments, central bank decisions, and economic event forecasts at your fingertips.
+
                     </p>
 
                     <div className="grid grid-cols-2 gap-4 mb-8">
