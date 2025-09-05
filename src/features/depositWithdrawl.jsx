@@ -9,9 +9,9 @@ import { CTAStrip } from '@/components/ui/cta-strip';
 
 const paymentMethods = [
   { icon: CreditCard, name: 'Credit/Debit Cards', desc: 'Visa, Mastercard' },
-  { icon: Building2, name: 'Bank Transfer', desc: 'Wire transfer, ACH' },
-  { icon: Smartphone, name: 'UPI', desc: 'Instant payments' },
-  { icon: Wallet, name: 'E-Wallets', desc: 'PayPal, Skrill, Neteller' },
+  { icon: Building2, name: 'Bank Transfer', desc: 'Wire transfer, ACH , Bankwire ,Multibanco,PagoEfectivo ,SafetyPay ,Boleto ,LATAM Cash' },
+  { icon: Smartphone, name: 'UPI', desc: 'UPI ,Google Pay' },
+  { icon: Wallet, name: 'E-Wallets', desc: 'PayPal, Skrill, Neteller ,M-Pesa ,WeChat Pay ,PIX ,Airtel Money ,Alipay ,Binance Pay ,MoMo (MTN) ,ePay.bg' },
 ];
 
 const faqItems = [
@@ -59,32 +59,32 @@ export default function DepositsWithdrawals() {
           </p>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6"
-        >
-          {paymentMethods.map((method, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ scale: 1.05 }}
-            >
-              <Card className="text-center hover:shadow-elegant transition-all duration-300 border border-border rounded-3xl">
-                <CardContent className="pt-6">
-                  <method.icon className="w-12 h-12 text-brand mx-auto mb-4" />
-                  <h3 className="font-semibold text-ink mb-2">{method.name}</h3>
-                  <p className="text-sm text-muted-foreground">{method.desc}</p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </motion.div>
+ <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6 }}
+  className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+>
+  {paymentMethods.map((method, index) => (
+    <motion.div
+      key={index}
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      whileHover={{ scale: 1.05 }}
+    >
+      <Card className="text-center hover:shadow-elegant transition-all duration-300 border border-border rounded-3xl h-full flex flex-col justify-center">
+        <CardContent className="pt-6 flex flex-col items-center">
+          <method.icon className="w-12 h-12 text-brand mb-4" />
+          <h3 className="font-semibold text-ink mb-2">{method.name}</h3>
+          <p className="text-sm text-muted-foreground">{method.desc}</p>
+        </CardContent>
+      </Card>
+    </motion.div>
+  ))}
+</motion.div>
       </Section>
 
       {/* How To Sections */}
