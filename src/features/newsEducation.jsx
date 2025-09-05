@@ -35,37 +35,46 @@ const NewsEducation = () => {
       description:
         "Comprehensive video tutorials covering all aspects of trading",
       duration: "50+ hours",
+      bgcolor:"bg-gradient-to-r from-[rgba(234,234,234,1)] to-[rgba(216,216,216,1)] text-gray-900",
+      textColor:"text-gray-900"
     },
     {
       icon: Headphones,
       title: "Audio Sessions",
       description: "Listen to expert insights and market analysis on the go",
       duration: "30+ episodes",
+      bgcolor:"bg-gradient-to-r from-[rgba(74,74,74,1)] to-[rgba(90,90,90,1)] text-white",
+      textColor: "text-white"
     },
     {
       icon: BookOpen,
       title: "eBooks & Guides",
       description: "Detailed written materials and trading strategies",
       duration: "20+ guides",
+      bgcolor: "bg-[rgba(238,66,35,1)] text-white",
+      textColor: "text-white"
     },
     {
       icon: Monitor,
       title: "Live Tutorials",
       description: "Interactive sessions with professional traders",
       duration: "Weekly",
+      bgcolor: "bg-[rgba(50,50,51,1)] text-white",
+      textColor:"text-white"
     },
   ];
 
   const languages = [
-    { code: "EN", name: "English", flag: "🇺🇸" },
-    { code: "ES", name: "Spanish", flag: "🇪🇸" },
-    { code: "FR", name: "French", flag: "🇫🇷" },
-    { code: "DE", name: "German", flag: "🇩🇪" },
-    { code: "IT", name: "Italian", flag: "🇮🇹" },
-    { code: "JP", name: "Japanese", flag: "🇯🇵" },
-    { code: "CN", name: "Chinese", flag: "🇨🇳" },
-    { code: "AR", name: "Arabic", flag: "🇸🇦" },
-  ];
+  { code: "EN", name: "English", flag: "US" },
+  { code: "ES", name: "Spanish", flag: "ES" },
+  { code: "FR", name: "French", flag: "FR" },
+  { code: "DE", name: "German", flag: "DE" },
+  { code: "IT", name: "Italian", flag: "IT" },
+  { code: "JP", name: "Japanese", flag: "JP" },
+  { code: "CN", name: "Chinese", flag: "CN" },
+  { code: "AR", name: "Arabic", flag: "SA" },
+];
+
 
   const marketData = [
     {
@@ -128,7 +137,7 @@ const NewsEducation = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mb-20"
           >
-            <Card className="relative bg-[#1C1C1C] text-white shadow-2xl rounded-none md:rounded-tl-[80px] md:rounded-br-[80px] xl:w-[1200px] lg:w-[1000px] sm:w-[900px] min-h-[463px] sm:min-h-[320px] lg:min-h-[400px] flex flex-col justify-center sm:px-[60px] lg:px-[50px] py-[100px] sm:py-[50px] lg:py-[50px]">
+            <Card className="relative bg-[#1C1C1C] text-white shadow-2xl rounded-none md:rounded-tl-[80px] md:rounded-br-[80px] min-h-[463px] sm:min-h-[320px] lg:min-h-[400px] flex flex-col justify-center sm:px-[60px] lg:px-[50px] py-[100px] sm:py-[50px] lg:py-[50px]">
               <CardHeader>
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 gradient-primary rounded-lg flex items-center justify-center">
@@ -306,7 +315,7 @@ const NewsEducation = () => {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="mb-16"
           >
-            <Card className="shadow-elegant hover:shadow-glow transition-smooth bg-card/80 backdrop-blur-sm border-primary/10">
+            <Card className="shadow-elegant hover:shadow-glow transition-smooth bg-card/80 backdrop-blur-sm border-primary/10 md:rounded-tr-[80px] md:rounded-bl-[80px]">
               <CardHeader className="text-center pb-8">
                 <div className="w-16 h-16 mx-auto mb-4 gradient-primary rounded-full flex items-center justify-center">
                   <BookOpen className="h-8 w-8 text-primary-foreground" />
@@ -366,8 +375,7 @@ const NewsEducation = () => {
                           boxShadow: "0 0 20px rgba(238, 66, 35, 0.7)",
                           transition: { duration: 0.3 },
                         }}
-                        className="relative text-center p-8 rounded-xl bg-[#1A1A1A] transition-all duration-300 group"
-                      >
+                        className={`relative text-center p-8 rounded-xl  transition-all duration-300 group ${format.bgcolor}` }                     >
                         {/* Glow Effect Element */}
                         <span
                           className="absolute inset-0 rounded-xl pointer-events-none transition-opacity duration-300 opacity-0 group-hover:opacity-100"
@@ -375,18 +383,18 @@ const NewsEducation = () => {
                         ></span>
 
                         <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center transform transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-2">
-                          <format.icon className="h-6 w-6 text-gray-500 transition-colors duration-300 group-hover:text-[#EE4223]" />
+                          <format.icon className="h-6 w-6 transition-colors duration-300 group-hover:text-white" />
                         </div>
 
-                        <h5 className="font-manrope font-extrabold text-white text-[18px] sm:text-[20px] mb-3 relative z-10">
+                        <h5 className={`font-manrope font-extrabold text-[18px] sm:text-[20px] mb-3 relative z-10 ${format.textColor}`}>
                           {format.title}
                         </h5>
 
-                        <p className="font-manrope font-medium text-gray-400 text-[13px] sm:text-[14px] leading-[20px] mb-3 relative z-10">
+                        <p className="font-manrope font-medium text-white-400 text-[13px] sm:text-[14px] leading-[20px] mb-3 relative z-10">
                           {format.description}
                         </p>
 
-                        <div className="font-manrope font-semibold text-[#EE4223] text-[13px] sm:text-[14px] relative z-10">
+                        <div className={`${format.textColor} font-manrope font-semibold text-[13px] sm:text-[14px] relative z-10`}>
                           {format.duration}
                         </div>
                       </motion.div>

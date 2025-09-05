@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import ReactCountryFlag from "react-country-flag";
 
 export default function LanguagesSlider({ languages = [], isInView }) {
   if (!Array.isArray(languages) || languages.length === 0) {
@@ -38,7 +39,8 @@ export default function LanguagesSlider({ languages = [], isInView }) {
               transition={{ delay: 0.3 + (idx % languages.length) * 0.05 }}
               className="flex items-center space-x-3 px-6 py-3 bg-muted/50 rounded-xl border border-primary/10 flex-shrink-0 shadow-sm"
             >
-              <span className="text-2xl">{lang.flag}</span> {/* bigger flag */}
+              {/* <span className="text-2xl">{lang.flag}</span> bigger flag */}
+              <ReactCountryFlag svg countryCode={lang.flag} key={lang.flag}  />
               <span className="text-base font-semibold text-foreground">
                 {lang.name}
               </span>
