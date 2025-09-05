@@ -169,12 +169,13 @@ const Header = ({ setCurrentPage }) => {
         // "Margin Trading",
         // "Derivatives",
         // "Futures",
-        "Home",
+        // "Home",
+        "Account Options",
         "Deposits and Withdrawals",
         "Market Access",
         "Tools and Platform",
         "Trading Conditions",
-        "Account Options",
+        
       ],
     },
     {
@@ -271,12 +272,18 @@ const Header = ({ setCurrentPage }) => {
           {/* Main header */}
           <div className="flex items-center justify-between py-3 sm:py-2 relative">
             <div className="flex items-center gap-4 sm:gap-10 md:gap-[60px]">
-              <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-JvtCp3eGbwrNUCKAHpTas3wGuWwtQU.png"
-                alt="LTI Logo"
-                className="h-[40px] sm:h-[50px] md:h-[60px] lg:h-[70px] w-auto object-contain"
-                crossOrigin="anonymous"
-              />
+              
+            <button
+                onClick={() => setCurrentPage("home")}
+                className="focus:outline-none"
+              >
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-JvtCp3eGbwrNUCKAHpTas3wGuWwtQU.png"
+                  alt="LTI Logo"
+                  className="h-[40px] sm:h-[50px] md:h-[60px] lg:h-[70px] w-auto object-contain"
+                  crossOrigin="anonymous"
+                />
+              </button>
               {/* Desktop nav */}
               {/* <nav className="hidden md:flex gap-[30px] lg:gap-[60px] text-gray-700 text-[20px] font-semibold">
                 {navLinks.map(({ label, subMenu }) => (
