@@ -4,7 +4,7 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/lti',   
+  base: '/lti/',   
     build: {
     outDir: 'dist'
   },
