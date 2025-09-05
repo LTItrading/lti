@@ -315,13 +315,14 @@ const NewsEducation = () => {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="mb-16"
           >
-            <Card className="shadow-elegant hover:shadow-glow transition-smooth bg-card/80 backdrop-blur-sm border-primary/10 md:rounded-tr-[80px] md:rounded-bl-[80px]">
+<Card className="border-none">
               <CardHeader className="text-center pb-8">
                 <div className="w-16 h-16 mx-auto mb-4 gradient-primary rounded-full flex items-center justify-center">
                   <BookOpen className="h-8 w-8 text-primary-foreground" />
                 </div>
                 <CardTitle className="text-3xl font-bold mb-2">
-                  FX & MetaTrader Education Hub
+                  FX <span className="text-[#EE4223]">&</span> MetaTrader
+                  Education Hub
                 </CardTitle>
                 <CardDescription className="text-lg">
                   <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20">
