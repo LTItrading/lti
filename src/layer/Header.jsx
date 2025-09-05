@@ -177,7 +177,7 @@ const Header = ({ setCurrentPage }) => {
         "Account Options"
       ],
     },
-    { label: "Insights", subMenu: ["Market News", "Reports", "Research", "News and Education","Rewards and Features"] },
+    { label: "Insights", subMenu: [ "News and Education","Rewards and Features"] },
     { label: "Corporate", subMenu: ["About Us", "Careers", "Contact"] },
     // { label: "News Education", page: "newsEducation" },
     // { label: "Rewards", page: "rewardsAndFeatures" },
