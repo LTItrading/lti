@@ -25,6 +25,13 @@ import { Button } from "@/components/ui/button";
 import { Container } from "@/components/layout/Container";
 import { useEffect, useState } from "react";
 import RegisterFeatures from "./registerFeatures";
+import ReactCountryFlag from "react-country-flag";
+import XAG from "@/assets/images/metals/silver.svg"
+import XAU from "@/assets/images/metals/gold.svg"
+import XPD from "@/assets/images/metals/palladium.svg"
+import XPT from "@/assets/images/metals/platinum.svg"
+import UKOIL from "@/assets/images/metals/brent.svg"
+import USOIL from "@/assets/images/metals/oil.svg"
 
 function ForexTab({ data, columns }) {
   return (
@@ -55,6 +62,14 @@ function ForexTab({ data, columns }) {
 export default function MarketAccess() {
   const [forexTabVal, setForexTabVal] = useState("standard");
   const [shareTabVal, setShareTabVal] = useState("usshare");
+  const metals= {
+    XAG : XAG,
+    XAU,
+    XPD,
+    XPT,
+    UKOIL,
+    USOIL
+  }
   const tabs = [
     {
       id: "forex",
@@ -62,74 +77,84 @@ export default function MarketAccess() {
       isMulti: true,
       standard: [
         {
-          symbol: "USDJPY",
+          symbol: "USD/JPY",
           name: "U.S. Dollar vs Japanese Yen",
           spread: 2.5,
           lowSpread: 2.0,
           leverage: 1500,
+          flags: ["US", "JP"],
         },
         {
-          symbol: "EURUSD",
+          symbol: "EUR/USD",
           name: "Euro vs U.S. Dollar",
           spread: 2.0,
           lowSpread: 1.6,
           leverage: 1500,
+          flags: ["EU", "US"],
         },
         {
-          symbol: "AUDUSD",
+          symbol: "AUD/USD",
           name: "Australian Dollar vs U.S. Dollar",
           spread: 2.4,
           lowSpread: 2.3,
           leverage: 1500,
+          flags: ["AU", "US"],
         },
         {
-          symbol: "GBPJPY",
+          symbol: "GBP/JPY",
           name: "Pound sterling vs Japanese Yen",
           spread: 3.8,
           lowSpread: 3.0,
           leverage: 1500,
+          flags: ["GB", "JP"],
         },
         {
-          symbol: "GBPUSD",
+          symbol: "GBP/USD",
           name: "Pound sterling vs U.S. Dollar",
           spread: 2.4,
           lowSpread: 1.8,
           leverage: 1500,
+          flags: ["GB", "US"],
         },
         {
-          symbol: "EURJPY",
+          symbol: "EUR/JPY",
           name: "Euro vs Japanese Yen",
           spread: 3.2,
           lowSpread: 2.1,
           leverage: 1500,
+          flags: ["EU", "JP"],
         },
         {
-          symbol: "EURGBP",
+          symbol: "EUR/GBP",
           name: "Euro vs Pound sterling",
           spread: 2.4,
           lowSpread: 1.8,
           leverage: 1500,
+          flags: ["EU", "GB"],
         },
         {
-          symbol: "USDCHF",
+          symbol: "USD/CHF",
           name: "U.S. Dollar vs Swiss Franc",
           spread: 2.6,
           lowSpread: 1.9,
           leverage: 400,
+          flags: ["US", "CH"],
         },
         {
-          symbol: "NZDUSD",
+          symbol: "NZD/USD",
           name: "New Zealand Dollar vs U.S. Dollar",
           spread: 2.9,
           lowSpread: 2.8,
           leverage: 1500,
+          flags: ["NZ", "US"],
         },
         {
-          symbol: "EURCHF",
+          symbol: "EUR/CHF",
           name: "Euro vs Swiss Franc",
           spread: 3.3,
           lowSpread: 2.4,
           leverage: 400,
+          flags: ["EU", "CH"],
         },
       ],
       columns: [
@@ -137,11 +162,29 @@ export default function MarketAccess() {
           key: "symbol",
           header: "Symbol",
           render: (_, row) => (
-            <div>
-              <div className="font-bold text-lg text-gray-900">
-                {row.symbol}
+            <div className="flex flex-row">
+              <div className="flex -space-x-2 mr-2">
+                {row?.flags?.map((code) => (
+                  <ReactCountryFlag
+                    key={code}
+                    countryCode={code}
+                    svg
+                    style={{
+                      width: "1.5em",
+                      height: "1.5em",
+                      borderRadius: "50%",
+                      objectFit: "cover",
+                    }}
+                    title={code}
+                  />
+                ))}
               </div>
-              <div className="text-xs text-gray-600">{row.name}</div>
+              <div>
+                <div className="font-bold text-lg text-gray-900">
+                  {row.symbol}
+                </div>
+                <div className="text-xs text-gray-600">{row.name}</div>
+              </div>
             </div>
           ),
         },
@@ -165,74 +208,84 @@ export default function MarketAccess() {
       ],
       ultralowstandard: [
         {
-          symbol: "USDJPY#",
+          symbol: "USD/JPY#",
           name: "U.S. Dollar vs Japanese Yen",
           spread: 1.3,
           lowSpread: 0.8,
           leverage: 1500,
+          flags: ["US", "JP"],
         },
         {
-          symbol: "EURUSD#",
+          symbol: "EUR/USD#",
           name: "Euro vs U.S. Dollar",
           spread: 1.1,
           lowSpread: 0.8,
           leverage: 1500,
+          flags: ["EU", "US"],
         },
         {
-          symbol: "AUDUSD#",
+          symbol: "AUD/USD#",
           name: "Australian Dollar vs U.S. Dollar",
           spread: 1.4,
           lowSpread: 1.3,
           leverage: 1500,
+          flags: ["AU", "US"],
         },
         {
-          symbol: "GBPJPY#",
+          symbol: "GBP/JPY#",
           name: "Pound sterling vs Japanese Yen",
           spread: 2.9,
           lowSpread: 1.5,
           leverage: 1500,
+          flags: ["GB", "JP"],
         },
         {
-          symbol: "GBPUSD#",
+          symbol: "GBP/USD#",
           name: "Pound sterling vs U.S. Dollar",
           spread: 1.3,
           lowSpread: 0.8,
           leverage: 1500,
+          flags: ["GB", "US"],
         },
         {
-          symbol: "EURJPY#",
+          symbol: "EUR/JPY#",
           name: "Euro vs Japanese Yen",
           spread: 2.3,
           lowSpread: 1.7,
           leverage: 1500,
+          flags: ["EU", "JP"],
         },
         {
-          symbol: "EURGBP#",
+          symbol: "EUR/GBP#",
           name: "Euro vs Pound sterling",
           spread: 2.0,
           lowSpread: 1.7,
           leverage: 1500,
+          flags: ["EU", "GB"],
         },
         {
-          symbol: "USDCHF#",
+          symbol: "USD/CHF#",
           name: "U.S. Dollar vs Swiss Franc",
           spread: 1.5,
           lowSpread: 1.1,
           leverage: 400,
+          flags: ["US", "CH"],
         },
         {
-          symbol: "NZDUSD#",
+          symbol: "NZD/USD#",
           name: "New Zealand Dollar vs U.S. Dollar",
           spread: 2.1,
           lowSpread: 2.0,
           leverage: 1500,
+          flags: ["NZ", "US"],
         },
         {
-          symbol: "EURCHF#",
+          symbol: "EUR/CHF#",
           name: "Euro vs Swiss Franc",
           spread: 1.8,
           lowSpread: 1.3,
           leverage: 400,
+          flags: ["EU", "CH"],
         },
       ],
     },
@@ -246,6 +299,7 @@ export default function MarketAccess() {
           spread: 3.5,
           lowSpread: 2.9,
           leverage: 1500,
+          flags: ["XAG", "EU"], // Silver + Euro
         },
         {
           symbol: "XAG/USD",
@@ -253,6 +307,7 @@ export default function MarketAccess() {
           spread: 2.8,
           lowSpread: 2.1,
           leverage: 1500,
+          flags: ["XAG", "US"], // Silver + United States
         },
         {
           symbol: "XAU/EUR",
@@ -260,6 +315,7 @@ export default function MarketAccess() {
           spread: 4.2,
           lowSpread: 3.6,
           leverage: 1500,
+          flags: ["XAU", "EU"], // Gold + Euro
         },
         {
           symbol: "XAU/USD",
@@ -267,6 +323,7 @@ export default function MarketAccess() {
           spread: 3.7,
           lowSpread: 3.0,
           leverage: 1500,
+          flags: ["XAU", "US"], // Gold + United States
         },
         {
           symbol: "XPD/USD",
@@ -274,6 +331,7 @@ export default function MarketAccess() {
           spread: 5.5,
           lowSpread: 4.8,
           leverage: 1500,
+          flags: ["XPD", "US"], // Palladium + United States
         },
         {
           symbol: "XPT/USD",
@@ -281,6 +339,7 @@ export default function MarketAccess() {
           spread: 4.9,
           lowSpread: 4.1,
           leverage: 1500,
+          flags: ["XPT", "US"], // Platinum + United States
         },
       ],
       columns: [
@@ -288,11 +347,30 @@ export default function MarketAccess() {
           key: "symbol",
           header: "Symbol",
           render: (_, row) => (
-            <div>
+            <div className="flex flex-row">
+              <div className="flex -space-x-2 mr-2">
+                {row?.flags?.map((code,i) => (
+                  i == 0 ? <img src={metals[code]} alt={code} width={24} height={24} /> :
+                  <ReactCountryFlag
+                    key={code}
+                    countryCode={code}
+                    svg
+                    style={{
+                      width: "1.5em",
+                      height: "1.5em",
+                      borderRadius: "50%",
+                      objectFit: "cover",
+                    }}
+                    title={code}
+                  />
+                ))}
+              </div>
+              <div>
               <div className="font-bold text-lg text-gray-900">
                 {row.symbol}
               </div>
               <div className="text-xs text-gray-600">{row.name}</div>
+              </div>
             </div>
           ),
         },
@@ -567,6 +645,7 @@ export default function MarketAccess() {
           spread: 1.8,
           lowSpread: 1.3,
           leverage: 500,
+          flags:['UKOIL']
         },
         {
           symbol: "USOIL.c",
@@ -574,6 +653,7 @@ export default function MarketAccess() {
           spread: 1.9,
           lowSpread: 1.4,
           leverage: 500,
+          flags:['USOIL']
         },
       ],
       columns: [
@@ -581,11 +661,16 @@ export default function MarketAccess() {
           key: "symbol",
           header: "Symbol",
           render: (_, row) => (
-            <div>
+            <div className="flex flex-row items-center">
+              <div className="mr-2">
+                <img src={metals[row?.flags[0]]} alt={row?.flags[0]} width={24} height={24} />
+              </div>
+              <div>
               <div className="font-bold text-lg text-gray-900">
                 {row.symbol}
               </div>
               <div className="text-xs text-gray-600">{row.name}</div>
+              </div>
             </div>
           ),
         },
@@ -613,98 +698,98 @@ export default function MarketAccess() {
       label: "Crypto",
       data: [
         {
-          symbol: "BCHUSD",
+          symbol: "BCH/USD",
           name: "Bitcoin Cash vs US Dollar",
           spread: 3.8,
           lowSpread: 2.9,
           leverage: 50,
         },
         {
-          symbol: "BTCEUR",
+          symbol: "BTC/EUR",
           name: "Bitcoin vs Euro",
           spread: 4.5,
           lowSpread: 3.7,
           leverage: 50,
         },
         {
-          symbol: "BTCJPY",
+          symbol: "BTC/JPY",
           name: "Bitcoin vs Japanese Yen",
           spread: 5.2,
           lowSpread: 4.1,
           leverage: 50,
         },
         {
-          symbol: "BTCUSD",
+          symbol: "BTC/USD",
           name: "Bitcoin vs US Dollar",
           spread: 3.9,
           lowSpread: 3.0,
           leverage: 50,
         },
         {
-          symbol: "SOLUSD",
+          symbol: "SOL/USD",
           name: "Solana vs US Dollar",
           spread: 2.6,
           lowSpread: 2.0,
           leverage: 50,
         },
         {
-          symbol: "ADAUSD",
+          symbol: "ADA/USD",
           name: "Cardano vs US Dollar",
           spread: 2.2,
           lowSpread: 1.7,
           leverage: 50,
         },
         {
-          symbol: "CHZUSD",
+          symbol: "CHZ/USD",
           name: "Chiliz vs US Dollar",
           spread: 2.4,
           lowSpread: 1.8,
           leverage: 50,
         },
         {
-          symbol: "DOGUSD",
+          symbol: "DOG/USD",
           name: "Dogecoin vs US Dollar",
           spread: 2.8,
           lowSpread: 2.1,
           leverage: 50,
         },
         {
-          symbol: "ONEUSD",
+          symbol: "ONE/USD",
           name: "Harmony vs US Dollar",
           spread: 2.5,
           lowSpread: 1.9,
           leverage: 50,
         },
         {
-          symbol: "TRXUSD",
+          symbol: "TRX/USD",
           name: "TRON vs US Dollar",
           spread: 2.3,
           lowSpread: 1.7,
           leverage: 50,
         },
         {
-          symbol: "VETUSD",
+          symbol: "VET/USD",
           name: "VeChain vs US Dollar",
           spread: 2.7,
           lowSpread: 2.0,
           leverage: 50,
         },
         {
-          symbol: "XEMUSD",
+          symbol: "XEM/USD",
           name: "NEM vs US Dollar",
           spread: 2.9,
           lowSpread: 2.2,
           leverage: 50,
         },
         {
-          symbol: "XLMUSD",
+          symbol: "XLM/USD",
           name: "Stellar Lumens vs US Dollar",
           spread: 2.6,
           lowSpread: 2.0,
           leverage: 50,
         },
         {
-          symbol: "ETHUSD",
+          symbol: "ETH/USD",
           name: "Ethereum vs US Dollar",
           spread: 3.2,
           lowSpread: 2.5,
@@ -926,12 +1011,12 @@ export default function MarketAccess() {
               variant={currentState?.id === t?.id ? "default" : "outline"}
               size="lg"
               onClick={() => {
-                console.log(t)
-                if(t?.id =='forex'){
-                  setForexTabVal('standard')
+                console.log(t);
+                if (t?.id == "forex") {
+                  setForexTabVal("standard");
                 }
-                if(t?.id =='shares'){
-                  setShareTabVal('usshare')
+                if (t?.id == "shares") {
+                  setShareTabVal("usshare");
                 }
                 setCurrentState(t);
               }}
