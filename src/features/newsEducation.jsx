@@ -182,7 +182,7 @@ const NewsEducation = () => {
                       <div className="text-center p-4 text-white rounded-lg bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] p-6 rounded-[20px] shadow-[0px_4px_4px_0px_#FF66334D] transition-all duration-300 border border-transparent hover:border-[#EE422333] hover:border-[2px] hover:bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] hover:backdrop-blur-[20px]">
                         <TrendingUp className="h-6 w-6 text-primary mx-auto mb-2" />
                         <div className="text-sm font-medium">
-                          Market Analysis
+                          Market News Feed
                         </div>
                         <div className="text-xs text-gray-400">
                          Delivered inside MT5 via leading financial news providers, covering global assets in real time.
