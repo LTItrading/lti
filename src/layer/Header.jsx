@@ -508,7 +508,6 @@ const Header = () => {
 
   const miniLinks = ["Partnerships", "Institutional", "Funding"];
   
-  
   const navLinks = [
     {
       label: "Trading",
@@ -587,7 +586,7 @@ const Header = () => {
           }}
         />
 
-        <div className="relative z-10 max-w-[1440px] mx-5 sm:mx-6 md:mx-10 lg:mx-[80px] xl:mx-[100px]">
+        <div className="relative z-10 max-w-auto mx-5 sm:mx-6 md:mx-10 lg:mx-[80px] xl:mx-[100px]">
           {/* Mini links */}
           <div className="flex justify-end py-2">
             <div className="flex gap-3 sm:gap-4 md:gap-5 lg:gap-[20px] text-sm sm:text-base md:text-[14px] lg:text-[16px] font-medium text-[#DE2605]">

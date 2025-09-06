@@ -19,7 +19,7 @@ export default function TradingFeatures() {
       </div>
 
       {/* Row 1 */}
-      <div className="flex flex-col lg:flex-row gap-5 text-white mt-[40px]">
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-5 text-white mt-[40px]">
         {/* First Card */}
         <div className="group flex flex-wrap sm:flex-nowrap justify-between items-center bg-gradient-to-r from-[#E62E1C] via-[#F04C1A] to-[#FF6B2C] rounded-3xl w-full lg:w-[725px] sm:h-[190.14px] pl-[20px] pr-[16px] relative overflow-hidden max-sm:gap-2 max-sm:pt-[20px] max-sm:pl-[20px] max-sm:pr-0 ">
           {/* Background Ellipse */}
@@ -79,7 +79,7 @@ export default function TradingFeatures() {
       </div>
 
       {/* Row 2 */}
-      <div className="flex flex-col lg:flex-row gap-5 text-white mt-[24.72px]">
+      <div className="flex flex-col justify-center items-center lg:flex-row gap-5 text-white mt-[24.72px]">
         {/* Third Card */}
         <div className="group flex flex-wrap sm:flex-nowrap justify-between items-center relative bg-[#CECCCD] rounded-3xl w-full lg:w-[513px] sm:h-[176.14px] lg:h-[190.14px] text-[#323233] pl-[20px] pr-[1px] overflow-hidden max-sm:gap-2 max-sm:pt-[20px]  max-sm:pl-[20px] max-sm:pr-0  gap-[0px]">
           {/* Ellipse Background */}
