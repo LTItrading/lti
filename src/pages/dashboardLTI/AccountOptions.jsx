@@ -179,90 +179,92 @@ export default function AccountOptions() {
         </Button>
       </motion.div>
 
-      {/* Account Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center mx-5 md:mx-[80px]">
-        {accountTypes.map((account, index) => (
-          <motion.div
-            key={account.name}
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            whileHover={{
-              y: -5,
-              boxShadow: "0 0 20px rgba(238, 66, 35, 0.7)",
-              transition: { duration: 0.3 },
-            }}
-            className="bg-base text-ink rounded-xl shadow-lg p-6 animate-fade-in"
-          >
-            <div class="w-12 h-12 gradient-primary rounded-lg flex items-center justify-center mx-auto mb-4 gradient-primary rounded-full flex">
-              <account.icon className="h-6 w-6 transition-colors duration-300 text-white group-hover:text-white" />
-            </div>
-            <h2 className="text-xl font-semibold mb-2 font-montserrat">
-              {account.name}
-            </h2>
-            <p className="mb-4 font-manrope">{account.description}</p>
-            <Accordion type="single" collapsible>
-              <AccordionItem value="details">
-                <AccordionTrigger className="text-brand hover:underline font-semibold">
-                  View Details
-                </AccordionTrigger>
-                <AccordionContent className="mt-2 space-y-2">
-                  {account.details.map((item, i) => (
-                    <div key={i} className="flex items-center gap-2">
-                      <div>
-                        <CheckCircle className="text-brand w-5 h-5" />
-                      </div>
-                      <div className="text-left">
-                        <span>{item}</span>
-                      </div>
-                    </div>
-                  ))}
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-            <button className="mt-6 bg-brand text-brand-foreground px-4 py-2 rounded-lg hover:opacity-90 transition">
-              {" "}
-              Open Account
-            </button>
-          </motion.div>
-        ))}
-      </div>
-
-      {/* Trust Banner */}
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        variants={{
-          hidden: { opacity: 0, y: 30 },
-          visible: {
-            opacity: 1,
-            y: 0,
-            transition: { staggerChildren: 0.2 },
-          },
-        }}
-        className="py-20 mx-5 md:mx-[80px]"
-      >
-        <h2 className="text-3xl font-bold text-center mb-10 text-[#EE4223]">
-          What sets LTI apart
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {whatsSetsLTIApart.map((item, index) => (
+      <div className="flex flex-col justify-center items-center">
+        {/* Account Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center mx-5 md:mx-[80px]">
+          {accountTypes.map((account, index) => (
             <motion.div
-              key={item.name}
-              variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
-              className="bg-base text-ink p-6 rounded-xl shadow-md animate-slide-up"
+              key={account.name}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{
+                y: -5,
+                boxShadow: "0 0 20px rgba(238, 66, 35, 0.7)",
+                transition: { duration: 0.3 },
+              }}
+              className="bg-base text-ink rounded-xl shadow-lg p-6 animate-fade-in"
             >
-              <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
-              <div className="flex flex-wrap md:flex-nowrap">
-                <p className="lg:w-[440px]">{item.description}</p>
-                <div className="lg:w-[240px]">
-                  <img src={item.icon} alt="Laptop" />
-                </div>
+              <div class="w-12 h-12 gradient-primary rounded-lg flex items-center justify-center mx-auto mb-4 gradient-primary rounded-full flex">
+                <account.icon className="h-6 w-6 transition-colors duration-300 text-white group-hover:text-white" />
               </div>
+              <h2 className="text-xl font-semibold mb-2 font-montserrat">
+                {account.name}
+              </h2>
+              <p className="mb-4 font-manrope">{account.description}</p>
+              <Accordion type="single" collapsible>
+                <AccordionItem value="details">
+                  <AccordionTrigger className="text-brand hover:underline font-semibold">
+                    View Details
+                  </AccordionTrigger>
+                  <AccordionContent className="mt-2 space-y-2">
+                    {account.details.map((item, i) => (
+                      <div key={i} className="flex items-center gap-2">
+                        <div>
+                          <CheckCircle className="text-brand w-5 h-5" />
+                        </div>
+                        <div className="text-left">
+                          <span>{item}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+              <button className="mt-6 bg-brand text-brand-foreground px-4 py-2 rounded-lg hover:opacity-90 transition">
+                {" "}
+                Open Account
+              </button>
             </motion.div>
           ))}
         </div>
-      </motion.div>
+
+        {/* Trust Banner */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={{
+            hidden: { opacity: 0, y: 30 },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: { staggerChildren: 0.2 },
+            },
+          }}
+          className="py-20 mx-5 md:mx-[80px]"
+        >
+          <h2 className="text-3xl font-bold text-center mb-10 text-[#EE4223]">
+            What sets LTI apart
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {whatsSetsLTIApart.map((item, index) => (
+              <motion.div
+                key={item.name}
+                variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+                className="bg-base text-ink p-6 rounded-xl shadow-md animate-slide-up"
+              >
+                <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
+                <div className="flex flex-wrap md:flex-nowrap">
+                  <p className="lg:w-[440px]">{item.description}</p>
+                  <div className="lg:w-[240px]">
+                    <img src={item.icon} alt="Laptop" />
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
     </div>
   );
 }
