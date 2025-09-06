@@ -119,6 +119,13 @@ const RewardsFeatures = () => {
               feature is designed to support your trading. Tools that Empower.
               Rewards That Motivate
             </p>
+                <Button
+                      className="mt-6 bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold"
+                      variant="cta"
+                      size="lg"
+                    >
+                      Open an Account
+                    </Button>
           </motion.div>
 
           {/* Trading Contests Section */}
@@ -264,9 +271,13 @@ const RewardsFeatures = () => {
               transition={{ delay: 1.2 }}
               className="text-center mt-12"
             >
-              <Button variant="cta" size="xl">
-                Launch Client Portal
-              </Button>
+                  <Button
+                      className="bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold"
+                      variant="cta"
+                      size="lg"
+                    >
+                      Launch Client Portal
+                    </Button>
             </motion.div>
           </motion.div>
 

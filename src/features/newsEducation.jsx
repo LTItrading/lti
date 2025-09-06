@@ -35,15 +35,15 @@ const NewsEducation = () => {
       description:
         "Comprehensive video tutorials covering all aspects of trading",
       duration: "50+ hours",
-      bgcolor:"bg-gradient-to-r from-[rgba(234,234,234,1)] to-[rgba(216,216,216,1)] text-gray-900",
-      textColor:"text-gray-900"
+      bgcolor: "bg-gradient-to-r from-[rgba(234,234,234,1)] to-[rgba(216,216,216,1)] text-gray-900",
+      textColor: "text-gray-900"
     },
     {
       icon: Headphones,
       title: "Audio Sessions",
       description: "Listen to expert insights and market analysis on the go",
       duration: "30+ episodes",
-      bgcolor:"bg-gradient-to-r from-[rgba(74,74,74,1)] to-[rgba(90,90,90,1)] text-white",
+      bgcolor: "bg-gradient-to-r from-[rgba(74,74,74,1)] to-[rgba(90,90,90,1)] text-white",
       textColor: "text-white"
     },
     {
@@ -60,20 +60,20 @@ const NewsEducation = () => {
       description: "Interactive sessions with professional traders",
       duration: "Weekly",
       bgcolor: "bg-[rgba(50,50,51,1)] text-white",
-      textColor:"text-white"
+      textColor: "text-white"
     },
   ];
 
   const languages = [
-  { code: "EN", name: "English", flag: "US" },
-  { code: "ES", name: "Spanish", flag: "ES" },
-  { code: "FR", name: "French", flag: "FR" },
-  { code: "DE", name: "German", flag: "DE" },
-  { code: "IT", name: "Italian", flag: "IT" },
-  { code: "JP", name: "Japanese", flag: "JP" },
-  { code: "CN", name: "Chinese", flag: "CN" },
-  { code: "AR", name: "Arabic", flag: "SA" },
-];
+    { code: "EN", name: "English", flag: "US" },
+    { code: "ES", name: "Spanish", flag: "ES" },
+    { code: "FR", name: "French", flag: "FR" },
+    { code: "DE", name: "German", flag: "DE" },
+    { code: "IT", name: "Italian", flag: "IT" },
+    { code: "JP", name: "Japanese", flag: "JP" },
+    { code: "CN", name: "Chinese", flag: "CN" },
+    { code: "AR", name: "Arabic", flag: "SA" },
+  ];
 
 
   const marketData = [
@@ -128,7 +128,20 @@ const NewsEducation = () => {
               knowledge with expert video, audio, and eBook content in multiple
               languages.
             </p>
+
+            <Button
+              className="mt-6 bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold"
+              variant="cta"
+              size="lg"
+            >
+              Open an Account
+            </Button>
+
           </motion.div>
+
+
+
+
 
           {/* Live Market News Section */}
           <motion.div
@@ -251,13 +264,12 @@ const NewsEducation = () => {
                             className="flex items-center space-x-3 p-3 bg-card/50 rounded-lg"
                           >
                             <div
-                              className={`w-2 h-2 rounded-full animate-pulse ${
-                                item.color === "green"
+                              className={`w-2 h-2 rounded-full animate-pulse ${item.color === "green"
                                   ? "bg-green-500"
                                   : item.color === "red"
-                                  ? "bg-red-500"
-                                  : "bg-blue-500"
-                              }`}
+                                    ? "bg-red-500"
+                                    : "bg-blue-500"
+                                }`}
                             />
                             <div className="flex-1 flex items-center space-x-2">
                               {/* Flags */}
@@ -288,13 +300,12 @@ const NewsEducation = () => {
                               </div>
                             </div>
                             <div
-                              className={`text-xs ${
-                                item.color === "green"
+                              className={`text-xs ${item.color === "green"
                                   ? "text-green-500"
                                   : item.color === "red"
-                                  ? "text-red-500"
-                                  : "text-blue-500"
-                              }`}
+                                    ? "text-red-500"
+                                    : "text-blue-500"
+                                }`}
                             >
                               {item.change}
                             </div>
@@ -375,7 +386,7 @@ const NewsEducation = () => {
                           boxShadow: "0 0 20px rgba(238, 66, 35, 0.7)",
                           transition: { duration: 0.3 },
                         }}
-                        className={`relative text-center p-8 rounded-xl  transition-all duration-300 group ${format.bgcolor}` }                     >
+                        className={`relative text-center p-8 rounded-xl  transition-all duration-300 group ${format.bgcolor}`}                     >
                         {/* Glow Effect Element */}
                         <span
                           className="absolute inset-0 rounded-xl pointer-events-none transition-opacity duration-300 opacity-0 group-hover:opacity-100"
@@ -426,11 +437,13 @@ const NewsEducation = () => {
                 <LanguagesSlider languages={languages} isInView={isInView} />
 
                 <div className="text-center">
-                  <Button className="inline-block mt-4 py-[8px] px-[40px] rounded-full bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold text-[18px]">
-                    <span className="transform transition-transform duration-300 hover:scale-105">
+                  <Button
+                      className="bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold"
+                      variant="cta"
+                      size="lg"
+                    >
                       Open an Account
-                    </span>
-                  </Button>
+                    </Button>
                 </div>
               </CardContent>
             </Card>
