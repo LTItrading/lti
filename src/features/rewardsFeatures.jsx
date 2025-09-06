@@ -116,8 +116,7 @@ const RewardsFeatures = () => {
               LTI gives you more than a trading platform — we offer smart tools
               and performance-based rewards to elevate your trading experience.
               From real-time utilities to cashback and competitions, every
-              feature is designed to support your trading. Tools that Empower.
-              Rewards That Motivate
+              feature is designed to support your trading. 
             </p>
                 <Button
                       className="mt-6 bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold"
@@ -293,11 +292,13 @@ const RewardsFeatures = () => {
               More Features Coming Soon
             </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              We're constantly innovating and adding new features to enhance
-              your trading experience. Stay tuned for exciting updates and
-              powerful new tools.
+              We’re continuously expanding our suite of tools and trader-focused programs. Expect more utility integrations, contests, and reward modules launching in the coming months.
             </p>
           </motion.div>
+          <p className=" mt-5 text-xs text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            Tools, calculators, and indicators are provided for informational purposes only and should not be considered as trading advice. Cashback programs and contests are subject to eligibility criteria and full terms, which will be made available before launch.
+
+          </p>
         </motion.div>
       </div>
     </section>

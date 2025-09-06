@@ -463,9 +463,12 @@ const NewsEducation = () => {
           >
             <div className="relative z-10">
               <Users className="h-12 w-12 text-primary-foreground mx-auto mb-6 opacity-80" />
-              <blockquote className="text-2xl md:text-3xl font-bold text-primary-foreground mb-6 leading-relaxed">
-                "Education is the foundation of successful trading. Knowledge
-                transforms risk into opportunity."
+               <h5 className={`font-manrope font-extrabold text-[18px] sm:text-[20px] mb-3 relative z-10 text-white`}>
+                         Stay informed. Stay Ahead.
+
+                        </h5>
+              <blockquote className="text-xl md:text-2xl font-bold text-primary-foreground mb-6 leading-relaxed">
+                "The trader that prepares, is the trader that survives. With LTI, you’re equipped with both the insight and the education to make confident decisions."
               </blockquote>
               <cite className="text-primary-foreground/90 text-lg">
                 — LTI Trading Academy
@@ -485,10 +488,10 @@ const NewsEducation = () => {
             className="text-center mt-8"
           >
             <p className="text-xs text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              Trading involves substantial risk of loss and is not suitable for
-              all investors. Past performance is not indicative of future
-              results. Please ensure you fully understand the risks involved and
-              seek independent advice if necessary.
+             The content provided through LTI’s platforms - including market news, economic calendars, videos, audio, and educational materials - is intended solely for general informational and educational purposes. It does not constitute investment advice, a recommendation, or a solicitation to buy or sell any financial instruments.
+All trading involves risk. Information published on this page, within the Client Portal, or via our trading platforms is not tailored to your personal financial circumstances or investment objectives. Users should exercise their own judgement and seek independent financial advice where necessary.
+Access to these materials is subject to our Terms & Conditions, and Risk Disclosure. Market commentary and third-party content made available through MT5 or the LTI Portal are provided “as is” and are not guaranteed for accuracy, completeness, or timeliness. Where applicable, educational resources may be considered marketing communication under relevant laws and are not intended to constitute regulated research.
+
             </p>
           </motion.div>
         </motion.div>
