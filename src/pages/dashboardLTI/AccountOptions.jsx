@@ -1,83 +1,228 @@
-import { motion } from 'framer-motion'
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@radix-ui/react-accordion'
-import { CheckCircle } from 'lucide-react'
+import { motion } from "framer-motion";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@radix-ui/react-accordion";
+import { CheckCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import WaveForFooter from "../../assets/images/4x-Images/WaveForFooter.png";
+import {
+  Newspaper,
+  Calendar,
+  Play,
+  Headphones,
+  BookOpen,
+  Monitor,
+  Globe,
+  TrendingUp,
+  Clock,
+  Users,
+} from "lucide-react";
+import labtop from "@/assets/images/tradingFeaturesPng/labtop.png";
+import security from "@/assets/images/tradingFeaturesPng/security.png";
+import ellipse from "@/assets/images/Ellipse.png";
+import card1 from "@/assets/images/CARD-1.png";
+import card3 from "@/assets/images/CARD-3.png";
 
 const accountTypes = [
   {
-    name: 'Cent',
-    description: 'Perfect for beginners with low-risk exposure.',
-    details: ['Spread: From 1.5 pips', 'Commission: None', 'Min Deposit: $5', 'Leverage: Up to 1:1000'],
+    icon: Play,
+    name: "Cent",
+    description: "Perfect for beginners with low-risk exposure.",
+    details: [
+      "Spread: From 1.5 pips",
+      "Commission: None",
+      "Min Deposit: $5",
+      "Leverage: Up to 1:1000",
+    ],
   },
   {
-    name: 'Core',
-    description: 'Raw spreads with commission, ideal for scalpers.',
-    details: ['Spread: From 0.0 pips', 'Commission: $6/lot', 'Min Deposit: $100', 'Leverage: Up to 1:500'],
+    icon: Headphones,
+    name: "Core",
+    description: "Raw spreads with commission, ideal for scalpers.",
+    details: [
+      "Spread: From 0.0 pips",
+      "Commission: $6/lot",
+      "Min Deposit: $100",
+      "Leverage: Up to 1:500",
+    ],
   },
   {
-    name: 'Pro ',
-    description: 'Perfect for beginners with low-risk exposure.',
-    details: ['Raw spreads for high-volume traders.', 'Min Deposit: $5,000', '- Spreads: Low', 'Commission: Low', '- Leverage: Up to 1:500','Swap-Free Available: Tick','Priority withdrawals + VPS (optional) (tick).','Negative Balance Protection: Tick'],
+    icon: BookOpen,
+    name: "Pro ",
+    description: "Perfect for beginners with low-risk exposure.",
+    details: [
+      "Raw spreads for high-volume traders.",
+      "Min Deposit: $5,000",
+      "- Spreads: Low",
+      "Commission: Low",
+      "- Leverage: Up to 1:500",
+      "Swap-Free Available: Tick",
+      "Priority withdrawals + VPS (optional) (tick).",
+      "Negative Balance Protection: Tick",
+    ],
   },
   {
-    name: 'ECN ',
-    description: 'Raw spreads with commission, ideal for scalpers.',
-    details: ['Giving traders raw spreads and deep liquidity.', 'Min Deposit: $50', 'Spreads: Raw', 'Commission: Medium','Commission: Medium','	Swap-Free Available: Untick.','Negative Balance Protection: Tick'],
+    icon: Monitor,
+    name: "ECN ",
+    description: "Raw spreads with commission, ideal for scalpers.",
+    details: [
+      "Giving traders raw spreads and deep liquidity.",
+      "Min Deposit: $50",
+      "Spreads: Raw",
+      "Commission: Medium",
+      "Commission: Medium",
+      "	Swap-Free Available: Untick.",
+      "Negative Balance Protection: Tick",
+    ],
   },
   {
-    name: 'Flexi',
-    description: 'Perfect for beginners with low-risk exposure.',
-    details: ['	Min Deposit: Negotiable.', 'Customised trading environment.', '	Spreads: Negotiable.', '	Commissions: Negotiable.','	Commissions: Negotiable.','	SwapFree Available: Tick.',' 	Negative Balance Protection.'],
+    icon: Globe,
+    name: "Flexi",
+    description: "Perfect for beginners with low-risk exposure.",
+    details: [
+      "	Min Deposit: Negotiable.",
+      "Customised trading environment.",
+      "	Spreads: Negotiable.",
+      "	Commissions: Negotiable.",
+      "	Commissions: Negotiable.",
+      "	SwapFree Available: Tick.",
+      " 	Negative Balance Protection.",
+    ],
   },
   {
-    name: 'ECO',
-    description: 'Raw spreads with commission, ideal for scalpers.',
-    details: ['	Trade with impact', '	A portion of spread revenue is donated to environmental or social causes.', 'Min Deposit: $100', '	Spreads: As low as 0.1 pips','	Spreads: As low as 0.1 pips','	Leverage: 1:100','	Swapfree: Tick','	Negative Balance Protection.'],
+    icon: TrendingUp,
+    name: "ECO",
+    description: "Raw spreads with commission, ideal for scalpers.",
+    details: [
+      "	Trade with impact",
+      "	A portion of spread revenue is donated to environmental or social causes.",
+      "Min Deposit: $100",
+      "	Spreads: As low as 0.1 pips",
+      "	Spreads: As low as 0.1 pips",
+      "	Leverage: 1:100",
+      "	Swapfree: Tick",
+      "	Negative Balance Protection.",
+    ],
   },
+];
 
-]
+const whatsSetsLTIApart = [
+  {
+    icon: labtop,
+    title: "Built for Serious Traders",
+    description:
+      "Our ecosystem is designed for high-performance trading. With accounts, platforms, and conditions engineered for execution speed, stability, and scale..",
+  },
+  {
+    icon: security,
+    title: "Licensed Across Leading Jurisdictions.",
+    description:
+      "Our group structure holds regulatory licenses in multiple regions, offering our clients transparency, protection, and the confidence of trading with a globally recognised broker..",
+  },
+  {
+    icon: card3,
+    title: "Clarity in Every Trade",
+    description:
+      "No hidden fees. No surprises. We offer clearly defined pricing structures with tight spreads, optional raw pricing, and institutional-level transparency..",
+  },
+  {
+    icon: card1,
+    title: "Global Reach. Local Insight.",
+    description:
+      "With clients in over 140+ countries, our infrastructure and support systems are built to scale, but our service remains personal, responsive, and localised..",
+  },
+  {
+    icon: labtop,
+    title: "Support That Speaks Trader.",
+    description:
+      "Our global support team offers expert assistance across languages, time zones, and trading needs, 24/5.",
+  },
+  {
+    icon: security,
+    title: "Your Funds, Fully Protected.",
+    description:
+      "Client funds are held in top-tier segregated accounts with robust internal safeguards, two-factor authentication, and end-to-end encryption protocols.",
+  },
+];
 
 export default function AccountOptions() {
   return (
-<div className="bg-base text-ink min-h-screen py-12 px-6">
+    <div className="bg-base text-ink min-h-screen">
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-center max-w-3xl mx-auto mb-12"
+        className="relative text-center py-20 "
       >
-        <h1 className="text-custom-32 font-bold font-montserrat">Open Your Trading Account</h1>
-        <p className="mt-4 text-lg font-manrope">
-          Choose from tailored account types designed to fit your trading strategy, experience level, and goals.
+        <img
+          src={WaveForFooter}
+          alt="Background"
+          className="absolute top-0 left-0 w-full h-full pointer-events-none z-0 animate-[wave_12s_linear_infinite]"
+        />
+        <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          Open Your Trading Account
+        </h1>
+        <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto mb-6">
+          Choose from tailored account types designed to fit your trading
+          strategy, experience level, and goals.
         </p>
+        <Button
+          className="bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold"
+          variant="cta"
+          size="lg"
+        >
+          Open an Account
+        </Button>
       </motion.div>
 
       {/* Account Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center mx-5 md:mx-[80px]">
         {accountTypes.map((account, index) => (
           <motion.div
             key={account.name}
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
+            whileHover={{
+              y: -5,
+              boxShadow: "0 0 20px rgba(238, 66, 35, 0.7)",
+              transition: { duration: 0.3 },
+            }}
             className="bg-base text-ink rounded-xl shadow-lg p-6 animate-fade-in"
           >
-            <h2 className="text-xl font-semibold mb-2 font-montserrat">{account.name}</h2>
+            <div class="w-12 h-12 gradient-primary rounded-lg flex items-center justify-center mx-auto mb-4 gradient-primary rounded-full flex">
+              <account.icon className="h-6 w-6 transition-colors duration-300 text-white group-hover:text-white" />
+            </div>
+            <h2 className="text-xl font-semibold mb-2 font-montserrat">
+              {account.name}
+            </h2>
             <p className="mb-4 font-manrope">{account.description}</p>
             <Accordion type="single" collapsible>
               <AccordionItem value="details">
-                <AccordionTrigger className="text-brand hover:underline font-semibold">View Details</AccordionTrigger>
+                <AccordionTrigger className="text-brand hover:underline font-semibold">
+                  View Details
+                </AccordionTrigger>
                 <AccordionContent className="mt-2 space-y-2">
                   {account.details.map((item, i) => (
                     <div key={i} className="flex items-center gap-2">
-                      <CheckCircle className="text-brand w-5 h-5" />
-                      <span>{item}</span>
+                      <div>
+                        <CheckCircle className="text-brand w-5 h-5" />
+                      </div>
+                      <div className="text-left">
+                        <span>{item}</span>
+                      </div>
                     </div>
                   ))}
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
-<button className="mt-6 bg-brand text-brand-foreground px-4 py-2 rounded-lg hover:opacity-90 transition">              Open Account
+            <button className="mt-6 bg-brand text-brand-foreground px-4 py-2 rounded-lg hover:opacity-90 transition">
+              {" "}
+              Open Account
             </button>
           </motion.div>
         ))}
@@ -95,70 +240,29 @@ export default function AccountOptions() {
             transition: { staggerChildren: 0.2 },
           },
         }}
-        className="mt-20"
+        className="py-20 mx-5 md:mx-[80px]"
       >
-        <h2 className="text-3xl font-bold text-center mb-10 font-montserrat">What sets LTI apart</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <motion.div
-            variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
-            className="bg-base text-ink p-6 rounded-xl shadow-md animate-slide-up"
-          >
-            <CheckCircle className="text-brand w-6 h-6 mb-2" />
-            <h3 className="text-xl font-semibold mb-2">Built for Serious Traders</h3>
-            <p>Our ecosystem is designed for high-performance trading. With accounts, platforms, and conditions engineered for execution speed, stability, and scale..</p>
-          </motion.div>
-
+        <h2 className="text-3xl font-bold text-center mb-10 text-[#EE4223]">
+          What sets LTI apart
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {whatsSetsLTIApart.map((item, index) => (
             <motion.div
-            variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
-            className="bg-base text-ink p-6 rounded-xl shadow-md animate-slide-up"
-          >
-            <CheckCircle className="text-brand w-6 h-6 mb-2" />
-            <h3 className="text-xl font-semibold mb-2"> Licensed Across Leading Jurisdictions.</h3>
-            <p>Our group structure holds regulatory licenses in multiple regions, offering our clients transparency, protection, and the confidence of trading with a globally recognised broker..</p>
-          </motion.div>
-
-
-            <motion.div
-            variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
-            className="bg-base text-ink p-6 rounded-xl shadow-md animate-slide-up"
-          >
-            <CheckCircle className="text-brand w-6 h-6 mb-2" />
-            <h3 className="text-xl font-semibold mb-2">Clarity in Every Trade</h3>
-            <p>No hidden fees. No surprises. We offer clearly defined pricing structures with tight spreads, optional raw pricing, and institutional-level transparency..</p>
-          </motion.div>
-
-
-            <motion.div
-            variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
-            className="bg-base text-ink p-6 rounded-xl shadow-md animate-slide-up"
-          >
-            <CheckCircle className="text-brand w-6 h-6 mb-2" />
-            <h3 className="text-xl font-semibold mb-2"> Global Reach. Local Insight.</h3>
-            <p>With clients in over 140+ countries, our infrastructure and support systems are built to scale, but our service remains personal, responsive, and localised..</p>
-          </motion.div>
-
-
-            <motion.div
-            variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
-            className="bg-base text-ink p-6 rounded-xl shadow-md animate-slide-up"
-          >
-            <CheckCircle className="text-brand w-6 h-6 mb-2" />
-            <h3 className="text-xl font-semibold mb-2"> Support That Speaks Trader.</h3>
-            <p>Our global support team offers expert assistance across languages, time zones, and trading needs, 24/5.</p>
-          </motion.div>
-
-
-
-            <motion.div
-            variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
-            className="bg-base text-ink p-6 rounded-xl shadow-md animate-slide-up"
-          >
-            <CheckCircle className="text-brand w-6 h-6 mb-2" />
-            <h3 className="text-xl font-semibold mb-2"> Your Funds, Fully Protected.</h3>
-            <p>Client funds are held in top-tier segregated accounts with robust internal safeguards, two-factor authentication, and end-to-end encryption protocols.</p>
-          </motion.div>
+              key={item.name}
+              variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+              className="bg-base text-ink p-6 rounded-xl shadow-md animate-slide-up"
+            >
+              <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
+              <div className="flex flex-wrap md:flex-nowrap">
+                <p className="lg:w-[440px]">{item.description}</p>
+                <div className="lg:w-[240px]">
+                  <img src={item.icon} alt="Laptop" />
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </motion.div>
     </div>
-  )
+  );
 }
