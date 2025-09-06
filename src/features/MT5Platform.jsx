@@ -1,39 +1,36 @@
 import { motion } from 'framer-motion';
-import { Download, Smartphone, Globe, Monitor, Zap, BarChart3, Shield, Cog } from 'lucide-react';
+import { Download, Smartphone, Globe, Monitor, Zap, BarChart3, Shield, Cog, PiggyBank, BookOpen, ShieldIcon } from 'lucide-react';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { Section } from '@/components/layout/Section';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { CTAStrip } from '@/components/ui/cta-strip';
+import mt5Asset from "@/assets/images/MT5-asset.png";
 
 const downloadButtons = [
   {
-    title: 'Windows',
-    description: 'Download for Windows PC',
+    title: 'Cut your costs with low spreads',
+    icon: PiggyBank,
+    href: '#',
+    variant: 'primary'
+  },
+  {
+    title: 'Seamlessly use Expert Advisors on MT5',
     icon: Monitor,
     href: '#',
-    variant: 'primary' 
+    variant: 'primary'
   },
   {
-    title: 'macOS',
-    description: 'Download for Mac',
-    icon: Monitor,
+    title: 'Access help guides for the MQL5 language',
+    icon: BookOpen,
     href: '#',
-    variant: 'primary' 
+    variant: 'outline'
   },
   {
-    title: 'WebTrader',
-    description: 'Trade in your browser',
-    icon: Globe,
+    title: 'Rely on full data back up and security',
+    icon: ShieldIcon,
     href: '#',
-    variant: 'outline' 
-  },
-  {
-    title: 'Mobile',
-    description: 'iOS & Android apps',
-    icon: Smartphone,
-    href: '#',
-    variant: 'outline' 
+    variant: 'outline'
   }
 ];
 
@@ -93,13 +90,55 @@ const devicePlatforms = [
 
 export default function MT5Platform() {
   return (
-    <main className="bg-base min-h-screen">
+    <main className=" bg-base min-h-screen">
       <PageHeader
         title="Download LTI MT5"
         description="Experience professional trading with MetaTrader 5 - the world's leading multi-asset platform offering superior execution, advanced analysis, and automated trading capabilities."
         showCta={false}
         background="gradient"
       />
+      <div className="flex justify-center items-center">
+ <img
+  src={mt5Asset}
+  alt="Trading Platform"
+  className="max-w-[800px]"
+/>
+      </div>
+
+
+      <div className="text-center mt-6">
+        <div className="flex flex-wrap justify-center gap-4 mb-6">
+          <Button
+            className="bg-white text-black border border-gray-300 hover:bg-gray-100 font-semibold px-6 py-6 rounded-md flex items-center gap-2"
+          >
+            <Smartphone className="w-5 h-5" />
+            App
+          </Button>
+
+          <Button
+            className="bg-white text-black border border-gray-300 hover:bg-gray-100 font-semibold px-6 py-6 rounded-md flex items-center gap-2"
+          >
+            <Monitor className="w-5 h-5" />
+            PC
+          </Button>
+
+          <Button
+            className="bg-white text-black border border-gray-300 hover:bg-gray-100 font-semibold px-6 py-6 rounded-md flex items-center gap-2"
+          >
+            <Globe className="w-5 h-5" />
+            WebTrader
+          </Button>
+        </div>
+
+        <Button
+          className="mt-6 bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold"
+          variant="cta"
+          size="lg"
+        >
+          Start Trading With MT5
+        </Button>
+      </div>
+
 
       {/* Download Buttons */}
       <Section padding="md">
@@ -108,39 +147,34 @@ export default function MT5Platform() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto"
+          className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto"
         >
           {downloadButtons.map((button, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ scale: 1.02 }}
+              className="flex items-start gap-5 border rounded-2xl p-7 shadow-md hover:shadow-lg bg-white"
             >
-              <Button
-                variant={button.variant === 'primary' ? 'default' : 'outline'}
-                size="lg"
-                className={`w-full h-auto p-6 flex flex-col items-center space-y-3 rounded-3xl ${
-                  button.variant === 'primary' 
-                    ? 'bg-brand hover:bg-brand/90 text-brand-foreground' 
-                    : 'border-brand text-brand hover:bg-brand/5'
-                }`}
-                asChild
-              >
-                <a href={button.href}>
-                  <button.icon className="w-8 h-8" />
-                  <div className="text-center">
-                    <div className="font-semibold">{button.title}</div>
-                    <div className="text-sm opacity-80">{button.description}</div>
-                  </div>
-                </a>
-              </Button>
+              {/* Icon box */}
+              <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-gray-900 text-white shrink-0">
+                <button.icon className="w-6 h-6" />
+              </div>
+
+              {/* Texts */}
+              <div>
+                <h3 className="font-semibold text-lg text-gray-900">{button.title}</h3>
+                <p className="text-base text-gray-600 mt-2">{button.description}</p>
+              </div>
             </motion.div>
           ))}
         </motion.div>
       </Section>
+
+
 
       {/* Benefits Grid */}
       <Section background="muted" padding="lg">
@@ -239,10 +273,10 @@ export default function MT5Platform() {
             Professional Trading Experience
           </h2>
           <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-            MetaTrader 5 combines powerful functionality with an intuitive interface, 
+            MetaTrader 5 combines powerful functionality with an intuitive interface,
             providing everything you need for successful trading across multiple asset classes.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
             <div className="bg-card border border-border rounded-3xl p-6">
               <h3 className="font-semibold text-ink mb-3">Trading Features</h3>
@@ -253,7 +287,7 @@ export default function MT5Platform() {
                 <li>• Real-time market depth and news feed</li>
               </ul>
             </div>
-            
+
             <div className="bg-card border border-border rounded-3xl p-6">
               <h3 className="font-semibold text-ink mb-3">Analysis Tools</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
@@ -276,3 +310,9 @@ export default function MT5Platform() {
     </main>
   );
 }
+
+
+
+
+
+
