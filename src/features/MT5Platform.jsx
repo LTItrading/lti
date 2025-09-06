@@ -6,6 +6,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { CTAStrip } from '@/components/ui/cta-strip';
 import mt5Asset from "@/assets/images/MT5-asset.png";
+import AppStore4x from "../assets/images/4x-Images/AppStore4x.png";
+import playstoreApk4x from "../assets/images/4x-Images/playstoreApk4x.png";
+
 
 const downloadButtons = [
   {
@@ -94,16 +97,16 @@ export default function MT5Platform() {
       <PageHeader
         title="Download LTI MT5"
         description="Experience professional trading with MetaTrader 5 - the world's leading multi-asset platform offering superior execution, advanced analysis, and automated trading capabilities."
-        showCta={false}
+        showCta={true}
         background="gradient"
       />
-      <div className="flex justify-center items-center">
- <img
-  src={mt5Asset}
-  alt="Trading Platform"
-  className="max-w-[800px]"
-/>
-      </div>
+<div className="flex justify-center items-center">
+  <img
+    src={mt5Asset}
+    alt="Trading Platform"
+    className="w-full max-w-[800px]"
+  />
+</div>
 
 
       <div className="text-center mt-6">
@@ -129,55 +132,47 @@ export default function MT5Platform() {
             WebTrader
           </Button>
         </div>
-
-        <Button
-          className="mt-6 bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold"
-          variant="cta"
-          size="lg"
-        >
-          Start Trading With MT5
-        </Button>
       </div>
 
 
       {/* Download Buttons */}
-      <Section padding="md">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto"
-        >
-          {downloadButtons.map((button, index) => (
+<Section padding="md">
+    <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-5xl mx-auto"
+    >
+        {downloadButtons.map((button, index) => (
             <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ scale: 1.02 }}
-              className="flex items-start gap-5 border rounded-2xl p-7 shadow-md hover:shadow-lg bg-white"
+                key={index}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ scale: 1.02 }}
+                className="flex flex-col border rounded-2xl p-10 shadow-md hover:shadow-lg bg-white w-30"
             >
-              {/* Icon box */}
-              <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-gray-900 text-white shrink-0">
-                <button.icon className="w-6 h-6" />
-              </div>
+                {/* Icon box */}
+                <div className="flex items-center justify-center w-16 h-16 rounded-lg bg-primary text-white shrink-0">
+                    <button.icon className="w-8 h-8" />
+                </div>
 
-              {/* Texts */}
-              <div>
-                <h3 className="font-semibold text-lg text-gray-900">{button.title}</h3>
-                <p className="text-base text-gray-600 mt-2">{button.description}</p>
-              </div>
+                {/* Texts */}
+                <div className="mt-4">
+                    <h3 className="font-semibold text-lg text-gray-900">{button.title}</h3>
+                    <p className="text-base text-gray-600 mt-2">{button.description}</p>
+                </div>
             </motion.div>
-          ))}
-        </motion.div>
-      </Section>
+        ))}
+    </motion.div>
+</Section>
 
 
 
       {/* Benefits Grid */}
-      <Section background="muted" padding="lg">
+      {/* <Section background="muted" padding="lg">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-ink mb-4">
             Why Choose LTI MT5?
@@ -210,58 +205,80 @@ export default function MT5Platform() {
             </motion.div>
           ))}
         </div>
-      </Section>
+      </Section> */}
 
       {/* Device Platforms */}
-      <Section padding="lg">
-        <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-ink mb-4">
-            Pick Your Device
-          </h2>
-          <p className="text-muted-foreground text-lg">
-            Trade anywhere, anytime with our multi-platform solution
-          </p>
+     <Section padding="lg">
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-7xl mx-auto">
+    
+    {/* Left Column: Heading & Download Images */}
+    <div className="text-center lg:text-left">
+      <h2 className="text-3xl md:text-4xl font-bold text-ink mb-4">
+        Pick Your Device
+      </h2>
+      <p className="text-muted-foreground text-lg mb-8 max-w-xl mx-auto lg:mx-0">
+        Trade anywhere, anytime with our multi-platform solution.
+      </p>
+      
+      {/* MT5 Heading & Download Buttons */}
+      <div className="flex flex-col items-center lg:items-start">
+       
+        <div className="flex items-center justify-center gap-3 sm:gap-4 md:gap-6">
+          <img
+            src={playstoreApk4x}
+            alt="Play Store"
+            className="w-[110px] sm:w-[125px] md:w-[139px] h-[32px] sm:h-[36px] md:h-[39px] object-contain"
+          />
+          <img
+            src={AppStore4x}
+            alt="App Store"
+            className="w-[110px] sm:w-[125px] md:w-[139px] h-[32px] sm:h-[36px] md:h-[39px] object-contain"
+          />
         </div>
+      </div>
+    </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {devicePlatforms.map((platform, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-            >
-              <Card className="h-full hover:shadow-elegant transition-shadow duration-300 border border-border rounded-3xl">
-                <CardHeader className="text-center">
-                  <div className="w-16 h-16 bg-brand/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <platform.icon className="w-8 h-8 text-brand" />
-                  </div>
-                  <CardTitle className="text-xl font-bold text-ink">
-                    {platform.title}
-                  </CardTitle>
-                  <CardDescription className="text-muted-foreground">
-                    {platform.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    {platform.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-muted-foreground">
-                        <div className="w-1.5 h-1.5 bg-brand rounded-full mr-3 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
-      </Section>
+    {/* Right Column: Platform Cards */}
+   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+      {devicePlatforms.map((platform, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: index * 0.2 }}
+        >
+          <Card className="h-full hover:shadow-elegant transition-shadow duration-300 border border-border rounded-3xl">
+            <CardHeader className="text-center">
+              <div className="w-16 h-16 bg-brand/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <platform.icon className="w-8 h-8 text-brand" />
+              </div>
+              <CardTitle className="text-xl font-bold text-ink">
+                {platform.title}
+              </CardTitle>
+              <CardDescription className="text-muted-foreground">
+                {platform.description}
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-2">
+                {platform.features.map((feature, idx) => (
+                  <li key={idx} className="flex items-center text-sm text-muted-foreground">
+                    <div className="w-1.5 h-1.5 bg-brand rounded-full mr-3 flex-shrink-0" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</Section>
 
       {/* Platform Features */}
-      <Section background="muted" padding="lg">
+      {/* <Section background="muted" padding="lg">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -299,14 +316,14 @@ export default function MT5Platform() {
             </div>
           </div>
         </motion.div>
-      </Section>
+      </Section> */}
 
-      <CTAStrip
+      {/* <CTAStrip
         title="Ready to Start Trading?"
         description="Download LTI MT5 now and experience professional trading at your fingertips."
         ctaText="Open Trading Account"
         variant="brand"
-      />
+      /> */}
     </main>
   );
 }
