@@ -185,7 +185,7 @@ const NewsEducation = () => {
                           Market Analysis
                         </div>
                         <div className="text-xs text-gray-400">
-                          Real-time insights
+                         Delivered inside MT5 via leading financial news providers, covering global assets in real time.
                         </div>
                       </div>
                       <div className="text-center p-4 text-white rounded-lg bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] p-6 rounded-[20px] shadow-[0px_4px_4px_0px_#FF66334D] transition-all duration-300 border border-transparent hover:border-[#EE422333] hover:border-[2px] hover:bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] hover:backdrop-blur-[20px]">
@@ -194,7 +194,8 @@ const NewsEducation = () => {
                           Economic Calendar
                         </div>
                         <div className="text-xs text-gray-400">
-                          Upcoming events
+                         Built into MT5, filterable by country, impact level, and event type — helping you track announcements like NFP, CPI, and rate decisions.
+
                         </div>
                       </div>
                     </div>
@@ -343,8 +344,12 @@ const NewsEducation = () => {
               <CardContent>
                 <div className="mb-12">
                   <h4 className="text-xl font-semibold text-foreground mb-6 text-center">
-                    Learning Formats Available
+                    Learn From the Best - In Your Language
                   </h4>
+               <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed text-lg">
+  LTI’s multilingual education library is designed to help you gain deep expertise in both financial markets and our trading platforms. Whether you’re building a solid foundation or enhancing advanced strategies, our resources are available anytime through the client portal.
+</p>
+
 
                   {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {educationFormats.map((format, index) => (
