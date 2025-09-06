@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Container } from './Container';
+import { ExternalLink } from 'lucide-react';
 
 // interface PageHeaderProps {
 //   title: string;
@@ -22,7 +23,7 @@ export function PageHeader({
   background = 'default'
 }) {
   return (
-    <section className={`py-16 md:py-24 ${background === 'gradient' ? 'bg-gradient-to-br from-brand/5 to-brand/10' : 'bg-base'}`}>
+    <section className={`py-16 md:py-24 ${background === 'gradient' ? 'bg-gradient-to-br from-brand/5 to-brand/10 header-bg1' : 'bg-base'}`}>
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -71,8 +72,9 @@ export function PageHeader({
                 size="lg"
                 className="bg-brand hover:bg-brand/90 text-brand-foreground font-semibold px-8 py-3 rounded-xl"
                 asChild
+                
               >
-                <a href={ctaHref}>{ctaText}</a>
+                <a href={ctaHref}>{ctaText} <ExternalLink /></a>
               </Button>
             </motion.div>
           )}

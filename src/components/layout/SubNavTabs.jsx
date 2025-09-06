@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
@@ -8,7 +8,9 @@ export function SubNavTabs({
   defaultTab, 
   className,
   onTabChange,
-  children 
+  children,
+  istabCenter,
+  activeTabId
 }) {
   const [activeTab, setActiveTab] = useState(defaultTab || tabs[0]?.id);
 
@@ -17,11 +19,17 @@ export function SubNavTabs({
     onTabChange?.(tabId);
   };
 
+  useEffect(() => {
+if(activeTabId){
+  setActiveTab(activeTabId)
+}
+  },[])
+
   return (
     <div className={cn('w-full', className)}>
       {/* Tab Navigation */}
       <div className="border-b border-border mb-8">
-        <nav className="flex space-x-8 overflow-x-auto">
+        <nav className={istabCenter ? "flex space-x-8 justify-center" : "flex space-x-8 "}>
           {tabs.map((tab) => (
             <button
               key={tab.id}
@@ -29,13 +37,13 @@ export function SubNavTabs({
               className={cn(
                 'relative whitespace-nowrap pb-4 px-1 text-sm font-medium transition-colors',
                 'focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 rounded-t-md',
-                activeTab === tab.id
+                activeTabId == tab.id
                   ? 'text-brand'
                   : 'text-muted-foreground hover:text-ink'
               )}
             >
               {tab.label}
-              {activeTab === tab.id && (
+              {activeTabId == tab.id && (
                 <motion.div
                   layoutId="activeTab"
                   className="absolute inset-x-0 -bottom-px h-0.5 bg-brand"
@@ -49,7 +57,7 @@ export function SubNavTabs({
 
       {/* Tab Content */}
       <div className="min-h-[200px]">
-        {children ? (
+        {children && typeof children === 'function' ? (
           children(activeTab)
         ) : (
           <motion.div
@@ -58,7 +66,7 @@ export function SubNavTabs({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
           >
-            {tabs.find(tab => tab.id === activeTab)?.content}
+            {tabs.find(tab => tab.id === activeTab)?.content || children}
           </motion.div>
         )}
       </div>

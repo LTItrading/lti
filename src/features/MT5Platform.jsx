@@ -93,7 +93,7 @@ const devicePlatforms = [
 
 export default function MT5Platform() {
   return (
-    <main className="pt-20 bg-base min-h-screen">
+    <main className="bg-base min-h-screen">
       <PageHeader
         title="Download LTI MT5"
         description="Experience professional trading with MetaTrader 5 - the world's leading multi-asset platform offering superior execution, advanced analysis, and automated trading capabilities."

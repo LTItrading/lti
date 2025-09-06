@@ -1,144 +1,997 @@
-import { motion } from 'framer-motion';
-import { TrendingUp, DollarSign, Building2, Zap, Bitcoin, BarChart3 } from 'lucide-react';
-import { PageHeader } from '@/components/layout/PageHeader';
-import { SubNavTabs } from '@/components/layout/SubNavTabs';
-import { Section } from '@/components/layout/Section';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { CTAStrip } from '@/components/ui/cta-strip';
-import { instruments } from '@/contents/instruments';
+import { motion } from "framer-motion";
+import {
+  TrendingUp,
+  DollarSign,
+  Building2,
+  Zap,
+  Bitcoin,
+  BarChart3,
+} from "lucide-react";
+import { PageHeader } from "@/components/layout/PageHeader";
+import { SubNavTabs } from "@/components/layout/SubNavTabs";
+import { Section } from "@/components/layout/Section";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { CTAStrip } from "@/components/ui/cta-strip";
+import { instruments } from "@/contents/instruments";
+import { DataTable } from "@/components/DataTable";
+import { Button } from "@/components/ui/button";
+import { Container } from "@/components/layout/Container";
+import { useEffect, useState } from "react";
+import RegisterFeatures from "./registerFeatures";
 
-function InstrumentTable({ instruments: instList, title }) {
-  return (
-    <div>
-      <h3 className="text-xl font-bold text-ink mb-6">{title}</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {instList.map((instrument, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: index * 0.05 }}
-          >
-            <Card className="hover:shadow-elegant transition-shadow duration-300 border border-border rounded-xl">
-              <CardContent className="p-4">
-                <div className="flex justify-between items-center">
-                  <div>
-                    <h4 className="font-semibold text-ink">{instrument.symbol}</h4>
-                    {instrument.name && (
-                      <p className="text-sm text-muted-foreground">{instrument.name}</p>
-                    )}
-                  </div>
-                  <TrendingUp className="w-4 h-4 text-brand" />
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function ForexTab() {
+function ForexTab({ data, columns }) {
   return (
     <div className="space-y-8">
       <motion.div
+        key={1}
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="bg-brand/5 border border-brand/20 rounded-3xl p-8"
+        transition={{ duration: 0.6, delay: 1 * 0.1 }}
       >
-        <h3 className="text-2xl font-bold text-ink mb-4">Forex CFDs</h3>
-        <p className="text-muted-foreground mb-4 leading-relaxed">
-          Trade major, minor, and exotic currency pairs with competitive spreads and fast execution. 
-          Access the world's largest financial market with leverage up to 1:500.
-        </p>
-        <div className="flex flex-wrap gap-2">
-          <Badge variant="outline" className="border-brand text-brand">Leverage up to 1:500</Badge>
-          <Badge variant="outline" className="border-brand text-brand">24/5 Trading</Badge>
-          <Badge variant="outline" className="border-brand text-brand">Tight Spreads</Badge>
-          <Badge variant="outline" className="border-brand text-brand">Fast Execution</Badge>
-        </div>
+        <Card className="h-full hover:shadow-elegant transition-shadow duration-300 border border-border rounded-3xl">
+          {/* <CardHeader>
+                  <CardTitle className="text-lg font-bold text-ink flex items-center">
+                    <feature.icon className="w-5 h-5 text-brand mr-2" />
+                    {feature.title}
+                  </CardTitle>
+                </CardHeader> */}
+          <CardContent className="m-5">
+            <DataTable columns={columns} data={data} />
+          </CardContent>
+        </Card>
       </motion.div>
-      
-      <div className="bg-muted/50 rounded-3xl p-8">
-        <h4 className="text-lg font-semibold text-ink mb-4">Sample Forex Instruments</h4>
-        <div className="text-muted-foreground">
-          <p>
-            Trade popular currency pairs including EUR/USD, GBP/USD, USD/JPY, AUD/USD, USD/CAD, 
-            NZD/USD, EUR/GBP, and many more major, minor, and exotic pairs.
-          </p>
-          <p className="mt-4 text-sm">
-            <strong>Note:</strong> Full instrument list and specific leverage & spread details to be confirmed.
-          </p>
-        </div>
-      </div>
     </div>
   );
 }
 
 export default function MarketAccess() {
+  const [forexTabVal, setForexTabVal] = useState("standard");
+  const [shareTabVal, setShareTabVal] = useState("usshare");
   const tabs = [
-    { id: 'forex', label: 'Forex CFDs' },
-    { id: 'metals', label: 'Metals' },
-    { id: 'indices-cash', label: 'Indices (Cash)' },
-    { id: 'indices-futures', label: 'Indices Futures' },
-    { id: 'energies', label: 'Energies' },
-    { id: 'crypto', label: 'Crypto' },
-    { id: 'shares', label: 'Shares' }
+    {
+      id: "forex",
+      label: "Forex CFDs",
+      isMulti: true,
+      standard: [
+        {
+          symbol: "USDJPY",
+          name: "U.S. Dollar vs Japanese Yen",
+          spread: 2.5,
+          lowSpread: 2.0,
+          leverage: 1500,
+        },
+        {
+          symbol: "EURUSD",
+          name: "Euro vs U.S. Dollar",
+          spread: 2.0,
+          lowSpread: 1.6,
+          leverage: 1500,
+        },
+        {
+          symbol: "AUDUSD",
+          name: "Australian Dollar vs U.S. Dollar",
+          spread: 2.4,
+          lowSpread: 2.3,
+          leverage: 1500,
+        },
+        {
+          symbol: "GBPJPY",
+          name: "Pound sterling vs Japanese Yen",
+          spread: 3.8,
+          lowSpread: 3.0,
+          leverage: 1500,
+        },
+        {
+          symbol: "GBPUSD",
+          name: "Pound sterling vs U.S. Dollar",
+          spread: 2.4,
+          lowSpread: 1.8,
+          leverage: 1500,
+        },
+        {
+          symbol: "EURJPY",
+          name: "Euro vs Japanese Yen",
+          spread: 3.2,
+          lowSpread: 2.1,
+          leverage: 1500,
+        },
+        {
+          symbol: "EURGBP",
+          name: "Euro vs Pound sterling",
+          spread: 2.4,
+          lowSpread: 1.8,
+          leverage: 1500,
+        },
+        {
+          symbol: "USDCHF",
+          name: "U.S. Dollar vs Swiss Franc",
+          spread: 2.6,
+          lowSpread: 1.9,
+          leverage: 400,
+        },
+        {
+          symbol: "NZDUSD",
+          name: "New Zealand Dollar vs U.S. Dollar",
+          spread: 2.9,
+          lowSpread: 2.8,
+          leverage: 1500,
+        },
+        {
+          symbol: "EURCHF",
+          name: "Euro vs Swiss Franc",
+          spread: 3.3,
+          lowSpread: 2.4,
+          leverage: 400,
+        },
+      ],
+      columns: [
+        {
+          key: "symbol",
+          header: "Symbol",
+          render: (_, row) => (
+            <div>
+              <div className="font-bold text-lg text-gray-900">
+                {row.symbol}
+              </div>
+              <div className="text-xs text-gray-600">{row.name}</div>
+            </div>
+          ),
+        },
+        { key: "spread", header: "Average Spread (pips)" },
+        { key: "lowSpread", header: "Spread As Low As (pips)" },
+        { key: "leverage", header: "Max Leverage" },
+        {
+          key: "actions",
+          header: "",
+          render: (_, row) => (
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => {}}
+              className="text-brand"
+            >
+              Trade
+            </Button>
+          ),
+        },
+      ],
+      ultralowstandard: [
+        {
+          symbol: "USDJPY#",
+          name: "U.S. Dollar vs Japanese Yen",
+          spread: 1.3,
+          lowSpread: 0.8,
+          leverage: 1500,
+        },
+        {
+          symbol: "EURUSD#",
+          name: "Euro vs U.S. Dollar",
+          spread: 1.1,
+          lowSpread: 0.8,
+          leverage: 1500,
+        },
+        {
+          symbol: "AUDUSD#",
+          name: "Australian Dollar vs U.S. Dollar",
+          spread: 1.4,
+          lowSpread: 1.3,
+          leverage: 1500,
+        },
+        {
+          symbol: "GBPJPY#",
+          name: "Pound sterling vs Japanese Yen",
+          spread: 2.9,
+          lowSpread: 1.5,
+          leverage: 1500,
+        },
+        {
+          symbol: "GBPUSD#",
+          name: "Pound sterling vs U.S. Dollar",
+          spread: 1.3,
+          lowSpread: 0.8,
+          leverage: 1500,
+        },
+        {
+          symbol: "EURJPY#",
+          name: "Euro vs Japanese Yen",
+          spread: 2.3,
+          lowSpread: 1.7,
+          leverage: 1500,
+        },
+        {
+          symbol: "EURGBP#",
+          name: "Euro vs Pound sterling",
+          spread: 2.0,
+          lowSpread: 1.7,
+          leverage: 1500,
+        },
+        {
+          symbol: "USDCHF#",
+          name: "U.S. Dollar vs Swiss Franc",
+          spread: 1.5,
+          lowSpread: 1.1,
+          leverage: 400,
+        },
+        {
+          symbol: "NZDUSD#",
+          name: "New Zealand Dollar vs U.S. Dollar",
+          spread: 2.1,
+          lowSpread: 2.0,
+          leverage: 1500,
+        },
+        {
+          symbol: "EURCHF#",
+          name: "Euro vs Swiss Franc",
+          spread: 1.8,
+          lowSpread: 1.3,
+          leverage: 400,
+        },
+      ],
+    },
+    {
+      id: "metals",
+      label: "Metals",
+      data: [
+        {
+          symbol: "XAG/EUR",
+          name: "Silver vs Euro",
+          spread: 3.5,
+          lowSpread: 2.9,
+          leverage: 1500,
+        },
+        {
+          symbol: "XAG/USD",
+          name: "Silver vs US Dollar",
+          spread: 2.8,
+          lowSpread: 2.1,
+          leverage: 1500,
+        },
+        {
+          symbol: "XAU/EUR",
+          name: "Gold vs Euro",
+          spread: 4.2,
+          lowSpread: 3.6,
+          leverage: 1500,
+        },
+        {
+          symbol: "XAU/USD",
+          name: "Gold vs US Dollar",
+          spread: 3.7,
+          lowSpread: 3.0,
+          leverage: 1500,
+        },
+        {
+          symbol: "XPD/USD",
+          name: "Palladium vs US Dollar",
+          spread: 5.5,
+          lowSpread: 4.8,
+          leverage: 1500,
+        },
+        {
+          symbol: "XPT/USD",
+          name: "Platinum vs US Dollar",
+          spread: 4.9,
+          lowSpread: 4.1,
+          leverage: 1500,
+        },
+      ],
+      columns: [
+        {
+          key: "symbol",
+          header: "Symbol",
+          render: (_, row) => (
+            <div>
+              <div className="font-bold text-lg text-gray-900">
+                {row.symbol}
+              </div>
+              <div className="text-xs text-gray-600">{row.name}</div>
+            </div>
+          ),
+        },
+        { key: "spread", header: "Average Spread (pips)" },
+        { key: "lowSpread", header: "Spread As Low As (pips)" },
+        { key: "leverage", header: "Max Leverage" },
+        {
+          key: "actions",
+          header: "",
+          render: (_, row) => (
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => {}}
+              className="text-brand"
+            >
+              Trade
+            </Button>
+          ),
+        },
+      ],
+    },
+    {
+      id: "indices-cash",
+      label: "Indices (Cash)",
+      data: [
+        {
+          symbol: "AUS200.c",
+          name: "S&P/ASX 200 Index",
+          spread: 1.8,
+          lowSpread: 1.3,
+          leverage: 200,
+        },
+        {
+          symbol: "DE40.c",
+          name: "DAX 40 Index (Germany)",
+          spread: 1.5,
+          lowSpread: 1.1,
+          leverage: 200,
+        },
+        {
+          symbol: "F40.c",
+          name: "CAC 40 Index (France)",
+          spread: 1.7,
+          lowSpread: 1.2,
+          leverage: 200,
+        },
+        {
+          symbol: "HK50.c",
+          name: "Hang Seng Index (Hong Kong)",
+          spread: 2.4,
+          lowSpread: 1.9,
+          leverage: 200,
+        },
+        {
+          symbol: "NE25.c",
+          name: "AEX 25 Index (Netherlands)",
+          spread: 1.6,
+          lowSpread: 1.2,
+          leverage: 200,
+        },
+        {
+          symbol: "STOXX50.c",
+          name: "Euro Stoxx 50 Index",
+          spread: 1.4,
+          lowSpread: 1.0,
+          leverage: 200,
+        },
+        {
+          symbol: "UK100.c",
+          name: "FTSE 100 Index (UK)",
+          spread: 1.9,
+          lowSpread: 1.4,
+          leverage: 200,
+        },
+        {
+          symbol: "US500.c",
+          name: "S&P 500 Index (US)",
+          spread: 1.2,
+          lowSpread: 0.9,
+          leverage: 200,
+        },
+        {
+          symbol: "USTEC.c",
+          name: "Nasdaq 100 Index (US)",
+          spread: 1.5,
+          lowSpread: 1.0,
+          leverage: 200,
+        },
+        {
+          symbol: "DJ30.c",
+          name: "Dow Jones 30 Index (US)",
+          spread: 1.6,
+          lowSpread: 1.1,
+          leverage: 200,
+        },
+        {
+          symbol: "ES35.c",
+          name: "IBEX 35 Index (Spain)",
+          spread: 1.8,
+          lowSpread: 1.3,
+          leverage: 200,
+        },
+        {
+          symbol: "SWI20.c",
+          name: "Swiss Market Index (Switzerland)",
+          spread: 1.7,
+          lowSpread: 1.2,
+          leverage: 200,
+        },
+      ],
+      columns: [
+        {
+          key: "symbol",
+          header: "Symbol",
+          render: (_, row) => (
+            <div>
+              <div className="font-bold text-lg text-gray-900">
+                {row.symbol}
+              </div>
+              <div className="text-xs text-gray-600">{row.name}</div>
+            </div>
+          ),
+        },
+        { key: "spread", header: "Average Spread (pips)" },
+        { key: "lowSpread", header: "Spread As Low As (pips)" },
+        { key: "leverage", header: "Max Leverage" },
+        {
+          key: "actions",
+          header: "",
+          render: (_, row) => (
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => {}}
+              className="text-brand"
+            >
+              Trade
+            </Button>
+          ),
+        },
+      ],
+    },
+    {
+      id: "indices-futures",
+      label: "Indices Futures",
+      data: [
+        {
+          symbol: "DE40.U25",
+          name: "DAX 40 Index Futures (Germany)",
+          spread: 2.1,
+          lowSpread: 1.6,
+          leverage: 100,
+        },
+        {
+          symbol: "DJ30.U25",
+          name: "Dow Jones 30 Index Futures (US)",
+          spread: 2.4,
+          lowSpread: 1.9,
+          leverage: 100,
+        },
+        {
+          symbol: "DX.U25",
+          name: "US Dollar Index Futures",
+          spread: 1.7,
+          lowSpread: 1.2,
+          leverage: 100,
+        },
+        {
+          symbol: "JPN225.U25",
+          name: "Nikkei 225 Index Futures (Japan)",
+          spread: 2.3,
+          lowSpread: 1.7,
+          leverage: 100,
+        },
+        {
+          symbol: "NGAS.Q25",
+          name: "Natural Gas Futures",
+          spread: 3.2,
+          lowSpread: 2.6,
+          leverage: 100,
+        },
+        {
+          symbol: "SILVER.U25",
+          name: "Silver Futures",
+          spread: 2.9,
+          lowSpread: 2.3,
+          leverage: 100,
+        },
+        {
+          symbol: "TY10.U25",
+          name: "10-Year US Treasury Note Futures",
+          spread: 1.8,
+          lowSpread: 1.3,
+          leverage: 100,
+        },
+        {
+          symbol: "UKBRENT.U25",
+          name: "Brent Crude Oil Futures (UK)",
+          spread: 2.6,
+          lowSpread: 2.0,
+          leverage: 100,
+        },
+        {
+          symbol: "US500.U25",
+          name: "S&P 500 Index Futures (US)",
+          spread: 1.9,
+          lowSpread: 1.4,
+          leverage: 100,
+        },
+        {
+          symbol: "USOIL.Q25",
+          name: "WTI Crude Oil Futures (US)",
+          spread: 2.7,
+          lowSpread: 2.1,
+          leverage: 100,
+        },
+        {
+          symbol: "USTEC.U25",
+          name: "Nasdaq 100 Index Futures (US)",
+          spread: 2.2,
+          lowSpread: 1.6,
+          leverage: 100,
+        },
+        {
+          symbol: "XAUUSD.Q25",
+          name: "Gold Futures (US Dollar)",
+          spread: 3.4,
+          lowSpread: 2.7,
+          leverage: 100,
+        },
+      ],
+      columns: [
+        {
+          key: "symbol",
+          header: "Symbol",
+          render: (_, row) => (
+            <div>
+              <div className="font-bold text-lg text-gray-900">
+                {row.symbol}
+              </div>
+              <div className="text-xs text-gray-600">{row.name}</div>
+            </div>
+          ),
+        },
+        { key: "spread", header: "Average Spread (pips)" },
+        { key: "lowSpread", header: "Spread As Low As (pips)" },
+        { key: "leverage", header: "Max Leverage" },
+        {
+          key: "actions",
+          header: "",
+          render: (_, row) => (
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => {}}
+              className="text-brand"
+            >
+              Trade
+            </Button>
+          ),
+        },
+      ],
+    },
+    {
+      id: "energies",
+      label: "Energies",
+      data: [
+        {
+          symbol: "UKOIL.c",
+          name: "Brent Crude Oil (Spot)",
+          spread: 1.8,
+          lowSpread: 1.3,
+          leverage: 500,
+        },
+        {
+          symbol: "USOIL.c",
+          name: "WTI Crude Oil (Spot)",
+          spread: 1.9,
+          lowSpread: 1.4,
+          leverage: 500,
+        },
+      ],
+      columns: [
+        {
+          key: "symbol",
+          header: "Symbol",
+          render: (_, row) => (
+            <div>
+              <div className="font-bold text-lg text-gray-900">
+                {row.symbol}
+              </div>
+              <div className="text-xs text-gray-600">{row.name}</div>
+            </div>
+          ),
+        },
+        { key: "spread", header: "Average Spread (pips)" },
+        { key: "lowSpread", header: "Spread As Low As (pips)" },
+        { key: "leverage", header: "Max Leverage" },
+        {
+          key: "actions",
+          header: "",
+          render: (_, row) => (
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => {}}
+              className="text-brand"
+            >
+              Trade
+            </Button>
+          ),
+        },
+      ],
+    },
+    {
+      id: "crypto",
+      label: "Crypto",
+      data: [
+        {
+          symbol: "BCHUSD",
+          name: "Bitcoin Cash vs US Dollar",
+          spread: 3.8,
+          lowSpread: 2.9,
+          leverage: 50,
+        },
+        {
+          symbol: "BTCEUR",
+          name: "Bitcoin vs Euro",
+          spread: 4.5,
+          lowSpread: 3.7,
+          leverage: 50,
+        },
+        {
+          symbol: "BTCJPY",
+          name: "Bitcoin vs Japanese Yen",
+          spread: 5.2,
+          lowSpread: 4.1,
+          leverage: 50,
+        },
+        {
+          symbol: "BTCUSD",
+          name: "Bitcoin vs US Dollar",
+          spread: 3.9,
+          lowSpread: 3.0,
+          leverage: 50,
+        },
+        {
+          symbol: "SOLUSD",
+          name: "Solana vs US Dollar",
+          spread: 2.6,
+          lowSpread: 2.0,
+          leverage: 50,
+        },
+        {
+          symbol: "ADAUSD",
+          name: "Cardano vs US Dollar",
+          spread: 2.2,
+          lowSpread: 1.7,
+          leverage: 50,
+        },
+        {
+          symbol: "CHZUSD",
+          name: "Chiliz vs US Dollar",
+          spread: 2.4,
+          lowSpread: 1.8,
+          leverage: 50,
+        },
+        {
+          symbol: "DOGUSD",
+          name: "Dogecoin vs US Dollar",
+          spread: 2.8,
+          lowSpread: 2.1,
+          leverage: 50,
+        },
+        {
+          symbol: "ONEUSD",
+          name: "Harmony vs US Dollar",
+          spread: 2.5,
+          lowSpread: 1.9,
+          leverage: 50,
+        },
+        {
+          symbol: "TRXUSD",
+          name: "TRON vs US Dollar",
+          spread: 2.3,
+          lowSpread: 1.7,
+          leverage: 50,
+        },
+        {
+          symbol: "VETUSD",
+          name: "VeChain vs US Dollar",
+          spread: 2.7,
+          lowSpread: 2.0,
+          leverage: 50,
+        },
+        {
+          symbol: "XEMUSD",
+          name: "NEM vs US Dollar",
+          spread: 2.9,
+          lowSpread: 2.2,
+          leverage: 50,
+        },
+        {
+          symbol: "XLMUSD",
+          name: "Stellar Lumens vs US Dollar",
+          spread: 2.6,
+          lowSpread: 2.0,
+          leverage: 50,
+        },
+        {
+          symbol: "ETHUSD",
+          name: "Ethereum vs US Dollar",
+          spread: 3.2,
+          lowSpread: 2.5,
+          leverage: 50,
+        },
+      ],
+      columns: [
+        {
+          key: "symbol",
+          header: "Symbol",
+          render: (_, row) => (
+            <div>
+              <div className="font-bold text-lg text-gray-900">
+                {row.symbol}
+              </div>
+              <div className="text-xs text-gray-600">{row.name}</div>
+            </div>
+          ),
+        },
+        { key: "spread", header: "Average Spread (pips)" },
+        { key: "lowSpread", header: "Spread As Low As (pips)" },
+        { key: "leverage", header: "Max Leverage" },
+        {
+          key: "actions",
+          header: "",
+          render: (_, row) => (
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => {}}
+              className="text-brand"
+            >
+              Trade
+            </Button>
+          ),
+        },
+      ],
+    },
+    {
+      id: "shares",
+      label: "Shares",
+      columns: [
+        {
+          key: "symbol",
+          header: "Symbol",
+          render: (_, row) => (
+            <div>
+              <div className="font-bold text-lg text-gray-900">
+                {row.symbol}
+              </div>
+              <div className="text-xs text-gray-600">{row.name}</div>
+            </div>
+          ),
+        },
+        { key: "spread", header: "Average Spread (pips)" },
+        { key: "lowSpread", header: "Spread As Low As (pips)" },
+        { key: "leverage", header: "Max Leverage" },
+        {
+          key: "actions",
+          header: "",
+          render: (_, row) => (
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => {}}
+              className="text-brand"
+            >
+              Trade
+            </Button>
+          ),
+        },
+      ],
+      usshare: [
+        {
+          symbol: "AAPL.OQ",
+          name: "Apple Inc.",
+          spread: 1.5,
+          lowSpread: 1.1,
+          leverage: 20,
+        },
+        {
+          symbol: "MSFT.OQ",
+          name: "Microsoft Corp.",
+          spread: 1.6,
+          lowSpread: 1.2,
+          leverage: 20,
+        },
+        {
+          symbol: "AMZN.OQ",
+          name: "Amazon.com Inc.",
+          spread: 1.8,
+          lowSpread: 1.3,
+          leverage: 20,
+        },
+        {
+          symbol: "TSLA.OQ",
+          name: "Tesla Inc.",
+          spread: 2.2,
+          lowSpread: 1.6,
+          leverage: 20,
+        },
+      ],
+      eushare: [
+        {
+          symbol: "LVMH.PA",
+          name: "LVMH Moët Hennessy Louis Vuitton SE",
+          spread: 1.9,
+          lowSpread: 1.4,
+          leverage: 20,
+        },
+        {
+          symbol: "SAPG.DE",
+          name: "SAP SE",
+          spread: 1.7,
+          lowSpread: 1.3,
+          leverage: 20,
+        },
+        {
+          symbol: "BAYGn.DE",
+          name: "Bayer AG",
+          spread: 1.8,
+          lowSpread: 1.3,
+          leverage: 20,
+        },
+        {
+          symbol: "AIR.PA",
+          name: "Airbus SE",
+          spread: 2.0,
+          lowSpread: 1.5,
+          leverage: 20,
+        },
+      ],
+      honkongshare: [
+        {
+          symbol: "0700.HK",
+          name: "Tencent Holdings Ltd.",
+          spread: 2.3,
+          lowSpread: 1.8,
+          leverage: 20,
+        },
+        {
+          symbol: "0939.HK",
+          name: "China Construction Bank Corp.",
+          spread: 2.1,
+          lowSpread: 1.6,
+          leverage: 20,
+        },
+        {
+          symbol: "2318.HK",
+          name: "Ping An Insurance (Group) Co. of China Ltd.",
+          spread: 2.2,
+          lowSpread: 1.7,
+          leverage: 20,
+        },
+        {
+          symbol: "0388.HK",
+          name: "Hong Kong Exchanges and Clearing Ltd.",
+          spread: 2.4,
+          lowSpread: 1.9,
+          leverage: 20,
+        },
+      ],
+    },
+  ];
+  const [currentState, setCurrentState] = useState(tabs[0]);
+
+  const forexTabs = [
+    {
+      id: "standard",
+      label: "Standard",
+    },
+    {
+      id: "ultralowstandard",
+      label: "Ultra Low Standard",
+    },
   ];
 
+  const sharesTabs = [
+    {
+      id: "usshare",
+      label: "US Shares",
+    },
+    {
+      id: "eushare",
+      label: "EU Shares",
+    },
+    {
+      id: "honkongshare",
+      label: "Hong Kong Shares",
+    },
+  ];
+  useEffect(() => {
+    setCurrentState(tabs[0]);
+  }, []);
+
+  useEffect(() => {
+    if (currentState?.id == "forex") {
+      setForexTabVal("standard");
+      setShareTabVal("usshare");
+    }
+    if (currentState?.id == "shares") {
+      setShareTabVal("usshare");
+    }
+  }, [currentState]);
+
   return (
-    <main className="pt-20 bg-base min-h-screen">
+    <main className=" bg-base min-h-screen">
       <PageHeader
         title="Market Access"
         description="Trade a comprehensive range of instruments across global markets with competitive conditions and professional execution."
         showCta={true}
         background="gradient"
       />
-      
+
       <Section padding="lg">
-        <SubNavTabs tabs={tabs} defaultTab="forex">
-          {(activeTab) => {
-            switch (activeTab) {
-              case 'forex':
-                return <ForexTab />;
-              case 'metals':
-                return <InstrumentTable instruments={instruments.metals} title="Precious Metals CFDs" />;
-              case 'indices-cash':
-                return <InstrumentTable instruments={instruments.indicesCash} title="Cash Indices" />;
-              case 'indices-futures':
-                return <InstrumentTable instruments={instruments.indicesFutures} title="Index Futures" />;
-              case 'energies':
-                return <InstrumentTable instruments={instruments.energies} title="Energy CFDs" />;
-              case 'crypto':
-                return <InstrumentTable instruments={instruments.crypto} title="Cryptocurrency CFDs" />;
-              case 'shares':
-                return (
-                  <div className="space-y-8">
-                    <InstrumentTable instruments={instruments.shares.us} title="US Shares" />
-                    <InstrumentTable instruments={instruments.shares.eu} title="European Shares" />
-                    <InstrumentTable instruments={instruments.shares.hk} title="Hong Kong Shares" />
-                  </div>
-                );
-              default:
-                return <ForexTab />;
-            }
-          }}
-        </SubNavTabs>
+        <div className="flex flex-wrap lg:flex-row justify-center items-center gap-5 text-white mt-[40px] mb-5 ">
+          {tabs.map((t) => (
+            <Button
+              variant={currentState?.id === t?.id ? "default" : "outline"}
+              size="lg"
+              onClick={() => {
+                console.log(t)
+                if(t?.id =='forex'){
+                  setForexTabVal('standard')
+                }
+                if(t?.id =='shares'){
+                  setShareTabVal('usshare')
+                }
+                setCurrentState(t);
+              }}
+              className={
+                currentState?.id === t?.id ? "text-white" : "text-brand"
+              }
+            >
+              {t?.label}
+            </Button>
+          ))}
+        </div>
+        {currentState.id == "forex" ? (
+          <SubNavTabs
+            onTabChange={(id) => setForexTabVal(id)}
+            istabCenter
+            tabs={forexTabs}
+            defaultTab="standard"
+            activeTabId={forexTabVal}
+          >
+            {forexTabVal && (
+              <ForexTab
+                data={currentState[forexTabVal]}
+                columns={currentState?.columns}
+              />
+            )}
+          </SubNavTabs>
+        ) : currentState?.id === "shares" ? (
+          <SubNavTabs
+            onTabChange={(id) => setShareTabVal(id)}
+            istabCenter
+            tabs={sharesTabs}
+            defaultTab="usshare"
+            activeTabId={shareTabVal}
+          >
+            {shareTabVal && (
+              <ForexTab
+                data={currentState[shareTabVal]}
+                columns={currentState?.columns}
+              />
+            )}
+          </SubNavTabs>
+        ) : (
+          <ForexTab
+            data={currentState?.data || []}
+            columns={currentState?.columns || []}
+          />
+        )}
       </Section>
 
+      <RegisterFeatures />
+
       {/* Market Overview Cards */}
-      <Section background="muted" padding="lg">
+      {/* <Section background="muted" padding="lg">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-ink mb-4">
             Why Trade with LTI?
           </h2>
           <p className="text-muted-foreground text-lg">
-            Access global markets with institutional-grade technology and execution
+            Access global markets with institutional-grade technology and
+            execution
           </p>
         </div>
 
@@ -146,34 +999,40 @@ export default function MarketAccess() {
           {[
             {
               icon: TrendingUp,
-              title: 'Competitive Spreads',
-              description: 'Tight spreads across all major instruments with transparent pricing.'
+              title: "Competitive Spreads",
+              description:
+                "Tight spreads across all major instruments with transparent pricing.",
             },
             {
               icon: Zap,
-              title: 'Fast Execution',
-              description: 'Lightning-fast order execution with minimal slippage and no requotes.'
+              title: "Fast Execution",
+              description:
+                "Lightning-fast order execution with minimal slippage and no requotes.",
             },
             {
               icon: Building2,
-              title: 'Deep Liquidity',
-              description: 'Access to tier-1 liquidity providers for optimal trading conditions.'
+              title: "Deep Liquidity",
+              description:
+                "Access to tier-1 liquidity providers for optimal trading conditions.",
             },
             {
               icon: BarChart3,
-              title: 'Advanced Tools',
-              description: 'Professional trading platforms with advanced charting and analysis.'
+              title: "Advanced Tools",
+              description:
+                "Professional trading platforms with advanced charting and analysis.",
             },
             {
               icon: DollarSign,
-              title: 'Flexible Leverage',
-              description: 'Leverage options up to 1:500 tailored to your risk appetite.'
+              title: "Flexible Leverage",
+              description:
+                "Leverage options up to 1:500 tailored to your risk appetite.",
             },
             {
               icon: Bitcoin,
-              title: 'Diverse Assets',
-              description: 'Trade forex, metals, indices, energies, crypto, and individual stocks.'
-            }
+              title: "Diverse Assets",
+              description:
+                "Trade forex, metals, indices, energies, crypto, and individual stocks.",
+            },
           ].map((feature, index) => (
             <motion.div
               key={index}
@@ -202,7 +1061,7 @@ export default function MarketAccess() {
         title="Start Trading Global Markets"
         description="Open your LTI account and access institutional-grade trading conditions."
         variant="brand"
-      />
+      /> */}
     </main>
   );
 }

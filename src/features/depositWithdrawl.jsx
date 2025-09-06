@@ -39,7 +39,7 @@ const faqItems = [
 
 export default function DepositsWithdrawals() {
   return (
-    <main className="pt-20 bg-base min-h-screen">
+    <main className=" bg-base min-h-screen">
       <PageHeader
         title="How to Fund and Withdraw from Your LTI Account"
         description="Secure, fast, and global payment options with instant processing on most methods. Your funds are protected with bank-grade security."
