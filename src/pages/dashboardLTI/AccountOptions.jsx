@@ -25,6 +25,9 @@ import security from "@/assets/images/tradingFeaturesPng/security.png";
 import ellipse from "@/assets/images/Ellipse.png";
 import card1 from "@/assets/images/CARD-1.png";
 import card3 from "@/assets/images/CARD-3.png";
+import support from "@/assets/images/support.png";
+import protect from "@/assets/images/protect.png";
+import { PageHeader } from "@/components/layout/PageHeader";
 
 const accountTypes = [
   {
@@ -135,13 +138,13 @@ const whatsSetsLTIApart = [
       "With clients in over 140+ countries, our infrastructure and support systems are built to scale, but our service remains personal, responsive, and localised..",
   },
   {
-    icon: labtop,
+    icon: support,
     title: "Support That Speaks Trader.",
     description:
       "Our global support team offers expert assistance across languages, time zones, and trading needs, 24/5.",
   },
   {
-    icon: security,
+    icon: protect,
     title: "Your Funds, Fully Protected.",
     description:
       "Client funds are held in top-tier segregated accounts with robust internal safeguards, two-factor authentication, and end-to-end encryption protocols.",
@@ -156,27 +159,15 @@ export default function AccountOptions() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="relative text-center py-20 "
+        className="relative text-center mb-10 "
       >
-        <img
-          src={WaveForFooter}
-          alt="Background"
-          className="absolute top-0 left-0 w-full h-full pointer-events-none z-0 animate-[wave_12s_linear_infinite]"
+        <PageHeader
+          title="Open Your Trading Account"
+          description="Choose from tailored account types designed to fit your trading
+          strategy, experience level, and goals."
+          showCta={true}
+          background="gradient"
         />
-        <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-          Open Your Trading Account
-        </h1>
-        <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto mb-6">
-          Choose from tailored account types designed to fit your trading
-          strategy, experience level, and goals.
-        </p>
-        <Button
-          className="bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold"
-          variant="cta"
-          size="lg"
-        >
-          Open an Account
-        </Button>
       </motion.div>
 
       <div className="flex flex-col justify-center items-center">

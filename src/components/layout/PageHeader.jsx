@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Container } from './Container';
 import { ExternalLink } from 'lucide-react';
+import WaveForFooter from "@/assets/images/4x-Images/WaveForFooter.png";
 
 // interface PageHeaderProps {
 //   title: string;
@@ -23,7 +24,13 @@ export function PageHeader({
   background = 'default'
 }) {
   return (
-    <section className={`py-16 md:py-24 ${background === 'gradient' ? 'bg-gradient-to-br from-brand/5 to-brand/10 header-bg1' : 'bg-base'}`}>
+    <section
+      className={`py-16 md:py-24 ${
+        background === "gradient"
+          ? "bg-gradient-to-br from-brand/5 to-brand/10 header-bg1"
+          : "bg-base"
+      }`}
+    >
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -31,6 +38,7 @@ export function PageHeader({
           transition={{ duration: 0.6 }}
           className="text-center max-w-4xl mx-auto"
         >
+          
           {subtitle && (
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -41,7 +49,7 @@ export function PageHeader({
               {subtitle}
             </motion.p>
           )}
-          
+
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -50,7 +58,7 @@ export function PageHeader({
           >
             {title}
           </motion.h1>
-          
+
           {description && (
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -61,20 +69,21 @@ export function PageHeader({
               {description}
             </motion.p>
           )}
-          
+
           {showCta && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <Button 
+              <Button
                 size="lg"
                 className="bg-brand hover:bg-brand/90 text-brand-foreground font-semibold px-8 py-3 rounded-xl"
                 asChild
-                
               >
-                <a href={ctaHref}>{ctaText} <ExternalLink /></a>
+                <a href={ctaHref}>
+                  {ctaText} <ExternalLink />
+                </a>
               </Button>
             </motion.div>
           )}
