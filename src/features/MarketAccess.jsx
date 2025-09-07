@@ -32,6 +32,10 @@ import XPD from "@/assets/images/metals/palladium.svg"
 import XPT from "@/assets/images/metals/platinum.svg"
 import UKOIL from "@/assets/images/metals/brent.svg"
 import USOIL from "@/assets/images/metals/oil.svg"
+import AMZN from "@/assets/images/metals/amazon.svg"
+import TSLA from "@/assets/images/metals/tesla.svg"
+import APPL from "@/assets/images/metals/apple.svg"
+import MSFT from "@/assets/images/metals/microsoft.svg"
 
 function ForexTab({ data, columns }) {
   return (
@@ -68,7 +72,11 @@ export default function MarketAccess() {
     XPD,
     XPT,
     UKOIL,
-    USOIL
+    USOIL,
+    AMZN,
+    TSLA,
+    MSFT,
+    APPL
   }
   const tabs = [
     {
@@ -836,7 +844,8 @@ export default function MarketAccess() {
           key: "symbol",
           header: "Symbol",
           render: (_, row) => (
-            <div>
+            <div className="flex flex-row">
+              <img src={metals[row.flags[0]]} alt={row.flags[0]} width={24} height={24} />
               <div className="font-bold text-lg text-gray-900">
                 {row.symbol}
               </div>
@@ -869,6 +878,7 @@ export default function MarketAccess() {
           spread: 1.5,
           lowSpread: 1.1,
           leverage: 20,
+          flags:['APPL']
         },
         {
           symbol: "MSFT.OQ",
@@ -876,6 +886,7 @@ export default function MarketAccess() {
           spread: 1.6,
           lowSpread: 1.2,
           leverage: 20,
+          flags:["MSFT"]
         },
         {
           symbol: "AMZN.OQ",
@@ -883,6 +894,7 @@ export default function MarketAccess() {
           spread: 1.8,
           lowSpread: 1.3,
           leverage: 20,
+          flags:["AMZN"]
         },
         {
           symbol: "TSLA.OQ",
@@ -890,6 +902,7 @@ export default function MarketAccess() {
           spread: 2.2,
           lowSpread: 1.6,
           leverage: 20,
+           flags:["TSLA"]
         },
       ],
       eushare: [
