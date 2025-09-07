@@ -357,27 +357,30 @@ export default function MarketAccess() {
           render: (_, row) => (
             <div className="flex flex-row">
               <div className="flex -space-x-2 mr-2">
-                {row?.flags?.map((code,i) => (
-                  i == 0 ? <img src={metals[code]} alt={code} width={24} height={24} /> :
-                  <ReactCountryFlag
-                    key={code}
-                    countryCode={code}
-                    svg
-                    style={{
-                      width: "1.5em",
-                      height: "1.5em",
-                      borderRadius: "50%",
-                      objectFit: "cover",
-                    }}
-                    title={code}
-                  />
-                ))}
+                {row?.flags?.map((code, i) =>
+                  i == 0 ? (
+                    <img src={metals[code]} alt={code} width={24} height={24} />
+                  ) : (
+                    <ReactCountryFlag
+                      key={code}
+                      countryCode={code}
+                      svg
+                      style={{
+                        width: "1.5em",
+                        height: "1.5em",
+                        borderRadius: "50%",
+                        objectFit: "cover",
+                      }}
+                      title={code}
+                    />
+                  )
+                )}
               </div>
               <div>
-              <div className="font-bold text-lg text-gray-900">
-                {row.symbol}
-              </div>
-              <div className="text-xs text-gray-600">{row.name}</div>
+                <div className="font-bold text-lg text-gray-900">
+                  {row.symbol}
+                </div>
+                <div className="text-xs text-gray-600">{row.name}</div>
               </div>
             </div>
           ),
@@ -653,7 +656,7 @@ export default function MarketAccess() {
           spread: 1.8,
           lowSpread: 1.3,
           leverage: 500,
-          flags:['UKOIL']
+          flags: ["UKOIL"],
         },
         {
           symbol: "USOIL.c",
@@ -661,7 +664,7 @@ export default function MarketAccess() {
           spread: 1.9,
           lowSpread: 1.4,
           leverage: 500,
-          flags:['USOIL']
+          flags: ["USOIL"],
         },
       ],
       columns: [
@@ -671,13 +674,18 @@ export default function MarketAccess() {
           render: (_, row) => (
             <div className="flex flex-row items-center">
               <div className="mr-2">
-                <img src={metals[row?.flags[0]]} alt={row?.flags[0]} width={24} height={24} />
+                <img
+                  src={metals[row?.flags[0]]}
+                  alt={row?.flags[0]}
+                  width={24}
+                  height={24}
+                />
               </div>
               <div>
-              <div className="font-bold text-lg text-gray-900">
-                {row.symbol}
-              </div>
-              <div className="text-xs text-gray-600">{row.name}</div>
+                <div className="font-bold text-lg text-gray-900">
+                  {row.symbol}
+                </div>
+                <div className="text-xs text-gray-600">{row.name}</div>
               </div>
             </div>
           ),
@@ -845,11 +853,20 @@ export default function MarketAccess() {
           header: "Symbol",
           render: (_, row) => (
             <div className="flex flex-row">
-              <img src={metals[row.flags[0]]} alt={row.flags[0]} width={24} height={24} />
-              <div className="font-bold text-lg text-gray-900">
-                {row.symbol}
+              {row?.flags?.[0] && (
+                <img
+                  src={metals[row?.flags?.[0]]}
+                  alt={row?.flags?.[0]}
+                  width={24}
+                  height={24}
+                />
+              )}
+              <div>
+                <div className="font-bold text-lg text-gray-900">
+                  {row.symbol}
+                </div>
+                <div className="text-xs text-gray-600">{row.name}</div>
               </div>
-              <div className="text-xs text-gray-600">{row.name}</div>
             </div>
           ),
         },
@@ -878,7 +895,7 @@ export default function MarketAccess() {
           spread: 1.5,
           lowSpread: 1.1,
           leverage: 20,
-          flags:['APPL']
+          flags: ["APPL"],
         },
         {
           symbol: "MSFT.OQ",
@@ -886,7 +903,7 @@ export default function MarketAccess() {
           spread: 1.6,
           lowSpread: 1.2,
           leverage: 20,
-          flags:["MSFT"]
+          flags: ["MSFT"],
         },
         {
           symbol: "AMZN.OQ",
@@ -894,7 +911,7 @@ export default function MarketAccess() {
           spread: 1.8,
           lowSpread: 1.3,
           leverage: 20,
-          flags:["AMZN"]
+          flags: ["AMZN"],
         },
         {
           symbol: "TSLA.OQ",
@@ -902,7 +919,7 @@ export default function MarketAccess() {
           spread: 2.2,
           lowSpread: 1.6,
           leverage: 20,
-           flags:["TSLA"]
+          flags: ["TSLA"],
         },
       ],
       eushare: [
