@@ -13,16 +13,16 @@ const Header = () => {
   const miniLinks = ["Partnerships", "Institutional", "Funding"];
   
   const navLinks = [
-    // {
-    //   label: "Trading",
-    //   subMenu: [
-    //     { name: "Account Options", path: "/trading/account-options" },
-    //     { name: "Deposits and Withdrawals", path: "/trading/deposits-withdrawals" },
-    //     { name: "Market Access", path: "/trading/market-access" },
-    //     { name: "Tools and Platform", path: "/trading/mt5" },
-    //     { name: "Trading Conditions", path: "/trading/trading-conditions" },
-    //   ],
-    // },
+    {
+      label: "Trading",
+      subMenu: [
+        { name: "Account Options", path: "/trading/account-options" },
+        { name: "Deposits and Withdrawals", path: "/trading/deposits-withdrawals" },
+        { name: "Market Access", path: "/trading/market-access" },
+        { name: "Tools and Platform", path: "/trading/mt5" },
+        { name: "Trading Conditions", path: "/trading/trading-conditions" },
+      ],
+    },
     {
       label: "Insights",
       subMenu: [
