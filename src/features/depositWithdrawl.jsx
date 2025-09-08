@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { CreditCard, Building2, Smartphone, Wallet, Clock, Shield, ChevronDown ,PiggyBankIcon,  BanknoteArrowDown} from 'lucide-react';
+import { CreditCard, Building2, Smartphone, Wallet, Clock, Shield, ChevronDown, PiggyBankIcon, BanknoteArrowDown } from 'lucide-react';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { Section } from '@/components/layout/Section';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -45,71 +45,64 @@ export default function DepositsWithdrawals() {
         ctaText="Open your Live Account"
         background="gradient"
       />
-        <ModernPaymentsFeatures />
-<Section padding="lg">
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
-    {/* Deposit Card */}
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
-    >
-      <Card className="flex flex-col h-full rounded-3xl p-8 shadow-md hover:shadow-2xl transition-all duration-400 transform hover:-translate-y-2 hover:scale-[1.02] bg-white">
-        <div className="flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-primary/10 text-primary mb-5 shadow-inner">
-          <PiggyBankIcon className="w-12 h-12" />
+
+      <Section padding="lg">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+          {/* Deposit Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+          >
+            <Card className="flex flex-col h-full rounded-3xl p-8 shadow-md hover:shadow-2xl transition-all duration-400 transform hover:-translate-y-2 hover:scale-[1.02] bg-white">
+              <div className="flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-primary/10 text-primary mb-5 shadow-inner">
+                <PiggyBankIcon className="w-12 h-12" />
+              </div>
+              <div className="flex flex-col flex-1">
+                <h3 className="font-extrabold text-2xl text-gray-900 mb-3 tracking-tight">
+                  How to Make a <span className="text-primary">Deposit</span>?
+                </h3>
+                <p className="text-gray-700 text-base leading-relaxed">
+                  Easily fund your trading account through the LTI client area. Choose from a wide range of secure deposit
+                  methods designed to suit every client’s needs and preferences.
+                </p>
+              </div>
+            </Card>
+          </motion.div>
+
+          {/* Withdraw Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.25, ease: "easeOut" }}
+          >
+            <Card className="flex flex-col h-full rounded-3xl p-8 shadow-md hover:shadow-2xl transition-all duration-400 transform hover:-translate-y-2 hover:scale-[1.02] bg-white">
+              <div className="flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-primary/10 text-primary mb-5 shadow-inner">
+                <BanknoteArrowDown className="w-12 h-12" />
+              </div>
+              <div className="flex flex-col flex-1">
+                <h3 className="font-extrabold text-2xl text-gray-900 mb-3 tracking-tight">
+                  How to <span className="text-primary">Withdraw</span> Funds
+                </h3>
+                <p className="text-gray-700 text-base leading-relaxed">
+                  Easily request a withdrawal through the LTI client area or mobile app. We offer a variety of secure withdrawal
+                  options designed to suit different client preferences and ensure smooth fund transfers.
+                </p>
+              </div>
+            </Card>
+          </motion.div>
         </div>
-        <div className="flex flex-col flex-1">
-          <h3 className="font-extrabold text-2xl text-gray-900 mb-3 tracking-tight">
-            How to Make a <span className="text-primary">Deposit</span>?
-          </h3>
-          <p className="text-gray-700 text-base leading-relaxed">
-            Easily fund your trading account through the LTI client area. Choose from a wide range of secure deposit
-            methods designed to suit every client’s needs and preferences.
-          </p>
-        </div>
-      </Card>
-    </motion.div>
 
-    {/* Withdraw Card */}
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, delay: 0.25, ease: "easeOut" }}
-    >
-      <Card className="flex flex-col h-full rounded-3xl p-8 shadow-md hover:shadow-2xl transition-all duration-400 transform hover:-translate-y-2 hover:scale-[1.02] bg-white">
-        <div className="flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-primary/10 text-primary mb-5 shadow-inner">
-          <BanknoteArrowDown className="w-12 h-12" />
-        </div>
-        <div className="flex flex-col flex-1">
-          <h3 className="font-extrabold text-2xl text-gray-900 mb-3 tracking-tight">
-            How to <span className="text-primary">Withdraw</span> Funds
-          </h3>
-          <p className="text-gray-700 text-base leading-relaxed">
-            Easily request a withdrawal through the LTI client area or mobile app. We offer a variety of secure withdrawal
-            options designed to suit different client preferences and ensure smooth fund transfers.
-          </p>
-        </div>
-      </Card>
-    </motion.div>
-  </div>
+        {/* Disclaimer */}
+        <p className="text-sm text-muted-foreground max-w-3xl mx-auto mt-10 leading-relaxed text-center">
+          Clients must ensure sufficient available balance before submitting a withdrawal request. Requests that exceed the
+          available balance or fail to meet account requirements may be delayed or declined.
+        </p>
+      </Section>
 
-  {/* Disclaimer */}
-  <p className="text-sm text-muted-foreground max-w-3xl mx-auto mt-10 leading-relaxed text-center">
-    Clients must ensure sufficient available balance before submitting a withdrawal request. Requests that exceed the
-    available balance or fail to meet account requirements may be delayed or declined.
-  </p>
-</Section>
-
-
-
-
-
-
-    
-
-
+      <ModernPaymentsFeatures />
     </main>
   );
 }

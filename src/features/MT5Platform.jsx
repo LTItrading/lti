@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Download, Smartphone, Globe, Monitor, Zap, BarChart3, Shield, Cog, PiggyBank, BookOpen, ShieldIcon } from 'lucide-react';
+import { Download, Smartphone, Globe, Monitor, Zap, BarChart3, Shield, Cog, PiggyBank, BookOpen, ShieldIcon, ExternalLink } from 'lucide-react';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { Section } from '@/components/layout/Section';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -8,6 +8,10 @@ import { CTAStrip } from '@/components/ui/cta-strip';
 import mt5Asset from "@/assets/images/MT5-asset.png";
 import AppStore4x from "../assets/images/4x-Images/AppStore4x.png";
 import playstoreApk4x from "../assets/images/4x-Images/playstoreApk4x.png";
+import TabletMobileImg from "../assets/images/android.png";
+import Pc from "../assets/images/pc.png"
+import mac from "../assets/images/mac.png"
+
 
 
 const downloadButtons = [
@@ -36,6 +40,36 @@ const downloadButtons = [
     variant: 'outline'
   }
 ];
+
+const devicePlatforms = [
+  {
+    title: "MT5 for Tablet and Mobile",
+    link: "#",
+    image: TabletMobileImg,
+    storeButtons: [
+      { src: AppStore4x, alt: "App Store" },
+      { src: playstoreApk4x, alt: "Android App" }
+    ]
+  },
+  {
+    title: "MT5 for PC",
+    action: "Download",
+    link: "#",
+    image: Pc,
+  },
+  {
+    title: "MT5 WebTrader",
+    action: "Access in Web",
+    link: "#",
+  },
+  {
+    title: "MT5 for Mac",
+    action: "Download",
+    link: "#",
+    image: mac,
+  },
+];
+
 
 const benefits = [
   {
@@ -70,26 +104,6 @@ const benefits = [
   }
 ];
 
-const devicePlatforms = [
-  {
-    title: 'Desktop Application',
-    description: 'Full-featured trading platform for Windows and Mac',
-    features: ['Advanced charting', 'Expert Advisors', 'Market depth', 'Economic calendar'],
-    icon: Monitor
-  },
-  {
-    title: 'Web Platform',
-    description: 'Trade directly from your browser without downloads',
-    features: ['No installation required', 'Cross-platform compatibility', 'Real-time quotes', 'Mobile responsive'],
-    icon: Globe
-  },
-  {
-    title: 'Mobile Apps',
-    description: 'Trade on-the-go with iOS and Android applications',
-    features: ['Touch-optimized interface', 'Push notifications', 'Biometric login', 'Offline charts'],
-    icon: Smartphone
-  }
-];
 
 export default function MT5Platform() {
   return (
@@ -98,232 +112,160 @@ export default function MT5Platform() {
         title="Download LTI MT5"
         description="Experience professional trading with MetaTrader 5 - the world's leading multi-asset platform offering superior execution, advanced analysis, and automated trading capabilities."
         showCta={true}
+        showPlatforms={true}
         background="gradient"
       />
-<div className="flex justify-center items-center">
-  <img
-    src={mt5Asset}
-    alt="Trading Platform"
-    className="w-full max-w-[800px]"
-  />
-</div>
 
 
-      <div className="text-center mt-6">
-        <div className="flex flex-wrap justify-center gap-4 mb-6">
-          <Button
-            className="bg-white text-black border border-gray-300 hover:bg-gray-100 font-semibold px-6 py-6 rounded-md flex items-center gap-2"
-          >
-            <Smartphone className="w-5 h-5" />
-            App
-          </Button>
-
-          <Button
-            className="bg-white text-black border border-gray-300 hover:bg-gray-100 font-semibold px-6 py-6 rounded-md flex items-center gap-2"
-          >
-            <Monitor className="w-5 h-5" />
-            PC
-          </Button>
-
-          <Button
-            className="bg-white text-black border border-gray-300 hover:bg-gray-100 font-semibold px-6 py-6 rounded-md flex items-center gap-2"
-          >
-            <Globe className="w-5 h-5" />
-            WebTrader
-          </Button>
-        </div>
-      </div>
 
 
       {/* Download Buttons */}
-<Section padding="md">
-    <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-5xl mx-auto"
-    >
-        {downloadButtons.map((button, index) => (
-            <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ scale: 1.02 }}
-                className="flex flex-col border rounded-2xl p-10 shadow-md hover:shadow-lg bg-white w-30"
-            >
-                {/* Icon box */}
-                <div className="flex items-center justify-center w-16 h-16 rounded-lg bg-primary text-white shrink-0">
-                    <button.icon className="w-8 h-8" />
-                </div>
-
-                {/* Texts */}
-                <div className="mt-4">
-                    <h3 className="font-semibold text-lg text-gray-900">{button.title}</h3>
-                    <p className="text-base text-gray-600 mt-2">{button.description}</p>
-                </div>
-            </motion.div>
-        ))}
-    </motion.div>
-</Section>
-
-
-
-      {/* Benefits Grid */}
-      {/* <Section background="muted" padding="lg">
-        <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-ink mb-4">
-            Why Choose LTI MT5?
-          </h2>
-          <p className="text-muted-foreground text-lg">
-            Professional trading features designed for serious traders
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {benefits.map((benefit, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-            >
-              <Card className="h-full hover:shadow-elegant transition-shadow duration-300 border border-border rounded-3xl">
-                <CardHeader>
-                  <CardTitle className="text-lg font-bold text-ink flex items-center">
-                    <benefit.icon className="w-5 h-5 text-brand mr-2" />
-                    {benefit.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">{benefit.description}</p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
-      </Section> */}
-
-      {/* Device Platforms */}
-     <Section padding="lg">
-  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-7xl mx-auto">
-    
-    {/* Left Column: Heading & Download Images */}
-    <div className="text-center lg:text-left">
-      <h2 className="text-3xl md:text-4xl font-bold text-ink mb-4">
-        Pick Your Device
-      </h2>
-      <p className="text-muted-foreground text-lg mb-8 max-w-xl mx-auto lg:mx-0">
-        Trade anywhere, anytime with our multi-platform solution.
-      </p>
-      
-      {/* MT5 Heading & Download Buttons */}
-      <div className="flex flex-col items-center lg:items-start">
-       
-        <div className="flex items-center justify-center gap-3 sm:gap-4 md:gap-6">
-          <img
-            src={playstoreApk4x}
-            alt="Play Store"
-            className="w-[110px] sm:w-[125px] md:w-[139px] h-[32px] sm:h-[36px] md:h-[39px] object-contain"
-          />
-          <img
-            src={AppStore4x}
-            alt="App Store"
-            className="w-[110px] sm:w-[125px] md:w-[139px] h-[32px] sm:h-[36px] md:h-[39px] object-contain"
-          />
-        </div>
-      </div>
-    </div>
-
-    {/* Right Column: Platform Cards */}
-   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-      {devicePlatforms.map((platform, index) => (
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: index * 0.2 }}
-        >
-          <Card className="h-full hover:shadow-elegant transition-shadow duration-300 border border-border rounded-3xl">
-            <CardHeader className="text-center">
-              <div className="w-16 h-16 bg-brand/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <platform.icon className="w-8 h-8 text-brand" />
-              </div>
-              <CardTitle className="text-xl font-bold text-ink">
-                {platform.title}
-              </CardTitle>
-              <CardDescription className="text-muted-foreground">
-                {platform.description}
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <ul className="space-y-2">
-                {platform.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center text-sm text-muted-foreground">
-                    <div className="w-1.5 h-1.5 bg-brand rounded-full mr-3 flex-shrink-0" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
-        </motion.div>
-      ))}
-    </div>
-  </div>
-</Section>
-
-      {/* Platform Features */}
-      {/* <Section background="muted" padding="lg">
+      <Section padding="md" className="mt-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto text-center"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 max-w-10xl mx-auto "
         >
-          <h2 className="text-2xl md:text-3xl font-bold text-ink mb-6">
-            Professional Trading Experience
-          </h2>
-          <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-            MetaTrader 5 combines powerful functionality with an intuitive interface,
-            providing everything you need for successful trading across multiple asset classes.
-          </p>
+          {downloadButtons.map((button, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ scale: 1.03 }}
+              className="flex flex-col items-center justify-center h-64 border rounded-2xl p-6 shadow-md hover:shadow-lg bg-white"
+            >
+              {/* Icon box */}
+              <div className="flex items-center justify-center w-16 h-16 rounded-xl bg-primary text-white mb-5">
+                <button.icon className="w-8 h-8" />
+              </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-            <div className="bg-card border border-border rounded-3xl p-6">
-              <h3 className="font-semibold text-ink mb-3">Trading Features</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>• One-click trading and instant execution</li>
-                <li>• Advanced order types (Stop, Limit, Stop Limit)</li>
-                <li>• Partial position closing and netting system</li>
-                <li>• Real-time market depth and news feed</li>
-              </ul>
-            </div>
-
-            <div className="bg-card border border-border rounded-3xl p-6">
-              <h3 className="font-semibold text-ink mb-3">Analysis Tools</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>• 50+ built-in technical indicators</li>
-                <li>• 21 timeframes for detailed analysis</li>
-                <li>• Multiple chart types and drawing tools</li>
-                <li>• Economic calendar integration</li>
-              </ul>
-            </div>
-          </div>
+              {/* Texts */}
+              <div className="mt-4 text-center px-2">
+                <h3 className="font-semibold text-md text-gray-900">{button.title}</h3>
+                <p className="text-sm text-gray-600 mt-2 line-clamp-3">{button.description}</p>
+              </div>
+            </motion.div>
+          ))}
         </motion.div>
-      </Section> */}
+      </Section>
 
-      {/* <CTAStrip
-        title="Ready to Start Trading?"
-        description="Download LTI MT5 now and experience professional trading at your fingertips."
-        ctaText="Open Trading Account"
-        variant="brand"
-      /> */}
+      {/* Device Platforms */}
+      <Section padding='md' className="py-16 md:py-24 bg-white">
+        <div className="max-w-7xl mx-auto text-center mb-12 px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Pick Your Device</h2>
+          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+            Get MT5 on the platform that fits best for you and your needs. Whether you’re on desktop or smartphone, MT5 is just a few clicks away.
+          </p>
+        </div>
+
+        <div className="flex flex-wrap gap-5">
+
+          {/* MT5 for Tablet and Mobile */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            whileHover={{ scale: 1.02 }}
+            className="flex flex-shrink-0 flex-grow-0 flex-col border border-gray-200 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 bg-white overflow-hidden row-span-2 min-w-[300px] max-w-[350px]"
+            style={{
+              background: "hsla(10, 69%, 47%, 0.10)",
+              boxShadow: "0px 4px 3px 0px rgba(183, 183, 183, 0.25)",
+            }}
+          >
+            <div className="p-6 flex flex-col items-center justify-start text-center">
+              <h3 className="font-semibold text-xl text-gray-900 mb-2">MT5 for Tablet and Mobile</h3>
+              <div className="flex items-center gap-3 mt-4 flex-wrap justify-center">
+                <img src={AppStore4x} alt="App Store" className="h-9 sm:h-10 w-auto max-w-[130px] object-contain" />
+                <img src={playstoreApk4x} alt="Android App" className="h-9 sm:h-10 w-auto max-w-[130px] object-contain" />
+              </div>
+            </div>
+            <div className=" p-4 flex-grow">
+              <img src={TabletMobileImg} alt="MT5 for Tablet and Mobile" className="object-cover w-full h-full transition-all duration-300" />
+            </div>
+          </motion.div>
+
+          {/* MT5 for PC */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            whileHover={{ scale: 1.02 }}
+            className="flex flex-shrink-0 flex-col border border-gray-200 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 bg-white overflow-hidden row-span-2 min-w-[300px] max-w-[350px]"
+            style={{
+              background: "hsla(10, 69%, 47%, 0.10)",
+              boxShadow: "0px 4px 3px 0px rgba(183, 183, 183, 0.25)",
+            }}
+          >
+            <div className="p-6 flex flex-col items-center justify-start text-center">
+              <h3 className="font-semibold text-xl text-gray-900 mb-2">MT5 for PC</h3>
+
+              <a href="#" className="text-primary flex items-center gap-1">
+                Download <ExternalLink className="w-4 h-4 text-primary" />
+              </a>
+            </div>
+            <div className="p-4 flex-grow">
+              <img src={Pc} alt="MT5 for PC" className="object-cover w-full h-full transition-all duration-300" />
+            </div>
+          </motion.div>
+
+          <div className=' flex-shrink-0 min-w-[350px] max-w-[300px]'>
+
+            {/* MT5 WebTrader */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              whileHover={{ scale: 1.02 }}
+              className="flex flex-col border border-gray-200 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 bg-white overflow-hidden row-span-1 mb-5"
+              style={{
+                background: "hsla(10, 69%, 47%, 0.10)",
+                boxShadow: "0px 4px 3px 0px rgba(183, 183, 183, 0.25)",
+              }}
+            >
+              <div className="p-6 flex flex-col items-center justify-start text-center flex-none">
+                <h3 className="font-semibold text-xl text-gray-900 mb-2">MT5 WebTrader</h3>
+
+                <a href="#" className="text-primary flex items-center gap-1">
+                  Access in Web <ExternalLink className="w-4 h-4 text-primary" />
+                </a>
+              </div>
+            </motion.div>
+
+            {/* MT5 for Mac */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              whileHover={{ scale: 1.02 }}
+              className="flex flex-col border border-gray-200 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 bg-white overflow-hidden row-span-2"
+              style={{
+                background: "hsla(10, 69%, 47%, 0.10)",
+                boxShadow: "0px 4px 3px 0px rgba(183, 183, 183, 0.25)",
+              }}
+            >
+              <div className="p-6 flex flex-col items-center justify-start text-center">
+                <h3 className="font-semibold text-xl text-gray-900 mb-2">MT5 for Mac</h3>
+
+                <a href="#" className="text-primary flex items-center gap-1">
+                  Download<ExternalLink className="w-4 h-4 text-primary" />
+                </a>
+              </div>
+              <div className="flex-grow p-4">
+                <img src={mac} alt="MT5 for Mac" className="object-cover w-full h-full transition-all duration-300" />
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </Section>
+
     </main>
   );
 }

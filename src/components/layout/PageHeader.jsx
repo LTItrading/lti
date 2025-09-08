@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Container } from './Container';
 import { ExternalLink } from 'lucide-react';
 import WaveForFooter from "@/assets/images/4x-Images/WaveForFooter.png";
+import {  Smartphone, Monitor, Globe } from 'lucide-react';
 
 // interface PageHeaderProps {
 //   title: string;
@@ -19,6 +20,7 @@ export function PageHeader({
   subtitle,
   description,
   showCta = false,
+  showPlatforms = false,
   ctaText = 'Open Live Account',
   ctaHref = '/accounts',
   background = 'default'
@@ -68,6 +70,33 @@ export function PageHeader({
             >
               {description}
             </motion.p>
+          )}
+
+                    {/* Platforms Section (App / PC / WebTrader) */}
+          {showPlatforms && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.35 }}
+              className="text-center mt-6"
+            >
+              <div className="flex flex-wrap justify-center gap-4 mb-6">
+                <Button className="bg-white text-black border border-gray-300 hover:bg-gray-100 font-semibold px-6 py-6 rounded-md flex items-center gap-2">
+                  <Smartphone className="w-5 h-5" />
+                  App
+                </Button>
+
+                <Button className="bg-white text-black border border-gray-300 hover:bg-gray-100 font-semibold px-6 py-6 rounded-md flex items-center gap-2">
+                  <Monitor className="w-5 h-5" />
+                  PC
+                </Button>
+
+                <Button className="bg-white text-black border border-gray-300 hover:bg-gray-100 font-semibold px-6 py-6 rounded-md flex items-center gap-2">
+                  <Globe className="w-5 h-5" />
+                  WebTrader
+                </Button>
+              </div>
+            </motion.div>
           )}
 
           {showCta && (
