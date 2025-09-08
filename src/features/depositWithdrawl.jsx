@@ -84,7 +84,7 @@ export default function DepositsWithdrawals() {
               </div>
               <div className="flex flex-col flex-1">
                 <h3 className="font-extrabold text-2xl text-gray-900 mb-3 tracking-tight">
-                  How to <span className="text-primary">Withdraw</span> Funds
+                  How to <span className="text-primary">Withdraw Funds</span>?
                 </h3>
                 <p className="text-gray-700 text-base leading-relaxed">
                   Easily request a withdrawal through the LTI client area or mobile app. We offer a variety of secure withdrawal

@@ -33,7 +33,7 @@ const accountTypes = [
   {
     icon: Play,
     name: "Cent",
-    description: "Perfect for beginners with low-risk exposure.",
+    description: "Start micro-scale trading with a Cent Account.",
     details: [
       "Spread: From 1.5 pips",
       "Commission: None",
@@ -44,7 +44,7 @@ const accountTypes = [
   {
     icon: Headphones,
     name: "Core",
-    description: "Raw spreads with commission, ideal for scalpers.",
+    description: "Trade confidently with the Core Account.",
     details: [
       "Spread: From 0.0 pips",
       "Commission: $6/lot",
@@ -55,7 +55,7 @@ const accountTypes = [
   {
     icon: BookOpen,
     name: "Pro ",
-    description: "Perfect for beginners with low-risk exposure.",
+    description: "Unlock high-volume trading with the Pro Account.",
     details: [
       "Raw spreads for high-volume traders.",
       "Min Deposit: $5,000",
@@ -70,7 +70,7 @@ const accountTypes = [
   {
     icon: Monitor,
     name: "ECN ",
-    description: "Raw spreads with commission, ideal for scalpers.",
+    description: "Experience raw spreads and deep liquidity with the ECN Account.",
     details: [
       "Giving traders raw spreads and deep liquidity.",
       "Min Deposit: $50",
@@ -84,7 +84,7 @@ const accountTypes = [
   {
     icon: Globe,
     name: "Flexi",
-    description: "Perfect for beginners with low-risk exposure.",
+    description: "Trade your way with the Flexi Account.",
     details: [
       "	Min Deposit: Negotiable.",
       "Customised trading environment.",
@@ -98,7 +98,7 @@ const accountTypes = [
   {
     icon: TrendingUp,
     name: "ECO",
-    description: "Raw spreads with commission, ideal for scalpers.",
+    description: "Make a difference while trading with the Eco Account.",
     details: [
       "	Trade with impact",
       "	A portion of spread revenue is donated to environmental or social causes.",

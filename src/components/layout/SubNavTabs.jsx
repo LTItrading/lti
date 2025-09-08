@@ -36,7 +36,7 @@ if(activeTabId){
               onClick={() => handleTabChange(tab.id)}
               className={cn(
                 'relative whitespace-nowrap pb-4 px-1 text-sm font-medium transition-colors',
-                'focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 rounded-t-md',
+                'focus:outline-none rounded-t-md',
                 activeTabId == tab.id
                   ? 'text-brand'
                   : 'text-muted-foreground hover:text-ink'

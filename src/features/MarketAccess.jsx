@@ -60,20 +60,19 @@ import UKBRENT from "@/assets/images/indices-ft/UKBRENT.svg"
 import US500U25 from "@/assets/images/indices-ft/US500U25.svg"
 import USOIL25 from "@/assets/images/indices-ft/USOIL25.svg"
 import XAUUSD from "@/assets/images/indices-ft/XAUUSD.svg"
-import SILVER from "@/assets/images/indices-ft/SILVER.svg"
 import USTECU from "@/assets/images/indices-ft/USTECU25.svg"
 //crypto
-import BITCOIN from "@/assets/images/crypto/bitcoin.svg"
-import CARDANO from "@/assets/images/crypto/cardano.svg"
-import CHILIZ from "@/assets/images/crypto/Chiliz.svg"
-import DOGECOIN from "@/assets/images/crypto/dogecoin.svg"
-import ETHEREUM from "@/assets/images/crypto/ethereum.svg"
-import HARMONY from "@/assets/images/crypto/harmony.svg"
-import NEM from "@/assets/images/crypto/nem.svg"
-import SOLANA from "@/assets/images/crypto/solana.svg"
-import STELLAR from "@/assets/images/crypto/stellar.svg"
-import TRON from "@/assets/images/crypto/tron.svg"
-import VECHAIN from "@/assets/images/crypto/vechain.svg"
+import BCH from "@/assets/images/crypto/bitcoin.svg"
+import ADA from "@/assets/images/crypto/cardano.svg"
+import CHZ from "@/assets/images/crypto/Chiliz.svg"
+import DOGE from "@/assets/images/crypto/dogecoin.svg"
+import ETH from "@/assets/images/crypto/ethereum.svg"
+import ONE from "@/assets/images/crypto/harmony.svg"
+import XEM from "@/assets/images/crypto/nem.svg"
+import SOL from "@/assets/images/crypto/solana.svg"
+import XLM from "@/assets/images/crypto/stellar.svg"
+import TRX from "@/assets/images/crypto/tron.svg"
+import VET from "@/assets/images/crypto/vechain.svg"
 //eu
 import AIRPA from "@/assets/images/euShares/AIRPA.svg"
 import BAYGN from "@/assets/images/euShares/BAYGN.svg"
@@ -151,17 +150,17 @@ export default function MarketAccess() {
   }
 
   const crypto ={
-    BITCOIN,
-    CARDANO,
-    CHILIZ,
-    DOGECOIN,
-    ETHEREUM,
-    HARMONY,
-    NEM,
-    SOLANA,
-    STELLAR,
-    TRON,
-    VECHAIN
+    BCH,
+    ADA,
+    CHZ,
+    DOGE,
+    ETH,
+    ONE,
+    XEM,
+    SOL,
+    XLM,
+    TRX,
+    VET
   }
 
   const indiceft ={
@@ -175,7 +174,7 @@ export default function MarketAccess() {
     US500U25,
     USOIL25,
     XAUUSD,
-    SILVER,
+    XAG,
     USTECU
   }
 
@@ -701,7 +700,7 @@ export default function MarketAccess() {
           spread: 2.9,
           lowSpread: 2.3,
           leverage: 100,
-          flags:['SILVER']
+          flags:['XAG']
         },
         {
           symbol: "TY10.U25",
@@ -867,7 +866,7 @@ export default function MarketAccess() {
           spread: 3.8,
           lowSpread: 2.9,
           leverage: 50,
-          // flags: ["SOLANA","US"],
+          flags: ["BCH","US"],
         },
         {
           symbol: "BTC/EUR",
@@ -875,7 +874,7 @@ export default function MarketAccess() {
           spread: 4.5,
           lowSpread: 3.7,
           leverage: 50,
-          // flags: ["SOLANA","EU"],
+          flags: ["BCH","EU"],
         },
         {
           symbol: "BTC/JPY",
@@ -883,7 +882,7 @@ export default function MarketAccess() {
           spread: 5.2,
           lowSpread: 4.1,
           leverage: 50,
-          // flags: ["SOLANA","JP"],
+          flags: ["BCH","JP"],
         },
         {
           symbol: "BTC/USD",
@@ -891,7 +890,7 @@ export default function MarketAccess() {
           spread: 3.9,
           lowSpread: 3.0,
           leverage: 50,
-          // flags: ["SOLANA","US"],
+          flags: ["BCH","US"],
         },
         {
           symbol: "SOL/USD",
@@ -899,7 +898,7 @@ export default function MarketAccess() {
           spread: 2.6,
           lowSpread: 2.0,
           leverage: 50,
-          // flags: ["SOLANA","US"],
+          flags: ["SOL","US"],
         },
         {
           symbol: "ADA/USD",
@@ -907,8 +906,7 @@ export default function MarketAccess() {
           spread: 2.2,
           lowSpread: 1.7,
           leverage: 50,
-          
-          
+          flags: ["ADA","US"],
         },
         {
           symbol: "CHZ/USD",
@@ -916,6 +914,8 @@ export default function MarketAccess() {
           spread: 2.4,
           lowSpread: 1.8,
           leverage: 50,
+          flags: ["CHZ","US"],
+
         },
         {
           symbol: "DOG/USD",
@@ -923,6 +923,8 @@ export default function MarketAccess() {
           spread: 2.8,
           lowSpread: 2.1,
           leverage: 50,
+          flags: ["DOGE","US"],
+
         },
         {
           symbol: "ONE/USD",
@@ -930,6 +932,7 @@ export default function MarketAccess() {
           spread: 2.5,
           lowSpread: 1.9,
           leverage: 50,
+          flags: ["ONE","US"],
         },
         {
           symbol: "TRX/USD",
@@ -937,6 +940,7 @@ export default function MarketAccess() {
           spread: 2.3,
           lowSpread: 1.7,
           leverage: 50,
+          flags: ["TRX","US"],
         },
         {
           symbol: "VET/USD",
@@ -944,6 +948,7 @@ export default function MarketAccess() {
           spread: 2.7,
           lowSpread: 2.0,
           leverage: 50,
+          flags: ["VET","US"],
         },
         {
           symbol: "XEM/USD",
@@ -951,6 +956,7 @@ export default function MarketAccess() {
           spread: 2.9,
           lowSpread: 2.2,
           leverage: 50,
+          flags: ["XEM","US"],
         },
         {
           symbol: "XLM/USD",
@@ -958,6 +964,7 @@ export default function MarketAccess() {
           spread: 2.6,
           lowSpread: 2.0,
           leverage: 50,
+          flags: ["XLM","US"],
         },
         {
           symbol: "ETH/USD",
@@ -965,6 +972,7 @@ export default function MarketAccess() {
           spread: 3.2,
           lowSpread: 2.5,
           leverage: 50,
+          flags: ["ETH","US"],
         },
       ],
       columns: [
@@ -976,7 +984,7 @@ export default function MarketAccess() {
               <div className="flex -space-x-2 mr-2 flex-shrink-0">
                 {row?.flags?.map((code, i) =>
                   i == 0 ? (
-                    <img src={crypto[code]} alt={code} width={15} height={15} />
+                    <img src={crypto[code]} alt={code} width={24} height={24} />
                   ) : (
                     <ReactCountryFlag
                       key={code}
@@ -1029,9 +1037,10 @@ export default function MarketAccess() {
           key: "symbol",
           header: "Symbol",
           render: (_, row) => (
-            <div className="flex flex-row">
+            <div className="flex flex-row items-center gp-3">
               {row?.flags?.[0] && (
                 <img
+                  className="mr-2"
                   src={metals[row?.flags?.[0]]}
                   alt={row?.flags?.[0]}
                   width={24}
