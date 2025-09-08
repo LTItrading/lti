@@ -36,6 +36,20 @@ import AMZN from "@/assets/images/metals/amazon.svg"
 import TSLA from "@/assets/images/metals/tesla.svg"
 import APPL from "@/assets/images/metals/apple.svg"
 import MSFT from "@/assets/images/metals/microsoft.svg"
+//indices
+import AUS200 from "@/assets/images/indices/AUS200.svg"
+import DE40C from "@/assets/images/indices/DE40C.svg"
+import F40C from "@/assets/images/indices/F40C.svg"
+import HK50C from "@/assets/images/indices/HK50C.svg"
+import NE25C from "@/assets/images/indices/NE25C.svg"
+import STOXX50 from "@/assets/images/indices/STOXX50.svg"
+import UK100C from "@/assets/images/indices/UK100C.svg"
+import US500C from "@/assets/images/indices/US500C.svg"
+import USTEC from "@/assets/images/indices/USTEC.svg"
+import DJ30 from "@/assets/images/indices/DJ30.svg"
+import ES35 from "@/assets/images/indices/ES35.svg"
+import SWI20C from "@/assets/images/indices/SWI20C.svg"
+
 
 function ForexTab({ data, columns }) {
   return (
@@ -77,6 +91,21 @@ export default function MarketAccess() {
     TSLA,
     MSFT,
     APPL
+  }
+
+  const indice = {
+    AUS200,
+    DE40C,
+    F40C,
+    HK50C,
+    NE25C,
+    STOXX50,
+    UK100C,
+    US500C,
+    USTEC,
+    DJ30,
+    ES35,
+    SWI20C
   }
   const tabs = [
     {
@@ -414,6 +443,7 @@ export default function MarketAccess() {
           spread: 1.8,
           lowSpread: 1.3,
           leverage: 200,
+          flags:['AUS200']
         },
         {
           symbol: "DE40.c",
@@ -421,6 +451,7 @@ export default function MarketAccess() {
           spread: 1.5,
           lowSpread: 1.1,
           leverage: 200,
+          flags:['DE40C']
         },
         {
           symbol: "F40.c",
@@ -428,6 +459,7 @@ export default function MarketAccess() {
           spread: 1.7,
           lowSpread: 1.2,
           leverage: 200,
+          flags:['F40C']
         },
         {
           symbol: "HK50.c",
@@ -435,6 +467,7 @@ export default function MarketAccess() {
           spread: 2.4,
           lowSpread: 1.9,
           leverage: 200,
+          flags:['AUS200']
         },
         {
           symbol: "NE25.c",
@@ -442,6 +475,7 @@ export default function MarketAccess() {
           spread: 1.6,
           lowSpread: 1.2,
           leverage: 200,
+          flags:['NE25C']
         },
         {
           symbol: "STOXX50.c",
@@ -449,6 +483,7 @@ export default function MarketAccess() {
           spread: 1.4,
           lowSpread: 1.0,
           leverage: 200,
+          flags:['STOXX50']
         },
         {
           symbol: "UK100.c",
@@ -456,6 +491,7 @@ export default function MarketAccess() {
           spread: 1.9,
           lowSpread: 1.4,
           leverage: 200,
+          flags:['UK100C']
         },
         {
           symbol: "US500.c",
@@ -463,6 +499,7 @@ export default function MarketAccess() {
           spread: 1.2,
           lowSpread: 0.9,
           leverage: 200,
+          flags:['US500C']
         },
         {
           symbol: "USTEC.c",
@@ -470,6 +507,7 @@ export default function MarketAccess() {
           spread: 1.5,
           lowSpread: 1.0,
           leverage: 200,
+          flags:['USTEC']
         },
         {
           symbol: "DJ30.c",
@@ -477,6 +515,7 @@ export default function MarketAccess() {
           spread: 1.6,
           lowSpread: 1.1,
           leverage: 200,
+          flags:['DJ30']
         },
         {
           symbol: "ES35.c",
@@ -484,6 +523,7 @@ export default function MarketAccess() {
           spread: 1.8,
           lowSpread: 1.3,
           leverage: 200,
+          flags:['ES35']
         },
         {
           symbol: "SWI20.c",
@@ -491,6 +531,7 @@ export default function MarketAccess() {
           spread: 1.7,
           lowSpread: 1.2,
           leverage: 200,
+          flags:['SWI20C']
         },
       ],
       columns: [
@@ -498,11 +539,21 @@ export default function MarketAccess() {
           key: "symbol",
           header: "Symbol",
           render: (_, row) => (
-            <div>
-              <div className="font-bold text-lg text-gray-900">
-                {row.symbol}
+              <div className="flex flex-row items-center gap-2">
+              <div className="mr-2 flex-shrink-0">
+                <img
+                  src={indice[row?.flags?.[0]]}
+                  alt={row?.flags?.[0]}
+                  width={24}
+                  height={24}
+                />
               </div>
-              <div className="text-xs text-gray-600">{row.name}</div>
+              <div>
+                <div className="font-bold text-lg text-gray-900">
+                  {row.symbol}
+                </div>
+                <div className="text-xs text-gray-600">{row.name}</div>
+              </div>
             </div>
           ),
         },
