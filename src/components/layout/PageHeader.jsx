@@ -23,13 +23,15 @@ export function PageHeader({
   showPlatforms = false,
   ctaText = 'Open Live Account',
   ctaHref = '/accounts',
-  background = 'default'
+  background = 'default',
+  bgType = "forex",
+  isMac = false
 }) {
   return (
     <section
       className={`py-16 md:py-24 ${
         background === "gradient"
-          ? "bg-gradient-to-br from-brand/5 to-brand/10 header-bg1"
+          ? isMac ? `bg-gradient-to-br from-brand/5 to-brand/10 header-${bgType}` : 'bg-gradient-to-br from-brand/5 to-brand/10 header-bg'
           : "bg-base"
       }`}
     >

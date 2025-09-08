@@ -170,8 +170,8 @@ export default function MarketAccess() {
           key: "symbol",
           header: "Symbol",
           render: (_, row) => (
-            <div className="flex flex-row">
-              <div className="flex -space-x-2 mr-2">
+            <div className="flex flex-row gap-2">
+              <div className="flex -space-x-2 mr-2 flex-shrink-0">
                 {row?.flags?.map((code) => (
                   <ReactCountryFlag
                     key={code}
@@ -355,8 +355,8 @@ export default function MarketAccess() {
           key: "symbol",
           header: "Symbol",
           render: (_, row) => (
-            <div className="flex flex-row">
-              <div className="flex -space-x-2 mr-2">
+            <div className="flex flex-row gap-2">
+              <div className="flex -space-x-2 mr-2 flex-shrink-0">
                 {row?.flags?.map((code, i) =>
                   i == 0 ? (
                     <img src={metals[code]} alt={code} width={24} height={24} />
@@ -672,8 +672,8 @@ export default function MarketAccess() {
           key: "symbol",
           header: "Symbol",
           render: (_, row) => (
-            <div className="flex flex-row items-center">
-              <div className="mr-2">
+            <div className="flex flex-row items-center gap-2">
+              <div className="mr-2 flex-shrink-0">
                 <img
                   src={metals[row?.flags[0]]}
                   alt={row?.flags[0]}
@@ -1032,6 +1032,8 @@ export default function MarketAccess() {
         description="Trade a comprehensive range of instruments across global markets with competitive conditions and professional execution."
         showCta={true}
         background="gradient"
+        bgType={currentState?.id}
+        isMac={true}
       />
 
       <Section padding="lg">
