@@ -5,7 +5,7 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@radix-ui/react-accordion";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import WaveForFooter from "../../assets/images/4x-Images/WaveForFooter.png";
 import {
@@ -70,7 +70,7 @@ const accountTypes = [
   {
     icon: Monitor,
     name: "ECN ",
-    description: "Experience raw spreads and deep liquidity with the ECN Account.",
+    description: "Raw spreads and deep liquidity with ECN Account.",
     details: [
       "Giving traders raw spreads and deep liquidity.",
       "Min Deposit: $50",
@@ -193,6 +193,17 @@ export default function AccountOptions() {
                 {account.name}
               </h2>
               <p className="mb-4 font-manrope">{account.description}</p>
+              
+              <Button
+                size="sm"
+                className="bg-brand hover:bg-brand/90 text-brand-foreground font-semibold px-8 py-3 rounded-xl mb-2"
+                asChild
+              >
+                <a href={'/accounts'}>
+                  Open Account <ExternalLink />
+                </a>
+              </Button>
+
               <Accordion type="single" collapsible>
                 <AccordionItem value="details">
                   <AccordionTrigger className="text-brand hover:underline font-semibold">
@@ -212,10 +223,6 @@ export default function AccountOptions() {
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
-              <button className="mt-6 bg-brand text-brand-foreground px-4 py-2 rounded-lg hover:opacity-90 transition">
-                {" "}
-                Open Account
-              </button>
             </motion.div>
           ))}
         </div>
