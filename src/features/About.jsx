@@ -3,6 +3,7 @@ import { Globe } from "lucide-react";
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import BigBen from "@/assets/images/world.png"
 
 export const About = () => {
     const ref = useRef(null);
@@ -11,12 +12,12 @@ export const About = () => {
   return (
     <div ref={ref}>
       <section
-        className="py-10 px-5 lg:px-32"
-        style={{
-          backgroundImage: "url('./src/assets/images/Ellipse2.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+        className="py-10 px-5 lg:px-32 about-header-bg"
+        // style={{
+        //   backgroundImage: "url('./src/assets/images/Ellipse2.png')",
+        //   backgroundSize: "cover",
+        //   backgroundPosition: "center",
+        // }}
       >
         <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 gap-y-6 gap-x-1">
           <div>
@@ -44,7 +45,7 @@ export const About = () => {
             <img
               className="mx-auto"
               width={350}
-              src="./src/assets/images/world.png"
+              src={BigBen}
             />
           </div>
         </div>

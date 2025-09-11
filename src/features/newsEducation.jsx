@@ -150,7 +150,7 @@ const NewsEducation = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mb-20"
           >
-            <Card className="relative text-white shadow-2xl rounded-none rounded-[80px] min-h-[463px] sm:min-h-[320px] lg:min-h-[400px] flex flex-col justify-center sm:px-[60px] lg:px-[50px] py-[100px] sm:py-[50px] lg:py-[50px]">
+            <Card className="relative shadow-elegant hover:shadow-glow transition-smooth text-white shadow-2xl rounded-none rounded-[50px] min-h-[463px] sm:min-h-[320px] lg:min-h-[400px] flex flex-col justify-center sm:px-[60px] lg:px-[50px] py-[100px] sm:py-[50px] lg:py-[50px]">
               <CardHeader>
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 gradient-primary rounded-lg flex items-center justify-center">
@@ -193,7 +193,7 @@ const NewsEducation = () => {
                         <div className="text-md font-medium">
                           Economic Calendar
                         </div>
-                        <div className="text-xs text-gray-400">
+                        <div className="text-xs text-white">
                          Built into MT5, filterable by country, impact level, and event type — helping you track announcements like NFP, CPI, and rate decisions.
 
                         </div>
@@ -290,7 +290,7 @@ const NewsEducation = () => {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="mb-16"
           >
-            <Card className="shadow-elegant hover:shadow-glow transition-smooth bg-card/80 backdrop-blur-sm border-primary/10 rounded-[80px] ">
+            <Card className="shadow-elegant hover:shadow-glow transition-smooth bg-card/80 backdrop-blur-sm border-primary/10 rounded-[50px] ">
               <CardHeader className="text-center pb-8">
                 <div className="w-16 h-16 mx-auto mb-4 gradient-primary rounded-full flex items-center justify-center">
                   <BookOpen className="h-8 w-8 text-primary-foreground" />
