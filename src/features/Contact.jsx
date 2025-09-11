@@ -91,7 +91,7 @@ export const Contact = () => {
       <section className="text-center py-10 md:py-14 px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold mb-7">Support When You Need It</h2>
         <div className="grid grid-cols-1 xs:grid-cols-3 sm:grid-cols-3 md:grid-cols-3 gap-y-6 gap-x-1">
-          <div className="bg-gradient-to-r from-[rgba(234,234,234,1)] to-[rgba(216,216,216,1)]  rounded-3xl p-5 mx-3">
+          <div className="bg-gradient-to-r from-[rgba(234,234,234,1)] to-[rgba(216,216,216,1)] p-5 mx-3">
             <div className="flex items-center justify-center space-x-4 mb-3 ">
               <div className="flex items-center justify-center">
                 <Calendar className="h-6 w-6 text-primary" />
@@ -102,7 +102,7 @@ export const Contact = () => {
             </div>
             <p>Monday – Friday</p>
           </div>
-          <div className="bg-gradient-to-r from-[rgba(234,234,234,1)] to-[rgba(216,216,216,1)]  rounded-3xl p-5 mx-3">
+          <div className="bg-gradient-to-r from-[rgba(234,234,234,1)] to-[rgba(216,216,216,1)] p-5 mx-3">
             <div className="flex items-center justify-center space-x-4 mb-3 ">
               <div className="flex items-center justify-center">
                 <Timer className="h-6 w-6 text-primary" />
@@ -113,7 +113,7 @@ export const Contact = () => {
             </div>
             <p>24/5 across trading sessions</p>
           </div>
-          <div className="bg-gradient-to-r from-[rgba(234,234,234,1)] to-[rgba(216,216,216,1)]  rounded-3xl p-5 mx-3">
+          <div className="bg-gradient-to-r from-[rgba(234,234,234,1)] to-[rgba(216,216,216,1)] p-5 mx-3">
             <div className="flex items-center justify-center space-x-4 mb-3 ">
               <div className="flex items-center justify-center">
                 <Globe className="h-6 w-6 text-primary" />

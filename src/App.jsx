@@ -108,6 +108,7 @@ import MT5Platform from "./features/MT5Platform";
 import TradingConditions from "./features/TradingConditions";
 import AccountOptions from "./pages/dashboardLTI/AccountOptions";
 import { Contact } from "./features/Contact";
+import { About } from "./features/About";
 
 function App() {
   return (
@@ -138,6 +139,7 @@ function App() {
         />
         <Route path="/trading/account-options" element={<AccountOptions />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
     </Router>
