@@ -241,6 +241,11 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   background-position: center;
 }
 
+.contact-header-bg{
+  background-image: url('/src/assets/images/businesswoman.jpg');
+  background-size: cover;    
+  background-position: top;
+}
 
 .header-forex {
   background-image: 
