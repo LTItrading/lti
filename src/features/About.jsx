@@ -4,6 +4,7 @@ import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import BigBen from "@/assets/images/world.png"
+import Tower  from "@/assets/images/london.png"
 
 export const About = () => {
     const ref = useRef(null);
@@ -59,7 +60,7 @@ export const About = () => {
           >
             <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 gap-y-6 gap-x-1">
               <div>
-                <img width={350} src="./src/assets/images/london.png" />
+                <img width={350} src={Tower} />
               </div>
               <div>
                 <h1 className="text-3xl md:text-4xl lg:text-3xl font-bold mb-6 tracking-tight">

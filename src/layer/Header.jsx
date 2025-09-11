@@ -97,7 +97,7 @@ const Header = () => {
                 <span
                   key={label}
                   style={{ color: "#EE4223" }}
-                  className="hover:underline focus:outline-none transition-all duration-200"
+                  className="hover:underline focus:outline-none transition-all duration-200 font-bold"
                 >
                   {label}
                 </span>
