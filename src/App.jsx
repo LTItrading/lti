@@ -107,6 +107,7 @@ import MarketAccess from "./features/MarketAccess";
 import MT5Platform from "./features/MT5Platform";
 import TradingConditions from "./features/TradingConditions";
 import AccountOptions from "./pages/dashboardLTI/AccountOptions";
+import { Contact } from "./features/Contact";
 
 function App() {
   return (
@@ -125,11 +126,18 @@ function App() {
         />
         <Route path="/insights/news-education" element={<NewsEducation />} />
         <Route path="/insights/rewards" element={<RewardsFeatures />} />
-        <Route path="/trading/deposits-withdrawals" element={<DepositsWithdrawals />} />
+        <Route
+          path="/trading/deposits-withdrawals"
+          element={<DepositsWithdrawals />}
+        />
         <Route path="/trading/market-access" element={<MarketAccess />} />
         <Route path="/trading/mt5" element={<MT5Platform />} />
-        <Route path="/trading/trading-conditions" element={<TradingConditions />} />
+        <Route
+          path="/trading/trading-conditions"
+          element={<TradingConditions />}
+        />
         <Route path="/trading/account-options" element={<AccountOptions />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </Router>
@@ -137,4 +145,3 @@ function App() {
 }
 
 export default App;
-

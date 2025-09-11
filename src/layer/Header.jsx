@@ -1,23 +1,24 @@
-
-
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom"; // Add this import
 
-const Header = () => { 
+const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   const miniLinks = ["Partnerships", "Institutional", "Funding"];
-  
+
   const navLinks = [
     {
       label: "Trading",
       subMenu: [
         { name: "Account Options", path: "/trading/account-options" },
-        { name: "Deposits and Withdrawals", path: "/trading/deposits-withdrawals" },
+        {
+          name: "Deposits and Withdrawals",
+          path: "/trading/deposits-withdrawals",
+        },
         { name: "Market Access", path: "/trading/market-access" },
         { name: "Tools and Platform", path: "/trading/mt5" },
         { name: "Trading Conditions", path: "/trading/trading-conditions" },
@@ -30,14 +31,14 @@ const Header = () => {
         { name: "Rewards and Features", path: "/insights/rewards" },
       ],
     },
-    // {
-    //   label: "Corporate",
-    //   subMenu: [
-    //     { name: "About Us", path: "/about" },
-    //     { name: "Careers", path: "/careers" },
-    //     { name: "Contact", path: "/contact" },
-    //   ],
-    // },
+    {
+      label: "Corporate",
+      subMenu: [
+        { name: "About Us", path: "/about" },
+        // { name: "Careers", path: "/careers" },
+        { name: "Contact", path: "/contact" },
+      ],
+    },
   ];
 
   const [isSticky, setIsSticky] = useState(false);
@@ -47,8 +48,6 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-
 
   const toggleDropdown = (label) => {
     setOpenDropdown(openDropdown === label ? null : label);
@@ -109,12 +108,8 @@ const Header = () => {
           {/* Main header */}
           <div className="flex items-center justify-between py-3 sm:py-2 relative">
             <div className="flex items-center gap-4 sm:gap-10 md:gap-[60px]">
-              
               {/* Use Link for the logo */}
-              <Link
-                to="/"
-                className="focus:outline-none"
-              >
+              <Link to="/" className="focus:outline-none">
                 <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-JvtCp3eGbwrNUCKAHpTas3wGuWwtQU.png"
                   alt="LTI Logo"
@@ -242,5 +237,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
