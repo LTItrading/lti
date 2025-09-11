@@ -32,9 +32,8 @@ const RewardsFeatures = () => {
       title: "Trade Calculators",
       description:
         " Instantly calculate pip value, margin requirements, and potential profit/loss before opening a trade.",
-        bgcolor: "bg-[rgba(238,66,35,1)] text-white",
+      bgcolor: "bg-[rgba(238,66,35,1)] text-white",
       textColor: "text-white",
-      
     },
     {
       icon: Bell,
@@ -58,9 +57,8 @@ const RewardsFeatures = () => {
       title: "Strategy Tester",
       description:
         "Backtest your expert advisors (EAs) against historical data",
-        bgcolor: "bg-[rgba(50,50,51,1)] text-white",
+      bgcolor: "bg-[rgba(50,50,51,1)] text-white",
       textColor: "text-white",
-      
     },
     {
       icon: Smartphone,
@@ -76,15 +74,14 @@ const RewardsFeatures = () => {
       description: "Free access to expert advisors pre-installed on MT5",
       bgcolor: "bg-[rgba(50,50,51,1)] text-white",
       textColor: "text-white",
-     
     },
-    {
-      icon: Users,
-      title: "Correlation Matrix",
-      description: "Analyse market interdependencies in real time",
-      bgcolor: "bg-gradient-to-r from-[#E62E1C] via-[#F04C1A] to-[#FF6B2C]",
-      textColor: "text-white",
-    },
+    // {
+    //   icon: Users,
+    //   title: "Correlation Matrix",
+    //   description: "Analyse market interdependencies in real time",
+    //   bgcolor: "bg-gradient-to-r from-[#E62E1C] via-[#F04C1A] to-[#FF6B2C]",
+    //   textColor: "text-white",
+    // },
   ];
 
   const contestFeatures = [
@@ -112,19 +109,19 @@ const RewardsFeatures = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               Tools that Empower. Rewards That Motivate
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-md text-muted-foreground max-w-2xl mx-auto">
               LTI gives you more than a trading platform — we offer smart tools
               and performance-based rewards to elevate your trading experience.
               From real-time utilities to cashback and competitions, every
-              feature is designed to support your trading. 
+              feature is designed to support your trading.
             </p>
-                <Button
-                      className="mt-6 bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold"
-                      variant="cta"
-                      size="lg"
-                    >
-                      Open an Account
-                    </Button>
+            <Button
+              className="mt-6 bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold"
+              variant="cta"
+              size="lg"
+            >
+              Open an Account
+            </Button>
           </motion.div>
 
           {/* Trading Contests Section */}
@@ -134,7 +131,7 @@ const RewardsFeatures = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mb-20"
           >
-            <Card className="shadow-elegant hover:shadow-glow transition-smooth bg-[#1C1C1C] md:rounded-tl-[80px] md:rounded-br-[80px] backdrop-blur-sm border-primary/10">
+            <Card className="shadow-elegant hover:shadow-glow transition-smooth rounded-[50px] backdrop-blur-sm border-primary/10">
               <CardHeader className="text-center pb-8">
                 <div className="w-16 h-16 mx-auto mb-4 gradient-primary rounded-full flex items-center justify-center">
                   <Trophy className="h-8 w-8 text-primary-foreground" />
@@ -198,12 +195,10 @@ const RewardsFeatures = () => {
                     >
                       <div className="text-center">
                         <Award className="h-12 w-12 text-primary mx-auto mb-4" />
-                        <h3 className="text-2xl font-bold text-white mb-2">
-                          Prize Pool
-                        </h3>
-                        <div className="text-3xl font-bold text-primary mb-4">
+                        <h3 className="text-2xl font-bold  mb-2">Prize Pool</h3>
+                        {/* <div className="text-3xl font-bold text-primary mb-4">
                           $50,000+
-                        </div>
+                        </div> */}
                         <p className="text-muted-foreground">
                           Monthly prizes distributed among top performers
                         </p>
@@ -245,7 +240,9 @@ const RewardsFeatures = () => {
                   transition={{ delay: 0.8 + index * 0.1 }}
                   whileHover={{ scale: 1.03 }}
                 >
-                  <Card className={`${tool.bgcolor} h-full shadow-elegant hover:shadow-glow transition-smooth backdrop-blur-sm border-primary/10 hover:border-primary/20`}>
+                  <Card
+                    className={`${tool.bgcolor} h-full shadow-elegant hover:shadow-glow transition-smooth backdrop-blur-sm border-primary/10 hover:border-primary/20`}
+                  >
                     <CardHeader className="text-center">
                       <div className="w-12 h-12 mx-auto mb-4 gradient-primary rounded-lg flex items-center justify-center">
                         <tool.icon className="h-6 w-6 text-primary-foreground" />
@@ -270,13 +267,13 @@ const RewardsFeatures = () => {
               transition={{ delay: 1.2 }}
               className="text-center mt-12"
             >
-                  <Button
-                      className="bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold"
-                      variant="cta"
-                      size="lg"
-                    >
-                      Launch Client Portal
-                    </Button>
+              <Button
+                className="bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold"
+                variant="cta"
+                size="lg"
+              >
+                Launch Client Portal
+              </Button>
             </motion.div>
           </motion.div>
 
@@ -292,12 +289,16 @@ const RewardsFeatures = () => {
               More Features Coming Soon
             </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              We’re continuously expanding our suite of tools and trader-focused programs. Expect more utility integrations, contests, and reward modules launching in the coming months.
+              We’re continuously expanding our suite of tools and trader-focused
+              programs. Expect more utility integrations, contests, and reward
+              modules launching in the coming months.
             </p>
           </motion.div>
           <p className=" mt-5 text-xs text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Tools, calculators, and indicators are provided for informational purposes only and should not be considered as trading advice. Cashback programs and contests are subject to eligibility criteria and full terms, which will be made available before launch.
-
+            Tools, calculators, and indicators are provided for informational
+            purposes only and should not be considered as trading advice.
+            Cashback programs and contests are subject to eligibility criteria
+            and full terms, which will be made available before launch.
           </p>
         </motion.div>
       </div>

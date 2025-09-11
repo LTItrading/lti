@@ -82,7 +82,7 @@ const NewsEducation = () => {
       title: "USD/EUR",
       subtitle: "ECB Rate Decision Impact",
       change: "+0.23%",
-      color: "green",
+      color: "blue",
     },
     {
       pair: ["GB", "US"],
@@ -122,7 +122,7 @@ const NewsEducation = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               Market Intelligence Meets Expert Education
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-md text-muted-foreground max-w-2xl mx-auto">
               Stay one step ahead with real-time news and economic event
               directly from your trading platform - and strengthen your trading
               knowledge with expert video, audio, and eBook content in multiple
@@ -150,14 +150,14 @@ const NewsEducation = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mb-20"
           >
-            <Card className="relative bg-[#1C1C1C] text-white shadow-2xl rounded-none md:rounded-tl-[80px] md:rounded-br-[80px] min-h-[463px] sm:min-h-[320px] lg:min-h-[400px] flex flex-col justify-center sm:px-[60px] lg:px-[50px] py-[100px] sm:py-[50px] lg:py-[50px]">
+            <Card className="relative text-white shadow-2xl rounded-none rounded-[80px] min-h-[463px] sm:min-h-[320px] lg:min-h-[400px] flex flex-col justify-center sm:px-[60px] lg:px-[50px] py-[100px] sm:py-[50px] lg:py-[50px]">
               <CardHeader>
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 gradient-primary rounded-lg flex items-center justify-center">
                     <Newspaper className="h-6 w-6 text-primary-foreground" />
                   </div>
                   <div>
-                    <CardTitle className="text-2xl font-bold">
+                    <CardTitle className="text-2xl text-foreground font-bold">
                       Real-time Market Coverage, Built In
                     </CardTitle>
                     <CardDescription className="text-lg">
@@ -181,16 +181,16 @@ const NewsEducation = () => {
                     <div className="grid grid-cols-2 gap-4 mb-8 my-2">
                       <div className="text-center p-4 text-white rounded-lg bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] p-6 rounded-[20px] shadow-[0px_4px_4px_0px_#FF66334D] transition-all duration-300 border border-transparent hover:border-[#EE422333] hover:border-[2px] hover:bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] hover:backdrop-blur-[20px]">
                         <TrendingUp className="h-6 w-6 text-primary mx-auto mb-2" />
-                        <div className="text-sm font-medium">
+                        <div className="text-md font-medium">
                           Market News Feed
                         </div>
-                        <div className="text-xs text-gray-400">
+                        <div className="text-xs text-white">
                          Delivered inside MT5 via leading financial news providers, covering global assets in real time.
                         </div>
                       </div>
                       <div className="text-center p-4 text-white rounded-lg bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] p-6 rounded-[20px] shadow-[0px_4px_4px_0px_#FF66334D] transition-all duration-300 border border-transparent hover:border-[#EE422333] hover:border-[2px] hover:bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] hover:backdrop-blur-[20px]">
                         <Calendar className="h-6 w-6 text-primary mx-auto mb-2" />
-                        <div className="text-sm font-medium">
+                        <div className="text-md font-medium">
                           Economic Calendar
                         </div>
                         <div className="text-xs text-gray-400">
@@ -209,43 +209,6 @@ const NewsEducation = () => {
                     </Button>
                   </div>
 
-                  {/* <div className="relative">
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-                      transition={{ delay: 0.6 }}
-                      className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-6 border border-primary/20"
-                    >
-                      <div className="space-y-4">
-                        <div className="flex items-center space-x-3 p-3 bg-card/50 rounded-lg">
-                          <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                          <div className="flex-1">
-                            <div className="text-sm font-medium text-foreground">USD/EUR</div>
-                            <div className="text-xs text-muted-foreground">ECB Rate Decision Impact</div>
-                          </div>
-                          <div className="text-xs text-green-500">+0.23%</div>
-                        </div>
-                        
-                        <div className="flex items-center space-x-3 p-3 bg-card/50 rounded-lg">
-                          <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
-                          <div className="flex-1">
-                            <div className="text-sm font-medium text-foreground">GBP/USD</div>
-                            <div className="text-xs text-muted-foreground">UK Inflation Data</div>
-                          </div>
-                          <div className="text-xs text-red-500">-0.15%</div>
-                        </div>
-
-                        <div className="flex items-center space-x-3 p-3 bg-card/50 rounded-lg">
-                          <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
-                          <div className="flex-1">
-                            <div className="text-sm font-medium text-foreground">Oil Futures</div>
-                            <div className="text-xs text-muted-foreground">OPEC Meeting Results</div>
-                          </div>
-                          <div className="text-xs text-blue-500">+1.8%</div>
-                        </div>
-                      </div>
-                    </motion.div>
-                  </div> */}
 
                   <div className="relative">
                     <motion.div
@@ -327,7 +290,7 @@ const NewsEducation = () => {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="mb-16"
           >
-            <Card className="shadow-elegant hover:shadow-glow transition-smooth bg-card/80 backdrop-blur-sm border-primary/10 md:rounded-tr-[80px] md:rounded-bl-[80px]">
+            <Card className="shadow-elegant hover:shadow-glow transition-smooth bg-card/80 backdrop-blur-sm border-primary/10 rounded-[80px] ">
               <CardHeader className="text-center pb-8">
                 <div className="w-16 h-16 mx-auto mb-4 gradient-primary rounded-full flex items-center justify-center">
                   <BookOpen className="h-8 w-8 text-primary-foreground" />
