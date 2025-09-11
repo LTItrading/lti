@@ -20,10 +20,10 @@ export const About = () => {
       >
         <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 gap-y-6 gap-x-1">
           <div>
-            <h1 className="text-3xl md:text-4xl lg:text-3xl font-bold mb-6 tracking-tight">
+            <h2 className="text-4xl md:text-4xl font-bold text-foreground mb-4">
               Rooted in <span className="text-brand"> London. </span> Built for
               the <span className="text-brand"> world.</span>
-            </h1>
+            </h2>
             <p className="mb-4">
               At London Trading Index (LTI), our story begins not just with a
               platform — but with a belief: That retail traders deserve access
@@ -36,8 +36,8 @@ export const About = () => {
               but with substance.
             </p>
             <p className="mb-4">
-              Our mission is simple: To empower serious traders with structure,
-              flexibility, and integrity.{" "}
+              Our mission is simple To empower serious traders with structure,
+              flexibility, and integrity.
             </p>
           </div>
           <div>
@@ -55,7 +55,6 @@ export const About = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="mb-20"
           >
             <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 gap-y-6 gap-x-1">
               <div>
