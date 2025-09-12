@@ -18,7 +18,7 @@ export const Contact = () => {
     <div className="bg-base text-ink min-h-screen">
       <section className="relative min-h-[500px] text-white py-16 md:py-24 bg-gradient-to-br from-brand/5 to-brand/10 contact-header-bg">
         <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-          <div className="relative z-20 text-center max-w-5xl mx-auto">
+          <div className="relative z-10 text-center max-w-5xl mx-auto">
             <h1 className="text-3xl md:text-4xl lg:text-4xl font-bold mb-6 tracking-tight">
               We’re Here to Help. <br />
               <span className="text-brand"> Anytime, Anywhere.</span>
@@ -30,7 +30,7 @@ export const Contact = () => {
             </p>
           </div>
         </div>
-        <div className="absolute inset-0 z-10 bg-[#1C1C1C] opacity-50 duration-300"></div>
+        <div className="absolute inset-0 z-5 bg-[#1C1C1C] opacity-50 duration-300"></div>
       </section>
       <section
         style={{ backgroundColor: "#ffe5e096" }}
