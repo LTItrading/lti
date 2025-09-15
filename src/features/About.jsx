@@ -2,13 +2,19 @@ import { Section } from "@/components/layout/Section";
 import { Globe } from "lucide-react";
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import BigBen from "@/assets/images/world.png"
-import Tower  from "@/assets/images/london.png"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import BigBen from "@/assets/images/shield.webp";
+import Tower from "@/assets/images/london-on.webp";
 
 export const About = () => {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
     <div ref={ref}>
@@ -43,11 +49,7 @@ export const About = () => {
             </p>
           </div>
           <div>
-            <img
-              className="mx-auto"
-              width={350}
-              src={BigBen}
-            />
+            <img className="mx-auto" width={450} src={BigBen} />
           </div>
         </div>
       </section>
@@ -60,7 +62,7 @@ export const About = () => {
           >
             <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 gap-y-6 gap-x-1">
               <div>
-                <img width={350} src={Tower} />
+                <img width={300} src={Tower} />
               </div>
               <div>
                 <h1 className="text-3xl md:text-4xl lg:text-3xl font-bold mb-6 tracking-tight">

@@ -35,10 +35,13 @@ const accountTypes = [
     name: "Cent",
     description: "Start micro-scale trading with a Cent Account.",
     details: [
-      "Spread: From 1.5 pips",
-      "Commission: None",
+      "Micro-Scale Trading",
       "Min Deposit: $5",
-      "Leverage: Up to 1:1000",
+      "Leverage: Up to 1:1000.",
+      "Spreads: From 0.1 pips.",
+      "Commissions: Low.",
+      "Swap-Free Available: Untick.",
+      "Negative balance protection: Tick",
     ],
   },
   {
@@ -46,10 +49,13 @@ const accountTypes = [
     name: "Core",
     description: "Trade confidently with the Core Account.",
     details: [
-      "Spread: From 0.0 pips",
-      "Commission: $6/lot",
-      "Min Deposit: $100",
+      "A balanced account for everyday trading.",
+      "Min Deposit: $50.",
+      "Spreads: Average.",
+      "Commission: Low",
       "Leverage: Up to 1:500",
+      "Swap-Free Available: Tick",
+      "Negative Balance Protection: Tick",
     ],
   },
   {
@@ -193,13 +199,13 @@ export default function AccountOptions() {
                 {account.name}
               </h2>
               <p className="mb-4 font-manrope">{account.description}</p>
-              
+
               <Button
                 size="sm"
                 className="bg-brand hover:bg-brand/90 text-brand-foreground font-semibold px-8 py-3 rounded-xl mb-2"
                 asChild
               >
-                <a href={'/accounts'}>
+                <a href={"/accounts"}>
                   Open Account <ExternalLink />
                 </a>
               </Button>
