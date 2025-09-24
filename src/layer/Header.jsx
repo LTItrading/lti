@@ -8,7 +8,20 @@ const Header = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
-  const miniLinks = ["Partnerships", "Institutional", "Funding"];
+  const miniLinks = [
+    {
+      text: "Partnerships",
+      url: "",
+    },
+    {
+      text: "Institutional",
+      url: "",
+    },
+    {
+      text: "Funding",
+      url: "https://www.ltiproprietary.com/",
+    },
+  ];
 
   const navLinks = [
     {
@@ -99,7 +112,7 @@ const Header = () => {
                   style={{ color: "#EE4223" }}
                   className="hover:underline focus:outline-none transition-all duration-200 font-bold"
                 >
-                  {label}
+                  <a href={label.url}>{label.text}</a>
                 </span>
               ))}
             </div>
@@ -152,9 +165,12 @@ const Header = () => {
             <div className="flex items-center gap-4">
               <div className="hidden md:block">
                 <Button className="group mt-1 py-[20px] px-[40px] rounded-full bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold text-[16px]">
-                  <span className="transform transition-transform duration-300 group-hover:scale-105">
+                  <a
+                    href="https://clientarea.londontradingindex.com/login"
+                    className="transform transition-transform duration-300 group-hover:scale-105"
+                  >
                     Login
-                  </span>
+                  </a>
                 </Button>
               </div>
               <div className="md:hidden">
@@ -226,7 +242,9 @@ const Header = () => {
                 </div>
               ))}
               <Button className="mt-4 py-[9px] px-[39px] rounded-full bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold transform transition-transform duration-300 hover:scale-105">
-                Login
+                <a href="https://clientarea.londontradingindex.com/login">
+                  Login
+                </a>
               </Button>
             </nav>
           </div>

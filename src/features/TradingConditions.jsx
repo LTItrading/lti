@@ -48,8 +48,6 @@ const features = [
   },
 ];
 
-
-
 export default function TradingConditions() {
   return (
     <main className="bg-base min-h-screen">
@@ -78,9 +76,9 @@ export default function TradingConditions() {
               <CardContent>
                 <p className="leading-relaxed">{feature.description}</p>
               </CardContent>
-              <div className="absolute bottom-0 right-0 hidden lg:block">
+              <div className="">
                 <img
-                  className="lg:w-[240px]"
+                  className="md:w-[240px]"
                   style={{ margin: "0 0 0 auto" }}
                   src={feature.icon}
                   alt="Laptop"
@@ -98,7 +96,9 @@ export default function TradingConditions() {
           Need Custom Conditions?
         </h2>
         <p className={`text-lg mb-6`}>
-          We work with serious traders to structure bespoke conditions,  including tailored commissions, VIP leverage, margin exceptions, and priority execution.
+          We work with serious traders to structure bespoke conditions,
+          including tailored commissions, VIP leverage, margin exceptions, and
+          priority execution.
         </p>
         <Button size="lg" className={`font-semibold px-8 py-3 rounded-xl`}>
           <a href="/accounts">Contact Us</a>
