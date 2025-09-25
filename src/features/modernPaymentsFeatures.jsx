@@ -75,24 +75,24 @@ import backgroundImgForHomePage4x from "../assets/images/4x-Images/backgroundImg
 
 const ModernPaymentsFeatures = () => {
     return (
-<div className="w-full mx-auto relative overflow-hidden px-0 sm:px-6 md:px-10 lg:px-20 xl:px-32 sm:px-6 lg:px-8 py-[0px] sm:py-[80px] lg:py-[40px] bg-white">
+<div className="w-full mx-auto relative overflow-hidden px-0 sm:px-6 md:px-10 lg:px-20 xl:px-32 sm:px-6 lg:px-8 py-[0px] sm:py-[80px] lg:py-[40px] ">
 
     {/* Background Image */}
     <img
         src={backgroundImgForHomePage4x}
         alt="Decorative Background"
-        className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[100%] max-w-none pointer-events-none z-0 h-full"
+        className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[100%] max-w-none pointer-events-none z-1 h-full"
     />
 
     {/* Main Container */}
-    <div className="relative z-[2] font-manrope text-black rounded-none sm:rounded-[50px] md:rounded-[40px] px-6 sm:px-10 lg:px-14 py-10 sm:py-14 lg:py-20 overflow-hidden max-w-[1440px] mx-auto bg-transparent">
+    <div className="relative z-[2] shadow font-manrope text-black rounded-none sm:rounded-[50px] md:rounded-[40px] px-6 sm:px-10 lg:px-14 py-10 sm:py-14 lg:py-20 overflow-hidden max-w-[1440px] mx-auto bg-white shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
 
         {/* Effect Layer */}
-        <img
+        {/* <img
             src={rigisterColumnEffectImg}
             alt="Effect"
             className="absolute inset-0 w-full h-full object-cover z-[1] pointer-events-none opacity-20 "
-        />
+        /> */}
 
         {/* Content */}
         <div className="relative z-[2] flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-14">

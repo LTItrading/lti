@@ -18,7 +18,7 @@ export default function TradingCardSection() {
       <img src={cardFrame} alt="" className=" absolute w-[1800px]" />
 
       {/* Card */}
-      <div className="relative bg-[#1C1C1C] shadow-2xl rounded-none md:rounded-tl-[80px] md:rounded-br-[80px] xl:w-[1200px] lg:w-[1000px] sm:w-[900px] min-h-[450px] sm:min-h-[320px] lg:min-h-[400px] flex flex-col justify-center items-center sm:px-[60px] lg:px-[50px] py-[100px] sm:py-[120px] lg:py-[146px] ">
+      <div className="relative shadow-[0_4px_20px_rgba(0,0,0,0.3)] bg-white shadow-2xl sm:rounded-[50px] md:rounded-[40px] rounded xl:w-[1200px] lg:w-[1000px] sm:w-[900px] min-h-[450px] sm:min-h-[320px] lg:min-h-[400px] flex flex-col justify-center items-center sm:px-[60px] lg:px-[50px] py-[100px] sm:py-[120px] lg:py-[146px] ">
 
         {/* Glow Center */}
         <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
@@ -45,7 +45,7 @@ export default function TradingCardSection() {
             <h2 className="font-manrope font-extrabold text-[#EE4223] text-[16px] sm:text-[22px] md:text-[26px] lg:text-[24px] leading-[140%]">
               Designed for traders <br /> who expect more — and get it
             </h2>
-            <p className="font-manrope font-medium pt-[30px] text-white text-[12px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[14px] leading-[2.1] max-w-[90%] [@media(min-width:867px)]:max-w-[95%]">
+            <p className="font-manrope font-medium pt-[30px] text-gray text-[12px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[14px] leading-[2.1] max-w-[90%] [@media(min-width:867px)]:max-w-[95%]">
               London Trading Index was created to reflect the excellence and discipline
               of the world’s most renowned trading hub. With deep roots in the City and
               a forward-thinking approach to technology and transparency, LTI offers a
@@ -60,7 +60,7 @@ export default function TradingCardSection() {
                 <p className="text-[#EE4223] font-manrope font-semibold text-[13px] sm:text-[16px] md:text-[18px] lg:text-[17px] leading-[150%]">
                   {stat.label}
                 </p>
-                <p className="mt-1 font-manrope font-bold text-[15px] sm:text-[14px] md:text-[24px] lg:text-[18px] text-white leading-[150%]">
+                <p className="mt-1 font-manrope font-bold text-[15px] sm:text-[14px] md:text-[24px] lg:text-[18px] text-gray leading-[150%]">
                   {stat.value}
                 </p>
               </div>

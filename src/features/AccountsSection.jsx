@@ -52,6 +52,7 @@ export default function AccountsSection() {
       icon: "settings",
       size: "small",
       flexi: true,
+      light: true,
     },
     {
       title: "ECO",
@@ -114,16 +115,16 @@ function AccountCard({
   };
 
   const backgroundClass = light
-    ? "bg-gradient-to-r from-[rgba(234,234,234,1)] to-[rgba(216,216,216,1)] text-gray-900"
+    ? "bg-gradient-to-r from-[rgba(74,74,74,1)] to-[rgba(90,90,90,1)] text-white"
     : core
     ? "bg-[rgba(255,102,51,1)] text-white"
     : pro
-    ? "bg-[rgba(238,66,35,1)] text-white"
+    ? "bg-[rgba(255,102,51,1)] text-white"
     : eco
-    ? "bg-gradient-to-r from-[rgba(74,74,74,1)] to-[rgba(90,90,90,1)] text-white"
+    ? "bg-[rgba(255,102,51,1)] text-white"
     : flexi
     ? "bg-[#0F0F0F] text-white"
-    : "bg-[rgba(50,50,51,1)] text-white";
+    : "bg-gradient-to-r from-[rgba(74,74,74,1)] to-[rgba(90,90,90,1)] text-white";
 
   const cardSize =
     size === "large"
@@ -160,14 +161,14 @@ function AccountCard({
           </h3>
           <h4
             className={`text-[18px] sm:text-[20px] font-extrabold mb-3 leading-[1.5] font-manrope ${
-              light ? "text-gray-700" : "text-[#FAFAFA]"
+              light ? "text-white" : "text-[#FAFAFA]"
             }`}
           >
             {subtitle}
           </h4>
           <p
             className={`text-[14px] sm:text-[15px] mt-[15px] font-semibold leading-relaxed font-manrope ${
-              light ? "text-gray-700" : "text-[#FAFAFA]"
+              light ? "text-white" : "text-[#FAFAFA]"
             }`}
           >
             {desc}

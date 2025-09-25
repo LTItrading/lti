@@ -45,7 +45,7 @@ const TradersFeatures = () => {
 
 
     return (
-        <div ref={sectionRef} className="relative w-full bg-[#FFFBF9] font-manrope overflow-hidden">
+        <div ref={sectionRef} className="relative w-full font-manrope overflow-hidden">
             <img
                 src={backgroundImgForHomePageRotate}
                 alt="Background"
@@ -54,15 +54,10 @@ const TradersFeatures = () => {
 
             {/* Content Wrapper */}
             <div className="relative z-10 w-full px-0 sm:px-6 lg:px-12 py-0 md:pt-16 md:pb-[30px]">
-                <div className="group relative mx-auto max-w-[1100px] bg-transparent text-black p-6 sm:p-10 rounded-[0px] md:rounded-[40px] overflow-hidden transition-all duration-900">
+                <div className="group relative mx-auto max-w-[1100px] bg-white shadow-[0_4px_20px_rgba(0,0,0,0.3)] text-black p-6 sm:p-10 rounded-[0px] md:rounded-[40px] overflow-hidden transition-all duration-900">
 
                     {/* Inner Overlay Image */}
-                    <img
-                        src={rigisterColumnEffectImg}
-                        alt="FX"
-                        className="absolute inset-0 w-full h-full object-cover opacity-20 z-0 pointer-events-none"
-                    />
-
+                    
                     {/* Foreground Content */}
                     <div className="relative z-10 pointer-events-none group-hover:pointer-events-auto sm:pointer-events-auto">
 
@@ -101,10 +96,10 @@ const TradersFeatures = () => {
                             className={`transition-all duration-1000 ease-in-out delay-300 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                                 }`}
                         >
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 bg-transparent ">
                                 {/* Card 1 */}
-                                <div className="group bg-white p-6 rounded-[20px] transition-all duration-300 border border-gray-200 hover:border-[#EE4223] hover:shadow-[0_0_20px_rgba(238,66,35,0.7)]">
-                                    <div className="w-12 h-12 mb-6 flex items-center justify-center rounded-full bg-gray-100 ring-1 ring-[#EE4223]/20 
+                                <div className="group p-6 rounded-[20px] transition-all duration-300 border border-gray-300 hover:border-[#EE4223] shadow-[0_4px_20px_rgba(0,0,0,0.3)] ">
+                                    <div className="w-12 h-12 mb-6 flex items-center justify-center rounded-full bg-gray-300 ring-1 ring-[#EE4223]/20 
                   group-hover:ring-[#EE4223] group-hover:ring-[3px] 
                   transition-all duration-300 
                   hover:shadow-[0_0_20px_rgba(238,66,35,0.7)]">
@@ -121,8 +116,8 @@ const TradersFeatures = () => {
                                 </div>
 
                                 {/* Card 2 */}
-                                <div className="group bg-white p-6 rounded-[20px] transition-all duration-300 border border-gray-200 hover:border-[#EE4223] hover:shadow-[0_0_20px_rgba(238,66,35,0.7)]">
-                                    <div className="w-12 h-12 mb-6 flex items-center justify-center rounded-full bg-gray-100 ring-1 ring-[#EE4223]/20 
+                                <div className="group bg-white p-6 rounded-[20px] transition-all duration-300 border border-gray-300 hover:border-[#EE4223] shadow-[0_4px_20px_rgba(0,0,0,0.3)] ">
+                                    <div className="w-12 h-12 mb-6 flex items-center justify-center rounded-full bg-gray-300 ring-1 ring-[#EE4223]/20 
                   group-hover:ring-[#EE4223] group-hover:ring-[3px] 
                   transition-all duration-300 
                   hover:shadow-[0_0_20px_rgba(238,66,35,0.7)]">
@@ -139,8 +134,8 @@ const TradersFeatures = () => {
                                 </div>
 
                                 {/* Card 3 */}
-                                <div className="group bg-white p-6 rounded-[20px] transition-all duration-300 border border-gray-200 hover:border-[#EE4223] hover:shadow-[0_0_20px_rgba(238,66,35,0.7)]">
-                                    <div className="w-12 h-12 mb-6 flex items-center justify-center rounded-full bg-gray-100 ring-1 ring-[#EE4223]/20 
+                                <div className="group bg-white p-6 rounded-[20px] transition-all duration-300 border border-gray-300 hover:border-[#EE4223] shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
+                                    <div className="w-12 h-12 mb-6 flex items-center justify-center rounded-full bg-gray-300 ring-1 ring-[#EE4223]/20 
                   group-hover:ring-[#EE4223] group-hover:ring-[3px] 
                   transition-all duration-300 
                   hover:shadow-[0_0_20px_rgba(238,66,35,0.7)]">
@@ -157,8 +152,8 @@ const TradersFeatures = () => {
                                 </div>
 
                                 {/* Card 4 */}
-                                <div className="group bg-white p-6 rounded-[20px] transition-all duration-300 border border-gray-200 hover:border-[#EE4223] hover:shadow-[0_0_20px_rgba(238,66,35,0.7)]">
-                                    <div className="w-12 h-12 mb-6 flex items-center justify-center rounded-full bg-gray-100 ring-1 ring-[#EE4223]/20 
+                                <div className="group bg-white p-6 rounded-[20px] transition-all duration-300 border border-gray-300 hover:border-[#EE4223] shadow-[0_4px_20px_rgba(0,0,0,0.3)] ">
+                                    <div className="w-12 h-12 mb-6 flex items-center justify-center rounded-full bg-gray-300 ring-1 ring-[#EE4223]/20 
                   group-hover:ring-[#EE4223] group-hover:ring-[3px] 
                   transition-all duration-300 
                   hover:shadow-[0_0_20px_rgba(238,66,35,0.7)]">
