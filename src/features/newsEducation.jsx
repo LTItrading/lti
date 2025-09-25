@@ -167,8 +167,8 @@ const NewsEducation = () => {
                 </div>
               </CardHeader>
               <CardContent>
-                <div className="grid md:grid-cols-2 gap-8 items-center">
-                  <div>
+                <div className="flex flex-wrap gap-8 justify-center">
+                  <div className="flex-1">
                     <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
                       Access streaming market news and a global economic
                       calendar directly within your MT5 trading platform — no
@@ -178,39 +178,42 @@ const NewsEducation = () => {
                       your fingertips.
                     </p>
 
-                    <div className="grid grid-cols-2 gap-4 mb-8 my-2">
-                      <div className="text-center p-4 text-white rounded-lg bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] p-6 rounded-[20px] shadow-[0px_4px_4px_0px_#FF66334D] transition-all duration-300 border border-transparent hover:border-[#EE422333] hover:border-[2px] hover:bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] hover:backdrop-blur-[20px]">
+                    <div className="flex flex-wrap items-stretch justify-center gap-4 mb-8">
+                      <div className="flex-1 min-w-[300px] max-w-[300px] p-6 text-white rounded-[20px] bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] shadow-[0px_4px_4px_0px_#FF66334D] transition-all duration-300 border border-transparent hover:border-[#EE422333] hover:border-[2px] hover:backdrop-blur-[20px] flex flex-col">
                         <TrendingUp className="h-6 w-6 text-primary mx-auto mb-2" />
-                        <div className="text-md font-medium">
+                        <div className="text-md font-medium text-left mb-2">
                           Market News Feed
                         </div>
-                        <div className="text-xs text-white">
-                         Delivered inside MT5 via leading financial news providers, covering global assets in real time.
+                        <div className="text-xs text-white text-left leading-relaxed flex-1">
+                          Delivered inside MT5 via leading financial news providers, covering global assets in real time.
                         </div>
                       </div>
-                      <div className="text-center p-4 text-white rounded-lg bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] p-6 rounded-[20px] shadow-[0px_4px_4px_0px_#FF66334D] transition-all duration-300 border border-transparent hover:border-[#EE422333] hover:border-[2px] hover:bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] hover:backdrop-blur-[20px]">
+
+                      <div className="flex-1 min-w-[300px] max-w-[300px] p-6 text-white rounded-[20px] bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] shadow-[0px_4px_4px_0px_#FF66334D] transition-all duration-300 border border-transparent hover:border-[#EE422333] hover:border-[2px] hover:backdrop-blur-[20px] flex flex-col">
                         <Calendar className="h-6 w-6 text-primary mx-auto mb-2" />
-                        <div className="text-md font-medium">
+                        <div className="text-md font-medium text-left mb-2">
                           Economic Calendar
                         </div>
-                        <div className="text-xs text-white">
-                         Built into MT5, filterable by country, impact level, and event type — helping you track announcements like NFP, CPI, and rate decisions.
-
+                        <div className="text-xs text-white text-left leading-relaxed flex-1">
+                          Built into MT5, filterable by country, impact level, and event type — helping you track announcements like NFP, CPI, and rate decisions.
                         </div>
                       </div>
                     </div>
 
-                    <Button
-                      className="bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold"
-                      variant="cta"
-                      size="lg"
-                    >
-                      Open an Account
-                    </Button>
+                    <div className="flex justify-center">
+
+                      <Button
+                        className="bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold"
+                        variant="cta"
+                        size="lg"
+                      >
+                        Open an Account
+                      </Button>
+                    </div>
                   </div>
 
 
-                  <div className="relative">
+                  <div className="relative flex-col self-center">
                     <motion.div
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={
@@ -219,7 +222,7 @@ const NewsEducation = () => {
                           : { opacity: 0, scale: 0.8 }
                       }
                       transition={{ delay: 0.6 }}
-                      className="bg-[rgba(255,102,51,1)] text-white rounded-2xl p-6 border border-primary/20 backdrop-blur-sm"
+                      className="bg-[rgba(255,102,51,1)] text-white rounded-2xl p-6 border border-primary/20 backdrop-blur-sm lg:min-w-[450px] max-w-[450px]"
                     >
                       <div className="space-y-4">
                         {marketData.map((item, idx) => (
@@ -229,10 +232,10 @@ const NewsEducation = () => {
                           >
                             <div
                               className={`w-2 h-2 rounded-full animate-pulse ${item.color === "green"
-                                  ? "bg-green-500"
-                                  : item.color === "red"
-                                    ? "bg-red-500"
-                                    : "bg-blue-500"
+                                ? "bg-green-500"
+                                : item.color === "red"
+                                  ? "bg-red-500"
+                                  : "bg-blue-500"
                                 }`}
                             />
                             <div className="flex-1 flex items-center space-x-2">
@@ -265,10 +268,10 @@ const NewsEducation = () => {
                             </div>
                             <div
                               className={`text-xs ${item.color === "green"
-                                  ? "text-green-500"
-                                  : item.color === "red"
-                                    ? "text-red-500"
-                                    : "text-blue-500"
+                                ? "text-green-500"
+                                : item.color === "red"
+                                  ? "text-red-500"
+                                  : "text-blue-500"
                                 }`}
                             >
                               {item.change}
@@ -309,9 +312,9 @@ const NewsEducation = () => {
                   <h4 className="text-xl font-semibold text-foreground mb-6 text-center">
                     Learn From the Best - In Your Language
                   </h4>
-               <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed text-lg">
-  LTI’s multilingual education library is designed to help you gain deep expertise in both financial markets and our trading platforms. Whether you’re building a solid foundation or enhancing advanced strategies, our resources are available anytime through the client portal.
-</p>
+                  <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed text-lg">
+                    LTI’s multilingual education library is designed to help you gain deep expertise in both financial markets and our trading platforms. Whether you’re building a solid foundation or enhancing advanced strategies, our resources are available anytime through the client portal.
+                  </p>
 
 
                   {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -406,12 +409,12 @@ const NewsEducation = () => {
 
                 <div className="text-center">
                   <Button
-                      className="bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold"
-                      variant="cta"
-                      size="lg"
-                    >
-                      Open an Account
-                    </Button>
+                    className="bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold"
+                    variant="cta"
+                    size="lg"
+                  >
+                    Open an Account
+                  </Button>
                 </div>
               </CardContent>
             </Card>
@@ -426,10 +429,10 @@ const NewsEducation = () => {
           >
             <div className="relative z-10">
               <Users className="h-12 w-12 text-primary-foreground mx-auto mb-6 opacity-80" />
-               <h5 className={`font-manrope font-extrabold text-[18px] sm:text-[20px] mb-3 relative z-10 text-white`}>
-                         Stay informed. Stay Ahead.
+              <h5 className={`font-manrope font-extrabold text-[18px] sm:text-[20px] mb-3 relative z-10 text-white`}>
+                Stay informed. Stay Ahead.
 
-                        </h5>
+              </h5>
               <blockquote className="text-xl md:text-2xl font-bold text-primary-foreground mb-6 leading-relaxed">
                 "The trader that prepares, is the trader that survives. With LTI, you’re equipped with both the insight and the education to make confident decisions."
               </blockquote>
@@ -451,9 +454,9 @@ const NewsEducation = () => {
             className="text-center mt-8"
           >
             <p className="text-xs text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-             The content provided through LTI’s platforms - including market news, economic calendars, videos, audio, and educational materials - is intended solely for general informational and educational purposes. It does not constitute investment advice, a recommendation, or a solicitation to buy or sell any financial instruments.
-All trading involves risk. Information published on this page, within the Client Portal, or via our trading platforms is not tailored to your personal financial circumstances or investment objectives. Users should exercise their own judgement and seek independent financial advice where necessary.
-Access to these materials is subject to our Terms & Conditions, and Risk Disclosure. Market commentary and third-party content made available through MT5 or the LTI Portal are provided “as is” and are not guaranteed for accuracy, completeness, or timeliness. Where applicable, educational resources may be considered marketing communication under relevant laws and are not intended to constitute regulated research.
+              The content provided through LTI’s platforms - including market news, economic calendars, videos, audio, and educational materials - is intended solely for general informational and educational purposes. It does not constitute investment advice, a recommendation, or a solicitation to buy or sell any financial instruments.
+              All trading involves risk. Information published on this page, within the Client Portal, or via our trading platforms is not tailored to your personal financial circumstances or investment objectives. Users should exercise their own judgement and seek independent financial advice where necessary.
+              Access to these materials is subject to our Terms & Conditions, and Risk Disclosure. Market commentary and third-party content made available through MT5 or the LTI Portal are provided “as is” and are not guaranteed for accuracy, completeness, or timeliness. Where applicable, educational resources may be considered marketing communication under relevant laws and are not intended to constitute regulated research.
 
             </p>
           </motion.div>

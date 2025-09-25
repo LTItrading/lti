@@ -150,7 +150,7 @@ const Footer = () => {
                         <li className='text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-extrabold text-[#FF6633] mb-1 font-manrope leading-[100%] tracking-[0]'>Insights</li>
                         <li className='text-[#1C1C1C] font-normal text-[12px] sm:text-[12px] md:text-[14px] lg:text-[16px] leading-[28px]'>LTI Proprietary (↓)</li>
                         <li className='text-[#1C1C1C] font-normal text-[12px] sm:text-[12px] md:text-[14px] lg:text-[16px] leading-[28px]'>Economic Events</li>
-                        <li className='text-[#1C1C1C] font-normal text-[12px] sm:text-[12px] md:text-[14px] lg:text-[16px] leading-[28px]'>Fundamental Data</li>
+                        {/* <li className='text-[#1C1C1C] font-normal text-[12px] sm:text-[12px] md:text-[14px] lg:text-[16px] leading-[28px]'>Fundamental Data</li> */}
                         <li className='text-[#1C1C1C] font-normal text-[12px] sm:text-[12px] md:text-[14px] lg:text-[16px] leading-[28px]'>Market News</li>
                     </ul>
 
@@ -173,17 +173,27 @@ const Footer = () => {
 
             <div className="space-y-4 pb-[60px]">
                 {/* Top Links */}
-                <div className="flex  gap-x-4 pt-5">
-                    <div className="font-manrope font-extrabold leading-[100%] opacity-90 text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-[#FF6633] pr-4 border-r-2 border-[#FF6633]">
+                <div className="flex gap-x-4 pt-5">
+                    <a
+                        href="/lti/pdfs/terms.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-manrope font-extrabold leading-[100%] opacity-90 text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-[#FF6633] pr-4 border-r-2 border-[#FF6633]"
+                    >
                         Terms and Conditions
-                    </div>
-                    <div className="font-manrope font-extrabold leading-[100%] opacity-90 text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-[#FF6633] pr-4 border-r-2 border-[#FF6633]">
+                    </a>
+
+                    <a
+                        href="/lti/pdfs/privacy.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-manrope font-extrabold leading-[100%] opacity-90 text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-[#FF6633] pr-4"
+                    >
                         Privacy Policy
-                    </div>
-                    <div className="font-manrope font-extrabold leading-[100%] opacity-90 text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-[#FF6633] ">
-                        AML Policy
-                    </div>
+                    </a>
                 </div>
+
+
 
 
                 {/* Risk Warning */}
@@ -232,10 +242,13 @@ const Footer = () => {
                             The website <span className="text-[#FF6633] font-medium text-[12px] leading-[200%] px-1 font-manrope">www.londontradingindex.com</span> is operated by London Trading Index Limited, a company incorporated in Saint Vincent and the Grenadines under registration number 25630, with its registered office at Suite 305, Griffith Corporate Centre, Kingstown. London Trading Index Limited is authorised by the Financial Services Authority (FSA) of Saint Vincent and the Grenadines to operate in accordance with local laws.
                         </li>
                         <li className="font-manrope font-normal text-[12px] leading-[158%] text-[#888888]">
-                            LDN Trading Index Commercial Brokers CO. LLC is a company incorporated in the United Arab Emirates under licence number 1205462, with its registered office at Unit 101–104, 1st Floor, Emitac Building, Dubai.
+                            Palm Valley Commercial Brokers L.L.C – Incorporation No. 1205462, registered address: Al Khabeesi Building, Plot 128-246, Office 9-473, Dubai, United Arab Emirates.
                         </li>
                         <li className="font-manrope font-normal text-[12px] leading-[158%] text-[#888888]">
-                            LDN Trading Index Commercial Brokers CO. LLC acts as a payment agent on behalf of London Trading Index Limited (SVG) for the purpose of receiving and processing client payments.
+                            London Trading Index Limited – Incorporation No. 25630, registered address: Suite 305, Griffith Corporate Centre, Beachmont, Kingstown, Saint Vincent and the Grenadines.
+                        </li>
+                        <li className="font-manrope font-normal text-[12px] leading-[158%] text-[#888888]">
+                            Palm Valley Commercial Brokers L.L.C is duly authorised and acts solely in the capacity of payment agent on behalf of London Trading Index Limited.
                         </li>
                     </ul>
                 </div>

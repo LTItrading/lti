@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ChevronDown, Menu, X, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import InfiniteImageSlider from "@/components/sliders/InfiniteImageSlider";
@@ -23,12 +23,14 @@ import ellipse1 from "@/assets/images/Ellipse1.png";
 import ellipse2 from "@/assets/images/Ellipse2.png";
 import mt5Asset from "@/assets/images/MT5-asset.png";
 import Header from "@/layer/Header";
+import PopUp from "@/components/PopUp";
 
 // import Header from "@/layer/Header";
 
 export default function TradingLandingPage() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [openDropdown, setOpenDropdown] = useState(null);
+    const [ShowPopUp,setShowPopUp] = useState(false)
 
     const toggleMenu = () => setMenuOpen(!menuOpen);
     const toggleDropdown = (label) =>
@@ -42,6 +44,18 @@ export default function TradingLandingPage() {
 
     const miniLinks = ["Partnerships", "Institutional", "Funding"];
 
+
+    useEffect(()=>{
+        const hasSeenPopUp = localStorage.getItem('hasSeenPopUp');
+            if(!hasSeenPopUp){
+                setShowPopUp(true);
+                localStorage.setItem('hasSeenPopUp' ,'true')
+            }
+    },[])
+
+    const handleClosePopUp=()=>{
+        setShowPopUp(false)
+    }
 
     return (
         <div className="min-h-screen bg-[#FFFBF9] font-[Manrope] overflow-x-hidden relative">
@@ -198,6 +212,7 @@ export default function TradingLandingPage() {
                 <Silder />
 
             </main>
+            {ShowPopUp && <PopUp onClose={handleClosePopUp}/>}
         </div>
 
     );

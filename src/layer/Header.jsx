@@ -149,24 +149,36 @@ const Header = () => {
             </div>
 
             {/* Login + Mobile menu toggle */}
-            <div className="flex items-center gap-4">
-              <div className="hidden md:block">
-                <Button className="group mt-1 py-[20px] px-[40px] rounded-full bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold text-[16px]">
-                  <span className="transform transition-transform duration-300 group-hover:scale-105">
-                    Login
-                  </span>
-                </Button>
-              </div>
-              <div className="md:hidden">
-                <button onClick={toggleMenu} aria-label="Toggle Menu">
-                  {menuOpen ? (
-                    <X className="h-6 w-6 text-gray-800" />
-                  ) : (
-                    <Menu className="h-6 w-6 text-gray-800" />
-                  )}
-                </button>
-              </div>
-            </div>
+          <div className="flex items-center gap-2 sm:gap-4">
+    {/* Login Button */}
+    <div className="hidden md:block">
+        <Button className="group py-3 px-6 rounded-full bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold text-sm sm:text-base transition-colors duration-300">
+            <span className="transform transition-transform duration-300 group-hover:scale-105">
+                Login
+            </span>
+        </Button>
+    </div>
+
+    {/* SignUp Button */}
+    <div className="hidden md:block">
+        <Button className="group py-3 px-6 rounded-full bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold text-sm sm:text-base transition-colors duration-300">
+            <span className="transform transition-transform duration-300 group-hover:scale-105">
+                SignUp
+            </span>
+        </Button>
+    </div>
+    
+    {/* Mobile Menu Button */}
+    <div className="md:hidden">
+        <button onClick={toggleMenu} aria-label="Toggle Menu">
+            {menuOpen ? (
+                <X className="h-6 w-6 text-gray-800" />
+            ) : (
+                <Menu className="h-6 w-6 text-gray-800" />
+            )}
+        </button>
+    </div>
+</div>
           </div>
         </div>
       </header>
@@ -227,6 +239,9 @@ const Header = () => {
               ))}
               <Button className="mt-4 py-[9px] px-[39px] rounded-full bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold transform transition-transform duration-300 hover:scale-105">
                 Login
+              </Button>
+               <Button className="mt-4 py-[9px] px-[39px] rounded-full bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold transform transition-transform duration-300 hover:scale-105">
+                SignUp
               </Button>
             </nav>
           </div>

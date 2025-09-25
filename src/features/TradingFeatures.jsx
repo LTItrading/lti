@@ -50,7 +50,7 @@ export default function TradingFeatures() {
 
 
         {/* Second Card */}
-        <div className="group flex flex-wrap sm:flex-nowrap justify-between items-center bg-gradient-to-r from-[#222222ec] to-[#2B2B2B] rounded-3xl w-full lg:w-[513px] sm:h-[190.14px] pl-[20px] max-sm:pr-0 overflow-hidden relative max-sm:gap-2 max-sm:pt-[20px]  max-sm:pl-[20px]">
+        <div className="group flex flex-wrap sm:flex-nowrap justify-between items-center bg-[#CECCCD] text-black rounded-3xl w-full lg:w-[513px] sm:h-[190.14px] pl-[20px] max-sm:pr-0 overflow-hidden relative max-sm:gap-2 max-sm:pt-[20px]  max-sm:pl-[20px]">
           {/* Ellipse Background */}
            <img
             src={ellipse}
@@ -81,7 +81,7 @@ export default function TradingFeatures() {
       {/* Row 2 */}
       <div className="flex flex-col justify-center items-center lg:flex-row gap-5 text-white mt-[24.72px]">
         {/* Third Card */}
-        <div className="group flex flex-wrap sm:flex-nowrap justify-between items-center relative bg-[#CECCCD] rounded-3xl w-full lg:w-[513px] sm:h-[176.14px] lg:h-[190.14px] text-[#323233] pl-[20px] pr-[1px] overflow-hidden max-sm:gap-2 max-sm:pt-[20px]  max-sm:pl-[20px] max-sm:pr-0  gap-[0px]">
+        <div className="group flex flex-wrap sm:flex-nowrap justify-between items-center relative text-white bg-gradient-to-r from-[#E62E1C] via-[#F04C1A] to-[#FF6B2C] rounded-3xl w-full lg:w-[513px] sm:h-[176.14px] lg:h-[190.14px] text-[#323233] pl-[20px] pr-[1px] overflow-hidden max-sm:gap-2 max-sm:pt-[20px]  max-sm:pl-[20px] max-sm:pr-0  gap-[0px]">
           {/* Ellipse Background */}
            <img
             src={ellipse}
@@ -110,7 +110,7 @@ export default function TradingFeatures() {
 
 
         {/* Fourth Card */}
-        <div className="group flex flex-wrap sm:flex-nowrap justify-between items-center bg-gradient-to-r from-[#1A1A1A] to-[#2B2B2B] rounded-3xl w-full lg:w-[725px] sm:h-[190.14px] pl-[20px] pr-[16px] overflow-hidden relative max-sm:gap-2 max-sm:pt-[20px]  max-sm:pl-[20px] max-sm:pr-0 gap-[0px]">
+        <div className="group flex flex-wrap sm:flex-nowrap justify-between items-center bg-[#CECCCD] text-black  rounded-3xl w-full lg:w-[725px] sm:h-[190.14px] pl-[20px] pr-[16px] overflow-hidden relative max-sm:gap-2 max-sm:pt-[20px]  max-sm:pl-[20px] max-sm:pr-0 gap-[0px]">
           {/* Background Ellipse */}
           <img
             src={ellipse}
