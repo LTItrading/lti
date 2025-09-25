@@ -82,11 +82,14 @@ export default function AccountsSection() {
         </div>
 
         {/* Cards */}
-        <div className="flex flex-wrap gap-6 justify-center">
-          {accountTypes.map((account, index) => (
-            <AccountCard key={index} {...account} />
-          ))}
-        </div>
+        <Section padding="lg">
+          <div className="max-w-7xl mx-auto flex flex-wrap gap-6 justify-center">
+            {accountTypes.map((account, index) => (
+              <AccountCard key={index} {...account} />
+            ))}
+          </div>
+        </Section>
+
       </div>
     </div>
   );
