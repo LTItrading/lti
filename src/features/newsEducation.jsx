@@ -163,8 +163,8 @@ const NewsEducation = () => {
                 </div>
               </CardHeader>
               <CardContent>
-                <div className="grid md:grid-cols-2 gap-8 items-center">
-                  <div>
+                <div className="flex flex-wrap gap-8 justify-center">
+                  <div className="flex-1">
                     <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
                       Access streaming market news and a global economic
                       calendar directly within your MT5 trading platform — no
@@ -177,7 +177,7 @@ const NewsEducation = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 my-2">
                       <div className="text-center p-4 text-white rounded-lg bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] p-6 rounded-[20px] shadow-[0px_4px_4px_0px_#FF66334D] transition-all duration-300 border border-transparent hover:border-[#EE422333] hover:border-[2px] hover:bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] hover:backdrop-blur-[20px]">
                         <TrendingUp className="h-6 w-6 text-primary mx-auto mb-2" />
-                        <div className="text-md font-medium">
+                        <div className="text-md font-medium text-left mb-2">
                           Market News Feed
                         </div>
                         <div className="text-xs text-white">
@@ -185,9 +185,10 @@ const NewsEducation = () => {
                           providers, covering global assets in real time.
                         </div>
                       </div>
-                      <div className="text-center p-4 text-white rounded-lg bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] p-6 rounded-[20px] shadow-[0px_4px_4px_0px_#FF66334D] transition-all duration-300 border border-transparent hover:border-[#EE422333] hover:border-[2px] hover:bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] hover:backdrop-blur-[20px]">
+
+                      <div className="flex-1 min-w-[300px] max-w-[300px] p-6 text-white rounded-[20px] bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] shadow-[0px_4px_4px_0px_#FF66334D] transition-all duration-300 border border-transparent hover:border-[#EE422333] hover:border-[2px] hover:backdrop-blur-[20px] flex flex-col">
                         <Calendar className="h-6 w-6 text-primary mx-auto mb-2" />
-                        <div className="text-md font-medium">
+                        <div className="text-md font-medium text-left mb-2">
                           Economic Calendar
                         </div>
                         <div className="text-xs text-white">
@@ -198,13 +199,16 @@ const NewsEducation = () => {
                       </div>
                     </div>
 
-                    <Button
-                      className="bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold"
-                      variant="cta"
-                      size="lg"
-                    >
-                      Open an Account
-                    </Button>
+                    <div className="flex justify-center">
+
+                      <Button
+                        className="bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold"
+                        variant="cta"
+                        size="lg"
+                      >
+                        Open an Account
+                      </Button>
+                    </div>
                   </div>
 
                   <div className="relative">
@@ -216,7 +220,7 @@ const NewsEducation = () => {
                           : { opacity: 0, scale: 0.8 }
                       }
                       transition={{ delay: 0.6 }}
-                      className="bg-[rgba(255,102,51,1)] text-white rounded-2xl p-6 border border-primary/20 backdrop-blur-sm"
+                      className="bg-[rgba(255,102,51,1)] text-white rounded-2xl p-6 border border-primary/20 backdrop-blur-sm lg:min-w-[450px] max-w-[450px]"
                     >
                       <div className="space-y-4">
                         {marketData.map((item, idx) => (

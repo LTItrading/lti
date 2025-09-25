@@ -24,6 +24,7 @@ import { DataTable } from "@/components/DataTable";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/layout/Container";
 import { useEffect, useState } from "react";
+import { useIsMobile } from "@/hooks/useIsMobile";
 import RegisterFeatures from "./registerFeatures";
 import ReactCountryFlag from "react-country-flag";
 import XAG from "@/assets/images/metals/silver.svg"
@@ -113,6 +114,7 @@ function ForexTab({ data, columns }) {
 export default function MarketAccess() {
   const [forexTabVal, setForexTabVal] = useState("standard");
   const [shareTabVal, setShareTabVal] = useState("usshare");
+  const isMobile = useIsMobile();
   const metals= {
     XAG : XAG,
     XAU,
@@ -1229,7 +1231,7 @@ export default function MarketAccess() {
         showCta={true}
         background="gradient"
         bgType={currentState?.id}
-        isMac={true}
+        isMac={!isMobile}
       />
 
       <Section padding="lg">

@@ -32,144 +32,139 @@ export const Contact = () => {
         </div>
         <div className="absolute inset-0 z-5 bg-[#1C1C1C] opacity-50 duration-300"></div>
       </section>
-      <section
-        style={{ backgroundColor: "#ffe5e096" }}
-        className="shadow-2xl rounded-none px-5 py-[50px] sm:px-[60px] lg:px-[50px] py-[50px] sm:py-[50px] lg:py-[50px]"
-      >
-        <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-3  gap-x-5">
-          <div className="bg-white p-20 mt-[-70px] z-20 rounded-[40px] shadow-elegant hover:shadow-glow mb-20">
-            <h2 className="text-3xl font-bold mb-3">Contact Channels</h2>
-            <p>Get in touch with our support team directly.</p>
-          </div>
-          <div className="bg-white p-20 mt-[-70px] z-20 rounded-[40px] shadow-elegant hover:shadow-glow mb-20">
-            <div className="flex items-center space-x-4 mb-3 ">
-              <div className="flex items-center justify-center">
-                <Mail className="h-6 w-6 text-primary" />
-              </div>
-              <h5 className="font-extrabold text-[18px] sm:text-[20px]">
-                Email Support
-              </h5>
-            </div>
-            <p className="text-sm font-medium">General Inquiries:</p>
-            <a
-              href="mailto:support@lti.com"
-              className="font-bold hover:text-[#ee4223]"
-            >
-              support@lti.com
-            </a>
-            <p className="text-sm font-medium mt-3">Account & Verification:</p>
-            <a
-              href="mailto:compliance@lti.com"
-              className="font-bold hover:text-[#ee4223]"
-            >
-              compliance@lti.com
-            </a>
-          </div>
-          <div className="bg-white p-20 mt-[-70px] z-20 rounded-[40px] shadow-elegant hover:shadow-glow mb-20">
-            <div className="flex items-center space-x-4 mb-3 ">
-              <div className="flex items-center justify-center">
-                <Ticket className="h-6 w-6 text-primary" />
-              </div>
-              <h5 className="font-extrabold text-[18px] sm:text-[20px]">
-                Raise a ticket!
-              </h5>
-            </div>
-            <p className="text-sm font-medium">
-              Raise a ticket for our multilingual support team, available
-              directly from your{" "}
-              <span className="font-bold">Client Portal</span> or{" "}
-              <span className="font-bold">via the website</span>.
-            </p>
-          </div>
-        </div>
-      </section>
+<section
+  style={{ backgroundColor: "#ffe5e096" }}
+  className="shadow-2xl px-5 py-16 sm:px-10 lg:px-16"
+>
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    
+    {/* Contact Channels */}
+    <div className="bg-white rounded-3xl p-10 shadow-elegant hover:shadow-glow transition-transform transform hover:-translate-y-2 flex flex-col">
+      <h2 className="text-3xl font-bold mb-4 text-center">Contact Channels</h2>
+      <p className="text-center text-gray-700">Get in touch with our support team directly.</p>
+    </div>
+
+    {/* Email Support */}
+    <div className="bg-white rounded-3xl p-10 shadow-elegant hover:shadow-glow transition-transform transform hover:-translate-y-2 flex flex-col">
+      <div className="flex items-center gap-3 mb-4">
+        <Mail className="h-6 w-6 text-primary" />
+        <h5 className="font-extrabold text-[18px] sm:text-[20px]">Email Support</h5>
+      </div>
+      <p className="text-sm font-medium">General Inquiries:</p>
+      <a href="mailto:support@lti.com" className="font-bold hover:text-[#ee4223]">
+        support@lti.com
+      </a>
+      <p className="text-sm font-medium mt-3">Account & Verification:</p>
+      <a href="mailto:compliance@lti.com" className="font-bold hover:text-[#ee4223]">
+        compliance@lti.com
+      </a>
+    </div>
+
+    {/* Raise a Ticket */}
+    <div className="bg-white rounded-3xl p-10 shadow-elegant hover:shadow-glow transition-transform transform hover:-translate-y-2 flex flex-col">
+      <div className="flex items-center gap-3 mb-4">
+        <Ticket className="h-6 w-6 text-primary" />
+        <h5 className="font-extrabold text-[18px] sm:text-[20px]">Raise a ticket!</h5>
+      </div>
+      <p className="text-sm font-medium">
+        Raise a ticket for our multilingual support team, available directly from your{" "}
+        <span className="font-bold">Client Portal</span> or <span className="font-bold">via the website</span>.
+      </p>
+    </div>
+
+  </div>
+</section>
+
       <Section padding="lg">
-        <section className="text-center md:py-14 px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-7">Support When You Need It</h2>
-          <div className="flex flex-row flex-wrap justify-center gap-y-6 gap-x-1">
-            <div className="bg-gradient-to-r from-[rgba(234,234,234,1)] to-[rgba(216,216,216,1)] p-5 mx-3 min-w-[300px] max-w-[300px] rounded-[20px]">
-              <div className="flex items-center justify-center space-x-4 mb-3 ">
-                <div className="flex items-center justify-center">
-                  <Calendar className="h-6 w-6 text-primary" />
-                </div>
-                <h5 className="font-extrabold text-[18px] sm:text-[20px]">
-                  Available:
-                </h5>
-              </div>
-              <p>Monday – Friday</p>
-            </div>
-            <div className="bg-gradient-to-r from-[rgba(234,234,234,1)] to-[rgba(216,216,216,1)] p-5 mx-3 min-w-[300px] max-w-[300px] rounded-[20px]">
-              <div className="flex items-center justify-center space-x-4 mb-3 ">
-                <div className="flex items-center justify-center">
-                  <Timer className="h-6 w-6 text-primary" />
-                </div>
-                <h5 className="font-extrabold text-[18px] sm:text-[20px]">
-                  Hours:
-                </h5>
-              </div>
-              <p>24/5 across trading sessions</p>
-            </div>
-            <div className="bg-gradient-to-r from-[rgba(234,234,234,1)] to-[rgba(216,216,216,1)] p-5 mx-3 min-w-[300px] max-w-[300px] rounded-[20px]">
-              <div className="flex items-center justify-center space-x-4 mb-3 ">
-                <div className="flex items-center justify-center">
-                  <Globe className="h-6 w-6 text-primary" />
-                </div>
-                <h5 className="font-extrabold text-[18px] sm:text-[20px]">
-                  Multilingual support
-                </h5>
-              </div>
-              <p>
-                English, Arabic, Spanish, Chinese, Portuguese, French & Russian
-              </p>
-            </div>
-          </div>
-        </section>
-        <section className="text-center py-10 md:py-14 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-[#1A1A1A] to-[#2B2B2B] text-white">
-          <h2 className="text-3xl font-bold mb-3">Stay connected</h2>
-          <p>For updates, news, and educational content:</p>
-          <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-4 md:grid-cols-4 gap-y-6 gap-x-1 mt-5 pt-5">
-            <a href="#">
-              <div className="flex items-center justify-center space-x-4 mb-3 ">
-                <div className="flex items-center justify-center">
-                  <Linkedin className="h-6 w-6 text-white" />
-                </div>
-                <h5 className="font-extrabold text-[18px] sm:text-[20px]">
-                  LinkedIn
-                </h5>
-              </div>
-            </a>
-            <a href="#">
-              <div className="flex items-center justify-center space-x-4 mb-3 ">
-                <div className="flex items-center justify-center">
-                  <Twitter className="h-6 w-6 text-white" />
-                </div>
-                <h5 className="font-extrabold text-[18px] sm:text-[20px]">
-                  Twitter/X
-                </h5>
-              </div>
-            </a>
-            <a href="#">
-              <div className="flex items-center justify-center space-x-4 mb-3 ">
-                <div className="flex items-center justify-center">
-                  <Instagram className="h-6 w-6 text-white" />
-                </div>
-                <h5 className="font-extrabold text-[18px] sm:text-[20px]">
-                  Instagram
-                </h5>
-              </div>
-            </a>
-            <a href="#">
-              <div className="flex items-center justify-center space-x-4 mb-3 ">
-                <div className="flex items-center justify-center">
-                  <Youtube className="h-6 w-6 text-white" />
-                </div>
-                <h5 className="font-extrabold text-[18px] sm:text-[20px]">
-                  YouTube
-                </h5>
-              </div>
-            </a>
-          </div>
-        </section>
+<section className="text-center mb-10 md:py-16 px-4 sm:px-6 lg:px-8">
+  <h2 className="text-3xl md:text-4xl font-bold mb-10">Support When You Need It</h2>
+
+  <div className="flex flex-wrap justify-center gap-6">
+    {/* Available */}
+    <div className="cursor-pointer bg-gradient-to-r from-[rgba(234,234,234,1)] to-[rgba(216,216,216,1)]
+                    p-6 min-w-[280px] max-w-[320px] rounded-2xl shadow-elegant
+                    flex flex-col items-start transition-all transform hover:-translate-y-2 hover:shadow-glow">
+      <div className="flex items-center gap-3 mb-3">
+        <Calendar className="h-6 w-6 text-primary" />
+        <h5 className="font-extrabold text-[18px] sm:text-[20px]">Available:</h5>
+      </div>
+      <p className="text-gray-800">Monday – Friday</p>
+    </div>
+
+    {/* Hours */}
+    <div className="cursor-pointer bg-gradient-to-r from-[rgba(234,234,234,1)] to-[rgba(216,216,216,1)]
+                    p-6 min-w-[280px] max-w-[320px] rounded-2xl shadow-elegant
+                    flex flex-col items-start transition-all transform hover:-translate-y-2 hover:shadow-glow">
+      <div className="flex items-center gap-3 mb-3">
+        <Timer className="h-6 w-6 text-primary" />
+        <h5 className="font-extrabold text-[18px] sm:text-[20px]">Hours:</h5>
+      </div>
+      <p className="text-gray-800">24/5 across trading sessions</p>
+    </div>
+
+    {/* Multilingual support */}
+    <div className="cursor-pointer bg-gradient-to-r from-[rgba(234,234,234,1)] to-[rgba(216,216,216,1)]
+                    p-6 min-w-[280px] max-w-[320px] rounded-2xl shadow-elegant
+                    flex flex-col items-start transition-all transform hover:-translate-y-2 hover:shadow-glow">
+      <div className="flex items-center gap-3 mb-3">
+        <Globe className="h-6 w-6 text-primary" />
+        <h5 className="font-extrabold text-[18px] sm:text-[20px]">Multilingual support</h5>
+      </div>
+      <p className="text-gray-800">
+        English, Arabic, Spanish, Chinese, Portuguese, French & Russian
+      </p>
+    </div>
+  </div>
+</section>
+
+
+        <section className="text-center py-10 md:py-14 px-4 sm:px-6 lg:px-8 bg-primary rounded-[3rem] text-white">
+  <h2 className="text-3xl font-bold mb-3">Stay connected</h2>
+  <p>For updates, news, and educational content:</p>
+
+  <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-4 md:grid-cols-4 gap-6 mt-5 pt-5">
+    {/* LinkedIn */}
+    <a href="#" className="hover:scale-105 transition-transform">
+      <div className="flex flex-col items-center justify-center bg-white/10 rounded-2xl py-4 px-6 space-y-2 hover:bg-white/20">
+        <Linkedin className="h-8 w-8 text-white" />
+        <h5 className="font-extrabold text-[18px] sm:text-[20px]" style={{ color: '#0A66C2' }}>
+          LinkedIn
+        </h5>
+      </div>
+    </a>
+
+    {/* Twitter/X */}
+    <a href="#" className="hover:scale-105 transition-transform">
+      <div className="flex flex-col items-center justify-center bg-white/10 rounded-2xl py-4 px-6 space-y-2 hover:bg-white/20">
+        <Twitter className="h-8 w-8 text-white" />
+        <h5 className="font-extrabold text-[18px] sm:text-[20px]" style={{ color: '#1DA1F2' }}>
+          Twitter/X
+        </h5>
+      </div>
+    </a>
+
+    {/* Instagram */}
+    <a href="#" className="hover:scale-105 transition-transform">
+      <div className="flex flex-col items-center justify-center bg-white/10 rounded-2xl py-4 px-6 space-y-2 hover:bg-white/20">
+        <Instagram className="h-8 w-8 text-white" />
+        <h5 className="font-extrabold text-[18px] sm:text-[20px]" style={{ color: '#DD2A7B' }}>
+          Instagram
+        </h5>
+      </div>
+    </a>
+
+    {/* YouTube */}
+    <a href="#" className="hover:scale-105 transition-transform">
+      <div className="flex flex-col items-center justify-center bg-white/10 rounded-2xl py-4 px-6 space-y-2 hover:bg-white/20">
+        <Youtube className="h-8 w-8 text-white" />
+        <h5 className="font-extrabold text-[18px] sm:text-[20px]" style={{ color: '#FF0000' }}>
+          YouTube
+        </h5>
+      </div>
+    </a>
+  </div>
+</section>
+
       </Section>
     </div>
   );

@@ -162,7 +162,7 @@ export default function MT5Platform() {
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-5">
+        <div className="flex flex-wrap gap-5 ">
 
           {/* MT5 for Tablet and Mobile */}
           <motion.div

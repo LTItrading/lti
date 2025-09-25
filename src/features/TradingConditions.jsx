@@ -8,14 +8,14 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import labtop from "@/assets/images/tradingFeaturesPng/labtop.png";
-import security from "@/assets/images/tradingFeaturesPng/security.png";
-import card3 from "@/assets/images/CARD-3.png";
-import protect from "@/assets/images/protect.png";
+import LiveRisk from "@/assets/images/LiveRisk.png"
+import Leverage from "@/assets/images/Leverage.png"
+import Strategy from "@/assets/images/Strategy.png"
+import Overnight from "@/assets/images/Overnight.png"
 
 const features = [
   {
-    icon: labtop,
+    icon: Leverage,
     title: "Leverage Up to 1:500 - Adjustable to Your Risk Appetite",
     description:
       "Our leverage tiers are flexible based on your account type, instrument, and jurisdiction. High or conservative, you decide.",
@@ -23,7 +23,7 @@ const features = [
       "bg-[#0F0F0F] w-full sm:w-[47%] lg:w-[31%] xl:w-[450px]",
   },
   {
-    icon: security,
+    icon: LiveRisk,
     title: "Live Risk & Margin Monitoring",
     description:
       "Access real-time exposure updates through our trading platform. Set custom alerts, track margin levels, and stay in control always.",
@@ -31,7 +31,7 @@ const features = [
       "bg-[rgba(255,102,51,1)] text-white w-full sm:w-[48%] lg:w-[48%] xl:w-[600px]",
   },
   {
-    icon: card3,
+    icon: Strategy,
     title: "Trade Your Strategy, Not Ours",
     description:
       "Take advantage of market volatility with scalable position sizing and conditions that can be adapted upon request from fees to execution speed.",
@@ -39,7 +39,7 @@ const features = [
       "bg-[rgba(238,66,35,1)] text-white w-full sm:w-[48%] lg:w-[48%] xl:w-[600px]",
   },
   {
-    icon: protect,
+    icon: Overnight,
     title: "No Overnight Surprises",
     description:
       "We keep our margin conditions stable, no unannounced hikes on weekends or overnight. For bespoke setups, custom agreements are available.",

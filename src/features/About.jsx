@@ -20,11 +20,11 @@ export const About = () => {
     <div ref={ref}>
       <section
         className="py-10 px-5 lg:px-32 about-header-bg"
-        // style={{
-        //   backgroundImage: "url('./src/assets/images/Ellipse2.png')",
-        //   backgroundSize: "cover",
-        //   backgroundPosition: "center",
-        // }}
+      // style={{
+      //   backgroundImage: "url('./src/assets/images/Ellipse2.png')",
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center",
+      // }}
       >
         <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 gap-y-6 gap-x-1">
           <div>
@@ -124,34 +124,37 @@ export const About = () => {
               className="flex-1 flex-shrink-0 min-w-[300px]"
             >
               <Card
-                className={`bg-gradient-to-r from-[rgba(234,234,234,1)] to-[rgba(216,216,216,1)] text-gray-900 h-full shadow-elegant hover:shadow-glow transition-smooth backdrop-blur-sm border-primary/10 hover:border-primary/20`}
+                className="relative overflow-hidden bg-gradient-to-br from-gray-200/90 to-gray-300/90
+             text-gray-900 h-full shadow-xl hover:shadow-2xl
+             transition-transform transform hover:-translate-y-1 rounded-2xl
+             backdrop-blur-md border border-primary/20"
               >
-                <CardHeader className="text-center">
-                  <CardTitle className="text-xl font-semibold">
+
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-primary/10 pointer-events-none rounded-2xl" />
+
+                <CardHeader className="relative z-10 text-center">
+                  <CardTitle className="text-2xl font-bold text-primary">
                     Our Principles
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-center text-white-foreground">
-                    <p className="mb-4">
+
+                <CardContent className="relative z-10">
+                  <CardDescription className="text-center text-gray-800">
+                    <p className="mb-4 italic">
                       We operate on principles that never expire:
                     </p>
-                    <ol className="list-decimal list-inside">
-                      <li className="mb-2">
-                        Structure matters. Traders thrive when systems are built
-                        with discipline.
+                    <ol className="list-decimal list-inside space-y-2 text-left">
+                      <li>
+                        Structure matters. Traders thrive when systems are built with discipline.
                       </li>
-                      <li className="mb-2">
-                        Transparency earns trust. From pricing to performance,
-                        everything is clear.
+                      <li>
+                        Transparency earns trust. From pricing to performance, everything is clear.
                       </li>
-                      <li className="mb-2">
-                        Flexibility is power. Trading conditions should reflect
-                        your strategy, not restrict it.
+                      <li>
+                        Flexibility is power. Trading conditions should reflect your strategy, not restrict it.
                       </li>
-                      <li className="mb-2">
-                        You don’t need to be institutional to be treated like
-                        one.
+                      <li>
+                        You don’t need to be institutional to be treated like one.
                       </li>
                     </ol>
                   </CardDescription>

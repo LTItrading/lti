@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ChevronDown, Menu, X, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import InfiniteImageSlider from "@/components/sliders/InfiniteImageSlider";
@@ -22,12 +22,14 @@ import ellipse1 from "@/assets/images/Ellipse1.png";
 import ellipse2 from "@/assets/images/Ellipse2.png";
 import mt5Asset from "@/assets/images/MT5-asset.png";
 import Header from "@/layer/Header";
+import PopUp from "@/components/PopUp";
 
 // import Header from "@/layer/Header";
 
 export default function TradingLandingPage() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(null);
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [openDropdown, setOpenDropdown] = useState(null);
+    const [ShowPopUp,setShowPopUp] = useState(false)
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const toggleDropdown = (label) =>
@@ -41,34 +43,39 @@ export default function TradingLandingPage() {
 
   const miniLinks = ["Partnerships", "Institutional", "Funding"];
 
-  return (
-    <div className="min-h-screen bg-[#FFFBF9] font-[Manrope] overflow-x-hidden relative">
-      {/* =================== HEADER =================== */}
-      {/* =================== MAIN CONTENT =================== */}
-      <main className="relative z-10">
-        {/* Background Gradients */}
-        <div
-          className="absolute inset-0 -z-10"
-          //         style={{
-          //             background: `
-          //   radial-gradient(circle at top right, rgba(238, 66, 35, 0.15) 0%, transparent 60%),
-          //   radial-gradient(circle at bottom left, rgba(238, 66, 35, 0.07), transparent 70%),
-          //   #ffffff
-          // `,
-          //         }}
-        />
+    useEffect(()=>{
+        const hasSeenPopUp = localStorage.getItem('hasSeenPopUp');
+            if(!hasSeenPopUp){
+                setShowPopUp(true);
+                localStorage.setItem('hasSeenPopUp' ,'true')
+            }
+    },[])
 
-        {/* Decorative Frame */}
-        <img
-          src={Frame}
-          alt=""
-          className="absolute w-[200px] sm:w-[400px] md:w-[600px] lg:w-[891.25px] h-[249px] top-[340px] left-[-240px] -rotate-[131deg] z-0"
-        />
+    const handleClosePopUp=()=>{
+        setShowPopUp(false)
+    }
+
+    return (
+        <div className="min-h-screen bg-[#FFFBF9] font-[Manrope] overflow-x-hidden relative">
+            {/* =================== HEADER =================== */}
+            {/* =================== MAIN CONTENT =================== */}
+            <main className="relative z-10">
+                {/* Background Gradients */}
+                <div
+                    className="absolute inset-0 -z-10"
+                //         style={{
+                //             background: `
+                //   radial-gradient(circle at top right, rgba(238, 66, 35, 0.15) 0%, transparent 60%),
+                //   radial-gradient(circle at bottom left, rgba(238, 66, 35, 0.07), transparent 70%),
+                //   #ffffff
+                // `,
+                //         }}
+                />
 
         {/* Grid Image */}
         {/* Grid Image - Shifted slightly right */}
         <img
-          src={grid}
+          src={Frame}
           alt=""
           className="absolute w-[300px] sm:w-[400px] md:w-[500px] lg:w-[600px] xl:w-[680px] h-auto top-[10px] left-2/4 -translate-x-[0%] z-10 max-[1024px]:hidden"
         />
@@ -162,6 +169,34 @@ export default function TradingLandingPage() {
               <img src={hand} alt="Hand Icon" className="lg:w-12 sm:w-8" />
             </div>
           </div>
+                {/* Global Footprint Section */}
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-8 px-2 py-6 sm:py-8 mt-3">
+                    {/* Left Line */}
+                    <img
+                        src={line1}
+                        alt="Decorative Line"
+                        className="hidden sm:block w-[150px] md:w-[250px] lg:w-[347px]"
+                    />
+
+                    {/* Center Text */}
+                    <p style={{color:'#000'}} className="font-extrabold text-center text-gray-600 text-sm md:text-lg leading-snug">
+                        Global Footprint. Local Impact
+                    </p>
+
+                    {/* Right Line */}
+                    <img
+                        src={line2}
+                        alt="Decorative Line"
+                        className="hidden sm:block w-[150px] md:w-[250px] lg:w-[347px]"
+                    />
+                </div>
+
+
+                {/* Image Slider */}
+                <Silder />
+
+            
+            {ShowPopUp && <PopUp onClose={handleClosePopUp}/>}
         </div>
 
         {/* Hand2 Image */}

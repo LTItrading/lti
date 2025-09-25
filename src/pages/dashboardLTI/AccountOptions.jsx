@@ -20,15 +20,13 @@ import {
   Clock,
   Users,
 } from "lucide-react";
-import labtop from "@/assets/images/tradingFeaturesPng/labtop.png";
-import security from "@/assets/images/tradingFeaturesPng/security.png";
-import ellipse from "@/assets/images/Ellipse.png";
-import card1 from "@/assets/images/CARD-1.png";
-import card3 from "@/assets/images/CARD-3.png";
-import support from "@/assets/images/support.png";
-import protect from "@/assets/images/protect.png";
 import { PageHeader } from "@/components/layout/PageHeader";
-
+import pro from "@/assets/images/tradingFeaturesPng/protected.png"
+import global from "@/assets/images/tradingFeaturesPng/global.png";
+import traders from "@/assets/images/tradingFeaturesPng/traders.png"
+import licensed from "@/assets/images/tradingFeaturesPng/licensed.png"
+import support from "@/assets/images/tradingFeaturesPng/support.png"
+import clarity from "@/assets/images/tradingFeaturesPng/clarity.png"
 const accountTypes = [
   {
     icon: Play,
@@ -120,25 +118,25 @@ const accountTypes = [
 
 const whatsSetsLTIApart = [
   {
-    icon: labtop,
+    icon: traders,
     title: "Built for Serious Traders",
     description:
       "Our ecosystem is designed for high-performance trading. With accounts, platforms, and conditions engineered for execution speed, stability, and scale..",
   },
   {
-    icon: security,
+    icon: licensed,
     title: "Licensed Across Leading Jurisdictions.",
     description:
       "Our group structure holds regulatory licenses in multiple regions, offering our clients transparency, protection, and the confidence of trading with a globally recognised broker..",
   },
   {
-    icon: card3,
+    icon: clarity,
     title: "Clarity in Every Trade",
     description:
       "No hidden fees. No surprises. We offer clearly defined pricing structures with tight spreads, optional raw pricing, and institutional-level transparency..",
   },
   {
-    icon: card1,
+    icon: global,
     title: "Global Reach. Local Insight.",
     description:
       "With clients in over 140+ countries, our infrastructure and support systems are built to scale, but our service remains personal, responsive, and localised..",
@@ -150,7 +148,7 @@ const whatsSetsLTIApart = [
       "Our global support team offers expert assistance across languages, time zones, and trading needs, 24/5.",
   },
   {
-    icon: protect,
+    icon: pro,
     title: "Your Funds, Fully Protected.",
     description:
       "Client funds are held in top-tier segregated accounts with robust internal safeguards, two-factor authentication, and end-to-end encryption protocols.",

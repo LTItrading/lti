@@ -246,6 +246,9 @@ const Header = () => {
                   Login
                 </a>
               </Button>
+               <Button className="mt-4 py-[9px] px-[39px] rounded-full bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold transform transition-transform duration-300 hover:scale-105">
+                SignUp
+              </Button>
             </nav>
           </div>
         </>
