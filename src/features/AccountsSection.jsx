@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
-
+import { Section } from "@/components/layout/Section";
 import zigzag from "@/assets/images/accountSectionPng/zigzag.png";
 import offMoon from "@/assets/images/accountSectionPng/offMoon.png";
 import settings from "@/assets/images/accountSectionPng/settings.png";
