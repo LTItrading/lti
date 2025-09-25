@@ -169,35 +169,8 @@ export default function TradingLandingPage() {
               <img src={hand} alt="Hand Icon" className="lg:w-12 sm:w-8" />
             </div>
           </div>
-                {/* Global Footprint Section */}
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-8 px-2 py-6 sm:py-8 mt-3">
-                    {/* Left Line */}
-                    <img
-                        src={line1}
-                        alt="Decorative Line"
-                        className="hidden sm:block w-[150px] md:w-[250px] lg:w-[347px]"
-                    />
-
-                    {/* Center Text */}
-                    <p style={{color:'#000'}} className="font-extrabold text-center text-gray-600 text-sm md:text-lg leading-snug">
-                        Global Footprint. Local Impact
-                    </p>
-
-                    {/* Right Line */}
-                    <img
-                        src={line2}
-                        alt="Decorative Line"
-                        className="hidden sm:block w-[150px] md:w-[250px] lg:w-[347px]"
-                    />
-                </div>
-
-
-                {/* Image Slider */}
-                <Silder />
-
-            
-            {ShowPopUp && <PopUp onClose={handleClosePopUp}/>}
-        </div>
+        </div>        
+        {ShowPopUp && <PopUp onClose={handleClosePopUp}/>}
 
         {/* Hand2 Image */}
         {/* Hand Icon */}
