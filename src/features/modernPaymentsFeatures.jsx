@@ -85,7 +85,7 @@ const ModernPaymentsFeatures = () => {
     />
 
     {/* Main Container */}
-    <div className="relative z-[2] font-manrope text-black rounded-none sm:rounded-[50px] md:rounded-[40px] px-6 sm:px-10 lg:px-14 py-10 sm:py-14 lg:py-20 overflow-hidden max-w-[1440px] mx-auto bg-white">
+    <div className="relative z-[2] font-manrope text-black rounded-none sm:rounded-[50px] md:rounded-[40px] px-6 sm:px-10 lg:px-14 py-10 sm:py-14 lg:py-20 overflow-hidden max-w-[1440px] mx-auto bg-transparent">
 
         {/* Effect Layer */}
         <img

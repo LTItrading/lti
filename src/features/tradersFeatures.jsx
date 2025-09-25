@@ -54,7 +54,7 @@ const TradersFeatures = () => {
 
             {/* Content Wrapper */}
             <div className="relative z-10 w-full px-0 sm:px-6 lg:px-12 py-0 md:pt-16 md:pb-[30px]">
-                <div className="group relative mx-auto max-w-[1100px] bg-white/90 text-black p-6 sm:p-10 rounded-[0px] md:rounded-[40px] overflow-hidden transition-all duration-900">
+                <div className="group relative mx-auto max-w-[1100px] bg-transparent text-black p-6 sm:p-10 rounded-[0px] md:rounded-[40px] overflow-hidden transition-all duration-900">
 
                     {/* Inner Overlay Image */}
                     <img

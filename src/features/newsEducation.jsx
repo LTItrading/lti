@@ -174,30 +174,42 @@ const NewsEducation = () => {
                       your fingertips.
                     </p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 my-2">
-                      <div className="text-center p-4 text-white rounded-lg bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] p-6 rounded-[20px] shadow-[0px_4px_4px_0px_#FF66334D] transition-all duration-300 border border-transparent hover:border-[#EE422333] hover:border-[2px] hover:bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] hover:backdrop-blur-[20px]">
-                        <TrendingUp className="h-6 w-6 text-primary mx-auto mb-2" />
-                        <div className="text-md font-medium text-left mb-2">
-                          Market News Feed
-                        </div>
-                        <div className="text-xs text-white">
-                          Delivered inside MT5 via leading financial news
-                          providers, covering global assets in real time.
-                        </div>
-                      </div>
+<div className="flex flex-col md:flex-row md:justify-between md:items-stretch gap-6 mb-8 my-2">
+  {/* Market News Feed */}
+  <div className="w-full md:w-1/2 xl:max-w-[500px] text-center p-6 text-white rounded-[20px] 
+    bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] 
+    shadow-[0px_4px_4px_0px_#FF66334D] 
+    transition-all duration-300 border border-transparent 
+    hover:border-[#EE422333] hover:border-2 hover:backdrop-blur-[20px]">
+    <TrendingUp className="h-6 w-6 text-primary mx-auto mb-2" />
+    <div className="text-md font-medium text-left mb-2">
+      Market News Feed
+    </div>
+    <div className="text-xs text-white">
+      Delivered inside MT5 via leading financial news providers, covering global assets in real time.
+    </div>
+  </div>
 
-                      <div className="flex-1 min-w-[300px] max-w-[300px] p-6 text-white rounded-[20px] bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] shadow-[0px_4px_4px_0px_#FF66334D] transition-all duration-300 border border-transparent hover:border-[#EE422333] hover:border-[2px] hover:backdrop-blur-[20px] flex flex-col">
-                        <Calendar className="h-6 w-6 text-primary mx-auto mb-2" />
-                        <div className="text-md font-medium text-left mb-2">
-                          Economic Calendar
-                        </div>
-                        <div className="text-xs text-white">
-                          Built into MT5, filterable by country, impact level,
-                          and event type — helping you track announcements like
-                          NFP, CPI, and rate decisions.
-                        </div>
-                      </div>
-                    </div>
+  {/* Economic Calendar */}
+  <div className="w-full md:w-1/2 xl:max-w-[500px] text-center p-6 text-white rounded-[20px] 
+    bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] 
+    shadow-[0px_4px_4px_0px_#FF66334D] 
+    transition-all duration-300 border border-transparent 
+    hover:border-[#EE422333] hover:border-2 hover:backdrop-blur-[20px] flex flex-col">
+    <Calendar className="h-6 w-6 text-primary mx-auto mb-2" />
+    <div className="text-md font-medium text-left mb-2">
+      Economic Calendar
+    </div>
+    <div className="text-xs text-white">
+      Built into MT5, filterable by country, impact level, and event type — helping you track announcements like NFP, CPI, and rate decisions.
+    </div>
+  </div>
+</div>
+
+
+
+
+
 
                     <div className="flex justify-center">
 

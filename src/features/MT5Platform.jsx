@@ -9,7 +9,7 @@ import mt5Asset from "@/assets/images/MT5-asset.png";
 import AppStore4x from "../assets/images/4x-Images/AppStore4x.png";
 import playstoreApk4x from "../assets/images/4x-Images/playstoreApk4x.png";
 import TabletMobileImg from "../assets/images/android.png";
-import Pc from "../assets/images/pc.png"
+import Pc from "../assets/images/Pc.png"
 import mac from "../assets/images/mac.png"
 
 
@@ -209,9 +209,14 @@ export default function MT5Platform() {
                 Download <ExternalLink className="w-4 h-4 text-primary" />
               </a>
             </div>
-            <div className="p-4 flex-grow">
-              <img src={Pc} alt="MT5 for PC" className="object-cover w-full h-full transition-all duration-300" />
+            <div className="p-4 flex-grow flex items-center justify-center">
+              <img
+                src={Pc}
+                alt="MT5 for PC"
+                className="object-contain w-full h-70 md:h-76 transition-all duration-300"
+              />
             </div>
+
           </motion.div>
 
           <div className=' flex-shrink-0 min-w-[350px] max-w-[300px]'>

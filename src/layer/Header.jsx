@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom"; // Add this import
+import { Link } from "react-router-dom"; 
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -69,9 +69,8 @@ const Header = () => {
   return (
     <>
       <header
-        className={`sticky top-0 w-full z-20 overflow-visible transition-colors duration-300 ${
-          isSticky ? "bg-[#FFFBF9]" : ""
-        }`}
+        className={`sticky top-0 w-full z-20 overflow-visible transition-colors duration-300 ${isSticky ? "bg-[#FFFBF9]" : ""
+          }`}
         style={{
           background: isSticky ? undefined : "rgba(242, 216, 211, 0.1)",
           boxShadow: isSticky
@@ -163,8 +162,9 @@ const Header = () => {
 
             {/* Login + Mobile menu toggle */}
             <div className="flex items-center gap-4">
-              <div className="hidden md:block">
-                <Button className="group mt-1 py-[20px] px-[40px] rounded-full bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold text-[16px]">
+              <div className="hidden md:flex gap-2">
+                {/* Login Button */}
+                <Button className="group mt-1 py-[10px] px-[25px] rounded-full bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold text-[16px]">
                   <a
                     href="https://clientarea.londontradingindex.com/login"
                     className="transform transition-transform duration-300 group-hover:scale-105"
@@ -172,7 +172,18 @@ const Header = () => {
                     Login
                   </a>
                 </Button>
+
+                {/* Sign Up Button */}
+                <Button className="group mt-1 py-[10px] px-[25px] rounded-full bg-white hover:bg-gray-100 text-[#ee4223] font-semibold text-[16px] border border-[#ee4223]">
+                  <a
+                    href="https://clientarea.londontradingindex.com/register"
+                    className="transform transition-transform duration-300 group-hover:scale-105"
+                  >
+                    Sign Up
+                  </a>
+                </Button>
               </div>
+
               <div className="md:hidden">
                 <button onClick={toggleMenu} aria-label="Toggle Menu">
                   {menuOpen ? (
@@ -216,9 +227,8 @@ const Header = () => {
                   >
                     <span className="text-gray-600">{label}</span>
                     <ChevronDown
-                      className={`h-4 w-4 transition-transform ${
-                        openDropdown === label ? "rotate-180" : ""
-                      }`}
+                      className={`h-4 w-4 transition-transform ${openDropdown === label ? "rotate-180" : ""
+                        }`}
                     />
                   </div>
                   {openDropdown === label && subMenu && (
@@ -246,8 +256,12 @@ const Header = () => {
                   Login
                 </a>
               </Button>
-               <Button className="mt-4 py-[9px] px-[39px] rounded-full bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold transform transition-transform duration-300 hover:scale-105">
-                SignUp
+              <Button className="mt-4 py-[9px] px-[39px] rounded-full bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold transform transition-transform duration-300 hover:scale-105">
+                <a
+                  href="https://clientarea.londontradingindex.com/register"
+                  className="transform transition-transform duration-300 group-hover:scale-105"
+                > Sign Up</a>
+
               </Button>
             </nav>
           </div>
