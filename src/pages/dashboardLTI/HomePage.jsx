@@ -97,7 +97,7 @@ export default function TradingLandingPage() {
         <div className="px-4 sm:px-8 md:px-[60px] lg:px-[80px] xl:px-[100px] pt-[60px] md:pt-[80px] lg:pt-[90px]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[70vh] text-center lg:text-left">
             {/* LEFT */}
-            <div className="space-y-8">
+            <div className="space-y-6">
               <h1 className="text-[32px] leading-[42px] sm:text-[36px] sm:leading-[48px] md:text-[40px] md:leading-[56px] lg:text-[48px] lg:leading-[65px] font-bold font-[Manrope] text-[#1C1C1C]">
                 Awarded Best Regional <br /> Broker in{" "}
                 <span className="text-[32px] leading-[42px] sm:text-[36px] sm:leading-[48px] md:text-[40px] md:leading-[56px] lg:text-[48px] lg:leading-[65px] font-extrabold font-[Manrope] text-[#1C1C1C]">
@@ -107,7 +107,7 @@ export default function TradingLandingPage() {
               <p className="text-[18px] leading-[30px] sm:text-[20px] sm:leading-[36px] md:text-[22px] md:leading-[44px] lg:text-[24px] lg:leading-[50px] font-normal font-[Manrope] text-[#1C1C1C]">
                 Join Thousands of Traders Who Made the Switch.
               </p>
-              <Button className="relative bg-[#ee4223] hover:bg-[#FF6B3D] text-white text-base sm:text-lg font-semibold shadow-lg transition-all duration-300 group px-[24px] py-[28px] rounded-full mx-auto lg:mx-0 flex items-center justify-center">
+              <Button className="relative bg-[#ee4223] hover:bg-[#FF6B3D] text-white text-base sm:text-lg font-semibold shadow-lg transition-all duration-300 group px-[24px] py-5 rounded-full mx-auto lg:mx-0 flex items-center justify-center">
                 <div className="group flex items-center justify-center gap-2 leading-none">
                   <a href="https://clientarea.londontradingindex.com/register/">
                     Start Trading
@@ -124,7 +124,7 @@ export default function TradingLandingPage() {
               </Button>
 
               {/* Partner Logos */}
-              <div className="flex justify-center lg:justify-start pt-8">
+              <div className="flex justify-center lg:justify-start pt-4">
                 <div className="flex items-center justify-between px-4 sm:px-6 py-3 w-full max-w-[320px] sm:max-w-[450px] lg:max-w-[596px] h-[80px] sm:h-[100px] lg:h-[108px] rounded-full bg-[#FFFBFB] shadow-md border">
                   <img
                     src={Group44055}

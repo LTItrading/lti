@@ -66,7 +66,7 @@ export default function AccountsSection() {
   ];
 
   return (
-    <div className="w-full py-10 sm:py-14 md:py-16 lg:py-20 overflow-hidden bg-[#FFFBF9]">
+    <div className="w-full py-10 sm:py-14 md:py-16 lg:py-20 mt-10 overflow-hidden bg-[#FFFBF9]">
       <div className="mx-auto max-w-[1800px] px-4 sm:px-6 md:px-10 lg:px-14 xl:px-20">
         {/* Header */}
         <div className="text-center mb-10 sm:mb-14 md:mb-16">
@@ -82,13 +82,13 @@ export default function AccountsSection() {
         </div>
 
         {/* Cards */}
-        <Section padding="lg" background="none">
+        {/* <Section padding="lg" background="none"> */}
           <div className="max-w-7xl mx-auto flex flex-wrap gap-6 justify-center">
             {accountTypes.map((account, index) => (
               <AccountCard key={index} {...account} />
             ))}
           </div>
-        </Section>
+        {/* </Section> */}
 
       </div>
     </div>

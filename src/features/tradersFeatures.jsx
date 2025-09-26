@@ -99,14 +99,14 @@ const TradersFeatures = () => {
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 bg-transparent ">
                                 {/* Card 1 */}
                                 <div className="group p-6 rounded-[20px] transition-all duration-300 border border-gray-300 hover:border-[#EE4223] shadow-[0_4px_20px_rgba(0,0,0,0.3)] ">
-                                    <div className="w-12 h-12 mb-6 flex items-center justify-center rounded-full bg-gray-300 ring-1 ring-[#EE4223]/20 
+                                    <div className="w-12 h-12 mb-6 flex items-center justify-center rounded-full bg-black ring-1 ring-[#EE4223]/20 
                   group-hover:ring-[#EE4223] group-hover:ring-[3px] 
                   transition-all duration-300 
                   hover:shadow-[0_0_20px_rgba(238,66,35,0.7)]">
                                         <img
                                             src={tradersFeaturesIcon14x}
                                             alt="Tight Spreads"
-                                            className="w-5 h-5 opacity-80 invert group-hover:opacity-100 transition-opacity duration-300"
+                                            className="w-5 h-5 opacity-80 invert-white group-hover:opacity-100 transition-opacity duration-300"
                                         />
                                     </div>
                                     <h4 className="text-black text-[16px] font-extrabold mb-2">Tight Spreads</h4>
@@ -117,14 +117,14 @@ const TradersFeatures = () => {
 
                                 {/* Card 2 */}
                                 <div className="group bg-white p-6 rounded-[20px] transition-all duration-300 border border-gray-300 hover:border-[#EE4223] shadow-[0_4px_20px_rgba(0,0,0,0.3)] ">
-                                    <div className="w-12 h-12 mb-6 flex items-center justify-center rounded-full bg-gray-300 ring-1 ring-[#EE4223]/20 
+                                    <div className="w-12 h-12 mb-6 flex items-center justify-center rounded-full bg-black ring-1 ring-[#EE4223]/20 
                   group-hover:ring-[#EE4223] group-hover:ring-[3px] 
                   transition-all duration-300 
                   hover:shadow-[0_0_20px_rgba(238,66,35,0.7)]">
                                         <img
                                             src={tradersFeaturesIcon24x}
                                             alt="Transparent Pricing"
-                                            className="w-5 h-5 opacity-80 invert group-hover:opacity-100 transition-opacity duration-300"
+                                            className="w-5 h-5 opacity-80 invert-white group-hover:opacity-100 transition-opacity duration-300"
                                         />
                                     </div>
                                     <h4 className="text-black text-[16px] font-extrabold mb-2">Transparent Pricing</h4>
@@ -135,14 +135,14 @@ const TradersFeatures = () => {
 
                                 {/* Card 3 */}
                                 <div className="group bg-white p-6 rounded-[20px] transition-all duration-300 border border-gray-300 hover:border-[#EE4223] shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
-                                    <div className="w-12 h-12 mb-6 flex items-center justify-center rounded-full bg-gray-300 ring-1 ring-[#EE4223]/20 
+                                    <div className="w-12 h-12 mb-6 flex items-center justify-center rounded-full bg-black ring-1 ring-[#EE4223]/20 
                   group-hover:ring-[#EE4223] group-hover:ring-[3px] 
                   transition-all duration-300 
                   hover:shadow-[0_0_20px_rgba(238,66,35,0.7)]">
                                         <img
                                             src={tradersFeaturesIcon34x}
                                             alt="Flexible Leverage"
-                                            className="w-5 h-5 opacity-80 invert group-hover:opacity-100 transition-opacity duration-300"
+                                            className="w-5 h-5 opacity-80 invert-white group-hover:opacity-100 transition-opacity duration-300"
                                         />
                                     </div>
                                     <h4 className="text-black text-[16px] font-extrabold mb-2">Flexible Leverage</h4>
@@ -153,14 +153,14 @@ const TradersFeatures = () => {
 
                                 {/* Card 4 */}
                                 <div className="group bg-white p-6 rounded-[20px] transition-all duration-300 border border-gray-300 hover:border-[#EE4223] shadow-[0_4px_20px_rgba(0,0,0,0.3)] ">
-                                    <div className="w-12 h-12 mb-6 flex items-center justify-center rounded-full bg-gray-300 ring-1 ring-[#EE4223]/20 
+                                    <div className="w-12 h-12 mb-6 flex items-center justify-center rounded-full bg-black ring-1 ring-[#EE4223]/20 
                   group-hover:ring-[#EE4223] group-hover:ring-[3px] 
                   transition-all duration-300 
                   hover:shadow-[0_0_20px_rgba(238,66,35,0.7)]">
                                         <img
                                             src={tradersFeaturesIcon44x}
                                             alt="Risk Protection"
-                                            className="w-5 h-5 opacity-80 invert group-hover:opacity-100 transition-opacity duration-300"
+                                            className="w-5 h-5 opacity-80 invert-white group-hover:opacity-100 transition-opacity duration-300"
                                         />
                                     </div>
                                     <h4 className="text-black text-[16px] font-extrabold mb-2">Risk Protection Built In</h4>

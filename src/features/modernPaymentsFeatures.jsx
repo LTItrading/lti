@@ -98,7 +98,7 @@ const ModernPaymentsFeatures = () => {
         <div className="relative z-[2] flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-14">
 
             {/* Scrolling Images */}
-            <div className="flex gap-3 sm:gap-4 md:gap-6 lg:w-2/2 h-[260px] sm:h-[320px] md:h-[420px] lg:h-[500px] overflow-hidden bg-black rounded-[2rem] ">
+            <div className="flex gap-3 sm:gap-4 md:gap-6 lg:w-2/2 h-[260px] sm:h-[320px] md:h-[420px] lg:h-[450px] overflow-hidden bg-black rounded-[2rem] ">
                 {[ModernPaymentImg14x, ModernPaymentImg24x, ModernPaymentImg34x].map((img, index) => (
                     <div key={index} className="relative w-[80px] sm:w-[100px] md:w-[120px] lg:w-[140px] h-full overflow-hidden">
                         <div className={`absolute w-full flex flex-col ${index % 2 === 0 ? 'animate-scroll-y' : 'animate-scroll-y-reverse'}`}>
@@ -116,12 +116,13 @@ const ModernPaymentsFeatures = () => {
                     Modern <span className="text-[26px] sm:text-[30px] md:text-[36px] font-extrabold text-[#EE4223]">Payments </span>
                     for Modern <span className="text-[26px] sm:text-[30px] md:text-[36px] font-extrabold text-[#EE4223]">Traders</span>
                 </h2>
-                <p className="text-[13px] sm:text-[14px] md:text-[16px] font-medium leading-[198%] text-black opacity-80">
-                    From cards to crypto, we offer a wide range of deposit and withdrawal options – fast, flexible, and built for modern traders.
-                </p>
-                <p className="text-[20px] sm:text-[11px] md:text-[12px] font-light leading-[191%] text-black opacity-50">
-                    *Availability of payment methods may vary by region and client verification status. Processing times and fees depend on the provider and account type.
-                </p>
+                        <p className="text-[16px] sm:text-[18px] md:text-[20px] font-medium leading-[198%] text-black opacity-80">
+                            From cards to crypto, we offer a wide range of deposit and withdrawal options – fast, flexible, and built for modern traders.
+                        </p>
+                        <p className="text-[14px] sm:text-[16px] md:text-[18px] font-light leading-[191%] text-black opacity-50">
+                            *Availability of payment methods may vary by region and client verification status. Processing times and fees depend on the provider and account type.
+                        </p>
+
             </div>
         </div>
     </div>
