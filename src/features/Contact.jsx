@@ -169,12 +169,12 @@ export const Contact = () => {
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
 
       {[
-        { Icon: Linkedin, name: "LinkedIn", color: "#0A66C2" },
-        { Icon: Twitter, name: "Twitter/X", color: "#1DA1F2" },
-        { Icon: Instagram, name: "Instagram", color: "#DD2A7B" },
-        { Icon: Youtube, name: "YouTube", color: "#FF0000" },
-      ].map(({ Icon, name, color }) => (
-        <a key={name} href="#" className="group">
+        { Icon: Linkedin, name: "LinkedIn", color: "#0A66C2", link:'https://www.linkedin.com/company/london-trading-index/' },
+        { Icon: Twitter, name: "Twitter/X", color: "#1DA1F2", link: 'https://x.com/ldntradingindex?s=21' },
+        { Icon: Instagram, name: "Instagram", color: "#DD2A7B", link: 'https://www.instagram.com/londontradingindex/profilecard' },
+        { Icon: Youtube, name: "YouTube", color: "#FF0000", link: 'https://www.youtube.com/@londontradingindex5068' },
+      ].map(({ Icon, name, color, link }) => (
+        <a key={name} href={link} className="group">
           <div className="bg-white rounded-3xl p-6 flex flex-col items-center justify-center
                           shadow-md hover:shadow-lg transition-shadow transform hover:-translate-y-2 ">
             <div

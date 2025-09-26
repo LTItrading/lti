@@ -27,63 +27,63 @@ import { useEffect, useState } from "react";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import RegisterFeatures from "./registerFeatures";
 import ReactCountryFlag from "react-country-flag";
-import XAG from "@/assets/images/metals/silver.svg"
-import XAU from "@/assets/images/metals/gold.svg"
-import XPD from "@/assets/images/metals/palladium.svg"
-import XPT from "@/assets/images/metals/platinum.svg"
-import UKOIL from "@/assets/images/metals/brent.svg"
-import USOIL from "@/assets/images/metals/oil.svg"
-import AMZN from "@/assets/images/metals/amazon.svg"
-import TSLA from "@/assets/images/metals/tesla.svg"
-import APPL from "@/assets/images/metals/apple.svg"
-import MSFT from "@/assets/images/metals/microsoft.svg"
+import XAG from "@/assets/images/metals/silver.svg";
+import XAU from "@/assets/images/metals/gold.svg";
+import XPD from "@/assets/images/metals/palladium.svg";
+import XPT from "@/assets/images/metals/platinum.svg";
+import UKOIL from "@/assets/images/metals/brent.svg";
+import USOIL from "@/assets/images/metals/oil.svg";
+import AMZN from "@/assets/images/metals/amazon.svg";
+import TSLA from "@/assets/images/metals/tesla.svg";
+import APPL from "@/assets/images/metals/apple.svg";
+import MSFT from "@/assets/images/metals/microsoft.svg";
 //indices
-import AUS200 from "@/assets/images/indices/AUS200.svg"
-import DE40C from "@/assets/images/indices/DE40C.svg"
-import F40C from "@/assets/images/indices/F40C.svg"
-import HK50C from "@/assets/images/indices/HK50C.svg"
-import NE25C from "@/assets/images/indices/NE25C.svg"
-import STOXX50 from "@/assets/images/indices/STOXX50.svg"
-import UK100C from "@/assets/images/indices/UK100C.svg"
-import US500C from "@/assets/images/indices/US500C.svg"
-import USTEC from "@/assets/images/indices/USTEC.svg"
-import DJ30 from "@/assets/images/indices/DJ30.svg"
-import ES35 from "@/assets/images/indices/ES35.svg"
-import SWI20C from "@/assets/images/indices/SWI20C.svg"
+import AUS200 from "@/assets/images/indices/AUS200.svg";
+import DE40C from "@/assets/images/indices/DE40C.svg";
+import F40C from "@/assets/images/indices/F40C.svg";
+import HK50C from "@/assets/images/indices/HK50C.svg";
+import NE25C from "@/assets/images/indices/NE25C.svg";
+import STOXX50 from "@/assets/images/indices/STOXX50.svg";
+import UK100C from "@/assets/images/indices/UK100C.svg";
+import US500C from "@/assets/images/indices/US500C.svg";
+import USTEC from "@/assets/images/indices/USTEC.svg";
+import DJ30 from "@/assets/images/indices/DJ30.svg";
+import ES35 from "@/assets/images/indices/ES35.svg";
+import SWI20C from "@/assets/images/indices/SWI20C.svg";
 //indices-ft
-import DE40U25 from "@/assets/images/indices-ft/DE40U25.svg"
-import DJ30U25 from "@/assets/images/indices-ft/DJ30U25.svg"
-import DXU25 from "@/assets/images/indices-ft/DXU25.svg"
-import JPN225U25 from "@/assets/images/indices-ft/JPN225U25.svg"
-import NGAS from "@/assets/images/indices-ft/NGAS.svg"
-import TY10U25 from "@/assets/images/indices-ft/TY10U25.svg"
-import UKBRENT from "@/assets/images/indices-ft/UKBRENT.svg"
-import US500U25 from "@/assets/images/indices-ft/US500U25.svg"
-import USOIL25 from "@/assets/images/indices-ft/USOIL25.svg"
-import XAUUSD from "@/assets/images/indices-ft/XAUUSD.svg"
-import USTECU from "@/assets/images/indices-ft/USTECU25.svg"
+import DE40U25 from "@/assets/images/indices-ft/DE40U25.svg";
+import DJ30U25 from "@/assets/images/indices-ft/DJ30U25.svg";
+import DXU25 from "@/assets/images/indices-ft/DXU25.svg";
+import JPN225U25 from "@/assets/images/indices-ft/JPN225U25.svg";
+import NGAS from "@/assets/images/indices-ft/NGAS.svg";
+import TY10U25 from "@/assets/images/indices-ft/TY10U25.svg";
+import UKBRENT from "@/assets/images/indices-ft/UKBRENT.svg";
+import US500U25 from "@/assets/images/indices-ft/US500U25.svg";
+import USOIL25 from "@/assets/images/indices-ft/USOIL25.svg";
+import XAUUSD from "@/assets/images/indices-ft/XAUUSD.svg";
+import USTECU from "@/assets/images/indices-ft/USTECU25.svg";
 //crypto
-import BCH from "@/assets/images/crypto/bitcoin.svg"
-import ADA from "@/assets/images/crypto/cardano.svg"
-import CHZ from "@/assets/images/crypto/Chiliz.svg"
-import DOGE from "@/assets/images/crypto/dogecoin.svg"
-import ETH from "@/assets/images/crypto/ethereum.svg"
-import ONE from "@/assets/images/crypto/harmony.svg"
-import XEM from "@/assets/images/crypto/nem.svg"
-import SOL from "@/assets/images/crypto/solana.svg"
-import XLM from "@/assets/images/crypto/stellar.svg"
-import TRX from "@/assets/images/crypto/tron.svg"
-import VET from "@/assets/images/crypto/vechain.svg"
+import BCH from "@/assets/images/crypto/bitcoin.svg";
+import ADA from "@/assets/images/crypto/cardano.svg";
+import CHZ from "@/assets/images/crypto/Chiliz.svg";
+import DOGE from "@/assets/images/crypto/dogecoin.svg";
+import ETH from "@/assets/images/crypto/ethereum.svg";
+import ONE from "@/assets/images/crypto/harmony.svg";
+import XEM from "@/assets/images/crypto/nem.svg";
+import SOL from "@/assets/images/crypto/solana.svg";
+import XLM from "@/assets/images/crypto/stellar.svg";
+import TRX from "@/assets/images/crypto/tron.svg";
+import VET from "@/assets/images/crypto/vechain.svg";
 //eu
-import AIRPA from "@/assets/images/euShares/AIRPA.svg"
-import BAYGN from "@/assets/images/euShares/BAYGN.svg"
-import LVMH from "@/assets/images/euShares/LVMH.svg"
-import SAPG from "@/assets/images/euShares/SAPG.svg"
+import AIRPA from "@/assets/images/euShares/AIRPA.svg";
+import BAYGN from "@/assets/images/euShares/BAYGN.svg";
+import LVMH from "@/assets/images/euShares/LVMH.svg";
+import SAPG from "@/assets/images/euShares/SAPG.svg";
 //hk
-import HKONE from "@/assets/images/hkShares/0388.svg"
-import HKTWO from "@/assets/images/hkShares/0700.svg"
-import HKTHREE from "@/assets/images/hkShares/0939.svg"
-import HKFOUR from "@/assets/images/hkShares/2318.svg"
+import HKONE from "@/assets/images/hkShares/0388.svg";
+import HKTWO from "@/assets/images/hkShares/0700.svg";
+import HKTHREE from "@/assets/images/hkShares/0939.svg";
+import HKFOUR from "@/assets/images/hkShares/2318.svg";
 
 function ForexTab({ data, columns }) {
   return (
@@ -115,8 +115,8 @@ export default function MarketAccess() {
   const [forexTabVal, setForexTabVal] = useState("standard");
   const [shareTabVal, setShareTabVal] = useState("usshare");
   const isMobile = useIsMobile();
-  const metals= {
-    XAG : XAG,
+  const metals = {
+    XAG: XAG,
     XAU,
     XPD,
     XPT,
@@ -133,8 +133,8 @@ export default function MarketAccess() {
     HKONE,
     HKTWO,
     HKTHREE,
-    HKFOUR
-  }
+    HKFOUR,
+  };
 
   const indice = {
     AUS200,
@@ -148,10 +148,10 @@ export default function MarketAccess() {
     USTEC,
     DJ30,
     ES35,
-    SWI20C
-  }
+    SWI20C,
+  };
 
-  const crypto ={
+  const crypto = {
     BCH,
     ADA,
     CHZ,
@@ -162,10 +162,10 @@ export default function MarketAccess() {
     SOL,
     XLM,
     TRX,
-    VET
-  }
+    VET,
+  };
 
-  const indiceft ={
+  const indiceft = {
     DE40U25,
     DJ30U25,
     DXU25,
@@ -177,12 +177,9 @@ export default function MarketAccess() {
     USOIL25,
     XAUUSD,
     XAG,
-    USTECU
-  }
+    USTECU,
+  };
 
-
-
-  
   const tabs = [
     {
       id: "forex",
@@ -314,7 +311,7 @@ export default function MarketAccess() {
               onClick={() => {}}
               className="text-brand"
             >
-              Trade
+              <a href="https://clientarea.londontradingindex.com/register/" >Trade</a>
             </Button>
           ),
         },
@@ -503,7 +500,7 @@ export default function MarketAccess() {
               onClick={() => {}}
               className="text-brand"
             >
-              Trade
+              <a href="https://clientarea.londontradingindex.com/register/" >Trade</a>
             </Button>
           ),
         },
@@ -519,7 +516,7 @@ export default function MarketAccess() {
           spread: 1.8,
           lowSpread: 1.3,
           leverage: 200,
-          flags:['AUS200']
+          flags: ["AUS200"],
         },
         {
           symbol: "DE40.c",
@@ -527,7 +524,7 @@ export default function MarketAccess() {
           spread: 1.5,
           lowSpread: 1.1,
           leverage: 200,
-          flags:['DE40C']
+          flags: ["DE40C"],
         },
         {
           symbol: "F40.c",
@@ -535,7 +532,7 @@ export default function MarketAccess() {
           spread: 1.7,
           lowSpread: 1.2,
           leverage: 200,
-          flags:['F40C']
+          flags: ["F40C"],
         },
         {
           symbol: "HK50.c",
@@ -543,7 +540,7 @@ export default function MarketAccess() {
           spread: 8,
           lowSpread: 8,
           leverage: 66,
-          flags:['AUS200']
+          flags: ["AUS200"],
         },
         {
           symbol: "NE25.c",
@@ -551,7 +548,7 @@ export default function MarketAccess() {
           spread: 1.6,
           lowSpread: 1.2,
           leverage: 200,
-          flags:['NE25C']
+          flags: ["NE25C"],
         },
         {
           symbol: "STOXX50.c",
@@ -559,15 +556,15 @@ export default function MarketAccess() {
           spread: 1.4,
           lowSpread: 1.0,
           leverage: 200,
-          flags:['STOXX50']
+          flags: ["STOXX50"],
         },
         {
           symbol: "UK100.c",
           name: "FTSE 100 Index (UK)",
           spread: 2.78,
-          lowSpread: 1.40,
+          lowSpread: 1.4,
           leverage: 500,
-          flags:['UK100C']
+          flags: ["UK100C"],
         },
         {
           symbol: "US500.c",
@@ -575,7 +572,7 @@ export default function MarketAccess() {
           spread: 0.57,
           lowSpread: 0.57,
           leverage: 500,
-          flags:['US500C']
+          flags: ["US500C"],
         },
         {
           symbol: "USTEC.c",
@@ -583,7 +580,7 @@ export default function MarketAccess() {
           spread: 1.5,
           lowSpread: 1.0,
           leverage: 200,
-          flags:['USTEC']
+          flags: ["USTEC"],
         },
         {
           symbol: "DJ30.c",
@@ -591,7 +588,7 @@ export default function MarketAccess() {
           spread: 1.6,
           lowSpread: 1.1,
           leverage: 200,
-          flags:['DJ30']
+          flags: ["DJ30"],
         },
         {
           symbol: "ES35.c",
@@ -599,7 +596,7 @@ export default function MarketAccess() {
           spread: 1.8,
           lowSpread: 1.3,
           leverage: 200,
-          flags:['ES35']
+          flags: ["ES35"],
         },
         {
           symbol: "SWI20.c",
@@ -607,7 +604,7 @@ export default function MarketAccess() {
           spread: 1.7,
           lowSpread: 1.2,
           leverage: 200,
-          flags:['SWI20C']
+          flags: ["SWI20C"],
         },
       ],
       columns: [
@@ -615,7 +612,7 @@ export default function MarketAccess() {
           key: "symbol",
           header: "Symbol",
           render: (_, row) => (
-              <div className="flex flex-row items-center gap-2 min-w-[150px]">
+            <div className="flex flex-row items-center gap-2 min-w-[150px]">
               <div className="mr-2 flex-shrink-0">
                 <img
                   src={indice[row?.flags?.[0]]}
@@ -646,7 +643,7 @@ export default function MarketAccess() {
               onClick={() => {}}
               className="text-brand"
             >
-              Trade
+              <a href="https://clientarea.londontradingindex.com/register/" >Trade</a>
             </Button>
           ),
         },
@@ -662,7 +659,7 @@ export default function MarketAccess() {
           spread: 2.1,
           lowSpread: 1.6,
           leverage: 100,
-          flags:['DE40U25']
+          flags: ["DE40U25"],
         },
         {
           symbol: "DJ30.U25",
@@ -670,7 +667,7 @@ export default function MarketAccess() {
           spread: 2.4,
           lowSpread: 1.9,
           leverage: 100,
-          flags:['DJ30U25']
+          flags: ["DJ30U25"],
         },
         {
           symbol: "DX.U25",
@@ -678,7 +675,7 @@ export default function MarketAccess() {
           spread: 1.7,
           lowSpread: 1.2,
           leverage: 100,
-          flags:['DXU25']
+          flags: ["DXU25"],
         },
         {
           symbol: "JPN225.U25",
@@ -686,7 +683,7 @@ export default function MarketAccess() {
           spread: 14,
           lowSpread: 14,
           leverage: 500,
-          flags:['JPN225U25']
+          flags: ["JPN225U25"],
         },
         {
           symbol: "NGAS.Q25",
@@ -694,7 +691,7 @@ export default function MarketAccess() {
           spread: 3.2,
           lowSpread: 2.6,
           leverage: 100,
-          flags:['NGAS']
+          flags: ["NGAS"],
         },
         {
           symbol: "SILVER.U25",
@@ -702,7 +699,7 @@ export default function MarketAccess() {
           spread: 2.9,
           lowSpread: 2.3,
           leverage: 100,
-          flags:['XAG']
+          flags: ["XAG"],
         },
         {
           symbol: "TY10.U25",
@@ -710,7 +707,7 @@ export default function MarketAccess() {
           spread: 1.8,
           lowSpread: 1.3,
           leverage: 100,
-          flags:['TY10U25']
+          flags: ["TY10U25"],
         },
         {
           symbol: "UKBRENT.U25",
@@ -718,15 +715,15 @@ export default function MarketAccess() {
           spread: 2.6,
           lowSpread: 2.0,
           leverage: 100,
-          flags:['UKBRENT']
+          flags: ["UKBRENT"],
         },
         {
           symbol: "US500.U25",
           name: "S&P 500 Index Futures (US)",
           spread: 1.24,
-          lowSpread: 1.20,
+          lowSpread: 1.2,
           leverage: 500,
-          flags:['US500U25']
+          flags: ["US500U25"],
         },
         {
           symbol: "USOIL.Q25",
@@ -734,7 +731,7 @@ export default function MarketAccess() {
           spread: 2.7,
           lowSpread: 2.1,
           leverage: 100,
-          flags:['USOIL25']
+          flags: ["USOIL25"],
         },
         {
           symbol: "USTEC.U25",
@@ -742,7 +739,7 @@ export default function MarketAccess() {
           spread: 2.2,
           lowSpread: 1.6,
           leverage: 100,
-          flags:['USTECU']
+          flags: ["USTECU"],
         },
         {
           symbol: "XAUUSD.Q25",
@@ -750,7 +747,7 @@ export default function MarketAccess() {
           spread: 3.4,
           lowSpread: 2.7,
           leverage: 100,
-          flags:['XAUUSD']
+          flags: ["XAUUSD"],
         },
       ],
       columns: [
@@ -758,7 +755,7 @@ export default function MarketAccess() {
           key: "symbol",
           header: "Symbol",
           render: (_, row) => (
-              <div className="flex flex-row items-center gap-2 min-w-[150px]">
+            <div className="flex flex-row items-center gap-2 min-w-[150px]">
               <div className="mr-2 flex-shrink-0">
                 <img
                   src={indiceft[row?.flags?.[0]]}
@@ -789,7 +786,7 @@ export default function MarketAccess() {
               onClick={() => {}}
               className="text-brand"
             >
-              Trade
+              <a href="https://clientarea.londontradingindex.com/register/" >Trade</a>
             </Button>
           ),
         },
@@ -852,7 +849,7 @@ export default function MarketAccess() {
               onClick={() => {}}
               className="text-brand"
             >
-              Trade
+              <a href="https://clientarea.londontradingindex.com/register/" >Trade</a>
             </Button>
           ),
         },
@@ -868,7 +865,7 @@ export default function MarketAccess() {
           spread: 3.42,
           lowSpread: 3.25,
           leverage: 250,
-          flags: ["BCH","US"],
+          flags: ["BCH", "US"],
         },
         {
           symbol: "BTC/EUR",
@@ -876,7 +873,7 @@ export default function MarketAccess() {
           spread: 4.5,
           lowSpread: 3.7,
           leverage: 50,
-          flags: ["BCH","EU"],
+          flags: ["BCH", "EU"],
         },
         {
           symbol: "BTC/JPY",
@@ -884,7 +881,7 @@ export default function MarketAccess() {
           spread: 5.2,
           lowSpread: 4.1,
           leverage: 50,
-          flags: ["BCH","JP"],
+          flags: ["BCH", "JP"],
         },
         {
           symbol: "BTC/USD",
@@ -892,7 +889,7 @@ export default function MarketAccess() {
           spread: 3.9,
           lowSpread: 3.0,
           leverage: 50,
-          flags: ["BCH","US"],
+          flags: ["BCH", "US"],
         },
         {
           symbol: "SOL/USD",
@@ -900,7 +897,7 @@ export default function MarketAccess() {
           spread: 1.18,
           lowSpread: 1.18,
           leverage: 50,
-          flags: ["SOL","US"],
+          flags: ["SOL", "US"],
         },
         {
           symbol: "ADA/USD",
@@ -908,7 +905,7 @@ export default function MarketAccess() {
           spread: 2.2,
           lowSpread: 1.7,
           leverage: 50,
-          flags: ["ADA","US"],
+          flags: ["ADA", "US"],
         },
         {
           symbol: "CHZ/USD",
@@ -916,8 +913,7 @@ export default function MarketAccess() {
           spread: 2.4,
           lowSpread: 1.8,
           leverage: 50,
-          flags: ["CHZ","US"],
-
+          flags: ["CHZ", "US"],
         },
         {
           symbol: "DOG/USD",
@@ -925,8 +921,7 @@ export default function MarketAccess() {
           spread: 0.00154,
           lowSpread: 0.00155,
           leverage: 50,
-          flags: ["DOGE","US"],
-
+          flags: ["DOGE", "US"],
         },
         {
           symbol: "ONE/USD",
@@ -934,7 +929,7 @@ export default function MarketAccess() {
           spread: 2.5,
           lowSpread: 1.9,
           leverage: 50,
-          flags: ["ONE","US"],
+          flags: ["ONE", "US"],
         },
         {
           symbol: "TRX/USD",
@@ -942,7 +937,7 @@ export default function MarketAccess() {
           spread: 2.3,
           lowSpread: 1.7,
           leverage: 50,
-          flags: ["TRX","US"],
+          flags: ["TRX", "US"],
         },
         {
           symbol: "VET/USD",
@@ -950,7 +945,7 @@ export default function MarketAccess() {
           spread: 2.7,
           lowSpread: 2.0,
           leverage: 50,
-          flags: ["VET","US"],
+          flags: ["VET", "US"],
         },
         {
           symbol: "XEM/USD",
@@ -958,7 +953,7 @@ export default function MarketAccess() {
           spread: 2.9,
           lowSpread: 2.2,
           leverage: 50,
-          flags: ["XEM","US"],
+          flags: ["XEM", "US"],
         },
         {
           symbol: "XLM/USD",
@@ -966,15 +961,15 @@ export default function MarketAccess() {
           spread: 2.6,
           lowSpread: 2.0,
           leverage: 50,
-          flags: ["XLM","US"],
+          flags: ["XLM", "US"],
         },
         {
           symbol: "ETH/USD",
           name: "Ethereum vs US Dollar",
           spread: 5.51,
-          lowSpread: 5.50,
+          lowSpread: 5.5,
           leverage: 500,
-          flags: ["ETH","US"],
+          flags: ["ETH", "US"],
         },
       ],
       columns: [
@@ -1025,7 +1020,9 @@ export default function MarketAccess() {
               onClick={() => {}}
               className="text-brand"
             >
-              Trade
+              <a href="https://clientarea.londontradingindex.com/register/">
+                Trade
+              </a>{" "}
             </Button>
           ),
         },
@@ -1069,9 +1066,12 @@ export default function MarketAccess() {
               variant="outline"
               size="sm"
               onClick={() => {}}
+              asChild
               className="text-brand"
             >
-              Trade
+              <a href="https://clientarea.londontradingindex.com/register/">
+                Trade
+              </a>
             </Button>
           ),
         },
@@ -1220,8 +1220,6 @@ export default function MarketAccess() {
       setShareTabVal("usshare");
     }
   }, [currentState]);
-
-;
 
   return (
     <main className=" bg-base min-h-screen">

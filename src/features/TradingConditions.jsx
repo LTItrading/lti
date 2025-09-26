@@ -101,7 +101,7 @@ export default function TradingConditions() {
           priority execution.
         </p>
         <Button size="lg" className={`font-semibold px-8 py-3 rounded-xl`}>
-          <a href="/accounts">Contact Us</a>
+          <a href="https://clientarea.londontradingindex.com/help-desk/">Contact Us</a>
         </Button>
       </div>
     </main>

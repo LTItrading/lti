@@ -5,7 +5,7 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@radix-ui/react-accordion";
-import { CheckCircle, ExternalLink } from "lucide-react";
+import { CheckCircle, ExternalLink, CircleX } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import WaveForFooter from "../../assets/images/4x-Images/WaveForFooter.png";
 import {
@@ -21,25 +21,46 @@ import {
   Users,
 } from "lucide-react";
 import { PageHeader } from "@/components/layout/PageHeader";
-import pro from "@/assets/images/tradingFeaturesPng/protected.png"
+import pro from "@/assets/images/tradingFeaturesPng/protected.png";
 import global from "@/assets/images/tradingFeaturesPng/global.png";
-import traders from "@/assets/images/tradingFeaturesPng/traders.png"
-import licensed from "@/assets/images/tradingFeaturesPng/licensed.png"
-import support from "@/assets/images/tradingFeaturesPng/support.png"
-import clarity from "@/assets/images/tradingFeaturesPng/clarity.png"
+import traders from "@/assets/images/tradingFeaturesPng/traders.png";
+import licensed from "@/assets/images/tradingFeaturesPng/licensed.png";
+import support from "@/assets/images/tradingFeaturesPng/support.png";
+import clarity from "@/assets/images/tradingFeaturesPng/clarity.png";
 const accountTypes = [
   {
     icon: Play,
     name: "Cent",
     description: "Start micro-scale trading with a Cent Account.",
     details: [
-      "Micro-Scale Trading",
-      "Min Deposit: $5",
-      "Leverage: Up to 1:1000.",
-      "Spreads: From 0.1 pips.",
-      "Commissions: Low.",
-      "Swap-Free Available: Untick.",
-      "Negative balance protection: Tick",
+      {
+        text: "Micro Scale Trading",
+        isCheck: true,
+      },
+      {
+        text: "Min Deposit: $5",
+        isCheck: true,
+      },
+      {
+        text: "Leverage: Up to 1:1000.",
+        isCheck: true,
+      },
+      {
+        text: "Spreads: From 0.1 pips.",
+        isCheck: true,
+      },
+      {
+        text: "Commissions: Low.",
+        isCheck: true,
+      },
+      {
+        text: "Swap Free Available.",
+        isCheck: false,
+      },
+      {
+        text: "Negative balance protection",
+        isCheck: true,
+      },
     ],
   },
   {
@@ -47,28 +68,73 @@ const accountTypes = [
     name: "Core",
     description: "Trade confidently with the Core Account.",
     details: [
-      "A balanced account for everyday trading.",
-      "Min Deposit: $50.",
-      "Spreads: Average.",
-      "Commission: Low",
-      "Leverage: Up to 1:500",
-      "Swap-Free Available: Tick",
-      "Negative Balance Protection: Tick",
+      {
+        text: "A balanced account for everyday trading.",
+        isCheck: true,
+      },
+      {
+        text: "Min Deposit: $50.",
+        isCheck: true,
+      },
+      {
+        text: "Spreads: Average.",
+        isCheck: true,
+      },
+      {
+        text: "Commission: Low",
+        isCheck: true,
+      },
+      {
+        text: "Leverage: Up to 1:500",
+        isCheck: true,
+      },
+      {
+        text: "Swap Free Available",
+        isCheck: true,
+      },
+      {
+        text: "Negative Balance Protection",
+        isCheck: true,
+      },
     ],
   },
   {
     icon: BookOpen,
     name: "Pro ",
-    description: "Unlock high-volume trading with the Pro Account.",
+    description: "Unlock high volume trading with the Pro Account.",
     details: [
-      "Raw spreads for high-volume traders.",
-      "Min Deposit: $5,000",
-      "- Spreads: Low",
-      "Commission: Low",
-      "- Leverage: Up to 1:500",
-      "Swap-Free Available: Tick",
-      "Priority withdrawals + VPS (optional) (tick).",
-      "Negative Balance Protection: Tick",
+      {
+        text: "Raw spreads for high volume traders.",
+        isCheck: true,
+      },
+      {
+        text: "Min Deposit: $5,000",
+        isCheck: true,
+      },
+      {
+        text: "Spreads: Low",
+        isCheck: true,
+      },
+      {
+        text: "Commission: Low",
+        isCheck: true,
+      },
+      {
+        text: "Leverage: Up to 1:500",
+        isCheck: true,
+      },
+      {
+        text: "Swap Free Available",
+        isCheck: true,
+      },
+      {
+        text: "Priority withdrawals + VPS (optional).",
+        isCheck: true,
+      },
+      {
+        text: "Negative Balance Protection",
+        isCheck: true,
+      },
     ],
   },
   {
@@ -76,13 +142,34 @@ const accountTypes = [
     name: "ECN ",
     description: "Raw spreads and deep liquidity with ECN Account.",
     details: [
-      "Giving traders raw spreads and deep liquidity.",
-      "Min Deposit: $50",
-      "Spreads: Raw",
-      "Commission: Medium",
-      "Commission: Medium",
-      "	Swap-Free Available: Untick.",
-      "Negative Balance Protection: Tick",
+      {
+        text: "Giving traders raw spreads and deep liquidity.",
+        isCheck: true,
+      },
+      {
+        text: "Min Deposit: $50",
+        isCheck: true,
+      },
+      {
+        text: "Spreads: Raw",
+        isCheck: true,
+      },
+      {
+        text: "Commission: Medium",
+        isCheck: true,
+      },
+      {
+        text: "Commission: Medium",
+        isCheck: true,
+      },
+      {
+        text: "Swap Free Available.",
+        isCheck: false,
+      },
+      {
+        text: "Negative Balance Protection",
+        isCheck: true,
+      },
     ],
   },
   {
@@ -90,13 +177,35 @@ const accountTypes = [
     name: "Flexi",
     description: "Trade your way with the Flexi Account.",
     details: [
-      "	Min Deposit: Negotiable.",
-      "Customised trading environment.",
-      "	Spreads: Negotiable.",
-      "	Commissions: Negotiable.",
-      "	Commissions: Negotiable.",
-      "	SwapFree Available: Tick.",
-      " 	Negative Balance Protection.",
+      {
+        text: "Customised trading environment.",
+        isCheck: true,
+      },
+      {
+        text: "Min Deposit: Negotiable.",
+        isCheck: true,
+      },
+      
+      {
+        text: "Spreads: Negotiable.",
+        isCheck: true,
+      },
+      {
+        text: "Commissions: Negotiable.",
+        isCheck: true,
+      },
+      {
+        text: "Commissions: Negotiable.",
+        isCheck: true,
+      },
+      {
+        text: "Swap free Available.",
+        isCheck: true,
+      },
+      {
+        text: "Negative Balance Protection.",
+        isCheck: true,
+      },
     ],
   },
   {
@@ -104,14 +213,38 @@ const accountTypes = [
     name: "ECO",
     description: "Make a difference while trading with the Eco Account.",
     details: [
-      "	Trade with impact",
-      "	A portion of spread revenue is donated to environmental or social causes.",
-      "Min Deposit: $100",
-      "	Spreads: As low as 0.1 pips",
-      "	Spreads: As low as 0.1 pips",
-      "	Leverage: 1:100",
-      "	Swapfree: Tick",
-      "	Negative Balance Protection.",
+      {
+        text: "Trade with impact",
+        isCheck: true,
+      },
+      {
+        text: "A portion of spread revenue is donated to environmental or social causes.",
+        isCheck: true,
+      },
+      {
+        text: "Min Deposit: $100",
+        isCheck: true,
+      },
+      {
+        text: "Spreads: As low as 0.1 pips",
+        isCheck: true,
+      },
+      {
+        text: "Spreads: As low as 0.1 pips",
+        isCheck: true,
+      },
+      {
+        text: "Leverage: 1:100",
+        isCheck: true,
+      },
+      {
+        text: "Swap free",
+        isCheck: true,
+      },
+      {
+        text: "Negative Balance Protection.",
+        isCheck: true,
+      },
     ],
   },
 ];
@@ -121,7 +254,7 @@ const whatsSetsLTIApart = [
     icon: traders,
     title: "Built for Serious Traders",
     description:
-      "Our ecosystem is designed for high-performance trading. With accounts, platforms, and conditions engineered for execution speed, stability, and scale..",
+      "Our ecosystem is designed for high performance trading. With accounts, platforms, and conditions engineered for execution speed, stability, and scale..",
   },
   {
     icon: licensed,
@@ -133,7 +266,7 @@ const whatsSetsLTIApart = [
     icon: clarity,
     title: "Clarity in Every Trade",
     description:
-      "No hidden fees. No surprises. We offer clearly defined pricing structures with tight spreads, optional raw pricing, and institutional-level transparency..",
+      "No hidden fees. No surprises. We offer clearly defined pricing structures with tight spreads, optional raw pricing, and institutional level transparency..",
   },
   {
     icon: global,
@@ -151,7 +284,7 @@ const whatsSetsLTIApart = [
     icon: pro,
     title: "Your Funds, Fully Protected.",
     description:
-      "Client funds are held in top-tier segregated accounts with robust internal safeguards, two-factor authentication, and end-to-end encryption protocols.",
+      "Client funds are held in top tier segregated accounts with robust internal safeguards, two factor authentication, and end to end encryption protocols.",
   },
 ];
 
@@ -204,7 +337,7 @@ export default function AccountOptions() {
                 asChild
               >
                 <a href={"/accounts"}>
-                  Open Account <ExternalLink />
+                  {account.name == "Flexi" || account.name == "ECO" ? "Request Account" :"Open Account"} <ExternalLink />
                 </a>
               </Button>
 
@@ -217,10 +350,13 @@ export default function AccountOptions() {
                     {account.details.map((item, i) => (
                       <div key={i} className="flex items-center gap-2">
                         <div>
-                          <CheckCircle className="text-brand w-5 h-5" />
+                          {item?.isCheck ?
+                          <CheckCircle className="text-foreground w-5 h-5" />
+                          : <CircleX className="text-brand w-5 h-5" />
+}
                         </div>
                         <div className="text-left">
-                          <span>{item}</span>
+                          <span>{item?.text}</span>
                         </div>
                       </div>
                     ))}

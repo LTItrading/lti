@@ -226,7 +226,7 @@ export const About = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ delay: 1.2 }}
-          className="relative gradient-hero rounded-2xl p-12 text-center overflow-hidden"
+          className="relative gradient-hero rounded-2xl p-12 text-center overflow-hidden mb-8"
         >
           <div className="relative z-10">
             <Globe className="h-12 w-12 text-primary-foreground mx-auto mb-5 opacity-80" />

@@ -272,7 +272,7 @@ const RewardsFeatures = () => {
                 variant="cta"
                 size="lg"
               >
-                Launch Client Portal
+                <a href="https://clientarea.londontradingindex.com/register/" >Launch Client Portal</a>
               </Button>
             </motion.div>
           </motion.div>
