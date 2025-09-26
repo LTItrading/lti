@@ -2,6 +2,7 @@ import { cn } from '@/lib/utils';
 import { Container } from './Container';
 
 const backgroundClasses = {
+  none:"",
   default: 'bg-base',
   muted: 'bg-muted',
   accent: 'bg-accent'
