@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom"; 
+import MegaMenu from "@/components/MegaMenu";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -130,7 +131,7 @@ const Header = () => {
                 />
               </Link>
               {/* Desktop nav */}
-              <nav className="hidden md:flex gap-[30px] lg:gap-[60px] text-gray-700 text-[20px] font-semibold">
+              {/* <nav className="hidden md:flex gap-[30px] lg:gap-[60px] text-gray-700 text-[20px] font-semibold">
                 {navLinks.map(({ label, subMenu }) => (
                   <div
                     key={label}
@@ -157,7 +158,10 @@ const Header = () => {
                     )}
                   </div>
                 ))}
-              </nav>
+              </nav> */}
+                <div className="hidden md:block">
+              <MegaMenu />
+              </div>
             </div>
 
             {/* Login + Mobile menu toggle */}
