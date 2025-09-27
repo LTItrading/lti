@@ -348,15 +348,7 @@ const Footer = () => {
               local laws.
             </li>
             <li className="font-manrope font-normal text-[12px] leading-[158%] text-[#888888]">
-              LDN Trading Index Commercial Brokers CO. LLC is a company
-              incorporated in the United Arab Emirates under licence number
-              1205462, with its registered office at Unit 101–104, 1st Floor,
-              Emitac Building, Dubai.
-            </li>
-            <li className="font-manrope font-normal text-[12px] leading-[158%] text-[#888888]">
-              LDN Trading Index Commercial Brokers CO. LLC acts as a payment
-              agent on behalf of London Trading Index Limited (SVG) for the
-              purpose of receiving and processing client payments.
+              Palm Valley Commercial Brokers L.L.C (Incorporation No. 1205462, registered address: Al Khabeesi Building, Plot 128-246, Office 9-473, Dubai, United Arab Emirates) is duly authorised and acts solely in the capacity of payment agent on behalf of London Trading Index Limited (Incorporation No. 25630, registered address: Suite 305, Griffith Corporate Centre, Beachmont, Kingstown, Saint Vincent and the Grenadines
             </li>
           </ul>
         </div>

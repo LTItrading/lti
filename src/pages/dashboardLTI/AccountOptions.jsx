@@ -59,7 +59,7 @@ const accountTypes = [
       },
       {
         text: "Negative balance protection",
-        isCheck: false,
+        isCheck: true,
       },
     ],
   },
@@ -90,11 +90,11 @@ const accountTypes = [
       },
       {
         text: "Swap Free Available",
-        isCheck: false,
+        isCheck: true,
       },
       {
         text: "Negative Balance Protection",
-        isCheck: false,
+        isCheck: true,
       },
     ],
   },
@@ -113,7 +113,7 @@ const accountTypes = [
       },
       {
         text: "Spreads: Low",
-        isCheck: false,
+        isCheck: true,
       },
       {
         text: "Commission: Low",
@@ -121,7 +121,7 @@ const accountTypes = [
       },
       {
         text: "Leverage: Up to 1:500",
-        isCheck: false,
+        isCheck: true,
       },
       {
         text: "Swap Free Available",
@@ -129,7 +129,7 @@ const accountTypes = [
       },
       {
         text: "Priority withdrawals + VPS (optional).",
-        isCheck: false,
+        isCheck: true,
       },
       {
         text: "Negative Balance Protection",
@@ -156,7 +156,7 @@ const accountTypes = [
       },
       {
         text: "Commission: Medium",
-        isCheck: true,
+        isCheck: "none",
       },
       {
         text: "Commission: Medium",
@@ -168,7 +168,7 @@ const accountTypes = [
       },
       {
         text: "Negative Balance Protection",
-        isCheck: false,
+        isCheck: true,
       },
     ],
   },
@@ -200,7 +200,7 @@ const accountTypes = [
       },
       {
         text: "Swap free Available.",
-        isCheck: false
+        isCheck: true
       },
       {
         text: "Negative Balance Protection.",
@@ -227,11 +227,11 @@ const accountTypes = [
       },
       {
         text: "Spreads: As low as 0.1 pips",
-        isCheck: false,
+        isCheck: true,
       },
       {
-        text: "Spreads: As low as 0.1 pips",
-        isCheck: false,
+        text: "Commissions:Mid",
+        isCheck: true,
       },
       {
         text: "Leverage: 1:100",
@@ -239,7 +239,7 @@ const accountTypes = [
       },
       {
         text: "Swap free",
-        isCheck: false,
+        isCheck: true,
       },
       {
         text: "Negative Balance Protection.",
@@ -350,11 +350,11 @@ export default function AccountOptions() {
                     {account.details.map((item, i) => (
                       <div key={i} className="flex items-center gap-2">
                         <div>
-                          {item?.isCheck ?
-                          <CheckCircle className="text-foreground w-5 h-5" />
-                          : <CircleX className="text-brand w-5 h-5" />
-}
+                          {item?.isCheck === true && <CheckCircle className="text-foreground w-5 h-5" />}
+                          {item?.isCheck === "none" && null}
+                          {item?.isCheck === false && <CircleX className="text-brand w-5 h-5" />}
                         </div>
+
                         <div className="text-left">
                           <span>{item?.text}</span>
                         </div>

@@ -147,7 +147,7 @@ export default function TradingLandingPage() {
           </div>
         </div>
         {/* Partner Logos */}
-        <div className="w-full flex flex-col mt-[30px] lg:flex-row items-center lg:items-center justify-between gap-6 px-4 sm:px-6 lg:px-[95px]">
+        <div className="w-full flex flex-col mt-4 lg:flex-row items-center lg:items-center justify-between gap-6 px-4 sm:px-6 lg:px-[95px]">
           {/* Logo Strip */}
           <div className="flex items-center justify-between w-full max-w-[320px] sm:max-w-[450px] lg:max-w-[596px] h-[50px] sm:h-[70px] lg:h-[108px] px-4 sm:px-6 py-3 rounded-full bg-[#FFFBFB] shadow-md border z-20">
             <img

@@ -13,10 +13,8 @@ import {
 } from "lucide-react";
 import React from "react";
 
-// --- CUSTOM UI DESIGN IMPLEMENTATION ---
 
 export const Contact = () => {
-  // --- Colors/Classes extracted directly from the provided code ---
   const primaryDarkBg = "bg-primary"; // Used in the footer section
   const primaryDarkText = "text-primary"; // Used for icons
   const lightAccentBg = "#ffe5e096"; // The pale pink/red background
@@ -169,19 +167,18 @@ export const Contact = () => {
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
 
       {[
-        { Icon: Linkedin, name: "LinkedIn", color: "#0A66C2", link:'https://www.linkedin.com/company/london-trading-index/' },
-        { Icon: Twitter, name: "Twitter/X", color: "#1DA1F2", link: 'https://x.com/ldntradingindex?s=21' },
-        { Icon: Instagram, name: "Instagram", color: "#DD2A7B", link: 'https://www.instagram.com/londontradingindex/profilecard' },
-        { Icon: Youtube, name: "YouTube", color: "#FF0000", link: 'https://www.youtube.com/@londontradingindex5068' },
+        { Icon: Linkedin, name: "LinkedIn", color: "gray", link:'https://www.linkedin.com/company/london-trading-index/' },
+        { Icon: Twitter, name: "Twitter/X", color: "gray", link: 'https://x.com/ldntradingindex?s=21' },
+        { Icon: Instagram, name: "Instagram", color: "gray", link: 'https://www.instagram.com/londontradingindex/profilecard' },
+        { Icon: Youtube, name: "YouTube", color: "gray", link: 'https://www.youtube.com/@londontradingindex5068' },
       ].map(({ Icon, name, color, link }) => (
         <a key={name} href={link} className="group">
           <div className="bg-white rounded-3xl p-6 flex flex-col items-center justify-center
                           shadow-md hover:shadow-lg transition-shadow transform hover:-translate-y-2 ">
             <div
-              className="w-16 h-16 flex items-center justify-center rounded-full mb-4"
-              style={{ backgroundColor: `${color}20` }}
+              className="w-16 h-16 flex items-center justify-center rounded-full mb-4 bg-gray-400"
             >
-              <Icon className="h-8 w-8 text-primary" />
+              <Icon className="h-8 w-8 text-gray-300" />
             </div>
             <h5
               className="font-extrabold text-[18px] sm:text-[20px] transition-colors group-hover:text-white"
