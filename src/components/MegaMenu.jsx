@@ -45,7 +45,7 @@ export default function MegaMenu() {
           items: [
             {
               name: "LTI Proprietary",
-              path: "https://external-link.com",
+              path: "https://www.ltiproprietary.com",
             },
           ],
         },
@@ -74,9 +74,9 @@ export default function MegaMenu() {
           title: null,
           items: [
             { name: "Our Story", path: "/about" },
-            { name: "Regulation and Licenses", path: "/licenses" },
+            // { name: "Regulation and Licenses", path: "/licenses" },
             { name: "Contact Us", path: "/contact" },
-            { name: "Help Centre", path: "/help" },
+            // { name: "Help Centre", path: "/help" },
           ],
         },
       ],

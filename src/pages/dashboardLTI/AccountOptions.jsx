@@ -336,7 +336,7 @@ export default function AccountOptions() {
                 className="bg-brand hover:bg-brand/90 text-brand-foreground font-semibold px-8 py-3 rounded-xl mb-2"
                 asChild
               >
-                <a href={"/accounts"}>
+                <a href={"https://clientarea.londontradingindex.com/register"}>
                   {account.name == "Flexi" || account.name == "ECO" ? "Request Account" :"Open Account"} <ExternalLink />
                 </a>
               </Button>

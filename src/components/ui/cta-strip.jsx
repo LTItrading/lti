@@ -19,7 +19,7 @@ export function CTAStrip({
   title,
   description,
   ctaText = 'Open an Account',
-  ctaHref = '/accounts',
+  ctaHref = 'https://clientarea.londontradingindex.com/register',
   variant = 'default',
   size = 'md'
 }) {

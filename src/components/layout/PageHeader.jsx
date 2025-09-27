@@ -22,7 +22,7 @@ export function PageHeader({
   showCta = false,
   showPlatforms = false,
   ctaText = 'Open Live Account',
-  ctaHref = '/accounts',
+  ctaHref = 'https://clientarea.londontradingindex.com/register',
   background = 'default',
   bgType = "forex",
   isMac = false

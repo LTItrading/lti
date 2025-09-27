@@ -115,13 +115,16 @@ const RewardsFeatures = () => {
               From real-time utilities to cashback and competitions, every
               feature is designed to support your trading.
             </p>
-            <Button
-              className="mt-6 bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold"
-              variant="cta"
-              size="lg"
-            >
-              Open an Account
-            </Button>
+            
+            <a href="https://clientarea.londontradingindex.com/register" target="_blank" rel="noopener noreferrer">
+              <Button
+                className="mt-6 bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold"
+                variant="cta"
+                size="lg"
+              >
+                Open an Account
+              </Button>
+            </a>
           </motion.div>
 
           {/* Trading Contests Section */}

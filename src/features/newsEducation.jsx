@@ -130,13 +130,16 @@ const NewsEducation = () => {
               languages.
             </p>
 
-            <Button
-              className="mt-6 bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold"
-              variant="cta"
-              size="lg"
-            >
-              Open an Account
-            </Button>
+            <a href="https://clientarea.londontradingindex.com/register" target="_blank" rel="noopener noreferrer">
+              <Button
+                className="mt-6 bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold"
+                variant="cta"
+                size="lg"
+              >
+                Open an Account
+              </Button>
+            </a>
+
           </motion.div>
 
           {/* Live Market News Section */}
@@ -245,10 +248,10 @@ const NewsEducation = () => {
                           >
                             <div
                               className={`w-2 h-2 rounded-full animate-pulse ${item.color === "green"
-                                  ? "bg-green-500"
-                                  : item.color === "red"
-                                    ? "bg-red-500"
-                                    : "bg-blue-500"
+                                ? "bg-green-500"
+                                : item.color === "red"
+                                  ? "bg-red-500"
+                                  : "bg-blue-500"
                                 }`}
                             />
                             <div className="flex-1 flex items-center space-x-2">
@@ -281,10 +284,10 @@ const NewsEducation = () => {
                             </div>
                             <div
                               className={`text-xs ${item.color === "green"
-                                  ? "text-green-500"
-                                  : item.color === "red"
-                                    ? "text-red-500"
-                                    : "text-blue-500"
+                                ? "text-green-500"
+                                : item.color === "red"
+                                  ? "text-red-500"
+                                  : "text-blue-500"
                                 }`}
                             >
                               {item.change}

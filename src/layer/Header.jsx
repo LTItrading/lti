@@ -12,7 +12,7 @@ const Header = () => {
   const miniLinks = [
     {
       text: "Partnerships",
-      url: "",
+      url: "/lti/#/contact",
     },
     {
       text: "Institutional",
