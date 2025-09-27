@@ -126,16 +126,16 @@ export const Contact = () => {
                 <div className="mt-4 pt-4 border-t border-gray-100">
                   {/* START: Client Email Content */}
                   <p className="text-xs font-medium">General Inquiries:</p>
-                  <a href="mailto:support@lti.com" className={`font-bold hover:${brandAccent}`}>
-                    support@lti.com
+                  <a href="mailto:support@londontradingindex.com" className={`font-bold hover:${brandAccent}`}>
+                    support@londontradingindex.com
                   </a>
                   <p className="text-xs font-medium mt-2">Account & Verification:</p>
-                  <a href="mailto:compliance@lti.com" className={`font-bold hover:${brandAccent}`}>
-                    compliance@lti.com
+                  <a href="mailto:Compliance@londontradingindex.com" className={`font-bold hover:${brandAccent}`}>
+                   Compliance@londontradingindex.com
                   </a>
                   <p className="text-xs font-medium mt-2">Partnerships:</p>
-                  <a href="mailto:partnerships@lti.com" className={`font-bold hover:${brandAccent}`}>
-                    partnerships@lti.com
+                  <a href="mailto:partnerships@londontradingindex.com" className={`font-bold hover:${brandAccent}`}>
+                    partnerships@londontradingindex.com
                   </a>
                   {/* END: Client Email Content */}
                 </div>

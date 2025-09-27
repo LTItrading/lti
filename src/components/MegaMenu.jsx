@@ -118,7 +118,7 @@ export default function MegaMenu() {
                                   ? "_blank"
                                   : "_self"
                               }
-                              className="block pr-5 py-1 text-gray-600 hover:text-[#FF5722] hover:bg-[#FFF0EB] rounded transition"
+                              className="block pr-5 py-1 text-brand hover:text-[#FF5722] hover:bg-[#FFF0EB] rounded transition"
                             >
                               {item.name}
                             </Link>

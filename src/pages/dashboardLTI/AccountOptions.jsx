@@ -5,7 +5,7 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@radix-ui/react-accordion";
-import { CheckCircle, ExternalLink, CircleX } from "lucide-react";
+import { CheckCircle, ExternalLink, CircleX, Flag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import WaveForFooter from "../../assets/images/4x-Images/WaveForFooter.png";
 import {
@@ -59,7 +59,7 @@ const accountTypes = [
       },
       {
         text: "Negative balance protection",
-        isCheck: true,
+        isCheck: false,
       },
     ],
   },
@@ -90,11 +90,11 @@ const accountTypes = [
       },
       {
         text: "Swap Free Available",
-        isCheck: true,
+        isCheck: false,
       },
       {
         text: "Negative Balance Protection",
-        isCheck: true,
+        isCheck: false,
       },
     ],
   },
@@ -113,7 +113,7 @@ const accountTypes = [
       },
       {
         text: "Spreads: Low",
-        isCheck: true,
+        isCheck: false,
       },
       {
         text: "Commission: Low",
@@ -121,7 +121,7 @@ const accountTypes = [
       },
       {
         text: "Leverage: Up to 1:500",
-        isCheck: true,
+        isCheck: false,
       },
       {
         text: "Swap Free Available",
@@ -129,7 +129,7 @@ const accountTypes = [
       },
       {
         text: "Priority withdrawals + VPS (optional).",
-        isCheck: true,
+        isCheck: false,
       },
       {
         text: "Negative Balance Protection",
@@ -168,7 +168,7 @@ const accountTypes = [
       },
       {
         text: "Negative Balance Protection",
-        isCheck: true,
+        isCheck: false,
       },
     ],
   },
@@ -200,7 +200,7 @@ const accountTypes = [
       },
       {
         text: "Swap free Available.",
-        isCheck: true,
+        isCheck: false
       },
       {
         text: "Negative Balance Protection.",
@@ -227,11 +227,11 @@ const accountTypes = [
       },
       {
         text: "Spreads: As low as 0.1 pips",
-        isCheck: true,
+        isCheck: false,
       },
       {
         text: "Spreads: As low as 0.1 pips",
-        isCheck: true,
+        isCheck: false,
       },
       {
         text: "Leverage: 1:100",
@@ -239,7 +239,7 @@ const accountTypes = [
       },
       {
         text: "Swap free",
-        isCheck: true,
+        isCheck: false,
       },
       {
         text: "Negative Balance Protection.",

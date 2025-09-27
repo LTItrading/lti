@@ -146,7 +146,14 @@ const NewsEducation = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mb-20"
           >
-            <Card className="relative shadow-elegant hover:shadow-glow transition-smooth text-white shadow-2xl rounded-none rounded-[50px] min-h-[463px] sm:min-h-[320px] lg:min-h-[400px] flex flex-col justify-center sm:px-[60px] lg:px-[50px] py-[30px] sm:py-[50px] lg:py-[50px]">
+            <Card
+              className="
+      relative shadow-elegant hover:shadow-glow transition-smooth text-white shadow-2xl rounded-none rounded-[50px]
+      min-h-fit sm:min-h-[350px] md:min-h-[400px] lg:min-h-[450px] xl:min-h-[400px]
+      flex flex-col justify-center
+      sm:px-8 lg:px-12 py-[30px] sm:py-[50px] lg:py-[50px]
+    "
+            >
               <CardHeader>
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 gradient-primary rounded-lg flex items-center justify-center">
@@ -163,8 +170,10 @@ const NewsEducation = () => {
                 </div>
               </CardHeader>
               <CardContent>
-                <div className="flex flex-wrap gap-8 justify-center">
-                  <div className="flex-1">
+                <div className="flex flex-wrap gap-8 justify-center lg:flex-col lg:flex-wrap xl:flex-row xl:flex-nowrap">
+
+                  {/* Main Text Content and Inner Cards Section */}
+                  <div className="flex-1 min-w-[300px] xl:max-w-[calc(100%-450px-2rem)]">
                     <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
                       Access streaming market news and a global economic
                       calendar directly within your MT5 trading platform — no
@@ -174,45 +183,32 @@ const NewsEducation = () => {
                       your fingertips.
                     </p>
 
-<div className="flex flex-col md:flex-row md:justify-between md:items-stretch gap-6 mb-8 my-2">
-  {/* Market News Feed */}
-  <div className="w-full md:w-1/2 xl:max-w-[500px] text-center p-6 text-white rounded-[20px] 
-    bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] 
-    shadow-[0px_4px_4px_0px_#FF66334D] 
-    transition-all duration-300 border border-transparent 
-    hover:border-[#EE422333] hover:border-2 hover:backdrop-blur-[20px]">
-    <TrendingUp className="h-6 w-6 text-primary mx-auto mb-2" />
-    <div className="text-md font-medium text-left mb-2">
-      Market News Feed
-    </div>
-    <div className="text-xs text-white">
-      Delivered inside MT5 via leading financial news providers, covering global assets in real time.
-    </div>
-  </div>
+                    <div className="flex flex-col md:flex-row md:justify-between md:items-stretch gap-6 mb-8 my-2">
 
-  {/* Economic Calendar */}
-  <div className="w-full md:w-1/2 xl:max-w-[500px] text-center p-6 text-white rounded-[20px] 
-    bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] 
-    shadow-[0px_4px_4px_0px_#FF66334D] 
-    transition-all duration-300 border border-transparent 
-    hover:border-[#EE422333] hover:border-2 hover:backdrop-blur-[20px] flex flex-col">
-    <Calendar className="h-6 w-6 text-primary mx-auto mb-2" />
-    <div className="text-md font-medium text-left mb-2">
-      Economic Calendar
-    </div>
-    <div className="text-xs text-white">
-      Built into MT5, filterable by country, impact level, and event type — helping you track announcements like NFP, CPI, and rate decisions.
-    </div>
-  </div>
-</div>
+                      {/* Market News Feed */}
+                      <div className="w-full md:w-1/2 xl:max-w-[500px] text-center p-6 text-white rounded-[20px] bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] shadow-[0px_4px_4px_0px_#FF66334D] transition-all duration-300 border border-transparent hover:border-[#EE422333] hover:border-2 hover:backdrop-blur-[20px]">
+                        <TrendingUp className="h-6 w-6 text-primary mx-auto mb-2" />
+                        <div className="text-md font-medium text-left mb-2">
+                          Market News Feed
+                        </div>
+                        <div className="text-xs text-white max-w-full">
+                          Delivered inside MT5 via leading financial news providers, covering global assets in real time.
+                        </div>
+                      </div>
 
-
-
-
-
+                      {/* Economic Calendar */}
+                      <div className="w-full md:w-1/2 xl:max-w-[500px] text-center p-6 text-white rounded-[20px] bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] shadow-[0px_4px_4px_0px_#FF66334D] transition-all duration-300 border border-transparent hover:border-[#EE422333] hover:border-2 hover:backdrop-blur-[20px] flex flex-col">
+                        <Calendar className="h-6 w-6 text-primary mx-auto mb-2" />
+                        <div className="text-md font-medium text-left mb-2">
+                          Economic Calendar
+                        </div>
+                        <div className="text-xs text-white max-w-full">
+                          Built into MT5, filterable by country, impact level, and event type — helping you track announcements like NFP, CPI, and rate decisions.
+                        </div>
+                      </div>
+                    </div>
 
                     <div className="flex justify-center">
-
                       <Button
                         className="bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold"
                         variant="cta"
@@ -223,7 +219,11 @@ const NewsEducation = () => {
                     </div>
                   </div>
 
-                  <div className="relative">
+                  {/* Real-time Market Data Component (the orange box) */}
+                  {/* *** RESPONSIVENESS FIX HERE ***
+          Allows the box to take full width and be centered on large tablets (lg:w-full lg:max-w-[450px])
+        */}
+                  <div className="relative lg:w-full lg:max-w-[450px] xl:w-auto mx-auto">
                     <motion.div
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={
@@ -232,7 +232,10 @@ const NewsEducation = () => {
                           : { opacity: 0, scale: 0.8 }
                       }
                       transition={{ delay: 0.6 }}
-                      className="bg-[rgba(255,102,51,1)] text-white rounded-2xl p-6 border border-primary/20 backdrop-blur-sm lg:min-w-[450px] max-w-[450px]"
+                      className="
+              bg-[rgba(255,102,51,1)] text-white rounded-2xl p-6 border border-primary/20 backdrop-blur-sm 
+              lg:min-w-[unset] lg:max-w-full xl:min-w-[450px] xl:max-w-[450px] mx-auto
+            "
                     >
                       <div className="space-y-4">
                         {marketData.map((item, idx) => (
@@ -241,13 +244,12 @@ const NewsEducation = () => {
                             className="flex items-center space-x-3 p-3 bg-card/50 rounded-lg"
                           >
                             <div
-                              className={`w-2 h-2 rounded-full animate-pulse ${
-                                item.color === "green"
+                              className={`w-2 h-2 rounded-full animate-pulse ${item.color === "green"
                                   ? "bg-green-500"
                                   : item.color === "red"
-                                  ? "bg-red-500"
-                                  : "bg-blue-500"
-                              }`}
+                                    ? "bg-red-500"
+                                    : "bg-blue-500"
+                                }`}
                             />
                             <div className="flex-1 flex items-center space-x-2">
                               {/* Flags */}
@@ -278,13 +280,12 @@ const NewsEducation = () => {
                               </div>
                             </div>
                             <div
-                              className={`text-xs ${
-                                item.color === "green"
+                              className={`text-xs ${item.color === "green"
                                   ? "text-green-500"
                                   : item.color === "red"
-                                  ? "text-red-500"
-                                  : "text-blue-500"
-                              }`}
+                                    ? "text-red-500"
+                                    : "text-blue-500"
+                                }`}
                             >
                               {item.change}
                             </div>

@@ -178,6 +178,14 @@ const Footer = () => {
               </li>
               <li>
                 <Link
+                  to="/trading/deposits-withdrawals"
+                  className="text-[#1C1C1C] font-normal text-[12px] sm:text-[14px] md:text-[14px] lg:text-[16px] leading-[28px]"
+                >
+                  Deposits and Withdrawals
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/trading/mt5"
                   className="text-[#1C1C1C] font-normal text-[12px] sm:text-[14px] md:text-[14px] lg:text-[16px] leading-[28px]"
                 >
@@ -195,19 +203,21 @@ const Footer = () => {
             <li className="text-[#1C1C1C] font-normal text-[12px] sm:text-[12px] md:text-[14px] lg:text-[16px] leading-[28px]">
               <a href="https://www.ltiproprietary.com/">LTI Proprietary (↓)</a>
             </li>
-            <li className="text-[#1C1C1C] font-normal text-[12px] sm:text-[12px] md:text-[14px] lg:text-[16px] leading-[28px]">
-              Economic Events
-            </li>
-            <li className="text-[#1C1C1C] font-normal text-[12px] sm:text-[12px] md:text-[14px] lg:text-[16px] leading-[28px]">
-              Fundamental Data
+            <li>
+              <Link
+                to="/insights/news-education"
+                className="text-[#1C1C1C] font-normal text-[12px] sm:text-[12px] md:text-[14px] lg:text-[16px] leading-[28px]">
+                News and Education
+              </Link>
+
             </li>
             <li>
               <Link
-                  to="/insights/news-education"
-                  className="text-[#1C1C1C] font-normal text-[12px] sm:text-[14px] md:text-[14px] lg:text-[16px] leading-[28px]"
-                >
-                Market News
-                </Link>
+                to="/insights/rewards"
+                className="text-[#1C1C1C] font-normal text-[12px] sm:text-[14px] md:text-[14px] lg:text-[16px] leading-[28px]"
+              >
+                Rewards and Features
+              </Link>
             </li>
           </ul>
 
@@ -216,14 +226,24 @@ const Footer = () => {
             <li className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-extrabold text-[#FF6633] mb-1 font-manrope leading-[100%] tracking-[0]">
               Corporate
             </li>
-            <li className="text-[#1C1C1C] font-normal text-[12px] sm:text-[12px] md:text-[14px] lg:text-[16px] leading-[28px]">
-              Our Story
+            <li>
+              <Link
+                to="/about"
+                className="text-[#1C1C1C] font-normal text-[12px] sm:text-[12px] md:text-[14px] lg:text-[16px] leading-[28px]">
+                Our Story
+              </Link>
+
             </li>
             <li className="text-[#1C1C1C] font-normal text-[12px] sm:text-[12px] md:text-[14px] lg:text-[16px] leading-[28px]">
               Regulation & Licenses
             </li>
-            <li className="text-[#1C1C1C] font-normal text-[12px] sm:text-[12px] md:text-[14px] lg:text-[16px] leading-[28px]">
-              Contact Us
+            <li>
+              <Link
+                to="/contact"
+                className="text-[#1C1C1C] font-normal text-[12px] sm:text-[12px] md:text-[14px] lg:text-[16px] leading-[28px]">
+                Contact Us
+              </Link>
+
             </li>
             <li className="text-[#1C1C1C] font-normal text-[12px] sm:text-[12px] md:text-[14px] lg:text-[16px] leading-[28px]">
               Help Centre
@@ -248,12 +268,12 @@ const Footer = () => {
           <div className="font-manrope font-extrabold leading-[100%] opacity-90 text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-[#FF6633] pr-4 border-r-2 border-[#FF6633]">
             Terms and Conditions
           </div>
-          <div className="font-manrope font-extrabold leading-[100%] opacity-90 text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-[#FF6633] pr-4 border-r-2 border-[#FF6633]">
+          <div className="font-manrope font-extrabold leading-[100%] opacity-90 text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-[#FF6633] pr-4">
             Privacy Policy
           </div>
-          <div className="font-manrope font-extrabold leading-[100%] opacity-90 text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-[#FF6633] ">
+          {/* <div className="font-manrope font-extrabold leading-[100%] opacity-90 text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-[#FF6633] ">
             AML Policy
-          </div>
+          </div> */}
         </div>
 
         {/* Risk Warning */}
@@ -298,7 +318,7 @@ const Footer = () => {
               on the FATF and EU/UN sanctions lists. For more information,
               please refer to our  FAQ page
               {/* <span className="text-[#FF6633] font-medium text-[12px] leading-[200%] px-1 font-manrope"> */}
-               
+
               {/* </span> */}
               .
             </li>
