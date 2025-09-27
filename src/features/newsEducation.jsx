@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import ReactCountryFlag from "react-country-flag";
 import LanguagesSlider from "@/components/sliders/LanguagesSlider";
+import { Link } from "react-router-dom";
 
 const NewsEducation = () => {
   const ref = useRef(null);
@@ -174,51 +175,52 @@ const NewsEducation = () => {
                       your fingertips.
                     </p>
 
-<div className="flex flex-col md:flex-row md:justify-between md:items-stretch gap-6 mb-8 my-2">
-  {/* Market News Feed */}
-  <div className="w-full md:w-1/2 xl:max-w-[500px] text-center p-6 text-white rounded-[20px] 
-    bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] 
+                    <div className="flex flex-col md:flex-row md:justify-between md:items-stretch gap-6 mb-8 my-2">
+                      {/* Market News Feed */}
+                      <div
+                        className="w-full md:w-1/2 xl:max-w-[500px] text-center p-6 text-white rounded-[20px] 
+    border border-[#EE4223] shadow-[0_4px_20px_rgba(0,0,0,0.3)]
     shadow-[0px_4px_4px_0px_#FF66334D] 
     transition-all duration-300 border border-transparent 
-    hover:border-[#EE422333] hover:border-2 hover:backdrop-blur-[20px]">
-    <TrendingUp className="h-6 w-6 text-primary mx-auto mb-2" />
-    <div className="text-md font-medium text-left mb-2">
-      Market News Feed
-    </div>
-    <div className="text-xs text-white">
-      Delivered inside MT5 via leading financial news providers, covering global assets in real time.
-    </div>
-  </div>
+    hover:border-[#EE422333] hover:border-2 hover:backdrop-blur-[20px] border-gray-300 hover:border-[#EE4223] shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
+                      >
+                        <TrendingUp className="h-6 w-6 text-primary mx-auto mb-2" />
+                        <div className="text-md text-[16px] text-black font-extrabold mb-2 text-center mb-2">
+                          Market News Feed
+                        </div>
+                        <div className="text-xs text-black">
+                          Delivered inside MT5 via leading financial news
+                          providers, covering global assets in real time.
+                        </div>
+                      </div>
 
-  {/* Economic Calendar */}
-  <div className="w-full md:w-1/2 xl:max-w-[500px] text-center p-6 text-white rounded-[20px] 
-    bg-[linear-gradient(180deg,rgba(28,28,28,0.2)_60%,rgba(238,66,35,0.2)_100%)] 
+                      {/* Economic Calendar */}
+                      <div
+                        className="w-full md:w-1/2 xl:max-w-[500px] text-center p-6 text-white rounded-[20px] 
+    border border-[#EE4223] shadow-[0_4px_20px_rgba(0,0,0,0.3)]
     shadow-[0px_4px_4px_0px_#FF66334D] 
     transition-all duration-300 border border-transparent 
-    hover:border-[#EE422333] hover:border-2 hover:backdrop-blur-[20px] flex flex-col">
-    <Calendar className="h-6 w-6 text-primary mx-auto mb-2" />
-    <div className="text-md font-medium text-left mb-2">
-      Economic Calendar
-    </div>
-    <div className="text-xs text-white">
-      Built into MT5, filterable by country, impact level, and event type — helping you track announcements like NFP, CPI, and rate decisions.
-    </div>
-  </div>
-</div>
-
-
-
-
-
+    hover:border-[#EE422333] hover:border-2 hover:backdrop-blur-[20px] border-gray-300 hover:border-[#EE4223] shadow-[0_4px_20px_rgba(0,0,0,0.3)] flex flex-col"
+                      >
+                        <Calendar className="h-6 w-6 text-primary mx-auto mb-2" />
+                        <div className="text-md text-black text-[16px] font-extrabold mb-2 text-center mb-2">
+                          Economic Calendar
+                        </div>
+                        <div className="text-xs text-black">
+                          Built into MT5, filterable by country, impact level,
+                          and event type — helping you track announcements like
+                          NFP, CPI, and rate decisions.
+                        </div>
+                      </div>
+                    </div>
 
                     <div className="flex justify-center">
-
                       <Button
                         className="bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold"
                         variant="cta"
                         size="lg"
                       >
-                        Open an Account
+                        <Link to="/accounts">Open an Account</Link>
                       </Button>
                     </div>
                   </div>

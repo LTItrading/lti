@@ -203,11 +203,11 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                  to="/insights/news-education"
-                  className="text-[#1C1C1C] font-normal text-[12px] sm:text-[14px] md:text-[14px] lg:text-[16px] leading-[28px]"
-                >
+                to="/insights/news-education"
+                className="text-[#1C1C1C] font-normal text-[12px] sm:text-[14px] md:text-[14px] lg:text-[16px] leading-[28px]"
+              >
                 Market News
-                </Link>
+              </Link>
             </li>
           </ul>
 
@@ -217,13 +217,13 @@ const Footer = () => {
               Corporate
             </li>
             <li className="text-[#1C1C1C] font-normal text-[12px] sm:text-[12px] md:text-[14px] lg:text-[16px] leading-[28px]">
-              Our Story
+              <Link to="/trading/about">Our Story</Link>
             </li>
             <li className="text-[#1C1C1C] font-normal text-[12px] sm:text-[12px] md:text-[14px] lg:text-[16px] leading-[28px]">
               Regulation & Licenses
             </li>
             <li className="text-[#1C1C1C] font-normal text-[12px] sm:text-[12px] md:text-[14px] lg:text-[16px] leading-[28px]">
-              Contact Us
+              <Link to="/trading/contact">Contact Us</Link>
             </li>
             <li className="text-[#1C1C1C] font-normal text-[12px] sm:text-[12px] md:text-[14px] lg:text-[16px] leading-[28px]">
               Help Centre
@@ -248,11 +248,8 @@ const Footer = () => {
           <div className="font-manrope font-extrabold leading-[100%] opacity-90 text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-[#FF6633] pr-4 border-r-2 border-[#FF6633]">
             Terms and Conditions
           </div>
-          <div className="font-manrope font-extrabold leading-[100%] opacity-90 text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-[#FF6633] pr-4 border-r-2 border-[#FF6633]">
+          <div className="font-manrope font-extrabold leading-[100%] opacity-90 text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-[#FF6633] pr-4">
             Privacy Policy
-          </div>
-          <div className="font-manrope font-extrabold leading-[100%] opacity-90 text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-[#FF6633] ">
-            AML Policy
           </div>
         </div>
 
@@ -279,9 +276,9 @@ const Footer = () => {
               independent financial advice if necessary.
             </li>
             <li className="font-manrope font-normal text-[12px] leading-[158%] text-[#888888]">
-              Please review our Terms and Conditions and AML Policy
-              and ensure you fully understand the risks before making any
-              trading decisions.
+              Please review our Terms and Conditions and AML Policy and ensure
+              you fully understand the risks before making any trading
+              decisions.
             </li>
           </ul>
         </div>
@@ -296,11 +293,9 @@ const Footer = () => {
               We do not offer our services to residents of certain jurisdictions
               such as Canada, Singapore, the United States, and to jurisdictions
               on the FATF and EU/UN sanctions lists. For more information,
-              please refer to our  FAQ page
+              please refer to our FAQ page
               {/* <span className="text-[#FF6633] font-medium text-[12px] leading-[200%] px-1 font-manrope"> */}
-               
-              {/* </span> */}
-              .
+              {/* </span> */}.
             </li>
             <li className="font-manrope font-normal text-[12px] leading-[158%] text-[#888888]">
               The information on this site and the products and services offered
@@ -318,14 +313,13 @@ const Footer = () => {
               Cybercity, 72201 Eben, Republic of Mauritius.
             </li>
             <li className="font-manrope font-normal text-[12px] leading-[158%] text-[#888888]">
-              The website www.londontradingindex.com
-              is operated by London Trading Index Limited, a company
-              incorporated in Saint Vincent and the Grenadines under
-              registration number 25630, with its registered office at Suite
-              305, Griffith Corporate Centre, Kingstown. London Trading Index
-              Limited is authorised by the Financial Services Authority (FSA) of
-              Saint Vincent and the Grenadines to operate in accordance with
-              local laws.
+              The website www.londontradingindex.com is operated by London
+              Trading Index Limited, a company incorporated in Saint Vincent and
+              the Grenadines under registration number 25630, with its
+              registered office at Suite 305, Griffith Corporate Centre,
+              Kingstown. London Trading Index Limited is authorised by the
+              Financial Services Authority (FSA) of Saint Vincent and the
+              Grenadines to operate in accordance with local laws.
             </li>
             <li className="font-manrope font-normal text-[12px] leading-[158%] text-[#888888]">
               LDN Trading Index Commercial Brokers CO. LLC is a company

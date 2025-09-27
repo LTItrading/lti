@@ -8,10 +8,10 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import LiveRisk from "@/assets/images/LiveRisk.png"
-import Leverage from "@/assets/images/Leverage.png"
-import Strategy from "@/assets/images/Strategy.png"
-import Overnight from "@/assets/images/Overnight.png"
+import LiveRisk from "@/assets/images/LiveRisk.png";
+import Leverage from "@/assets/images/Leverage.png";
+import Strategy from "@/assets/images/Strategy.png";
+import Overnight from "@/assets/images/Overnight.png";
 
 const features = [
   {
@@ -25,8 +25,7 @@ const features = [
   {
     icon: LiveRisk,
     title: "Live Risk & Margin Monitoring",
-    description:
-      "Access real-time exposure updates through our trading platform. Set custom alerts, track margin levels, and stay in control always.",
+    description: `Access real-time exposure updates through our trading platform. Set custom alerts, track margin levels, and stay in control always.`,
     bgAndCardSizeClass:
       "bg-[rgba(255,102,51,1)] text-white w-full sm:w-[48%] lg:w-[48%] xl:w-[600px]",
   },
@@ -78,7 +77,7 @@ export default function TradingConditions() {
               </CardContent>
               <div className="">
                 <img
-                  className="md:w-[240px]"
+                  className="md:w-[270px]"
                   style={{ margin: "0 0 0 auto" }}
                   src={feature.icon}
                   alt="Laptop"
@@ -101,7 +100,9 @@ export default function TradingConditions() {
           priority execution.
         </p>
         <Button size="lg" className={`font-semibold px-8 py-3 rounded-xl`}>
-          <a href="https://clientarea.londontradingindex.com/help-desk/">Contact Us</a>
+          <a href="https://clientarea.londontradingindex.com/help-desk/">
+            Contact Us
+          </a>
         </Button>
       </div>
     </main>
