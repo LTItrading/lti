@@ -130,7 +130,7 @@ const NewsEducation = () => {
               languages.
             </p>
 
-            <a href="https://clientarea.londontradingindex.com/register" target="_blank" rel="noopener noreferrer">
+            {/* <a href="https://clientarea.londontradingindex.com/register" target="_blank" rel="noopener noreferrer">
               <Button
                 className="mt-6 bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold"
                 variant="cta"
@@ -138,7 +138,12 @@ const NewsEducation = () => {
               >
                 Open an Account
               </Button>
-            </a>
+            </a> */}
+
+             <Button size="lg" className={` mt-6 font-semibold px-8 py-3 rounded-xl`}>
+                      <a href="https://clientarea.londontradingindex.com/register"> Open an Account</a>
+                    </Button>
+            
 
           </motion.div>
 
@@ -212,13 +217,16 @@ const NewsEducation = () => {
                     </div>
 
                     <div className="flex justify-center">
-                      <Button
+                      {/* <Button
                         className="bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold"
                         variant="cta"
                         size="lg"
                       >
                         Open an Account
-                      </Button>
+                      </Button> */}
+                                   <Button size="lg" className={` mt-6 font-semibold px-8 py-3 rounded-xl`}>
+                      <a href="https://clientarea.londontradingindex.com/register"> Open an Account</a>
+                    </Button>
                     </div>
                   </div>
 
@@ -432,13 +440,16 @@ const NewsEducation = () => {
                 <LanguagesSlider languages={languages} isInView={isInView} />
 
                 <div className="text-center">
-                  <Button
+                  {/* <Button
                     className="bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold"
                     variant="cta"
                     size="lg"
                   >
                     Open an Account
-                  </Button>
+                  </Button> */}
+                               <Button size="lg" className={` mt-6 font-semibold px-8 py-3 rounded-xl`}>
+                      <a href="https://clientarea.londontradingindex.com/register"> Open an Account</a>
+                    </Button>
                 </div>
               </CardContent>
             </Card>

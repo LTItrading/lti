@@ -116,7 +116,7 @@ const RewardsFeatures = () => {
               feature is designed to support your trading.
             </p>
             
-            <a href="https://clientarea.londontradingindex.com/register" target="_blank" rel="noopener noreferrer">
+            {/* <a href="https://clientarea.londontradingindex.com/register" target="_blank" rel="noopener noreferrer">
               <Button
                 className="mt-6 bg-[#ee4223] hover:bg-[#FF6B3D] text-white font-semibold"
                 variant="cta"
@@ -124,7 +124,10 @@ const RewardsFeatures = () => {
               >
                 Open an Account
               </Button>
-            </a>
+            </a> */}
+                         <Button size="lg" className={` mt-6 font-semibold px-8 py-3 rounded-xl`}>
+                      <a href="https://clientarea.londontradingindex.com/register"> Open an Account</a>
+                    </Button>
           </motion.div>
 
           {/* Trading Contests Section */}
@@ -175,11 +178,13 @@ const RewardsFeatures = () => {
                         </motion.li>
                       ))}
                     </ul>
+                    <a href="https://clientarea.londontradingindex.com/register">
                     <Button className="relative bg-[#ee4223] hover:bg-[#FF6B3D] text-white text-base sm:text-lg font-semibold shadow-lg transition-all duration-300 group px-[24px] py-[28px] rounded-full mx-auto lg:mx-0 flex items-center justify-center">
                       <div className="flex items-center justify-center gap-2 leading-none transform transition-transform duration-300 group-hover:scale-105">
                         <span>Register Now</span>
                       </div>
                     </Button>
+                    </a>
                     {/* <button  size="lg" className="w-full md:w-auto">
                       Register Now
                     </button> */}
