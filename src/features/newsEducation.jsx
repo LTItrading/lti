@@ -194,9 +194,9 @@ const NewsEducation = () => {
                     <div className="flex flex-col md:flex-row md:justify-between md:items-stretch gap-6 mb-8 my-2">
 
                       {/* Market News Feed */}
-                      <div className="w-full md:w-1/2 xl:max-w-[500px] text-center p-6 text-gray-600 rounded-[20px] bg-[#FFFBF9] shadow-[0_4px_20px_rgba(0,0,0,0.3)] transition-all duration-300 border border-transparent hover:border-[#EE422333] hover:border-2 hover:backdrop-blur-[20px]">
+                      <div className="w-full md:w-1/2 xl:max-w-[500px] text-center p-6 text-gray-600 rounded-[20px] bg-[#FFFBF9] shadow-[0_4px_20px_rgba(0,0,0,0.3)]  ">
                         <TrendingUp className="h-6 w-6 text-primary mx-auto mb-2" />
-                        <div className="text-md font-medium text-left mb-2">
+                        <div className="text-md font-medium text-center mb-2">
                           Market News Feed
                         </div>
                         <div className="text-xs text-gray-600 max-w-full">
@@ -205,9 +205,9 @@ const NewsEducation = () => {
                       </div>
 
                       {/* Economic Calendar */}
-                      <div className="w-full md:w-1/2 xl:max-w-[500px] text-center p-6 text-gray-600 rounded-[20px] bg-[#FFFBF9] shadow-[0_4px_20px_rgba(0,0,0,0.3)] transition-all duration-300 border border-transparent hover:border-[#EE422333] hover:border-2 hover:backdrop-blur-[20px] flex flex-col">
+                      <div className="w-full md:w-1/2 xl:max-w-[500px] text-center p-6 text-gray-600 rounded-[20px] bg-[#FFFBF9] shadow-[0_4px_20px_rgba(0,0,0,0.3)] flex flex-col">
                         <Calendar className="h-6 w-6 text-primary mx-auto mb-2" />
-                        <div className="text-md font-medium text-left mb-2">
+                        <div className="text-md font-medium text-center mb-2">
                           Economic Calendar
                         </div>
                         <div className="text-xs text-gray-600 max-w-full">
