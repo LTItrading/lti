@@ -253,11 +253,7 @@ const Footer = () => {
           {/* Column 4 */}
           <ul>
             <li className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-extrabold text-[#FF6633] mb-1 font-manrope leading-[100%] tracking-[0]">
-              <Link
-                to="https://partnerships.londontradingindex.com"
-                className="text-[#1C1C1C] font-normal text-[12px] sm:text-[12px] md:text-[14px] lg:text-[16px] leading-[28px]">
                 Partnerships
-              </Link>
             </li>
             <Link
               to="https://partnerships.londontradingindex.com "
