@@ -38,6 +38,7 @@ const RegisterFeatures = () => {
                 <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] font-normal mt-3">
                   From Sign Up to execution - you’re only a few clicks away
                 </p>
+                <a href="https://clientarea.londontradingindex.com/register">
                 <Button className="bg-[#ee4223] hover:bg-[#FF6B3D] text-white text-base sm:text-lg font-semibold shadow-lg transition-all duration-300 group px-[20px] py-[24px] rounded-full mt-10">
                   <div className="group flex items-center justify-center gap-2 leading-none">
                     <span>Register Now</span>
@@ -50,6 +51,7 @@ const RegisterFeatures = () => {
                     </span>
                   </div>
                 </Button>
+                </a>
               </div>
 
               {/* Chart Image */}
