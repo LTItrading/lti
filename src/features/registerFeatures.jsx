@@ -17,11 +17,11 @@ const RegisterFeatures = () => {
       <img
         src={WaveForFooter}
         alt="Background"
-        className="absolute top-0 left-0 w-full h-full pointer-events-none z-0 animate-[wave_12s_linear_infinite]"
+        className="absolute top-0 left-0 w-full h-full pointer-events-none animate-[wave_12s_linear_infinite]"
       />
 
       {/* Hover Zone */}
-      <div className="relative z-10 h-auto sm:h-[700px] flex items-end justify-center">
+      <div className="relative h-auto sm:h-[700px] flex items-end justify-center">
         <div className="pb-0 sm:pb-[200px] w-full max-w-full md:w-[600px] lg:w-[800px] xl:w-[1000px] min-[640px]:w-[900px]">
           <div
             ref={ref}

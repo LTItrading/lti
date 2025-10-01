@@ -157,7 +157,7 @@ function AccountCard({
       </div>
 
       {/* Text */}
-      <CardContent className="relative z-10 pr-1 flex flex-col justify-center h-full">
+      <CardContent className="relative pr-1 flex flex-col justify-center h-full">
         <div className="transition-transform duration-700 ease-in-out group-hover:-translate-y-2">
           <h3 className="text-[24px] sm:text-[26px] md:text-[28px] lg:text-[32px] font-extrabold mb-[24px] leading-[1.2] font-manrope mt-[28px] text-[F4F4F4]">
             {title}

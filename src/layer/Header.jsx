@@ -12,7 +12,7 @@ const Header = () => {
   const miniLinks = [
     {
       text: "Partnerships",
-      url: "https://partnerships.londontradingindex.com",
+      url: "https://partnership.londontradingindex.com",
     },
     {
       text: "Institutional",
@@ -70,7 +70,7 @@ const Header = () => {
   return (
     <>
       <header
-        className={`sticky top-0 w-full z-20 overflow-visible transition-colors duration-300 ${isSticky ? "bg-[#FFFBF9]" : ""
+        className={`sticky top-0 w-full z-10 overflow-visible transition-colors duration-300 ${isSticky ? "bg-[#FFFBF9]" : ""
           }`}
         style={{
           background: isSticky ? undefined : "rgba(242, 216, 211, 0.1)",

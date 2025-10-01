@@ -61,7 +61,7 @@ export default function MegaMenu() {
           items: [
             {
               name: "Partner With Us",
-              path: "https://partnerships.londontradingindex.com",
+              path: "https://partnership.londontradingindex.com",
             },
           ],
         },

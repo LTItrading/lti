@@ -29,7 +29,7 @@ import PopUp from "@/components/PopUp";
 export default function TradingLandingPage() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [openDropdown, setOpenDropdown] = useState(null);
-    const [ShowPopUp,setShowPopUp] = useState(false)
+    const [ShowPopUp,setShowPopUp] = useState(true)
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const toggleDropdown = (label) =>

@@ -39,7 +39,7 @@ export default function TradingCardSection() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 flex flex-col [@media(min-width:867px)]:flex-row w-full justify-between items-center text-center [@media(min-width:867px)]:text-left gap-10 [@media(min-width:867px)]:gap-6">
+        <div className="relative flex flex-col [@media(min-width:867px)]:flex-row w-full justify-between items-center text-center [@media(min-width:867px)]:text-left gap-10 [@media(min-width:867px)]:gap-6">
           {/* Left Text */}
           <div className="flex-1 flex flex-col justify-center items-center [@media(min-width:867px)]:items-start space-y-4 sm:space-y-6 pr-0 [@media(min-width:867px)]:pr-[10px] mx-4">
             <h2 className="font-manrope font-extrabold text-[#EE4223] text-[16px] sm:text-[22px] md:text-[26px] lg:text-[34px] leading-[140%]">

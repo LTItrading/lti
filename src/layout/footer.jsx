@@ -256,7 +256,7 @@ const Footer = () => {
                 Partnerships
             </li>
             <Link
-              to="https://partnerships.londontradingindex.com "
+              to="https://partnership.londontradingindex.com "
               className="text-[#1C1C1C] font-normal text-[12px] sm:text-[12px] md:text-[14px] lg:text-[16px] leading-[28px]"
             >
               Partner With Us (↓)
