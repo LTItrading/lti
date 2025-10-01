@@ -254,31 +254,45 @@ const Footer = () => {
           <ul>
             <li className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-extrabold text-[#FF6633] mb-1 font-manrope leading-[100%] tracking-[0]">
               <Link
-                to="/contact"
+                to="https://partnerships.londontradingindex.com"
                 className="text-[#1C1C1C] font-normal text-[12px] sm:text-[12px] md:text-[14px] lg:text-[16px] leading-[28px]">
-              Partnerships
-                </Link>
+                Partnerships
+              </Link>
             </li>
-            <li className="text-[#1C1C1C] font-normal text-[12px] sm:text-[12px] md:text-[14px] lg:text-[16px] leading-[28px]">
+            <Link
+              to="https://partnerships.londontradingindex.com "
+              className="text-[#1C1C1C] font-normal text-[12px] sm:text-[12px] md:text-[14px] lg:text-[16px] leading-[28px]"
+            >
               Partner With Us (↓)
-            </li>
+            </Link>
           </ul>
         </div>
       </div>
 
       <div className="space-y-4 pb-[60px]">
         {/* Top Links */}
-        <div className="flex  gap-x-4 pt-5">
-          <div className="font-manrope font-extrabold leading-[100%] opacity-90 text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-[#FF6633] pr-4 border-r-2 border-[#FF6633]">
-            Terms and Conditions
+        <div className="space-y-4 pb-[60px]">
+          <div className="flex gap-x-4 pt-5">
+            <a
+              href="/pdfs/terms.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-manrope font-extrabold leading-[100%] opacity-90 text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-[#FF6633] pr-4 border-r-2 border-[#FF6633]"
+            >
+              Terms and Conditions
+            </a>
+
+            <a
+              href="/pdfs/privacy.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-manrope font-extrabold leading-[100%] opacity-90 text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-[#FF6633] pr-4"
+            >
+              Privacy Policy
+            </a>
           </div>
-          <div className="font-manrope font-extrabold leading-[100%] opacity-90 text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-[#FF6633] pr-4">
-            Privacy Policy
-          </div>
-          {/* <div className="font-manrope font-extrabold leading-[100%] opacity-90 text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-[#FF6633] ">
-            AML Policy
-          </div> */}
         </div>
+
 
         {/* Risk Warning */}
         <div className="sm:pt-6">

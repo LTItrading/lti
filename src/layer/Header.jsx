@@ -12,11 +12,11 @@ const Header = () => {
   const miniLinks = [
     {
       text: "Partnerships",
-      url: "/lti/#/contact",
+      url: "https://partnerships.londontradingindex.com",
     },
     {
       text: "Institutional",
-      url: "",
+      url: "https://equivestprime.com/",
     },
     {
       text: "Funding",
