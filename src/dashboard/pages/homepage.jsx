@@ -170,7 +170,7 @@ export default function TradingLandingPage() {
             </div>
           </div>
         </div>        
-        {ShowPopUp && <PopUp onClose={handleClosePopUp}/>}
+        
 
         {/* Hand2 Image */}
         {/* Hand Icon */}
@@ -210,6 +210,7 @@ export default function TradingLandingPage() {
         {/* Image Slider */}
         <Silder />
       </main>
+      {ShowPopUp && <PopUp onClose={handleClosePopUp}/>}
     </div>
   );
 }

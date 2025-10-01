@@ -2,15 +2,15 @@ import React, { useEffect } from "react";
 
 const RiskWarningPopup = ({ onClose }) => {
 
-    // useEffect(() => {
-    //     document.body.style.overflow = "hidden";
-    //     return () => {
-    //         document.body.style.overflow = "auto";
-    //     };
-    // }, []);
+    useEffect(() => {
+        document.body.style.overflow = "hidden";
+        return () => {
+            document.body.style.overflow = "auto";
+        };
+    }, []);
 
     return (
-        <div className="fixed inset-0 z-50 flex items-end justify-center p-2 duration-300 ease-in-out animate-fadeIn">
+        <div className="fixed inset-0 z-40 flex items-end justify-center p-2 duration-300 ease-in-out animate-fadeIn">
             {/* Container is now a flexbox column to organize content vertically */}
             <div
                 className="relative bg-white rounded-xl shadow-2xl w-full mx-4 max-w-lg p-6 text-center max-h-[90vh] flex flex-col transform transition-transform duration-300 scale-95 animate-scaleUp
