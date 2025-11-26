@@ -48,7 +48,7 @@ export default function TradingCardSection() {
             <p className="font-manrope font-medium pt-[30px] text-gray 
   text-[12px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[18px] 
   leading-[2.1] max-w-[90%] [@media(min-width:867px)]:max-w-[100%]">
-              London Trading Index was created to reflect the excellence and discipline
+              London Trading Index was created to Reflect the excellence and discipline
               of the world’s most renowned trading hub. With deep roots in the City and
               a forward-thinking approach to technology and transparency, LTI offers a
               refined trading experience for those who demand more from their broker.

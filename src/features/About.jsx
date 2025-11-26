@@ -193,7 +193,7 @@ export const About = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg text-gray-800">Flexibility is Power</h3>
-                  <p className="text-gray-600 mt-1">Trading conditions should reflect your strategy, not restrict it.</p>
+                  <p className="text-gray-600 mt-1">Trading conditions should Reflect your strategy, not restrict it.</p>
                 </div>
               </div>
 

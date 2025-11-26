@@ -28,41 +28,41 @@ import licensed from "@/assets/images/tradingFeaturesPng/licensed.png";
 import support from "@/assets/images/tradingFeaturesPng/support.png";
 import clarity from "@/assets/images/tradingFeaturesPng/clarity.png";
 const accountTypes = [
-  {
-    icon: Play,
-    name: "Cent",
-    description: "Start micro-scale trading with a Cent Account.",
-    details: [
-      {
-        text: "Micro Scale Trading",
-        isCheck: true,
-      },
-      {
-        text: "Min Deposit: $5",
-        isCheck: true,
-      },
-      {
-        text: "Leverage: Up to 1:1000.",
-        isCheck: true,
-      },
-      {
-        text: "Spreads: From 0.1 pips.",
-        isCheck: true,
-      },
-      {
-        text: "Commissions: Low.",
-        isCheck: true,
-      },
-      {
-        text: "Swap Free Available.",
-        isCheck: false,
-      },
-      {
-        text: "Negative balance protection",
-        isCheck: true,
-      },
-    ],
-  },
+  // {
+  //   icon: Play,
+  //   name: "Cent",
+  //   description: "Start micro-scale trading with a Cent Account.",
+  //   details: [
+  //     {
+  //       text: "Micro Scale Trading",
+  //       isCheck: true,
+  //     },
+  //     {
+  //       text: "Min Deposit: $5",
+  //       isCheck: true,
+  //     },
+  //     {
+  //       text: "Leverage: Up to 1:1000.",
+  //       isCheck: true,
+  //     },
+  //     {
+  //       text: "Spreads: From 0.1 pips.",
+  //       isCheck: true,
+  //     },
+  //     {
+  //       text: "Commissions: Low.",
+  //       isCheck: true,
+  //     },
+  //     {
+  //       text: "Swap Free Available.",
+  //       isCheck: false,
+  //     },
+  //     {
+  //       text: "Negative balance protection",
+  //       isCheck: true,
+  //     },
+  //   ],
+  // },
   {
     icon: Headphones,
     name: "Core",
@@ -208,51 +208,51 @@ const accountTypes = [
       },
     ],
   },
-  {
-    icon: TrendingUp,
-    name: "ECO",
-    description: "Make a difference while trading with the Eco Account.",
-    details: [
-      {
-        text: "Trade with impact",
-        isCheck: true,
-      },
-      {
-        text: "A portion of spread revenue is donated to environmental or social causes.",
-        isCheck: true,
-      },
-      {
-        text: "Min Deposit: $100",
-        isCheck: true,
-      },
-      {
-        text: "Spreads: As low as 0.1 pips",
-        isCheck: true,
-      },
-      {
-        text: "Commissions:Mid",
-        isCheck: true,
-      },
-      {
-        text: "Leverage: 1:100",
-        isCheck: true,
-      },
-      {
-        text: "Swap free",
-        isCheck: true,
-      },
-      {
-        text: "Negative Balance Protection.",
-        isCheck: true,
-      },
-    ],
-  },
+  // {
+  //   icon: TrendingUp,
+  //   name: "ECO",
+  //   description: "Make a difference while trading with the Eco Account.",
+  //   details: [
+  //     {
+  //       text: "Trade with impact",
+  //       isCheck: true,
+  //     },
+  //     {
+  //       text: "A portion of spread revenue is donated to environmental or social causes.",
+  //       isCheck: true,
+  //     },
+  //     {
+  //       text: "Min Deposit: $100",
+  //       isCheck: true,
+  //     },
+  //     {
+  //       text: "Spreads: As low as 0.1 pips",
+  //       isCheck: true,
+  //     },
+  //     {
+  //       text: "Commissions:Mid",
+  //       isCheck: true,
+  //     },
+  //     {
+  //       text: "Leverage: 1:100",
+  //       isCheck: true,
+  //     },
+  //     {
+  //       text: "Swap free",
+  //       isCheck: true,
+  //     },
+  //     {
+  //       text: "Negative Balance Protection.",
+  //       isCheck: true,
+  //     },
+  //   ],
+  // },
 ];
 
 const whatsSetsLTIApart = [
   {
     icon: traders,
-    title: "Built for Serious Traders",
+    title: "Built For Serious Traders",
     description:
       "Our ecosystem is designed for high performance trading. With accounts, platforms, and conditions engineered for execution speed, stability, and scale..",
   },
@@ -264,7 +264,7 @@ const whatsSetsLTIApart = [
   },
   {
     icon: clarity,
-    title: "Clarity in Every Trade",
+    title: "Clarity In Every Trade",
     description:
       "No hidden fees. No surprises. We offer clearly defined pricing structures with tight spreads, optional raw pricing, and institutional level transparency..",
   },
@@ -309,20 +309,20 @@ export default function AccountOptions() {
 
       <div className="flex flex-col justify-center items-center">
         {/* Account Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center mx-5 md:mx-[80px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {accountTypes.map((account, index) => (
             <motion.div
-              key={account.name}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{
-                y: -5,
-                boxShadow: "0 0 20px rgba(238, 66, 35, 0.7)",
-                transition: { duration: 0.3 },
-              }}
-              className="bg-base text-ink rounded-xl shadow-lg p-6 animate-fade-in"
-            >
+  key={account.name}
+  initial={{ opacity: 0, scale: 0.95 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.5, delay: index * 0.1 }}
+  whileHover={{
+    y: -5,
+    boxShadow: "0 0 20px rgba(238, 66, 35, 0.7)",
+    transition: { duration: 0.3 },
+  }}
+  className="bg-base text-ink rounded-xl shadow-lg p-6 animate-fade-in text-center"
+>
               <div class="w-12 h-12 gradient-primary rounded-lg flex items-center justify-center mx-auto mb-4 gradient-primary rounded-full flex">
                 <account.icon className="h-6 w-6 transition-colors duration-300 text-white group-hover:text-white" />
               </div>

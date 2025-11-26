@@ -11,9 +11,9 @@ import database from "@/assets/images/accountSectionPng/database.png";
 export default function AccountsSection() {
   const accountTypes = [
     {
-      title: "CENT",
-      subtitle: "Scaled-Risk Traders",
-      desc: "Trade with real money using smaller volumes - balances are displayed in cents.",
+      title: "ECN",
+      subtitle: "Raw spreads and deep liquidity with ECN Account.",
+      desc: "Built for traders who demand ultra-tight spreads, institutional-grade execution speeds, and complete transparency.",
       icon: "database",
       size: "small",
       shadow: "shadow-[inset_0px_-4px_4px_rgba(0,0,0,0.3)]",
@@ -50,19 +50,19 @@ export default function AccountsSection() {
       subtitle: "Customisable conditions",
       desc: "Fully tailored trading solution - all conditions negotiable, including spreads, leverage, and commissions.",
       icon: "settings",
-      size: "small",
+      size: "large",
       flexi: true,
       light: true,
     },
-    {
-      title: "ECO",
-      subtitle: "Impact-Orientated Traders",
-      desc: "Trade as usual while making a difference - a portion of spread revenue supports charitable causes.",
-      icon: "leaf",
-      size: "large",
-      eco: true,
-      shadow: "shadow-[inset_0px_-4px_4px_rgba(0,0,0,0.3)]",
-    },
+    // {
+    //   title: "ECO",
+    //   subtitle: "Impact-Orientated Traders",
+    //   desc: "Trade as usual while making a difference - a portion of spread revenue supports charitable causes.",
+    //   icon: "leaf",
+    //   size: "large",
+    //   eco: true,
+    //   shadow: "shadow-[inset_0px_-4px_4px_rgba(0,0,0,0.3)]",
+    // },
   ];
 
   return (

@@ -191,7 +191,7 @@ export default function MarketAccess() {
           name: "U.S. Dollar vs Japanese Yen",
           spread: 2.5,
           lowSpread: 2.0,
-          leverage: 1000,
+          leverage: 500,
           flags: ["US", "JP"],
         },
         {
@@ -199,7 +199,7 @@ export default function MarketAccess() {
           name: "Euro vs U.S. Dollar",
           spread: 2.0,
           lowSpread: 1.6,
-          leverage: 1000,
+          leverage: 500,
           flags: ["EU", "US"],
         },
         {
@@ -207,7 +207,7 @@ export default function MarketAccess() {
           name: "Australian Dollar vs U.S. Dollar",
           spread: 2.4,
           lowSpread: 2.3,
-          leverage: 1000,
+          leverage: 500,
           flags: ["AU", "US"],
         },
         {
@@ -215,7 +215,7 @@ export default function MarketAccess() {
           name: "Pound sterling vs Japanese Yen",
           spread: 3.8,
           lowSpread: 3.0,
-          leverage: 1000,
+          leverage: 500,
           flags: ["GB", "JP"],
         },
         {
@@ -223,7 +223,7 @@ export default function MarketAccess() {
           name: "Pound sterling vs U.S. Dollar",
           spread: 2.4,
           lowSpread: 1.8,
-          leverage: 1000,
+          leverage: 500,
           flags: ["GB", "US"],
         },
         {
@@ -231,7 +231,7 @@ export default function MarketAccess() {
           name: "Euro vs Japanese Yen",
           spread: 3.2,
           lowSpread: 2.1,
-          leverage: 1000,
+          leverage: 500,
           flags: ["EU", "JP"],
         },
         {
@@ -239,7 +239,7 @@ export default function MarketAccess() {
           name: "Euro vs Pound sterling",
           spread: 2.4,
           lowSpread: 1.8,
-          leverage: 1000,
+          leverage: 500,
           flags: ["EU", "GB"],
         },
         {
@@ -247,7 +247,7 @@ export default function MarketAccess() {
           name: "U.S. Dollar vs Swiss Franc",
           spread: 2.6,
           lowSpread: 1.9,
-          leverage: 400,
+          leverage: 500,
           flags: ["US", "CH"],
         },
         {
@@ -255,7 +255,7 @@ export default function MarketAccess() {
           name: "New Zealand Dollar vs U.S. Dollar",
           spread: 2.9,
           lowSpread: 2.8,
-          leverage: 1000,
+          leverage: 500,
           flags: ["NZ", "US"],
         },
         {
@@ -263,7 +263,7 @@ export default function MarketAccess() {
           name: "Euro vs Swiss Franc",
           spread: 3.3,
           lowSpread: 2.4,
-          leverage: 400,
+          leverage: 500,
           flags: ["EU", "CH"],
         },
       ],
@@ -408,7 +408,7 @@ export default function MarketAccess() {
           name: "Silver vs Euro",
           spread: 3.5,
           lowSpread: 2.9,
-          leverage: 1500,
+          leverage: 200,
           flags: ["XAG", "EU"], // Silver + Euro
         },
         {
@@ -416,7 +416,7 @@ export default function MarketAccess() {
           name: "Silver vs US Dollar",
           spread: 2.8,
           lowSpread: 2.1,
-          leverage: 1500,
+          leverage: 200,
           flags: ["XAG", "US"], // Silver + United States
         },
         {
@@ -424,7 +424,7 @@ export default function MarketAccess() {
           name: "Gold vs Euro",
           spread: 5.0,
           lowSpread: 3.5,
-          leverage: 1000,
+          leverage: 200,
           flags: ["XAU", "EU"], // Gold + Euro
         },
         {
@@ -432,25 +432,25 @@ export default function MarketAccess() {
           name: "Gold vs US Dollar",
           spread: 3.7,
           lowSpread: 3.0,
-          leverage: 1500,
+          leverage: 200,
           flags: ["XAU", "US"], // Gold + United States
         },
-        {
-          symbol: "XPD/USD",
-          name: "Palladium vs US Dollar",
-          spread: 10.01,
-          lowSpread: 10.01,
-          leverage: 22.2,
-          flags: ["XPD", "US"], // Palladium + United States
-        },
-        {
-          symbol: "XPT/USD",
-          name: "Platinum vs US Dollar",
-          spread: 4.5,
-          lowSpread: 4.5,
-          leverage: 22.22,
-          flags: ["XPT", "US"], // Platinum + United States
-        },
+        // {
+        //   symbol: "XPD/USD",
+        //   name: "Palladium vs US Dollar",
+        //   spread: 10.01,
+        //   lowSpread: 10.01,
+        //   leverage: 22.2,
+        //   flags: ["XPD", "US"], // Palladium + United States
+        // },
+        // {
+        //   symbol: "XPT/USD",
+        //   name: "Platinum vs US Dollar",
+        //   spread: 4.5,
+        //   lowSpread: 4.5,
+        //   leverage: 22.22,
+        //   flags: ["XPT", "US"], // Platinum + United States
+        // },
       ],
       columns: [
         {
@@ -515,7 +515,7 @@ export default function MarketAccess() {
           name: "S&P/ASX 200 Index",
           spread: 1.8,
           lowSpread: 1.3,
-          leverage: 200,
+          leverage: 100,
           flags: ["AUS200"],
         },
         {
@@ -523,7 +523,7 @@ export default function MarketAccess() {
           name: "DAX 40 Index (Germany)",
           spread: 1.5,
           lowSpread: 1.1,
-          leverage: 200,
+          leverage: 100,
           flags: ["DE40C"],
         },
         {
@@ -531,7 +531,7 @@ export default function MarketAccess() {
           name: "CAC 40 Index (France)",
           spread: 1.7,
           lowSpread: 1.2,
-          leverage: 200,
+          leverage: 100,
           flags: ["F40C"],
         },
         {
@@ -539,7 +539,7 @@ export default function MarketAccess() {
           name: "Hang Seng Index (Hong Kong)",
           spread: 8,
           lowSpread: 8,
-          leverage: 66,
+          leverage: 100,
           flags: ["AUS200"],
         },
         {
@@ -547,7 +547,7 @@ export default function MarketAccess() {
           name: "AEX 25 Index (Netherlands)",
           spread: 1.6,
           lowSpread: 1.2,
-          leverage: 200,
+          leverage: 100,
           flags: ["NE25C"],
         },
         {
@@ -555,7 +555,7 @@ export default function MarketAccess() {
           name: "Euro Stoxx 50 Index",
           spread: 1.4,
           lowSpread: 1.0,
-          leverage: 200,
+          leverage: 100,
           flags: ["STOXX50"],
         },
         {
@@ -563,7 +563,7 @@ export default function MarketAccess() {
           name: "FTSE 100 Index (UK)",
           spread: 2.78,
           lowSpread: 1.4,
-          leverage: 500,
+          leverage: 100,
           flags: ["UK100C"],
         },
         {
@@ -571,7 +571,7 @@ export default function MarketAccess() {
           name: "S&P 500 Index (US)",
           spread: 0.57,
           lowSpread: 0.57,
-          leverage: 500,
+          leverage: 100,
           flags: ["US500C"],
         },
         {
@@ -579,7 +579,7 @@ export default function MarketAccess() {
           name: "Nasdaq 100 Index (US)",
           spread: 1.5,
           lowSpread: 1.0,
-          leverage: 200,
+          leverage: 100,
           flags: ["USTEC"],
         },
         {
@@ -587,7 +587,7 @@ export default function MarketAccess() {
           name: "Dow Jones 30 Index (US)",
           spread: 1.6,
           lowSpread: 1.1,
-          leverage: 200,
+          leverage: 100,
           flags: ["DJ30"],
         },
         {
@@ -595,7 +595,7 @@ export default function MarketAccess() {
           name: "IBEX 35 Index (Spain)",
           spread: 1.8,
           lowSpread: 1.3,
-          leverage: 200,
+          leverage: 100,
           flags: ["ES35"],
         },
         {
@@ -603,7 +603,7 @@ export default function MarketAccess() {
           name: "Swiss Market Index (Switzerland)",
           spread: 1.7,
           lowSpread: 1.2,
-          leverage: 200,
+          leverage: 100,
           flags: ["SWI20C"],
         },
       ],
@@ -682,7 +682,7 @@ export default function MarketAccess() {
           name: "Nikkei 225 Index Futures (Japan)",
           spread: 14,
           lowSpread: 14,
-          leverage: 500,
+          leverage: 100,
           flags: ["JPN225U25"],
         },
         {
@@ -722,7 +722,7 @@ export default function MarketAccess() {
           name: "S&P 500 Index Futures (US)",
           spread: 1.24,
           lowSpread: 1.2,
-          leverage: 500,
+          leverage: 100,
           flags: ["US500U25"],
         },
         {
@@ -801,7 +801,7 @@ export default function MarketAccess() {
           name: "Brent Crude Oil (Spot)",
           spread: 0.03,
           lowSpread: 0.03,
-          leverage: 200,
+          leverage: 100,
           flags: ["UKOIL"],
         },
         {
@@ -809,7 +809,7 @@ export default function MarketAccess() {
           name: "WTI Crude Oil (Spot)",
           spread: 0.03,
           lowSpread: 0.03,
-          leverage: 200,
+          leverage: 100,
           flags: ["USOIL"],
         },
       ],
@@ -864,7 +864,7 @@ export default function MarketAccess() {
           name: "Bitcoin Cash vs US Dollar",
           spread: 3.42,
           lowSpread: 3.25,
-          leverage: 250,
+          leverage: 10,
           flags: ["BCH", "US"],
         },
         {
@@ -872,7 +872,7 @@ export default function MarketAccess() {
           name: "Bitcoin vs Euro",
           spread: 4.5,
           lowSpread: 3.7,
-          leverage: 50,
+          leverage: 10,
           flags: ["BCH", "EU"],
         },
         {
@@ -880,7 +880,7 @@ export default function MarketAccess() {
           name: "Bitcoin vs Japanese Yen",
           spread: 5.2,
           lowSpread: 4.1,
-          leverage: 50,
+          leverage: 10,
           flags: ["BCH", "JP"],
         },
         {
@@ -888,7 +888,7 @@ export default function MarketAccess() {
           name: "Bitcoin vs US Dollar",
           spread: 3.9,
           lowSpread: 3.0,
-          leverage: 50,
+          leverage: 10,
           flags: ["BCH", "US"],
         },
         {
@@ -896,7 +896,7 @@ export default function MarketAccess() {
           name: "Solana vs US Dollar",
           spread: 1.18,
           lowSpread: 1.18,
-          leverage: 50,
+          leverage: 10,
           flags: ["SOL", "US"],
         },
         {
@@ -904,7 +904,7 @@ export default function MarketAccess() {
           name: "Cardano vs US Dollar",
           spread: 2.2,
           lowSpread: 1.7,
-          leverage: 50,
+          leverage: 10,
           flags: ["ADA", "US"],
         },
         {
@@ -912,7 +912,7 @@ export default function MarketAccess() {
           name: "Chiliz vs US Dollar",
           spread: 2.4,
           lowSpread: 1.8,
-          leverage: 50,
+          leverage: 10,
           flags: ["CHZ", "US"],
         },
         {
@@ -920,7 +920,7 @@ export default function MarketAccess() {
           name: "Dogecoin vs US Dollar",
           spread: 0.00154,
           lowSpread: 0.00155,
-          leverage: 50,
+          leverage: 10,
           flags: ["DOGE", "US"],
         },
         {
@@ -928,7 +928,7 @@ export default function MarketAccess() {
           name: "Harmony vs US Dollar",
           spread: 2.5,
           lowSpread: 1.9,
-          leverage: 50,
+          leverage: 10,
           flags: ["ONE", "US"],
         },
         {
@@ -936,7 +936,7 @@ export default function MarketAccess() {
           name: "TRON vs US Dollar",
           spread: 2.3,
           lowSpread: 1.7,
-          leverage: 50,
+          leverage: 10,
           flags: ["TRX", "US"],
         },
         {
@@ -944,7 +944,7 @@ export default function MarketAccess() {
           name: "VeChain vs US Dollar",
           spread: 2.7,
           lowSpread: 2.0,
-          leverage: 50,
+          leverage: 10,
           flags: ["VET", "US"],
         },
         {
@@ -952,7 +952,7 @@ export default function MarketAccess() {
           name: "NEM vs US Dollar",
           spread: 2.9,
           lowSpread: 2.2,
-          leverage: 50,
+          leverage: 10,
           flags: ["XEM", "US"],
         },
         {
@@ -960,7 +960,7 @@ export default function MarketAccess() {
           name: "Stellar Lumens vs US Dollar",
           spread: 2.6,
           lowSpread: 2.0,
-          leverage: 50,
+          leverage: 10,
           flags: ["XLM", "US"],
         },
         {
@@ -968,7 +968,7 @@ export default function MarketAccess() {
           name: "Ethereum vs US Dollar",
           spread: 5.51,
           lowSpread: 5.5,
-          leverage: 500,
+          leverage: 10,
           flags: ["ETH", "US"],
         },
       ],
@@ -1028,157 +1028,157 @@ export default function MarketAccess() {
         },
       ],
     },
-    {
-      id: "shares",
-      label: "Shares",
-      columns: [
-        {
-          key: "symbol",
-          header: "Symbol",
-          render: (_, row) => (
-            <div className="flex flex-row items-center gp-3">
-              {row?.flags?.[0] && (
-                <img
-                  className="mr-2"
-                  src={metals[row?.flags?.[0]]}
-                  alt={row?.flags?.[0]}
-                  width={24}
-                  height={24}
-                />
-              )}
-              <div>
-                <div className="font-bold text-lg text-gray-900">
-                  {row.symbol}
-                </div>
-                <div className="text-xs text-gray-600">{row.name}</div>
-              </div>
-            </div>
-          ),
-        },
-        { key: "spread", header: "Average Spread (pips)" },
-        { key: "lowSpread", header: "Spread As Low As (pips)" },
-        { key: "leverage", header: "Max Leverage" },
-        {
-          key: "actions",
-          header: "",
-          render: (_, row) => (
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => {}}
-              asChild
-              className="text-brand"
-            >
-              <a href="https://clientarea.londontradingindex.com/register/">
-                Trade
-              </a>
-            </Button>
-          ),
-        },
-      ],
-      usshare: [
-        {
-          symbol: "AAPL.OQ",
-          name: "Apple Inc.",
-          spread: 0.02,
-          lowSpread: 0.02,
-          leverage: 1,
-          flags: ["APPL"],
-        },
-        {
-          symbol: "MSFT.OQ",
-          name: "Microsoft Corp.",
-          spread: 0.07,
-          lowSpread: 0.07,
-          leverage: 1,
-          flags: ["MSFT"],
-        },
-        {
-          symbol: "AMZN.OQ",
-          name: "Amazon.com Inc.",
-          spread: 0.02,
-          lowSpread: 0.02,
-          leverage: 1,
-          flags: ["AMZN"],
-        },
-        {
-          symbol: "TSLA.OQ",
-          name: "Tesla Inc.",
-          spread: 0.05,
-          lowSpread: 0.05,
-          leverage: 1,
-          flags: ["TSLA"],
-        },
-      ],
-      eushare: [
-        {
-          symbol: "LVMH.PA",
-          name: "LVMH Moët Hennessy Louis Vuitton SE",
-          spread: 1.9,
-          lowSpread: 1.4,
-          leverage: 20,
-          flags: ["LVMH"],
-        },
-        {
-          symbol: "SAPG.DE",
-          name: "SAP SE",
-          spread: 1.7,
-          lowSpread: 1.3,
-          leverage: 20,
-          flags: ["SAPG"],
-        },
-        {
-          symbol: "BAYGn.DE",
-          name: "Bayer AG",
-          spread: 1.8,
-          lowSpread: 1.3,
-          leverage: 20,
-          flags: ["BAYGN"],
-        },
-        {
-          symbol: "AIR.PA",
-          name: "Airbus SE",
-          spread: 2.0,
-          lowSpread: 1.5,
-          leverage: 20,
-          flags: ["AIRPA"],
-        },
-      ],
-      honkongshare: [
-        {
-          symbol: "0700.HK",
-          name: "Tencent Holdings Ltd.",
-          spread: 2.3,
-          lowSpread: 1.8,
-          leverage: 20,
-          flags: ["HKONE"],
-        },
-        {
-          symbol: "0939.HK",
-          name: "China Construction Bank Corp.",
-          spread: 2.1,
-          lowSpread: 1.6,
-          leverage: 20,
-          flags: ["HKTWO"],
-        },
-        {
-          symbol: "2318.HK",
-          name: "Ping An Insurance (Group) Co. of China Ltd.",
-          spread: 2.2,
-          lowSpread: 1.7,
-          leverage: 20,
-          flags: ["HKTHREE"],
-        },
-        {
-          symbol: "0388.HK",
-          name: "Hong Kong Exchanges and Clearing Ltd.",
-          spread: 2.4,
-          lowSpread: 1.9,
-          leverage: 20,
-          flags: ["HKFOUR"],
-        },
-      ],
-    },
+    // {
+    //   id: "shares",
+    //   label: "Shares",
+    //   columns: [
+    //     {
+    //       key: "symbol",
+    //       header: "Symbol",
+    //       render: (_, row) => (
+    //         <div className="flex flex-row items-center gp-3">
+    //           {row?.flags?.[0] && (
+    //             <img
+    //               className="mr-2"
+    //               src={metals[row?.flags?.[0]]}
+    //               alt={row?.flags?.[0]}
+    //               width={24}
+    //               height={24}
+    //             />
+    //           )}
+    //           <div>
+    //             <div className="font-bold text-lg text-gray-900">
+    //               {row.symbol}
+    //             </div>
+    //             <div className="text-xs text-gray-600">{row.name}</div>
+    //           </div>
+    //         </div>
+    //       ),
+    //     },
+    //     { key: "spread", header: "Average Spread (pips)" },
+    //     { key: "lowSpread", header: "Spread As Low As (pips)" },
+    //     { key: "leverage", header: "Max Leverage" },
+    //     {
+    //       key: "actions",
+    //       header: "",
+    //       render: (_, row) => (
+    //         <Button
+    //           variant="outline"
+    //           size="sm"
+    //           onClick={() => {}}
+    //           asChild
+    //           className="text-brand"
+    //         >
+    //           <a href="https://clientarea.londontradingindex.com/register/">
+    //             Trade
+    //           </a>
+    //         </Button>
+    //       ),
+    //     },
+    //   ],
+    //   usshare: [
+    //     {
+    //       symbol: "AAPL.OQ",
+    //       name: "Apple Inc.",
+    //       spread: 0.02,
+    //       lowSpread: 0.02,
+    //       leverage: 1,
+    //       flags: ["APPL"],
+    //     },
+    //     {
+    //       symbol: "MSFT.OQ",
+    //       name: "Microsoft Corp.",
+    //       spread: 0.07,
+    //       lowSpread: 0.07,
+    //       leverage: 1,
+    //       flags: ["MSFT"],
+    //     },
+    //     {
+    //       symbol: "AMZN.OQ",
+    //       name: "Amazon.com Inc.",
+    //       spread: 0.02,
+    //       lowSpread: 0.02,
+    //       leverage: 1,
+    //       flags: ["AMZN"],
+    //     },
+    //     {
+    //       symbol: "TSLA.OQ",
+    //       name: "Tesla Inc.",
+    //       spread: 0.05,
+    //       lowSpread: 0.05,
+    //       leverage: 1,
+    //       flags: ["TSLA"],
+    //     },
+    //   ],
+    //   eushare: [
+    //     {
+    //       symbol: "LVMH.PA",
+    //       name: "LVMH Moët Hennessy Louis Vuitton SE",
+    //       spread: 1.9,
+    //       lowSpread: 1.4,
+    //       leverage: 20,
+    //       flags: ["LVMH"],
+    //     },
+    //     {
+    //       symbol: "SAPG.DE",
+    //       name: "SAP SE",
+    //       spread: 1.7,
+    //       lowSpread: 1.3,
+    //       leverage: 20,
+    //       flags: ["SAPG"],
+    //     },
+    //     {
+    //       symbol: "BAYGn.DE",
+    //       name: "Bayer AG",
+    //       spread: 1.8,
+    //       lowSpread: 1.3,
+    //       leverage: 20,
+    //       flags: ["BAYGN"],
+    //     },
+    //     {
+    //       symbol: "AIR.PA",
+    //       name: "Airbus SE",
+    //       spread: 2.0,
+    //       lowSpread: 1.5,
+    //       leverage: 20,
+    //       flags: ["AIRPA"],
+    //     },
+    //   ],
+    //   honkongshare: [
+    //     {
+    //       symbol: "0700.HK",
+    //       name: "Tencent Holdings Ltd.",
+    //       spread: 2.3,
+    //       lowSpread: 1.8,
+    //       leverage: 20,
+    //       flags: ["HKONE"],
+    //     },
+    //     {
+    //       symbol: "0939.HK",
+    //       name: "China Construction Bank Corp.",
+    //       spread: 2.1,
+    //       lowSpread: 1.6,
+    //       leverage: 20,
+    //       flags: ["HKTWO"],
+    //     },
+    //     {
+    //       symbol: "2318.HK",
+    //       name: "Ping An Insurance (Group) Co. of China Ltd.",
+    //       spread: 2.2,
+    //       lowSpread: 1.7,
+    //       leverage: 20,
+    //       flags: ["HKTHREE"],
+    //     },
+    //     {
+    //       symbol: "0388.HK",
+    //       name: "Hong Kong Exchanges and Clearing Ltd.",
+    //       spread: 2.4,
+    //       lowSpread: 1.9,
+    //       leverage: 20,
+    //       flags: ["HKFOUR"],
+    //     },
+    //   ],
+    // },
   ];
   const [currentState, setCurrentState] = useState(tabs[0]);
 

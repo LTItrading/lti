@@ -172,7 +172,7 @@ const NewsEducation = () => {
                       Real-time Market Coverage, Built In
                     </CardTitle>
                     <CardDescription className="text-lg">
-                      Real-time updates that impact your trading decisions
+                      Real-Time Updates That Impact Your Trading Decisions
                     </CardDescription>
                   </div>
                 </div>
@@ -467,7 +467,7 @@ const NewsEducation = () => {
               <h5
                 className={`font-manrope font-extrabold text-[18px] sm:text-[20px] mb-3 relative z-10 text-white`}
               >
-                Stay informed. Stay Ahead.
+                Stay Informed. Stay Ahead.
               </h5>
               <blockquote className="text-xl md:text-2xl font-bold text-primary-foreground mb-6 leading-relaxed">
                 "The trader that prepares, is the trader that survives. With

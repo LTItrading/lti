@@ -13,6 +13,7 @@ import GooglePay4x from "../assets/images/4x-Images/GooglePay4x.png";
 import ApplePay4x from "../assets/images/4x-Images/ApplePay4x.png";
 import BankWire4x from "../assets/images/4x-Images/BankWire4x.png";
 import MetaQuotes4x from "../assets/images/4x-Images/MetaQuotes4x.png";
+import metatrader5 from "../assets/images/4x-Images/metatrader5.png";
 import FXCubic4x from "../assets/images/4x-Images/FXCubic4x.png";
 import AyMabMission4x from "../assets/images/4x-Images/AyMabMission4x.png";
 import brokeragerelated4x from "../assets/images/4x-Images/brokeragerelated4x.png";
@@ -343,13 +344,10 @@ const Footer = () => {
               local law or regulation.
             </li>
             <li className="font-manrope font-normal text-[12px] leading-[158%] text-[#888888]">
-              London Trading Index is a registered trading name of Equivest
-              (Mauritius) Limited, which is regulated by the Financial Services
-              Commission of the Republic of Mauritius under licence number
-              00321997. Equivest (Mauritius) Limited is incorporated under
-              company number GB24203378, with its registered address at The
-              Cyberati Lounge, Ground Floor, The Catalyst, 40 Silicon Avenue,
-              Cybercity, 72201 Eben, Republic of Mauritius.
+              London Trading Index is a registered trading name of Equivest (Mauritius) Limited, regulated by the Financial Services Commission of the Republic of Mauritius under licence number 00321997. Equivest (Mauritius) Limited is incorporated under company number GB24203378, with its registered address at The Cyberati Lounge, Ground Floor, The Catalyst, 40 Silicon Avenue, Cybercity, 72201 Eben, Republic of Mauritius.
+            </li>
+            <li className="font-manrope font-normal text-[12px] leading-[158%] text-[#888888]">
+              Equivest (Mauritius) Limited collaborates with London Trading Index Limited to supply corporate, operational, and administrative support for services provided under the London Trading Index SVG entity.
             </li>
             <li className="font-manrope font-normal text-[12px] leading-[158%] text-[#888888]">
               The website www.londontradingindex.com
@@ -430,9 +428,9 @@ const Footer = () => {
 
           <div className="flex flex-wrap items-center gap-6 sm:gap-6 opacity-[0.76]">
             <img
-              src={MetaQuotes4x}
+              src={metatrader5}
               alt="MetaQuotes"
-              className="w-[119px] h-[18px] opacity-[0.60]"
+               className="w-auto h-[90px] opacity-[0.80]"
             />
             <img
               src={FXCubic4x}

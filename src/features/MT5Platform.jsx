@@ -179,9 +179,14 @@ export default function MT5Platform() {
           >
             <div className="p-6 flex flex-col items-center justify-start text-center">
               <h3 className="font-semibold text-xl text-gray-900 mb-2">MT5 for Tablet and Mobile</h3>
+             
               <div className="flex items-center gap-3 mt-4 flex-wrap justify-center">
-                <img src={AppStore4x} alt="App Store" className="h-9 sm:h-10 w-auto max-w-[130px] object-contain" />
-                <img src={playstoreApk4x} alt="Android App" className="h-9 sm:h-10 w-auto max-w-[130px] object-contain" />
+                <a href="https://download.mql5.com/cdn/mobile/mt5/android?server=LondonTradingIndex-Live" target="_blank" rel="noopener noreferrer">
+                  <img src={AppStore4x} alt="App Store" className="h-9 sm:h-10 w-auto max-w-[130px] object-contain" />
+                </a>
+                <a href="https://download.mql5.com/cdn/mobile/mt5/ios?server=LondonTradingIndex-Live" target="_blank" rel="noopener noreferrer">
+                  <img src={playstoreApk4x} alt="Android App" className="h-9 sm:h-10 w-auto max-w-[130px] object-contain" />
+                </a>
               </div>
             </div>
             <div className=" p-4 flex-grow">
@@ -205,7 +210,7 @@ export default function MT5Platform() {
             <div className="p-6 flex flex-col items-center justify-start text-center">
               <h3 className="font-semibold text-xl text-gray-900 mb-2">MT5 for PC</h3>
 
-              <a href="#" className="text-primary flex items-center gap-1">
+              <a href="https://download.mql5.com/cdn/web/london.trading.index/mt5/londontradingindex5setup.exe" className="text-primary flex items-center gap-1">
                 Download <ExternalLink className="w-4 h-4 text-primary" />
               </a>
             </div>
@@ -237,7 +242,7 @@ export default function MT5Platform() {
               <div className="p-6 flex flex-col items-center justify-start text-center flex-none">
                 <h3 className="font-semibold text-xl text-gray-900 mb-2">MT5 WebTrader</h3>
 
-                <a href="#" className="text-primary flex items-center gap-1">
+                <a href="https://web.metatrader.app/terminal?lang=en" className="text-primary flex items-center gap-1">
                   Access in Web <ExternalLink className="w-4 h-4 text-primary" />
                 </a>
               </div>
@@ -259,7 +264,7 @@ export default function MT5Platform() {
               <div className="p-6 flex flex-col items-center justify-start text-center">
                 <h3 className="font-semibold text-xl text-gray-900 mb-2">MT5 for Mac</h3>
 
-                <a href="#" className="text-primary flex items-center gap-1">
+                <a href="https://download.mql5.com/cdn/web/metaquotes.ltd/mt5/MetaTrader5.pkg.zip?utm_source=support.metaquotes.net&utm_campaign=download.mt5.macos" className="text-primary flex items-center gap-1">
                   Download<ExternalLink className="w-4 h-4 text-primary" />
                 </a>
               </div>

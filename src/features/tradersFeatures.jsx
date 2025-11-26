@@ -68,7 +68,7 @@ const TradersFeatures = () => {
                                     Numbers That Matter to Traders
                                 </h2>
                                 <p className="text-black text-[13px] sm:text-[14px] font-semibold leading-[1.6] max-w-xl mx-auto opacity-70">
-                                    Our trading infrastructure reflects the highest standards in the industry delivering precision from price to payout.
+                                    Our trading infrastructure Reflects the highest standards in the industry delivering precision from price to payout.
                                 </p>
                             </div>
 

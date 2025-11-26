@@ -75,31 +75,37 @@ export function PageHeader({
           )}
 
                     {/* Platforms Section (App / PC / WebTrader) */}
-          {showPlatforms && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.35 }}
-              className="text-center mt-6"
-            >
-              <div className="flex flex-wrap justify-center gap-4 mb-6">
-                <Button className="bg-white text-black border border-gray-300 hover:bg-gray-100 font-semibold px-6 py-6 rounded-md flex items-center gap-2">
-                  <Smartphone className="w-5 h-5" />
-                  App
-                </Button>
+        {showPlatforms && (
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, delay: 0.35 }}
+    className="text-center mt-6"
+  >
+    <div className="flex flex-wrap justify-center gap-4 mb-6">
+      <a href="https://download.mql5.com/cdn/mobile/mt5/ios?server=LondonTradingIndex-Live" target="_blank" rel="noopener noreferrer">
+        <Button className="bg-white text-black border border-gray-300 hover:bg-gray-100 font-semibold px-6 py-6 rounded-md flex items-center gap-2">
+          <Smartphone className="w-5 h-5" />
+          App
+        </Button>
+      </a>
 
-                <Button className="bg-white text-black border border-gray-300 hover:bg-gray-100 font-semibold px-6 py-6 rounded-md flex items-center gap-2">
-                  <Monitor className="w-5 h-5" />
-                  PC
-                </Button>
+      <a href="https://download.mql5.com/cdn/web/london.trading.index/mt5/londontradingindex5setup.exe" target="_blank" rel="noopener noreferrer">
+        <Button className="bg-white text-black border border-gray-300 hover:bg-gray-100 font-semibold px-6 py-6 rounded-md flex items-center gap-2">
+          <Monitor className="w-5 h-5" />
+          PC
+        </Button>
+      </a>
 
-                <Button className="bg-white text-black border border-gray-300 hover:bg-gray-100 font-semibold px-6 py-6 rounded-md flex items-center gap-2">
-                  <Globe className="w-5 h-5" />
-                  WebTrader
-                </Button>
-              </div>
-            </motion.div>
-          )}
+      <a href="https://web.metatrader.app/terminal?lang=en" target="_blank" rel="noopener noreferrer">
+        <Button className="bg-white text-black border border-gray-300 hover:bg-gray-100 font-semibold px-6 py-6 rounded-md flex items-center gap-2">
+          <Globe className="w-5 h-5" />
+          WebTrader
+        </Button>
+      </a>
+    </div>
+  </motion.div>
+)}
 
           {showCta && (
             <motion.div

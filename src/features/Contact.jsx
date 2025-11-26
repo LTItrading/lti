@@ -102,7 +102,7 @@ export const Contact = () => {
                 <div className="mt-8 p-6 rounded-2xl border-l-8 border-brand/70 bg-gray-50 shadow-inner">
                   <div className="flex items-center mb-3">
                     <Globe className={`h-7 w-7 mr-3 ${primaryDarkText}`} />
-                    <h4 className={`font-extrabold text-xl ${inkText}`}>Multilingual support</h4>
+                    <h4 className={`font-extrabold text-xl ${inkText}`}>Multilingual Support</h4>
                   </div>
                   <p className="text-gray-600">
                     English, Arabic, Spanish, Chinese, Portuguese, French & Russian
@@ -120,7 +120,7 @@ export const Contact = () => {
                   <Mail className={`h-6 w-6 ${primaryDarkText}`} />
                   <h5 className="font-extrabold text-[18px] sm:text-[20px]">Email Support</h5>
                 </div>
-                <p className="text-sm font-medium">Get in touch with our support team directly.</p>
+                <p className="text-sm font-medium">Get in Touch With Our Support Team Directly.</p>
                 <div className="mt-4 pt-4 border-t border-gray-100">
                   {/* START: Client Email Content */}
                   <p className="text-xs font-medium">General Inquiries:</p>
@@ -143,7 +143,7 @@ export const Contact = () => {
               <div className={`bg-white rounded-3xl p-6 shadow-elegant hover:shadow-glow transition-transform transform hover:-translate-y-1 flex flex-col ${inkText}`}>
                 <div className="flex items-center gap-3 mb-4">
                   <Ticket className={`h-6 w-6 ${primaryDarkText}`} />
-                  <h5 className="font-extrabold text-[18px] sm:text-[20px]">Raise a ticket!</h5>
+                  <h5 className="font-extrabold text-[18px] sm:text-[20px]">Raise a Ticket!</h5>
                 </div>
                 {/* START: Client Ticket Content */}
                 <p className="text-sm font-medium">

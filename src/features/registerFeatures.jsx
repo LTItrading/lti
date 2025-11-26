@@ -33,10 +33,10 @@ const RegisterFeatures = () => {
               {/* Text Block */}
               <div className="flex-1 md:text-left px-4 sm:px-0">
                 <h2 className="text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] font-bold leading-tight">
-                  LTI: Your Edge in Every Market
+                  LTI: Your Edge In Every Market
                 </h2>
                 <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] font-normal mt-3">
-                  From Sign Up to execution - you’re only a few clicks away
+                  From Sign Up To Execution - You’re Only a Few Clicks Away
                 </p>
                 <a href="https://clientarea.londontradingindex.com/register">
                 <Button className="bg-[#ee4223] hover:bg-[#FF6B3D] text-white text-base sm:text-lg font-semibold shadow-lg transition-all duration-300 group px-[20px] py-[24px] rounded-full mt-10">
@@ -92,7 +92,7 @@ const RegisterFeatures = () => {
                   2
                 </div>
                 <h3 className="text-[15px] sm:text-[17px] font-bold text-[#1C1C1C]">
-                  Verify your Identity
+                  Verify Your Identity
                 </h3>
                 <p className="text-[13px] sm:text-[14px] text-[#333] font-normal">
                   Upload your KYC documents to get approved quickly and
